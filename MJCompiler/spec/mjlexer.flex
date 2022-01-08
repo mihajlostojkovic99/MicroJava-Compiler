@@ -1,4 +1,5 @@
 package rs.ac.bg.etf.pp1;
+
 import java_cup.runtime.Symbol;
 
 %%
@@ -18,7 +19,7 @@ import java_cup.runtime.Symbol;
 %}
 
 %cup
-$line
+%line
 %column
 
 %xstate COMMENT
@@ -35,8 +36,8 @@ $line
 "\r\n" 	{ }
 "\f" 	{ }
 
-/*"program"   { return new_symbol(sym.PROG, yytext()); }
-"break"   	{ return new_symbol(sym.BREAK); }
+"program"   { return new_symbol(sym.PROG, yytext()); }
+"break"   	{ return new_symbol(sym.BREAK, yytext()); }
 "class"   	{ return new_symbol(sym.CLASS, yytext()); }
 "enum"   	{ return new_symbol(sym.ENUM, yytext()); }
 "new"   	{ return new_symbol(sym.NEW, yytext()); }
@@ -45,7 +46,7 @@ $line
 "return" 	{ return new_symbol(sym.RETURN, yytext()); }
 "void" 		{ return new_symbol(sym.VOID, yytext()); }
 "extends"  	{ return new_symbol(sym.EXTENDS, yytext()); }
-"continue" 	{ return new_symbol(sym.CONT); }
+"continue" 	{ return new_symbol(sym.CONT, yytext()); }
 "goto"   	{ return new_symbol(sym.GOTO, yytext()); }
 "record"   	{ return new_symbol(sym.RECORD, yytext()); }
 "+" 		{ return new_symbol(sym.PLUS, yytext()); }
@@ -56,7 +57,6 @@ $line
 ")" 		{ return new_symbol(sym.RPAREN, yytext()); }
 "{" 		{ return new_symbol(sym.LBRACE, yytext()); }
 "}"			{ return new_symbol(sym.RBRACE, yytext()); }
-*/
 
 <YYINITIAL> "//" 		     { yybegin(COMMENT); }
 <COMMENT> .      { yybegin(COMMENT); }
@@ -66,3 +66,9 @@ $line
 ([a-z]|[A-Z])[a-z|A-Z|0-9|_]* 	{return new_symbol (sym.IDENT, yytext()); }
 
 . { System.err.println("Leksicka greska ("+yytext()+") u liniji "+(yyline+1)); }
+
+
+
+
+
+

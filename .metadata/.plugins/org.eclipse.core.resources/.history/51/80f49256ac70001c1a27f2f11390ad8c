@@ -37,19 +37,10 @@ import java_cup.runtime.Symbol;
 "\f" 	{ }
 
 "program"   { return new_symbol(sym.PROG, yytext()); }
-"break"   	{ return new_symbol(sym.BREAK, yytext()); }
-"class"   	{ return new_symbol(sym.CLASS, yytext()); }
-"enum"   	{ return new_symbol(sym.ENUM, yytext()); }
-"new"   	{ return new_symbol(sym.NEW, yytext()); }
 "print" 	{ return new_symbol(sym.PRINT, yytext()); }
-"read"   	{ return new_symbol(sym.READ, yytext()); }
 "return" 	{ return new_symbol(sym.RETURN, yytext()); }
 "void" 		{ return new_symbol(sym.VOID, yytext()); }
-"extends"  	{ return new_symbol(sym.EXTENDS, yytext()); }
-"continue" 	{ return new_symbol(sym.CONT, yytext()); }
-"goto"   	{ return new_symbol(sym.GOTO, yytext()); }
-"record"   	{ return new_symbol(sym.RECORD, yytext()); }
-"+" 		{ return new_symbol(sym.PLUS, yytext()); }
+<YYINITIAL> "+" 		{ return new_symbol(sym.PLUS, yytext()); }
 "=" 		{ return new_symbol(sym.EQUAL, yytext()); }
 ";" 		{ return new_symbol(sym.SEMI, yytext()); }
 "," 		{ return new_symbol(sym.COMMA, yytext()); }

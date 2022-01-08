@@ -37,7 +37,7 @@ import java_cup.runtime.Symbol;
 "\f" 	{ }
 
 "program"   { return new_symbol(sym.PROG, yytext()); }
-"break"   	{ return new_symbol(sym.BREAK, yytext()); }
+"break"   	{ return new_symbol(sym.BREAK); }
 "class"   	{ return new_symbol(sym.CLASS, yytext()); }
 "enum"   	{ return new_symbol(sym.ENUM, yytext()); }
 "new"   	{ return new_symbol(sym.NEW, yytext()); }
@@ -46,7 +46,7 @@ import java_cup.runtime.Symbol;
 "return" 	{ return new_symbol(sym.RETURN, yytext()); }
 "void" 		{ return new_symbol(sym.VOID, yytext()); }
 "extends"  	{ return new_symbol(sym.EXTENDS, yytext()); }
-"continue" 	{ return new_symbol(sym.CONT, yytext()); }
+"continue" 	{ return new_symbol(sym.CONT); }
 "goto"   	{ return new_symbol(sym.GOTO, yytext()); }
 "record"   	{ return new_symbol(sym.RECORD, yytext()); }
 "+" 		{ return new_symbol(sym.PLUS, yytext()); }
