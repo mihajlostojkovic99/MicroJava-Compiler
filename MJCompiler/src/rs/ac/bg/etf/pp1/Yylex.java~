@@ -850,7 +850,7 @@ class Yylex implements java_cup.runtime.Scanner {
             // fall through
           case 46: break;
           case 20:
-            { return new_symbol(sym.BREAK);
+            { return new_symbol(sym.BREAK, yytext());
             }
             // fall through
           case 47: break;
@@ -885,7 +885,7 @@ class Yylex implements java_cup.runtime.Scanner {
             // fall through
           case 53: break;
           case 27:
-            { return new_symbol(sym.CONT);
+            { return new_symbol(sym.CONT, yytext());
             }
             // fall through
           case 54: break;
