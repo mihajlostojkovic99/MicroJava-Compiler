@@ -9,5 +9,7 @@
 	<classpathentry kind="src" path="spec"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="lib" path="lib/java-cup-11b.jar"/>
+	<classpathentry kind="lib" path="lib/jflex-full-1.8.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
