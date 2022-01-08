@@ -22,7 +22,6 @@
 			<javac srcdir="src/rs/ac/bg/etf/pp1" includeantruntime="false">
 				<classpath>
 					<pathelement path="lib/jflex-full-1.8.2.jar"/>
-					<pathelement path="lib/log4j-1.2.17.jar"/>
 					<pathelement path="lib/cup_v10k.jar"/>
 				</classpath>	
 			</javac>
