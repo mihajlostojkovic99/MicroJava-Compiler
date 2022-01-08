@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="MJCompiler" default="compile" basedir=".">
+<project name="MJCompiler" default="lexerGen" basedir=".">
 
 	<target name="delete">
 		<delete>
@@ -17,15 +17,5 @@
 			<arg value="spec/mjlexer.flex"/>
 		</java>
 	</target>
-	
-	<target name="compile" depends="lexerGen">
-			<javac srcdir="src/rs/ac/bg/etf/pp1" includeantruntime="false">
-				<classpath>
-					<pathelement path="lib/jflex-full-1.8.2.jar"/>
-					<pathelement path="lib/cup_v10k.jar"/>
-				</classpath>	
-			</javac>
-		
-		</target>
 
 </project>
