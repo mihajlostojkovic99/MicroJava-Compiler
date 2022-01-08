@@ -35,7 +35,7 @@ $line
 "\r\n" 	{ }
 "\f" 	{ }
 
-/*"program"   { return new_symbol(sym.PROG, yytext()); }
+"program"   { return new_symbol(sym.PROG, yytext()); }
 "break"   	{ return new_symbol(sym.BREAK); }
 "class"   	{ return new_symbol(sym.CLASS, yytext()); }
 "enum"   	{ return new_symbol(sym.ENUM, yytext()); }
@@ -56,7 +56,6 @@ $line
 ")" 		{ return new_symbol(sym.RPAREN, yytext()); }
 "{" 		{ return new_symbol(sym.LBRACE, yytext()); }
 "}"			{ return new_symbol(sym.RBRACE, yytext()); }
-*/
 
 <YYINITIAL> "//" 		     { yybegin(COMMENT); }
 <COMMENT> .      { yybegin(COMMENT); }
