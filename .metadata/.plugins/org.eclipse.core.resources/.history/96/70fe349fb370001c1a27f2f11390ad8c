@@ -10,7 +10,7 @@
 		</delete>
 	</target>
 	
-	<target name="lexerGen" depends="delete">
+	<target name="lexerGen">
 		<java jar="lib/jflex-full-1.8.2.jar" fork="true">
 			<arg value="-d"/>
 			<arg value="./src/rs/ac/bg/etf/pp1"/>
