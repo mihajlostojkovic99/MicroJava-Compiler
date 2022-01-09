@@ -64,7 +64,7 @@ nonterminal Program, List, MethodDecl, ConstDeclList, VarDeclList, ClassDeclList
 
 Program 		::= (Program) PROG IDENT List LBRACE MethodDecl RBRACE;
 
-List 			::= (ListConst) List ConstDeclWrapper
+List 			::= (ListConst) List ConstDeclList
 				|
 				(ListVar) List VarDeclList
 				|
@@ -75,20 +75,12 @@ List 			::= (ListConst) List ConstDeclWrapper
 				(NoList) /* epsilon */
 				;
 
-ConstDeclWrapper ::= (ConstDeclHere) CONST Type ConstDeclList SEMI;
-				 |
-				 (NoConstDeclHere) /* epsilon */
-				 ;
+ConstDeclList	::= ConstDeclList COMMA IDENT ConstDecl
 
-ConstDeclList	::= (ConstDeclarations) ConstDeclList COMMA IDENT ConstDecl
+ConstDecl		::= CONST Type IDENT EQUAL NUMBER 
 				|
-				(SingleConstDeclaration) ConstDecl
-				;
+				CONST Type IDENT EQUAL BOOL
+				|
+				CONST Type IDENT EQUAL CHAR 
 
-ConstDecl		::= (ConstDeclNumber) IDENT EQUAL NUMBER 
-				|
-				(ConstDeclBool) IDENT EQUAL BOOL
-				|
-				(ConstDeclChar) IDENT EQUAL CHAR 
-				;
 

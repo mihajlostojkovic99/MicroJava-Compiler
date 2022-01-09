@@ -60,8 +60,35 @@ terminal Integer NUMBER;
 terminal Boolean BOOL;
 terminal Character CHAR;
 
-nonterminal Program;
+nonterminal Program, List, MethodDecl, ConstDeclList, VarDeclList, ClassDeclList, RecordDeclList;
 
-Program ::= (Program) PROG IDENT;
+Program 		::= (Program) PROG IDENT List LBRACE MethodDecl RBRACE;
 
+List 			::= (ListConst) List ConstDeclWrapper
+				|
+				(ListVar) List VarDeclList
+				|
+				(ListClass) List ClassDeclList
+				|
+				(ListRecord) List RecordDeclList
+				|
+				(NoList) /* epsilon */
+				;
+
+ConstDeclWrapper ::= (ConstDeclHere) CONST Type ConstDeclList SEMI;
+				 |
+				 (NoConstDeclHere) /* epsilon */
+				 ;
+
+ConstDeclList	::= (ConstDeclarations) ConstDeclList COMMA IDENT ConstDecl
+				|
+				(SingleConstDeclaration) ConstDecl
+				;
+
+ConstDecl		::= (ConstDeclNumber) IDENT EQUAL NUMBER 
+				|
+				(ConstDeclBool) IDENT EQUAL BOOL
+				|
+				(ConstDeclChar) IDENT EQUAL CHAR 
+				;
 
