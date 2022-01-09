@@ -60,23 +60,13 @@ terminal Integer NUMBER;
 terminal Boolean BOOL;
 terminal Character CHAR;
 
-nonterminal Program, List, MethodDeclList;
-nonterminal ConstDeclWrapper, VarDeclWrapper, ClassDeclList, RecordDeclList;
-nonterminal MethodDecl;
-nonterminal Type, ConstDeclList, ConstDecl;
-nonterminal VarDeclList, VarDecl;
-nonterminal ClassDecl;
-nonterminal RecordDecl;
+nonterminal Program, List, MethodDecl, ConstDeclList, VarDeclList, ClassDeclList, RecordDeclList;
 
-
-
-nonterminal Type, FormPars, StatementList;
-
-Program 		::= (Program) PROG IDENT List LBRACE MethodDeclList RBRACE;
+Program 		::= (Program) PROG IDENT List LBRACE MethodDecl RBRACE;
 
 List 			::= (ListConst) List ConstDeclWrapper
 				|
-				(ListVar) List VarDeclWrapper
+				(ListVar) List VarDeclList
 				|
 				(ListClass) List ClassDeclList
 				|
@@ -85,14 +75,12 @@ List 			::= (ListConst) List ConstDeclWrapper
 				(NoList) /* epsilon */
 				;
 
-MethodDeclList	::= (MethodDeclarations) MethodDeclList MethodDecl
-				|
-				(NoMethodDecl) /* epsilon */
-				;
+ConstDeclWrapper ::= (ConstDeclHere) CONST Type ConstDeclList SEMI;
+				 |
+				 (NoConstDeclHere) /* epsilon */
+				 ;
 
-ConstDeclWrapper ::= (ConstDeclWrapper) CONST Type ConstDeclList SEMI;
-
-ConstDeclList	::= (ConstDeclarations) ConstDeclList COMMA ConstDecl
+ConstDeclList	::= (ConstDeclarations) ConstDeclList COMMA IDENT ConstDecl
 				|
 				(SingleConstDeclaration) ConstDecl
 				;
@@ -103,24 +91,4 @@ ConstDecl		::= (ConstDeclNumber) IDENT EQUAL NUMBER
 				|
 				(ConstDeclChar) IDENT EQUAL CHAR 
 				;
-
-VarDeclWrapper	::= (VarDeclWrapper) Type VarDeclList SEMI;
-
-VarDeclList		::= (VarDeclarations) VarDeclList COMMA VarDecl
-				|
-				(SingleVarDecl) VarDecl
-				;
-				
-VarDecl			::= (NormalVarDecl) IDENT
-				|
-				(ArrayVarDecl) IDENT LSQBR RSQBR
-				;
-
-ClassDeclList	::= (ClassDeclList) ClassDeclList ClassDecl;
-
-RecordDeclList	::= (RecordDeclList) RecordDeclList RecordDecl;
-
-MethodDecl		::= Type IDENT LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
-				|
-				VOID IDENT LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
 

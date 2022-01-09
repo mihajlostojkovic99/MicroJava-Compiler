@@ -116,9 +116,9 @@ VarDecl			::= (NormalVarDecl) IDENT
 				(ArrayVarDecl) IDENT LSQBR RSQBR
 				;
 
-ClassDeclList	::= (ClassDeclList) ClassDeclList ClassDecl;
+ClassDeclList	::= ClassDeclList ClassDecl;
 
-RecordDeclList	::= (RecordDeclList) RecordDeclList RecordDecl;
+RecordDeclList	::= RecordDeclList RecordDecl;
 
 MethodDecl		::= Type IDENT LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
 				|
