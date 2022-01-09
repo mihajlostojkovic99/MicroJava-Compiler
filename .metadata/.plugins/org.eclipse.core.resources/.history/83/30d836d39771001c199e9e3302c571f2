@@ -67,11 +67,8 @@ nonterminal Type, ConstDeclList, ConstDecl;
 nonterminal VarDeclList, VarDecl;
 nonterminal ClassDecl;
 nonterminal RecordDecl;
-nonterminal FormPars, StatementList;
+nonterminal FormParsWrapper, StatementList;
 nonterminal ConstructorDecl;
-nonterminal FormPar;
-nonterminal Statement, SingleStatement, Statements;
-nonterminal DesignatorStatement, Condition, Expr, Designator;
 
 Program 		::= (Program) PROG IDENT List LBRACE MethodDeclList RBRACE;
 
@@ -121,7 +118,7 @@ ClassDeclList	::= (ClassDeclList) ClassDeclList ClassDecl;
 
 RecordDeclList	::= (RecordDeclList) RecordDeclList RecordDecl;
 
-MethodDecl		::= Type IDENT LPAREN FormPars RPAREN VarDeclWrapper LBRACE StatementList RBRACE
+MethodDecl		::= Type IDENT LPAREN FormParsWrapper RPAREN VarDeclWrapper LBRACE StatementList RBRACE
 				|
 				Type IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE
 				|
@@ -155,47 +152,6 @@ FormPars		::= FormPars COMMA FormPar;
 FormPar			::= Type IDENT
 				|
 				Type IDENT LSQBR RSQBR
-				;
-				
-StatementList	::= StatementList Statement
-				|
-				/* epsilon */
-				;
-				
-ConstructorDecl	::= IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE;
-
-Statement		::= Label COLON SingleStatement
-				|
-				SingleStatement
-				|
-				Statements
-				;
-				
-Label			::= IDENT;
-
-SingleStatement	::= DesignatorStatement SEMI
-				|
-				IF LPAREN Condition RPAREN Statement ELSE Statement
-				|
-				IF LPAREN Condition RPAREN Statement
-				|
-				DO Statement WHILE LPAREN Condition RPAREN SEMI
-				|
-				BREAK SEMI
-				|
-				CONTINUE SEMI
-				|
-				RETURN Expr SEMI
-				|
-				RETURN SEMI
-				|
-				READ LPAREN Designator RPAREN SEMI
-				|
-				PRINT LPAREN Expr COMMA NUMBER RPAREN SEMI
-				|
-				PRINT LPAREN Expr RPAREN SEMI
-				|
-				GOTO Label SEMI
 				;
 				
 				

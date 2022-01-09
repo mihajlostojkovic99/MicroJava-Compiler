@@ -71,7 +71,7 @@ nonterminal FormPars, StatementList;
 nonterminal ConstructorDecl;
 nonterminal FormPar;
 nonterminal Statement, SingleStatement, Statements;
-nonterminal DesignatorStatement, Condition, Expr, Designator;
+nonterminal DesignatorStatement, Condition, Expr, Designator, numConstWrapper;
 
 Program 		::= (Program) PROG IDENT List LBRACE MethodDeclList RBRACE;
 

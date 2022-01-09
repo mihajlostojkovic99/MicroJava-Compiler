@@ -67,11 +67,10 @@ nonterminal Type, ConstDeclList, ConstDecl;
 nonterminal VarDeclList, VarDecl;
 nonterminal ClassDecl;
 nonterminal RecordDecl;
-nonterminal FormPars, StatementList;
-nonterminal ConstructorDecl;
-nonterminal FormPar;
-nonterminal Statement, SingleStatement, Statements;
-nonterminal DesignatorStatement, Condition, Expr, Designator;
+
+
+
+nonterminal Type, FormPars, StatementList;
 
 Program 		::= (Program) PROG IDENT List LBRACE MethodDeclList RBRACE;
 
@@ -130,72 +129,3 @@ MethodDecl		::= Type IDENT LPAREN FormPars RPAREN VarDeclWrapper LBRACE Statemen
 				VOID IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE
 				;
 
-Type			::= (Type) IDENT;
-
-ClassDecl		::= CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper LBRACE ConstructorDecl MethodDeclList RBRACE RBRACE
-				|
-				CLASS IDENT LBRACE VarDeclWrapper LBRACE ConstructorDecl MethodDeclList RBRACE RBRACE
-				|
-				CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper RBRACE
-				|
-				CLASS IDENT LBRACE VarDeclWrapper RBRACE
-				|
-				CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
-				|
-				CLASS IDENT LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
-				;
-				
-RecordDecl		::= RECORD IDENT LBRACE VarDeclWrapper RBRACE;
-
-FormPars		::= FormPars COMMA FormPar;
-				|
-				FormPar
-				;
-
-FormPar			::= Type IDENT
-				|
-				Type IDENT LSQBR RSQBR
-				;
-				
-StatementList	::= StatementList Statement
-				|
-				/* epsilon */
-				;
-				
-ConstructorDecl	::= IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE;
-
-Statement		::= Label COLON SingleStatement
-				|
-				SingleStatement
-				|
-				Statements
-				;
-				
-Label			::= IDENT;
-
-SingleStatement	::= DesignatorStatement SEMI
-				|
-				IF LPAREN Condition RPAREN Statement ELSE Statement
-				|
-				IF LPAREN Condition RPAREN Statement
-				|
-				DO Statement WHILE LPAREN Condition RPAREN SEMI
-				|
-				BREAK SEMI
-				|
-				CONTINUE SEMI
-				|
-				RETURN Expr SEMI
-				|
-				RETURN SEMI
-				|
-				READ LPAREN Designator RPAREN SEMI
-				|
-				PRINT LPAREN Expr COMMA NUMBER RPAREN SEMI
-				|
-				PRINT LPAREN Expr RPAREN SEMI
-				|
-				GOTO Label SEMI
-				;
-				
-				
