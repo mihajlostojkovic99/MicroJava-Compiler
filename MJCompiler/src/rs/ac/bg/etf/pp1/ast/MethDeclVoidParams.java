@@ -1,23 +1,33 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 13:44:31
+// 10/0/2022 14:42:42
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MethDeclVoidParams extends MethodDecl {
 
+    private String I1;
     private FormPars FormPars;
     private VarDeclWrapper VarDeclWrapper;
     private StatementList StatementList;
 
-    public MethDeclVoidParams (FormPars FormPars, VarDeclWrapper VarDeclWrapper, StatementList StatementList) {
+    public MethDeclVoidParams (String I1, FormPars FormPars, VarDeclWrapper VarDeclWrapper, StatementList StatementList) {
+        this.I1=I1;
         this.FormPars=FormPars;
         if(FormPars!=null) FormPars.setParent(this);
         this.VarDeclWrapper=VarDeclWrapper;
         if(VarDeclWrapper!=null) VarDeclWrapper.setParent(this);
         this.StatementList=StatementList;
         if(StatementList!=null) StatementList.setParent(this);
+    }
+
+    public String getI1() {
+        return I1;
+    }
+
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public FormPars getFormPars() {
@@ -72,6 +82,9 @@ public class MethDeclVoidParams extends MethodDecl {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("MethDeclVoidParams(\n");
+
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
 
         if(FormPars!=null)
             buffer.append(FormPars.toString("  "+tab));

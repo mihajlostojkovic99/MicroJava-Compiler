@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 13:44:31
+// 10/0/2022 14:42:42
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,12 +8,14 @@ package rs.ac.bg.etf.pp1.ast;
 public class MethDeclNoParams extends MethodDecl {
 
     private Type Type;
+    private String I2;
     private VarDeclWrapper VarDeclWrapper;
     private StatementList StatementList;
 
-    public MethDeclNoParams (Type Type, VarDeclWrapper VarDeclWrapper, StatementList StatementList) {
+    public MethDeclNoParams (Type Type, String I2, VarDeclWrapper VarDeclWrapper, StatementList StatementList) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
+        this.I2=I2;
         this.VarDeclWrapper=VarDeclWrapper;
         if(VarDeclWrapper!=null) VarDeclWrapper.setParent(this);
         this.StatementList=StatementList;
@@ -26,6 +28,14 @@ public class MethDeclNoParams extends MethodDecl {
 
     public void setType(Type Type) {
         this.Type=Type;
+    }
+
+    public String getI2() {
+        return I2;
+    }
+
+    public void setI2(String I2) {
+        this.I2=I2;
     }
 
     public VarDeclWrapper getVarDeclWrapper() {
@@ -77,6 +87,9 @@ public class MethDeclNoParams extends MethodDecl {
             buffer.append(Type.toString("  "+tab));
         else
             buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(" "+tab+I2);
         buffer.append("\n");
 
         if(VarDeclWrapper!=null)

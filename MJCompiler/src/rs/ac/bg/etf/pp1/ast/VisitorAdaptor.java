@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 13:44:31
+// 10/0/2022 14:42:42
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -24,6 +24,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Expr Expr) { }
     public void visit(ActPars ActPars) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
+    public void visit(ExprMore ExprMore) { }
     public void visit(Statement Statement) { }
     public void visit(VarDecl VarDecl) { }
     public void visit(ClassDecl ClassDecl) { }
@@ -66,10 +67,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorDot DesignatorDot) { visit(); }
     public void visit(Minus Minus) { visit(); }
     public void visit(Plus Plus) { visit(); }
-    public void visit(SingleExprNegative SingleExprNegative) { visit(); }
-    public void visit(SingleExpr SingleExpr) { visit(); }
-    public void visit(MultipleExpr MultipleExpr) { visit(); }
-    public void visit(MultipleExprNegative MultipleExprNegative) { visit(); }
+    public void visit(ExprPositive ExprPositive) { visit(); }
+    public void visit(ExprNegative ExprNegative) { visit(); }
+    public void visit(NoMoreExpr NoMoreExpr) { visit(); }
+    public void visit(ThereIsMoreExpr ThereIsMoreExpr) { visit(); }
     public void visit(SingleCondition SingleCondition) { visit(); }
     public void visit(MultipleCondition MultipleCondition) { visit(); }
     public void visit(DesStmDec DesStmDec) { visit(); }
@@ -103,7 +104,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(RecordDecl RecordDecl) { visit(); }
     public void visit(ClassWithMethods ClassWithMethods) { visit(); }
     public void visit(ClassExtendsWithMethods ClassExtendsWithMethods) { visit(); }
-    public void visit(Class Class) { visit(); }
+    public void visit(NormalClass NormalClass) { visit(); }
     public void visit(ClassExtends ClassExtends) { visit(); }
     public void visit(Type Type) { visit(); }
     public void visit(MethDeclVoidNoParams MethDeclVoidNoParams) { visit(); }

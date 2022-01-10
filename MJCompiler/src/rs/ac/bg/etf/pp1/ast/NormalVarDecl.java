@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 13:44:31
+// 10/0/2022 14:42:42
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class NormalVarDecl extends VarDecl {
 
-    public NormalVarDecl () {
+    private String I1;
+
+    public NormalVarDecl (String I1) {
+        this.I1=I1;
+    }
+
+    public String getI1() {
+        return I1;
+    }
+
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public void accept(Visitor visitor) {
@@ -29,6 +40,9 @@ public class NormalVarDecl extends VarDecl {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("NormalVarDecl(\n");
+
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [NormalVarDecl]");

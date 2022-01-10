@@ -1,24 +1,34 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 13:44:31
+// 10/0/2022 14:42:42
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ConstDeclBool extends ConstDecl {
 
-    private Boolean B1;
+    private String I1;
+    private String B2;
 
-    public ConstDeclBool (Boolean B1) {
-        this.B1=B1;
+    public ConstDeclBool (String I1, String B2) {
+        this.I1=I1;
+        this.B2=B2;
     }
 
-    public Boolean getB1() {
-        return B1;
+    public String getI1() {
+        return I1;
     }
 
-    public void setB1(Boolean B1) {
-        this.B1=B1;
+    public void setI1(String I1) {
+        this.I1=I1;
+    }
+
+    public String getB2() {
+        return B2;
+    }
+
+    public void setB2(String B2) {
+        this.B2=B2;
     }
 
     public void accept(Visitor visitor) {
@@ -41,7 +51,10 @@ public class ConstDeclBool extends ConstDecl {
         buffer.append(tab);
         buffer.append("ConstDeclBool(\n");
 
-        buffer.append(" "+tab+B1);
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
+
+        buffer.append(" "+tab+B2);
         buffer.append("\n");
 
         buffer.append(tab);

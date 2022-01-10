@@ -1,20 +1,30 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 13:44:31
+// 10/0/2022 14:42:42
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ClassWithMethods extends ClassDecl {
 
+    private String I1;
     private VarDeclWrapper VarDeclWrapper;
     private MethodDeclList MethodDeclList;
 
-    public ClassWithMethods (VarDeclWrapper VarDeclWrapper, MethodDeclList MethodDeclList) {
+    public ClassWithMethods (String I1, VarDeclWrapper VarDeclWrapper, MethodDeclList MethodDeclList) {
+        this.I1=I1;
         this.VarDeclWrapper=VarDeclWrapper;
         if(VarDeclWrapper!=null) VarDeclWrapper.setParent(this);
         this.MethodDeclList=MethodDeclList;
         if(MethodDeclList!=null) MethodDeclList.setParent(this);
+    }
+
+    public String getI1() {
+        return I1;
+    }
+
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public VarDeclWrapper getVarDeclWrapper() {
@@ -58,6 +68,9 @@ public class ClassWithMethods extends ClassDecl {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ClassWithMethods(\n");
+
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
 
         if(VarDeclWrapper!=null)
             buffer.append(VarDeclWrapper.toString("  "+tab));

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 13:44:31
+// 10/0/2022 14:42:42
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,10 +8,12 @@ package rs.ac.bg.etf.pp1.ast;
 public class FormalParameter extends FormPar {
 
     private Type Type;
+    private String I2;
 
-    public FormalParameter (Type Type) {
+    public FormalParameter (Type Type, String I2) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
+        this.I2=I2;
     }
 
     public Type getType() {
@@ -20,6 +22,14 @@ public class FormalParameter extends FormPar {
 
     public void setType(Type Type) {
         this.Type=Type;
+    }
+
+    public String getI2() {
+        return I2;
+    }
+
+    public void setI2(String I2) {
+        this.I2=I2;
     }
 
     public void accept(Visitor visitor) {
@@ -49,6 +59,9 @@ public class FormalParameter extends FormPar {
             buffer.append(Type.toString("  "+tab));
         else
             buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(" "+tab+I2);
         buffer.append("\n");
 
         buffer.append(tab);

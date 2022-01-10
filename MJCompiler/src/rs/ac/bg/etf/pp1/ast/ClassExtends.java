@@ -1,20 +1,30 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 13:44:31
+// 10/0/2022 14:42:42
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ClassExtends extends ClassDecl {
 
+    private String I1;
     private Type Type;
     private VarDeclWrapper VarDeclWrapper;
 
-    public ClassExtends (Type Type, VarDeclWrapper VarDeclWrapper) {
+    public ClassExtends (String I1, Type Type, VarDeclWrapper VarDeclWrapper) {
+        this.I1=I1;
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
         this.VarDeclWrapper=VarDeclWrapper;
         if(VarDeclWrapper!=null) VarDeclWrapper.setParent(this);
+    }
+
+    public String getI1() {
+        return I1;
+    }
+
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public Type getType() {
@@ -58,6 +68,9 @@ public class ClassExtends extends ClassDecl {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ClassExtends(\n");
+
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
 
         if(Type!=null)
             buffer.append(Type.toString("  "+tab));

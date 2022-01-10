@@ -1,17 +1,27 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 13:44:31
+// 10/0/2022 14:42:42
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class DesignatorWithArr extends Designator {
 
+    private String I1;
     private DesignatorArray DesignatorArray;
 
-    public DesignatorWithArr (DesignatorArray DesignatorArray) {
+    public DesignatorWithArr (String I1, DesignatorArray DesignatorArray) {
+        this.I1=I1;
         this.DesignatorArray=DesignatorArray;
         if(DesignatorArray!=null) DesignatorArray.setParent(this);
+    }
+
+    public String getI1() {
+        return I1;
+    }
+
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public DesignatorArray getDesignatorArray() {
@@ -44,6 +54,9 @@ public class DesignatorWithArr extends Designator {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("DesignatorWithArr(\n");
+
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
 
         if(DesignatorArray!=null)
             buffer.append(DesignatorArray.toString("  "+tab));

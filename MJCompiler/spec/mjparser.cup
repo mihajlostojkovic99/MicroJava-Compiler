@@ -58,7 +58,7 @@ terminal EQEQ, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, EQUAL, INC, DEC, SEMI, COLON
 terminal LPAREN, RPAREN, LSQBR, RSQBR, LBRACE, RBRACE;
 terminal Integer NUMBER;
 terminal String BOOL;
-terminal String IDENT
+terminal String IDENT;
 terminal Character CHAR;
 
 nonterminal Program, List, MethodDeclList;
@@ -71,7 +71,7 @@ nonterminal RecordDecl;
 nonterminal FormPars, StatementList;
 nonterminal FormPar;
 nonterminal Statement, SingleStatement, Statements, Label;
-nonterminal DesignatorStatement, Condition, Expr, Designator;
+nonterminal DesignatorStatement, Condition, Expr, ExprMore, Designator;
 nonterminal Assignop, ActPars;
 nonterminal CondTerm;
 nonterminal Addop, Term;
@@ -79,6 +79,8 @@ nonterminal DesignatorArray;
 nonterminal CondFact;
 nonterminal Mulop, Factor;
 nonterminal Relop;
+
+precedence left ELSE;
 
 Program 		::= (Program) PROG IDENT List LBRACE MethodDeclList RBRACE;
 
@@ -141,7 +143,7 @@ Type			::= (Type) IDENT;
 
 ClassDecl		::= (ClassExtends) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper RBRACE
 				|
-				(Class) CLASS IDENT LBRACE VarDeclWrapper RBRACE
+				(NormalClass) CLASS IDENT LBRACE VarDeclWrapper RBRACE
 				|
 				(ClassExtendsWithMethods) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
 				|
@@ -217,13 +219,14 @@ Condition		::= (MultipleCondition) Condition OR CondTerm
 				(SingleCondition) CondTerm
 				;
 								
-Expr			::= (MultipleExprNegative) MINUS Expr Addop Term
+ExprMore		::= (ThereIsMoreExpr) ExprMore Addop Term
 				|
-				(MultipleExpr) Expr Addop Term
+				(NoMoreExpr) /* epsilon */
+				;
+		
+Expr			::= (ExprNegative) MINUS Term ExprMore
 				|
-				(SingleExpr)Term
-				|
-				(SingleExprNegative) MINUS Term
+				(ExprPositive) Term ExprMore
 				;
 				
 Addop			::= (Plus) PLUS
