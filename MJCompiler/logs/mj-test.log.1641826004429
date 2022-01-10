@@ -1,0 +1,49 @@
+INFO  15:46:16,100 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  15:46:16,140 - #2 program
+INFO  15:46:16,141 - #50 p
+INFO  15:46:16,141 - #4 class
+INFO  15:46:16,141 - #50 Table
+INFO  15:46:16,142 - #46 {
+INFO  15:46:16,142 - #50 int
+INFO  15:46:16,142 - #50 a
+INFO  15:46:16,143 - #40 ,
+INFO  15:46:16,143 - #50 b
+INFO  15:46:16,143 - #44 [
+INFO  15:46:16,143 - #45 ]
+INFO  15:46:16,144 - #38 ;
+INFO  15:46:16,144 - #46 {
+INFO  15:46:16,144 - #47 }
+INFO  15:46:16,145 - #47 }
+INFO  15:46:16,145 - #46 {
+INFO  15:46:16,145 - #47 }
+INFO  15:46:16,146 - Program(
+ p
+  ListClass(
+    NoList(
+    ) [NoList]
+    ClassWithMethods(
+     Table
+      VarDeclWrapper(
+        Type(
+         int
+        ) [Type]
+        VarDeclarations(
+          SingleVarDecl(
+            NormalVarDecl(
+             a
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+          ArrayVarDecl(
+           b
+          ) [ArrayVarDecl]
+        ) [VarDeclarations]
+      ) [VarDeclWrapper]
+      NoMethodDecl(
+      ) [NoMethodDecl]
+    ) [ClassWithMethods]
+  ) [ListClass]
+  NoMethodDecl(
+  ) [NoMethodDecl]
+) [Program]
+INFO  15:46:16,146 - ===================================
+INFO  15:46:16,148 -  Program count calls = 1

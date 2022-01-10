@@ -1,0 +1,7 @@
+program p
+	class Table{
+		int a, b[];
+	}
+{
+
+}

@@ -132,20 +132,32 @@ RecordDeclList	::= (RecordDeclList) RecordDeclList RecordDecl;
 
 MethodDecl		::= (MethDeclParams) Type IDENT LPAREN FormPars RPAREN VarDeclWrapper LBRACE StatementList RBRACE
 				|
+				(MethDeclParamsNoVars) Type IDENT LPAREN FormPars RPAREN LBRACE StatementList RBRACE
+				|
 				(MethDeclNoParams) Type IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE
+				|
+				(MethDeclNoParamsNoVars) Type IDENT LPAREN RPAREN LBRACE StatementList RBRACE
 				|
 				(MethDeclVoidParams) VOID IDENT LPAREN FormPars RPAREN VarDeclWrapper LBRACE StatementList RBRACE
 				|
+				(MethDeclVoidParamsNoVars) VOID IDENT LPAREN FormPars RPAREN LBRACE StatementList RBRACE
+				|
 				(MethDeclVoidNoParams) VOID IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE
+				|
+				(MethDeclVoidNoParamsNoVars) VOID IDENT LPAREN RPAREN LBRACE StatementList RBRACE
 				;
 
 Type			::= (Type) IDENT;
 
 ClassDecl		::= (ClassExtends) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper RBRACE
 				|
-				(SimpleClass) CLASS IDENT LBRACE VarDeclWrapper RBRACE
+				(SimpleClassWithVars) CLASS IDENT LBRACE VarDeclWrapper RBRACE
 				|
-				(ClassExtendsWithMethods) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
+				(SimpleClass) CLASS IDENT LBRACE RBRACE
+				|
+				(ClassExtendsWithVarsAndMethods) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
+				|
+				(ClassExtendsWithMethods) CLASS IDENT EXTENDS Type LBRACE LBRACE MethodDeclList RBRACE RBRACE
 				|
 				(ClassWithMethods) CLASS IDENT LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
 				;

@@ -162,9 +162,13 @@ Type			::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};
 
 ClassDecl		::= (ClassExtends) CLASS IDENT:I1 EXTENDS Type:T2 LBRACE VarDeclWrapper:V3 RBRACE {: RESULT=new ClassExtends(I1, T2, V3); RESULT.setLine(I1left); :}
 				|
-				(SimpleClass) CLASS IDENT:I1 LBRACE VarDeclWrapper:V2 RBRACE {: RESULT=new SimpleClass(I1, V2); RESULT.setLine(I1left); :}
+				(SimpleClassWithVars) CLASS IDENT:I1 LBRACE VarDeclWrapper:V2 RBRACE {: RESULT=new SimpleClassWithVars(I1, V2); RESULT.setLine(I1left); :}
 				|
-				(ClassExtendsWithMethods) CLASS IDENT:I1 EXTENDS Type:T2 LBRACE VarDeclWrapper:V3 LBRACE MethodDeclList:M4 RBRACE RBRACE {: RESULT=new ClassExtendsWithMethods(I1, T2, V3, M4); RESULT.setLine(I1left); :}
+				(SimpleClass) CLASS IDENT:I1 LBRACE RBRACE {: RESULT=new SimpleClass(I1); RESULT.setLine(I1left); :}
+				|
+				(ClassExtendsWithVarsAndMethods) CLASS IDENT:I1 EXTENDS Type:T2 LBRACE VarDeclWrapper:V3 LBRACE MethodDeclList:M4 RBRACE RBRACE {: RESULT=new ClassExtendsWithVarsAndMethods(I1, T2, V3, M4); RESULT.setLine(I1left); :}
+				|
+				(ClassExtendsWithMethods) CLASS IDENT:I1 EXTENDS Type:T2 LBRACE LBRACE MethodDeclList:M3 RBRACE RBRACE {: RESULT=new ClassExtendsWithMethods(I1, T2, M3); RESULT.setLine(I1left); :}
 				|
 				(ClassWithMethods) CLASS IDENT:I1 LBRACE VarDeclWrapper:V2 LBRACE MethodDeclList:M3 RBRACE RBRACE {: RESULT=new ClassWithMethods(I1, V2, M3); RESULT.setLine(I1left); :}
 				;

@@ -1,6 +1,10 @@
 program p
+	const int size = 10;
 	class Table{
-	
+		int a, b[];
+		{
+			void putp (int a, int idx) {};
+		}
 	}
 {
 
