@@ -1031,7 +1031,7 @@ class Yylex implements java_cup.runtime.Scanner {
             // fall through
           case 95: break;
           case 42:
-            { return new_symbol (sym.BOOL, new Boolean(yytext().equals("true") ? true : false));
+            { return new_symbol(sym.BOOL, yytext());
             }
             // fall through
           case 96: break;

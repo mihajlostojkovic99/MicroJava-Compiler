@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 14:42:42
+// 10/0/2022 15:30:41
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class ListClass extends List {
 
     private List List;
-    private ClassDeclList ClassDeclList;
+    private ClassDecl ClassDecl;
 
-    public ListClass (List List, ClassDeclList ClassDeclList) {
+    public ListClass (List List, ClassDecl ClassDecl) {
         this.List=List;
         if(List!=null) List.setParent(this);
-        this.ClassDeclList=ClassDeclList;
-        if(ClassDeclList!=null) ClassDeclList.setParent(this);
+        this.ClassDecl=ClassDecl;
+        if(ClassDecl!=null) ClassDecl.setParent(this);
     }
 
     public List getList() {
@@ -25,12 +25,12 @@ public class ListClass extends List {
         this.List=List;
     }
 
-    public ClassDeclList getClassDeclList() {
-        return ClassDeclList;
+    public ClassDecl getClassDecl() {
+        return ClassDecl;
     }
 
-    public void setClassDeclList(ClassDeclList ClassDeclList) {
-        this.ClassDeclList=ClassDeclList;
+    public void setClassDecl(ClassDecl ClassDecl) {
+        this.ClassDecl=ClassDecl;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class ListClass extends List {
 
     public void childrenAccept(Visitor visitor) {
         if(List!=null) List.accept(visitor);
-        if(ClassDeclList!=null) ClassDeclList.accept(visitor);
+        if(ClassDecl!=null) ClassDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(List!=null) List.traverseTopDown(visitor);
-        if(ClassDeclList!=null) ClassDeclList.traverseTopDown(visitor);
+        if(ClassDecl!=null) ClassDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(List!=null) List.traverseBottomUp(visitor);
-        if(ClassDeclList!=null) ClassDeclList.traverseBottomUp(visitor);
+        if(ClassDecl!=null) ClassDecl.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class ListClass extends List {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(ClassDeclList!=null)
-            buffer.append(ClassDeclList.toString("  "+tab));
+        if(ClassDecl!=null)
+            buffer.append(ClassDecl.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

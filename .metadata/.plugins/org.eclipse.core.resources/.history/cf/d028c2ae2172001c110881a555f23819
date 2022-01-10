@@ -1,0 +1,9 @@
+program p
+	const int size = 10;
+	int a, b;
+	class Table{
+	
+	}
+{
+
+}

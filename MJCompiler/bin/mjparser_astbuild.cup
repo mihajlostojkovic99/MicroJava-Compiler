@@ -107,9 +107,9 @@ List 			::= (ListConst) List:L1 ConstDeclWrapper:C2 {: RESULT=new ListConst(L1, 
 				|
 				(ListVar) List:L1 VarDeclWrapper:V2 {: RESULT=new ListVar(L1, V2); RESULT.setLine(L1left); :}
 				|
-				(ListClass) List:L1 ClassDeclList:C2 {: RESULT=new ListClass(L1, C2); RESULT.setLine(L1left); :}
+				(ListClass) List:L1 ClassDecl:C2 {: RESULT=new ListClass(L1, C2); RESULT.setLine(L1left); :}
 				|
-				(ListRecord) List:L1 RecordDeclList:R2 {: RESULT=new ListRecord(L1, R2); RESULT.setLine(L1left); :}
+				(ListRecord) List:L1 RecordDecl:R2 {: RESULT=new ListRecord(L1, R2); RESULT.setLine(L1left); :}
 				|
 				(NoList) {: RESULT=new NoList(); :} /* epsilon */
 				;
@@ -133,7 +133,7 @@ ConstDecl		::= (ConstDeclNumber) IDENT:I1 EQUAL NUMBER:N2 {: RESULT=new ConstDec
 				(ConstDeclChar) IDENT:I1 EQUAL CHAR:C2 {: RESULT=new ConstDeclChar(I1, C2); RESULT.setLine(I1left); :} 
 				;
 
-VarDeclWrapper	::= (VarDeclWrapperTmp) Type:T1 VarDeclList:V2 SEMI {: RESULT=new VarDeclWrapperTmp(T1, V2); RESULT.setLine(T1left); :};
+VarDeclWrapper	::= (VarDeclWrapper) Type:T1 VarDeclList:V2 SEMI {: RESULT=new VarDeclWrapper(T1, V2); RESULT.setLine(T1left); :};
 
 VarDeclList		::= (VarDeclarations) VarDeclList:V1 COMMA VarDecl:V2 {: RESULT=new VarDeclarations(V1, V2); RESULT.setLine(V1left); :}
 				|
@@ -162,7 +162,7 @@ Type			::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};
 
 ClassDecl		::= (ClassExtends) CLASS IDENT:I1 EXTENDS Type:T2 LBRACE VarDeclWrapper:V3 RBRACE {: RESULT=new ClassExtends(I1, T2, V3); RESULT.setLine(I1left); :}
 				|
-				(Class) CLASS IDENT:I1 LBRACE VarDeclWrapper:V2 RBRACE {: RESULT=new Class(I1, V2); RESULT.setLine(I1left); :}
+				(SimpleClass) CLASS IDENT:I1 LBRACE VarDeclWrapper:V2 RBRACE {: RESULT=new SimpleClass(I1, V2); RESULT.setLine(I1left); :}
 				|
 				(ClassExtendsWithMethods) CLASS IDENT:I1 EXTENDS Type:T2 LBRACE VarDeclWrapper:V3 LBRACE MethodDeclList:M4 RBRACE RBRACE {: RESULT=new ClassExtendsWithMethods(I1, T2, V3, M4); RESULT.setLine(I1left); :}
 				|

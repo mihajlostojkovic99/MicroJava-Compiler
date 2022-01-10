@@ -1,0 +1,11 @@
+program p
+	const int size = 10;
+	int a, b;
+	class Table extends A{
+		int pos[], neg[];
+	
+		{
+			void putp (int a, int idx) { this.pos[idx] = a; }
+		}
+	}
+	{}

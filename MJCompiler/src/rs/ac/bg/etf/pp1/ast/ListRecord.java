@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 14:42:42
+// 10/0/2022 15:30:41
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class ListRecord extends List {
 
     private List List;
-    private RecordDeclList RecordDeclList;
+    private RecordDecl RecordDecl;
 
-    public ListRecord (List List, RecordDeclList RecordDeclList) {
+    public ListRecord (List List, RecordDecl RecordDecl) {
         this.List=List;
         if(List!=null) List.setParent(this);
-        this.RecordDeclList=RecordDeclList;
-        if(RecordDeclList!=null) RecordDeclList.setParent(this);
+        this.RecordDecl=RecordDecl;
+        if(RecordDecl!=null) RecordDecl.setParent(this);
     }
 
     public List getList() {
@@ -25,12 +25,12 @@ public class ListRecord extends List {
         this.List=List;
     }
 
-    public RecordDeclList getRecordDeclList() {
-        return RecordDeclList;
+    public RecordDecl getRecordDecl() {
+        return RecordDecl;
     }
 
-    public void setRecordDeclList(RecordDeclList RecordDeclList) {
-        this.RecordDeclList=RecordDeclList;
+    public void setRecordDecl(RecordDecl RecordDecl) {
+        this.RecordDecl=RecordDecl;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class ListRecord extends List {
 
     public void childrenAccept(Visitor visitor) {
         if(List!=null) List.accept(visitor);
-        if(RecordDeclList!=null) RecordDeclList.accept(visitor);
+        if(RecordDecl!=null) RecordDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(List!=null) List.traverseTopDown(visitor);
-        if(RecordDeclList!=null) RecordDeclList.traverseTopDown(visitor);
+        if(RecordDecl!=null) RecordDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(List!=null) List.traverseBottomUp(visitor);
-        if(RecordDeclList!=null) RecordDeclList.traverseBottomUp(visitor);
+        if(RecordDecl!=null) RecordDecl.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class ListRecord extends List {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(RecordDeclList!=null)
-            buffer.append(RecordDeclList.toString("  "+tab));
+        if(RecordDecl!=null)
+            buffer.append(RecordDecl.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

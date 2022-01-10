@@ -88,9 +88,9 @@ List 			::= (ListConst) List ConstDeclWrapper
 				|
 				(ListVar) List VarDeclWrapper
 				|
-				(ListClass) List ClassDeclList
+				(ListClass) List ClassDecl
 				|
-				(ListRecord) List RecordDeclList
+				(ListRecord) List RecordDecl
 				|
 				(NoList) /* epsilon */
 				;
@@ -143,7 +143,7 @@ Type			::= (Type) IDENT;
 
 ClassDecl		::= (ClassExtends) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper RBRACE
 				|
-				(NormalClass) CLASS IDENT LBRACE VarDeclWrapper RBRACE
+				(SimpleClass) CLASS IDENT LBRACE VarDeclWrapper RBRACE
 				|
 				(ClassExtendsWithMethods) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
 				|
