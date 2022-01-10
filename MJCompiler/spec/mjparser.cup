@@ -77,6 +77,8 @@ nonterminal CondTerm;
 nonterminal Addop, Term;
 nonterminal DesignatorArray;
 nonterminal CondFact;
+nonterminal Mulop, Factor;
+nonterminal Relop;
 
 Program 		::= (Program) PROG IDENT List LBRACE MethodDeclList RBRACE;
 
@@ -255,5 +257,54 @@ CondTerm		::= CondTerm AND CondFact
 				|
 				CondFact
 				;
+
+Term			::= Term Mulop Factor
+				|
+				Factor
+				;
 				
+CondFact		::= Expr
+				|
+				Expr Relop Expr
+				;
+				
+Mulop			::= MUL
+				|
+				DIV
+				|
+				MOD
+				;
+				
+Factor			::= Designator
+				|
+				Designator LPAREN ActPars RPAREN
+				|
+				Designator LPAREN RPAREN
+				|
+				NUMBER
+				|
+				CHAR
+				|
+				BOOL
+				|
+				NEW Type
+				|
+				NEW Type LSQBR Expr RSQBR
+				|
+				LPAREN Expr RPAREN
+				;
+				
+Relop			::= EQEQ
+				|
+				NOTEQUAL
+				|
+				GT
+				|
+				GTE
+				|
+				LT
+				|
+				LTE
+				;
+
 				
