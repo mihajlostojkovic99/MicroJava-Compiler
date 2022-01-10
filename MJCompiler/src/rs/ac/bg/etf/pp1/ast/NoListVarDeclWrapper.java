@@ -1,24 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 23:45:10
+// 10/0/2022 23:59:26
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class SimpleClass extends ClassDecl {
+public class NoListVarDeclWrapper extends ListVarDeclWrapper {
 
-    private String I1;
-
-    public SimpleClass (String I1) {
-        this.I1=I1;
-    }
-
-    public String getI1() {
-        return I1;
-    }
-
-    public void setI1(String I1) {
-        this.I1=I1;
+    public NoListVarDeclWrapper () {
     }
 
     public void accept(Visitor visitor) {
@@ -39,13 +28,10 @@ public class SimpleClass extends ClassDecl {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("SimpleClass(\n");
-
-        buffer.append(" "+tab+I1);
-        buffer.append("\n");
+        buffer.append("NoListVarDeclWrapper(\n");
 
         buffer.append(tab);
-        buffer.append(") [SimpleClass]");
+        buffer.append(") [NoListVarDeclWrapper]");
         return buffer.toString();
     }
 }

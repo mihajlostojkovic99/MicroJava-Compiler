@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 23:45:10
+// 10/0/2022 23:59:26
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,12 +8,12 @@ package rs.ac.bg.etf.pp1.ast;
 public class SimpleClassWithVars extends ClassDecl {
 
     private String I1;
-    private VarDeclWrapper VarDeclWrapper;
+    private ListVarDeclWrapper ListVarDeclWrapper;
 
-    public SimpleClassWithVars (String I1, VarDeclWrapper VarDeclWrapper) {
+    public SimpleClassWithVars (String I1, ListVarDeclWrapper ListVarDeclWrapper) {
         this.I1=I1;
-        this.VarDeclWrapper=VarDeclWrapper;
-        if(VarDeclWrapper!=null) VarDeclWrapper.setParent(this);
+        this.ListVarDeclWrapper=ListVarDeclWrapper;
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.setParent(this);
     }
 
     public String getI1() {
@@ -24,12 +24,12 @@ public class SimpleClassWithVars extends ClassDecl {
         this.I1=I1;
     }
 
-    public VarDeclWrapper getVarDeclWrapper() {
-        return VarDeclWrapper;
+    public ListVarDeclWrapper getListVarDeclWrapper() {
+        return ListVarDeclWrapper;
     }
 
-    public void setVarDeclWrapper(VarDeclWrapper VarDeclWrapper) {
-        this.VarDeclWrapper=VarDeclWrapper;
+    public void setListVarDeclWrapper(ListVarDeclWrapper ListVarDeclWrapper) {
+        this.ListVarDeclWrapper=ListVarDeclWrapper;
     }
 
     public void accept(Visitor visitor) {
@@ -37,16 +37,16 @@ public class SimpleClassWithVars extends ClassDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(VarDeclWrapper!=null) VarDeclWrapper.accept(visitor);
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(VarDeclWrapper!=null) VarDeclWrapper.traverseTopDown(visitor);
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(VarDeclWrapper!=null) VarDeclWrapper.traverseBottomUp(visitor);
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -58,8 +58,8 @@ public class SimpleClassWithVars extends ClassDecl {
         buffer.append(" "+tab+I1);
         buffer.append("\n");
 
-        if(VarDeclWrapper!=null)
-            buffer.append(VarDeclWrapper.toString("  "+tab));
+        if(ListVarDeclWrapper!=null)
+            buffer.append(ListVarDeclWrapper.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

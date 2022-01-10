@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 23:45:10
+// 10/0/2022 23:59:26
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class ClassWithVarsAndMethods extends ClassDecl {
 
     private String I1;
-    private VarDeclWrapper VarDeclWrapper;
+    private ListVarDeclWrapper ListVarDeclWrapper;
     private MethodDeclList MethodDeclList;
 
-    public ClassWithVarsAndMethods (String I1, VarDeclWrapper VarDeclWrapper, MethodDeclList MethodDeclList) {
+    public ClassWithVarsAndMethods (String I1, ListVarDeclWrapper ListVarDeclWrapper, MethodDeclList MethodDeclList) {
         this.I1=I1;
-        this.VarDeclWrapper=VarDeclWrapper;
-        if(VarDeclWrapper!=null) VarDeclWrapper.setParent(this);
+        this.ListVarDeclWrapper=ListVarDeclWrapper;
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.setParent(this);
         this.MethodDeclList=MethodDeclList;
         if(MethodDeclList!=null) MethodDeclList.setParent(this);
     }
@@ -27,12 +27,12 @@ public class ClassWithVarsAndMethods extends ClassDecl {
         this.I1=I1;
     }
 
-    public VarDeclWrapper getVarDeclWrapper() {
-        return VarDeclWrapper;
+    public ListVarDeclWrapper getListVarDeclWrapper() {
+        return ListVarDeclWrapper;
     }
 
-    public void setVarDeclWrapper(VarDeclWrapper VarDeclWrapper) {
-        this.VarDeclWrapper=VarDeclWrapper;
+    public void setListVarDeclWrapper(ListVarDeclWrapper ListVarDeclWrapper) {
+        this.ListVarDeclWrapper=ListVarDeclWrapper;
     }
 
     public MethodDeclList getMethodDeclList() {
@@ -48,18 +48,18 @@ public class ClassWithVarsAndMethods extends ClassDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(VarDeclWrapper!=null) VarDeclWrapper.accept(visitor);
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.accept(visitor);
         if(MethodDeclList!=null) MethodDeclList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(VarDeclWrapper!=null) VarDeclWrapper.traverseTopDown(visitor);
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.traverseTopDown(visitor);
         if(MethodDeclList!=null) MethodDeclList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(VarDeclWrapper!=null) VarDeclWrapper.traverseBottomUp(visitor);
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.traverseBottomUp(visitor);
         if(MethodDeclList!=null) MethodDeclList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -72,8 +72,8 @@ public class ClassWithVarsAndMethods extends ClassDecl {
         buffer.append(" "+tab+I1);
         buffer.append("\n");
 
-        if(VarDeclWrapper!=null)
-            buffer.append(VarDeclWrapper.toString("  "+tab));
+        if(ListVarDeclWrapper!=null)
+            buffer.append(ListVarDeclWrapper.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

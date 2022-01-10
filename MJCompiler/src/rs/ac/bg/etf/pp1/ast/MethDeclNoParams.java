@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 23:45:10
+// 10/0/2022 23:59:26
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,15 +9,15 @@ public class MethDeclNoParams extends MethodDecl {
 
     private Type Type;
     private String I2;
-    private VarDeclWrapper VarDeclWrapper;
+    private ListVarDeclWrapper ListVarDeclWrapper;
     private StatementList StatementList;
 
-    public MethDeclNoParams (Type Type, String I2, VarDeclWrapper VarDeclWrapper, StatementList StatementList) {
+    public MethDeclNoParams (Type Type, String I2, ListVarDeclWrapper ListVarDeclWrapper, StatementList StatementList) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
         this.I2=I2;
-        this.VarDeclWrapper=VarDeclWrapper;
-        if(VarDeclWrapper!=null) VarDeclWrapper.setParent(this);
+        this.ListVarDeclWrapper=ListVarDeclWrapper;
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.setParent(this);
         this.StatementList=StatementList;
         if(StatementList!=null) StatementList.setParent(this);
     }
@@ -38,12 +38,12 @@ public class MethDeclNoParams extends MethodDecl {
         this.I2=I2;
     }
 
-    public VarDeclWrapper getVarDeclWrapper() {
-        return VarDeclWrapper;
+    public ListVarDeclWrapper getListVarDeclWrapper() {
+        return ListVarDeclWrapper;
     }
 
-    public void setVarDeclWrapper(VarDeclWrapper VarDeclWrapper) {
-        this.VarDeclWrapper=VarDeclWrapper;
+    public void setListVarDeclWrapper(ListVarDeclWrapper ListVarDeclWrapper) {
+        this.ListVarDeclWrapper=ListVarDeclWrapper;
     }
 
     public StatementList getStatementList() {
@@ -60,20 +60,20 @@ public class MethDeclNoParams extends MethodDecl {
 
     public void childrenAccept(Visitor visitor) {
         if(Type!=null) Type.accept(visitor);
-        if(VarDeclWrapper!=null) VarDeclWrapper.accept(visitor);
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.accept(visitor);
         if(StatementList!=null) StatementList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Type!=null) Type.traverseTopDown(visitor);
-        if(VarDeclWrapper!=null) VarDeclWrapper.traverseTopDown(visitor);
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.traverseTopDown(visitor);
         if(StatementList!=null) StatementList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Type!=null) Type.traverseBottomUp(visitor);
-        if(VarDeclWrapper!=null) VarDeclWrapper.traverseBottomUp(visitor);
+        if(ListVarDeclWrapper!=null) ListVarDeclWrapper.traverseBottomUp(visitor);
         if(StatementList!=null) StatementList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -92,8 +92,8 @@ public class MethDeclNoParams extends MethodDecl {
         buffer.append(" "+tab+I2);
         buffer.append("\n");
 
-        if(VarDeclWrapper!=null)
-            buffer.append(VarDeclWrapper.toString("  "+tab));
+        if(ListVarDeclWrapper!=null)
+            buffer.append(ListVarDeclWrapper.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

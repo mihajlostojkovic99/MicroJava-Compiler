@@ -79,6 +79,7 @@ nonterminal DesignatorArray;
 nonterminal CondFact;
 nonterminal Mulop, Factor;
 nonterminal Relop;
+nonterminal ListVarDeclWrapper;
 
 precedence left ELSE;
 
@@ -116,6 +117,11 @@ ConstDecl		::= (ConstDeclNumber) IDENT EQUAL NUMBER
 
 VarDeclWrapper	::= (VarDeclWrapper) Type VarDeclList SEMI;
 
+ListVarDeclWrapper ::= (IsListVarDeclWrapper) ListVarDeclWrapper VarDeclWrapper
+				   |
+				   (NoListVarDeclWrapper) /* epsilon */
+				   ;
+
 VarDeclList		::= (VarDeclarations) VarDeclList COMMA VarDecl
 				|
 				(SingleVarDecl) VarDecl
@@ -130,41 +136,27 @@ ClassDeclList	::= (ClassDeclList) ClassDeclList ClassDecl;
 
 RecordDeclList	::= (RecordDeclList) RecordDeclList RecordDecl;
 
-MethodDecl		::= (MethDeclParams) Type IDENT LPAREN FormPars RPAREN VarDeclWrapper LBRACE StatementList RBRACE
+MethodDecl		::= (MethDeclParams) Type IDENT LPAREN FormPars RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
 				|
-				(MethDeclParamsNoVars) Type IDENT LPAREN FormPars RPAREN LBRACE StatementList RBRACE
+				(MethDeclNoParams) Type IDENT LPAREN RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
 				|
-				(MethDeclNoParams) Type IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE
+				(MethDeclVoidParams) VOID IDENT LPAREN FormPars RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
 				|
-				(MethDeclNoParamsNoVars) Type IDENT LPAREN RPAREN LBRACE StatementList RBRACE
-				|
-				(MethDeclVoidParams) VOID IDENT LPAREN FormPars RPAREN VarDeclWrapper LBRACE StatementList RBRACE
-				|
-				(MethDeclVoidParamsNoVars) VOID IDENT LPAREN FormPars RPAREN LBRACE StatementList RBRACE
-				|
-				(MethDeclVoidNoParams) VOID IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE
-				|
-				(MethDeclVoidNoParamsNoVars) VOID IDENT LPAREN RPAREN LBRACE StatementList RBRACE
+				(MethDeclVoidNoParams) VOID IDENT LPAREN RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
 				;
 
 Type			::= (Type) IDENT;
 
-ClassDecl		::= (ClassExtends) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper RBRACE
+ClassDecl		::= (ClassExtends) CLASS IDENT EXTENDS Type LBRACE ListVarDeclWrapper RBRACE
 				|
-				(SimpleClassWithVars) CLASS IDENT LBRACE VarDeclWrapper RBRACE
+				(SimpleClassWithVars) CLASS IDENT LBRACE ListVarDeclWrapper RBRACE
 				|
-				(SimpleClass) CLASS IDENT LBRACE RBRACE
+				(ClassExtendsWithVarsAndMethods) CLASS IDENT EXTENDS Type LBRACE ListVarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
 				|
-				(ClassExtendsWithVarsAndMethods) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
-				|
-				(ClassExtendsWithMethods) CLASS IDENT EXTENDS Type LBRACE LBRACE MethodDeclList RBRACE RBRACE
-				|
-				(ClassWithVarsAndMethods) CLASS IDENT LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
+				(ClassWithVarsAndMethods) CLASS IDENT LBRACE ListVarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
 				;
 				
-RecordDecl		::= (RecordDeclWithVars) RECORD IDENT LBRACE VarDeclWrapper RBRACE
-				|
-				(RecordDeclNoVars) RECORD IDENT LBRACE RBRACE;
+RecordDecl		::= (RecordDecl) RECORD IDENT LBRACE ListVarDeclWrapper RBRACE;
 
 FormPars		::= (FormParameters) FormPars COMMA FormPar
 				|
