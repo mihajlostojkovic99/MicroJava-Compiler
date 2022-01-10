@@ -1,0 +1,40 @@
+INFO  22:44:42,454 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:44:42,503 - #2 program
+INFO  22:44:42,503 - #50 p
+INFO  22:44:42,503 - #7 const
+INFO  22:44:42,504 - #50 int
+INFO  22:44:42,504 - #50 size
+INFO  22:44:42,504 - #35 =
+INFO  22:44:42,505 - #48 10
+INFO  22:44:42,505 - #38 ;
+INFO  22:44:42,505 - #4 class
+INFO  22:44:42,506 - #50 Table
+INFO  22:44:42,506 - #16 extends
+INFO  22:44:42,506 - #50 A
+INFO  22:44:42,506 - #46 {
+INFO  22:44:42,506 - #50 int
+INFO  22:44:42,506 - #50 a
+INFO  22:44:42,506 - #40 ,
+INFO  22:44:42,506 - #50 b
+INFO  22:44:42,506 - #44 [
+INFO  22:44:42,507 - #45 ]
+INFO  22:44:42,507 - #38 ;
+INFO  22:44:42,507 - #46 {
+INFO  22:44:42,507 - #15 void
+INFO  22:44:42,508 - #50 putp
+INFO  22:44:42,508 - #42 (
+INFO  22:44:42,509 - #50 int
+INFO  22:44:42,509 - #50 a
+INFO  22:44:42,509 - #40 ,
+INFO  22:44:42,509 - #50 int
+INFO  22:44:42,509 - #50 idx
+INFO  22:44:42,509 - #43 )
+INFO  22:44:42,509 - #50 int
+INFO  22:44:42,509 - #50 ac
+INFO  22:44:42,510 - #38 ;
+INFO  22:44:42,510 - #46 {
+INFO  22:44:42,510 - #50 int
+INFO  22:44:42,510 - #50 c
+ERROR 22:44:42,511 - 
+Sintaksna greska na liniji 6
+ERROR 22:44:42,511 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6

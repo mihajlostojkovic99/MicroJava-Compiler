@@ -159,10 +159,12 @@ ClassDecl		::= (ClassExtends) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper RBR
 				|
 				(ClassExtendsWithMethods) CLASS IDENT EXTENDS Type LBRACE LBRACE MethodDeclList RBRACE RBRACE
 				|
-				(ClassWithMethods) CLASS IDENT LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
+				(ClassWithVarsAndMethods) CLASS IDENT LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
 				;
 				
-RecordDecl		::= (RecordDecl) RECORD IDENT LBRACE VarDeclWrapper RBRACE;
+RecordDecl		::= (RecordDeclWithVars) RECORD IDENT LBRACE VarDeclWrapper RBRACE
+				|
+				(RecordDeclNoVars) RECORD IDENT LBRACE RBRACE;
 
 FormPars		::= (FormParameters) FormPars COMMA FormPar
 				|

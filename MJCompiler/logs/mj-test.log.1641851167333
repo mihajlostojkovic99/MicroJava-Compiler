@@ -1,0 +1,107 @@
+INFO  22:45:15,684 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:45:15,733 - #2 program
+INFO  22:45:15,733 - #50 p
+INFO  22:45:15,733 - #7 const
+INFO  22:45:15,734 - #50 int
+INFO  22:45:15,734 - #50 size
+INFO  22:45:15,734 - #35 =
+INFO  22:45:15,734 - #48 10
+INFO  22:45:15,735 - #38 ;
+INFO  22:45:15,735 - #4 class
+INFO  22:45:15,735 - #50 Table
+INFO  22:45:15,736 - #16 extends
+INFO  22:45:15,736 - #50 A
+INFO  22:45:15,736 - #46 {
+INFO  22:45:15,736 - #50 int
+INFO  22:45:15,737 - #50 a
+INFO  22:45:15,737 - #40 ,
+INFO  22:45:15,737 - #50 b
+INFO  22:45:15,737 - #44 [
+INFO  22:45:15,737 - #45 ]
+INFO  22:45:15,737 - #38 ;
+INFO  22:45:15,737 - #46 {
+INFO  22:45:15,738 - #15 void
+INFO  22:45:15,741 - #50 putp
+INFO  22:45:15,741 - #42 (
+INFO  22:45:15,741 - #50 int
+INFO  22:45:15,741 - #50 a
+INFO  22:45:15,741 - #40 ,
+INFO  22:45:15,741 - #50 int
+INFO  22:45:15,741 - #50 idx
+INFO  22:45:15,742 - #43 )
+INFO  22:45:15,742 - #46 {
+INFO  22:45:15,742 - #47 }
+INFO  22:45:15,743 - #47 }
+INFO  22:45:15,743 - #47 }
+INFO  22:45:15,743 - #46 {
+INFO  22:45:15,743 - #47 }
+INFO  22:45:15,744 - Program(
+ p
+  ListClass(
+    ListConst(
+      NoList(
+      ) [NoList]
+      ConstDeclWrapper(
+        Type(
+         int
+        ) [Type]
+        SingleConstDeclaration(
+          ConstDeclNumber(
+           size
+           10
+          ) [ConstDeclNumber]
+        ) [SingleConstDeclaration]
+      ) [ConstDeclWrapper]
+    ) [ListConst]
+    ClassExtendsWithVarsAndMethods(
+     Table
+      Type(
+       A
+      ) [Type]
+      VarDeclWrapper(
+        Type(
+         int
+        ) [Type]
+        VarDeclarations(
+          SingleVarDecl(
+            NormalVarDecl(
+             a
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+          ArrayVarDecl(
+           b
+          ) [ArrayVarDecl]
+        ) [VarDeclarations]
+      ) [VarDeclWrapper]
+      MethodDeclarations(
+        NoMethodDecl(
+        ) [NoMethodDecl]
+        MethDeclVoidParamsNoVars(
+         putp
+          FormParameters(
+            SingleFormPars(
+              FormalParameter(
+                Type(
+                 int
+                ) [Type]
+               a
+              ) [FormalParameter]
+            ) [SingleFormPars]
+            FormalParameter(
+              Type(
+               int
+              ) [Type]
+             idx
+            ) [FormalParameter]
+          ) [FormParameters]
+          NoStatementList(
+          ) [NoStatementList]
+        ) [MethDeclVoidParamsNoVars]
+      ) [MethodDeclarations]
+    ) [ClassExtendsWithVarsAndMethods]
+  ) [ListClass]
+  NoMethodDecl(
+  ) [NoMethodDecl]
+) [Program]
+INFO  22:45:15,745 - ===================================
+INFO  22:45:15,747 -  Program count calls = 1

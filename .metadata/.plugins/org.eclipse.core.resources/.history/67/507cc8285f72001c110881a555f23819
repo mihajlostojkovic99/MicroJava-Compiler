@@ -1,0 +1,14 @@
+program p
+	const int size = 10;
+	int a, b;
+	float c, d;
+	class Table extends A{
+		int a, b[];
+		{
+			void putp (int a, int idx) {}
+		}
+	}
+	record r {}
+{
+
+}

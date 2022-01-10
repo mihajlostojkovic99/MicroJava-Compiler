@@ -1,0 +1,11 @@
+program p
+	const int size = 10;
+	class Table extends A{
+		int a, b[];
+		{
+			void putp (int a, int idx) int ac {}
+		}
+	}
+{
+
+}

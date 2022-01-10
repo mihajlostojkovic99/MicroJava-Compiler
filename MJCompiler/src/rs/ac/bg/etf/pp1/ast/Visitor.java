@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 15:58:17
+// 10/0/2022 23:45:10
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -13,6 +13,7 @@ public interface Visitor {
     public void visit(StatementList StatementList);
     public void visit(Addop Addop);
     public void visit(List List);
+    public void visit(RecordDecl RecordDecl);
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
     public void visit(Designator Designator);
@@ -101,17 +102,22 @@ public interface Visitor {
     public void visit(FormalParameter FormalParameter);
     public void visit(SingleFormPars SingleFormPars);
     public void visit(FormParameters FormParameters);
-    public void visit(RecordDecl RecordDecl);
-    public void visit(ClassWithMethods ClassWithMethods);
+    public void visit(RecordDeclNoVars RecordDeclNoVars);
+    public void visit(RecordDeclWithVars RecordDeclWithVars);
+    public void visit(ClassWithVarsAndMethods ClassWithVarsAndMethods);
     public void visit(ClassExtendsWithMethods ClassExtendsWithMethods);
     public void visit(ClassExtendsWithVarsAndMethods ClassExtendsWithVarsAndMethods);
     public void visit(SimpleClass SimpleClass);
     public void visit(SimpleClassWithVars SimpleClassWithVars);
     public void visit(ClassExtends ClassExtends);
     public void visit(Type Type);
+    public void visit(MethDeclVoidNoParamsNoVars MethDeclVoidNoParamsNoVars);
     public void visit(MethDeclVoidNoParams MethDeclVoidNoParams);
+    public void visit(MethDeclVoidParamsNoVars MethDeclVoidParamsNoVars);
     public void visit(MethDeclVoidParams MethDeclVoidParams);
+    public void visit(MethDeclNoParamsNoVars MethDeclNoParamsNoVars);
     public void visit(MethDeclNoParams MethDeclNoParams);
+    public void visit(MethDeclParamsNoVars MethDeclParamsNoVars);
     public void visit(MethDeclParams MethDeclParams);
     public void visit(RecordDeclList RecordDeclList);
     public void visit(ClassDeclList ClassDeclList);

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2022 15:58:17
+// 10/0/2022 23:45:10
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -13,6 +13,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(StatementList StatementList) { }
     public void visit(Addop Addop) { }
     public void visit(List List) { }
+    public void visit(RecordDecl RecordDecl) { }
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
     public void visit(Designator Designator) { }
@@ -101,17 +102,22 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FormalParameter FormalParameter) { visit(); }
     public void visit(SingleFormPars SingleFormPars) { visit(); }
     public void visit(FormParameters FormParameters) { visit(); }
-    public void visit(RecordDecl RecordDecl) { visit(); }
-    public void visit(ClassWithMethods ClassWithMethods) { visit(); }
+    public void visit(RecordDeclNoVars RecordDeclNoVars) { visit(); }
+    public void visit(RecordDeclWithVars RecordDeclWithVars) { visit(); }
+    public void visit(ClassWithVarsAndMethods ClassWithVarsAndMethods) { visit(); }
     public void visit(ClassExtendsWithMethods ClassExtendsWithMethods) { visit(); }
     public void visit(ClassExtendsWithVarsAndMethods ClassExtendsWithVarsAndMethods) { visit(); }
     public void visit(SimpleClass SimpleClass) { visit(); }
     public void visit(SimpleClassWithVars SimpleClassWithVars) { visit(); }
     public void visit(ClassExtends ClassExtends) { visit(); }
     public void visit(Type Type) { visit(); }
+    public void visit(MethDeclVoidNoParamsNoVars MethDeclVoidNoParamsNoVars) { visit(); }
     public void visit(MethDeclVoidNoParams MethDeclVoidNoParams) { visit(); }
+    public void visit(MethDeclVoidParamsNoVars MethDeclVoidParamsNoVars) { visit(); }
     public void visit(MethDeclVoidParams MethDeclVoidParams) { visit(); }
+    public void visit(MethDeclNoParamsNoVars MethDeclNoParamsNoVars) { visit(); }
     public void visit(MethDeclNoParams MethDeclNoParams) { visit(); }
+    public void visit(MethDeclParamsNoVars MethDeclParamsNoVars) { visit(); }
     public void visit(MethDeclParams MethDeclParams) { visit(); }
     public void visit(RecordDeclList RecordDeclList) { visit(); }
     public void visit(ClassDeclList ClassDeclList) { visit(); }
