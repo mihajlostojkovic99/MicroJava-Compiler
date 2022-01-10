@@ -128,173 +128,183 @@ ClassDeclList	::= (ClassDeclList) ClassDeclList ClassDecl;
 
 RecordDeclList	::= (RecordDeclList) RecordDeclList RecordDecl;
 
-MethodDecl		::= (MethDeclParams) Type IDENT LPAREN FormPars RPAREN VarDeclWrapper LBRACE StatementList RBRACE
+MethodDecl		::= Type IDENT LPAREN FormPars RPAREN VarDeclWrapper LBRACE StatementList RBRACE
 				|
-				(MethDeclNoParams) Type IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE
+				Type IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE
 				|
-				(MethDeclVoidParams) VOID IDENT LPAREN FormPars RPAREN VarDeclWrapper LBRACE StatementList RBRACE
+				VOID IDENT LPAREN FormPars RPAREN VarDeclWrapper LBRACE StatementList RBRACE
 				|
-				(MethDeclVoidNoParams) VOID IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE
+				VOID IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE
 				;
 
 Type			::= (Type) IDENT;
 
-ClassDecl		::= (ClassExtends) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper RBRACE
+ClassDecl		::= CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper LBRACE ConstructorDecl MethodDeclList RBRACE RBRACE
 				|
-				(Class) CLASS IDENT LBRACE VarDeclWrapper RBRACE
+				CLASS IDENT LBRACE VarDeclWrapper LBRACE ConstructorDecl MethodDeclList RBRACE RBRACE
 				|
-				(ClassExtendsWithMethods) CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
+				CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper RBRACE
 				|
-				(ClassWithMethods) CLASS IDENT LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
+				CLASS IDENT LBRACE VarDeclWrapper RBRACE
+				|
+				CLASS IDENT EXTENDS Type LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
+				|
+				CLASS IDENT LBRACE VarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
 				;
 				
-RecordDecl		::= (RecordDecl) RECORD IDENT LBRACE VarDeclWrapper RBRACE;
+RecordDecl		::= RECORD IDENT LBRACE VarDeclWrapper RBRACE;
 
-FormPars		::= (FormParameters) FormPars COMMA FormPar
+FormPars		::= FormPars COMMA FormPar;
 				|
-				(SingleFormPars) FormPar
+				FormPar
 				;
 
-FormPar			::= (FormalParameter) Type IDENT
+FormPar			::= Type IDENT
 				|
-				(FormalParameterArray) Type IDENT LSQBR RSQBR
-				;
-				
-StatementList	::= (StatementListExists) StatementList Statement
-				|
-				(NoStatementList) /* epsilon */
-				;
-
-Statement		::= (StatementWithColon) Label COLON SingleStatement
-				|
-				(StatementWithSingleStatement) SingleStatement
-				|
-				(StatementWithStatements) Statements
+				Type IDENT LSQBR RSQBR
 				;
 				
-Label			::= (Label) IDENT;
-
-SingleStatement	::= (DesignatorSingleStatement) DesignatorStatement SEMI
+StatementList	::= StatementList Statement
 				|
-				(IfElseSingleStatement) IF LPAREN Condition RPAREN Statement ELSE Statement
-				|
-				(IfSingleStatement) IF LPAREN Condition RPAREN Statement
-				|
-				(DoWhileSingleStatement) DO Statement WHILE LPAREN Condition RPAREN SEMI
-				|
-				(BreakSingleStatement) BREAK SEMI
-				|
-				(ContinueSingleStatement) CONTINUE SEMI
-				|
-				(ReturnExprSingleStatement) RETURN Expr SEMI
-				|
-				(ReturnSingleStatement) RETURN SEMI
-				|
-				(ReadSingleStatement) READ LPAREN Designator RPAREN SEMI
-				|
-				(PrintNumberSingleStatement) PRINT LPAREN Expr COMMA NUMBER RPAREN SEMI
-				|
-				(PrintSingleStatement) PRINT LPAREN Expr RPAREN SEMI
-				|
-				(GotoSingleStatement) GOTO Label SEMI
+				/* epsilon */
 				;
 				
-Statements		::= (Statements) LBRACE StatementList RBRACE;
+ConstructorDecl	::= IDENT LPAREN RPAREN VarDeclWrapper LBRACE StatementList RBRACE;
 
-DesignatorStatement ::= (DesStmAssign) Designator Assignop Expr
+Statement		::= Label COLON SingleStatement
+				|
+				SingleStatement
+				|
+				Statements
+				;
+				
+Label			::= IDENT;
+
+SingleStatement	::= DesignatorStatement SEMI
+				|
+				IF LPAREN Condition RPAREN Statement ELSE Statement
+				|
+				IF LPAREN Condition RPAREN Statement
+				|
+				DO Statement WHILE LPAREN Condition RPAREN SEMI
+				|
+				BREAK SEMI
+				|
+				CONTINUE SEMI
+				|
+				RETURN Expr SEMI
+				|
+				RETURN SEMI
+				|
+				READ LPAREN Designator RPAREN SEMI
+				|
+				PRINT LPAREN Expr COMMA NUMBER RPAREN SEMI
+				|
+				PRINT LPAREN Expr RPAREN SEMI
+				|
+				GOTO Label SEMI
+				;
+				
+Statements		::= LBRACE StatementList RBRACE;
+
+DesignatorStatement ::= Designator Assignop Expr
 					|
-					(DesStmFuncParams) Designator LPAREN ActPars RPAREN
+					Designator LPAREN ActPars RPAREN
 					|
-					(DesStmFunc) Designator LPAREN RPAREN
+					Designator LPAREN RPAREN
 					|
-					(DesStmInc) Designator INC
+					Designator INC
 					|
-					(DesStmDec) Designator DEC
+					Designator DEC
 					;
 					
-Condition		::= (MultipleCondition) Condition OR CondTerm
+Condition		::= Condition OR CondTerm
 				|
-				(SingleCondition) CondTerm
+				CondTerm
 				;
 								
-Expr			::= (MultipleExprNegative) MINUS Expr Addop Term
+Expr			::= MINUS Expr Addop Term
 				|
-				(MultipleExpr) Expr Addop Term
+				Expr Addop Term
 				|
-				(SingleExpr)Term
+				Term
 				|
-				(SingleExprNegative) MINUS Term
+				MINUS Term
 				;
 				
-Designator		::= (DesignatorDot) IDENT DOT Designator
+Designator		::= IDENT DOT Designator
 				|
-				(DesignatorWithArr) IDENT DesignatorArray
+				IDENT DesignatorArray
+				|
+				LSQBR Expr RSQBR
+				|
+				IDENT
 				;
 	
-DesignatorArray ::= (DesigArr) DesignatorArray LSQBR Expr RSQBR
+DesignatorArray ::= DesignatorArray LSQBR Expr RSQBR
 				|
-				(NoDesgArr) /* epsilon */
+				/* epsilon */
 				;
 				
-Assignop		::= (Assignop) EQUAL;
+Assignop		::= EQUAL;
 
-ActPars			::= (MulActPars) ActPars COMMA Expr
+ActPars			::= ActPars COMMA Expr
 				|
-				(SingleActPar) Expr
-				;
-
-CondTerm		::= (MulCondTerm) CondTerm AND CondFact
-				|
-				(SingleCondTerm) CondFact
+				Expr
 				;
 
-Term			::= (MultipleTerms) Term Mulop Factor
+CondTerm		::= CondTerm AND CondFact
 				|
-				(SingleTerm) Factor
+				CondFact
+				;
+
+Term			::= Term Mulop Factor
+				|
+				Factor
 				;
 				
-CondFact		::= (CondFactExpr) Expr
+CondFact		::= Expr
 				|
-				(CondFactRelop) Expr Relop Expr
+				Expr Relop Expr
 				;
 				
-Mulop			::= (Multiply) MUL
+Mulop			::= MUL
 				|
-				(Divide) DIV
+				DIV
 				|
-				(Mod) MOD
+				MOD
 				;
 				
-Factor			::= (NormalFactor) Designator
+Factor			::= Designator
 				|
-				(FactorWithActPars) Designator LPAREN ActPars RPAREN
+				Designator LPAREN ActPars RPAREN
 				|
-				(FactorWithoutActPars) Designator LPAREN RPAREN
+				Designator LPAREN RPAREN
 				|
-				(Num) NUMBER
+				NUMBER
 				|
-				(Char) CHAR
+				CHAR
 				|
-				(Bool) BOOL
+				BOOL
 				|
-				(NewFactor) NEW Type
+				NEW Type
 				|
-				(NewFactorWithPars) NEW Type LSQBR Expr RSQBR
+				NEW Type LSQBR Expr RSQBR
 				|
-				(FactorWithExpr) LPAREN Expr RPAREN
+				LPAREN Expr RPAREN
 				;
 				
-Relop			::= (Equals) EQEQ
+Relop			::= EQEQ
 				|
-				(NotEqual) NOTEQUAL
+				NOTEQUAL
 				|
-				(GreaterThan) GT
+				GT
 				|
-				(GreaterOrEqual) GTE
+				GTE
 				|
-				(LessThan) LT
+				LT
 				|
-				(LessOrEqual) LTE
+				LTE
 				;
 
 				
