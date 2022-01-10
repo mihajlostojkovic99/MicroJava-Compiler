@@ -72,11 +72,6 @@ nonterminal ConstructorDecl;
 nonterminal FormPar;
 nonterminal Statement, SingleStatement, Statements;
 nonterminal DesignatorStatement, Condition, Expr, Designator;
-nonterminal Assignop, ActPars;
-nonterminal CondTerm;
-nonterminal Addop, Term;
-nonterminal DesignatorArray;
-nonterminal CondFact;
 
 Program 		::= (Program) PROG IDENT List LBRACE MethodDeclList RBRACE;
 
@@ -204,56 +199,5 @@ SingleStatement	::= DesignatorStatement SEMI
 				;
 				
 Statements		::= LBRACE StatementList RBRACE;
-
-DesignatorStatement ::= Designator Assignop Expr
-					|
-					Designator LPAREN ActPars RPAREN
-					|
-					Designator LPAREN RPAREN
-					|
-					Designator INC
-					|
-					Designator DEC
-					;
-					
-Condition		::= Condition OR CondTerm
-				|
-				CondTerm
-				;
-								
-Expr			::= MINUS Expr Addop Term
-				|
-				Expr Addop Term
-				|
-				Term
-				|
-				MINUS Term
-				;
-				
-Designator		::= IDENT DOT Designator
-				|
-				IDENT DesignatorArray
-				|
-				LSQBR Expr RSQBR
-				|
-				IDENT
-				;
-	
-DesignatorArray ::= DesignatorArray LSQBR Expr RSQBR
-				|
-				/* epsilon */
-				;
-				
-Assignop		::= EQUAL;
-
-ActPars			::= ActPars COMMA Expr
-				|
-				Expr
-				;
-
-CondTerm		::= CondTerm AND CondFact
-				|
-				CondFact
-				;
 				
 				
