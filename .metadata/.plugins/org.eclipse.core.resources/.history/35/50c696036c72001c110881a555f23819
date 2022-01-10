@@ -32,17 +32,6 @@ program p
 {
 	void main() {
 		testObject = new B[c + d];
-		a = testObject.testingMore() % 10;
-		b = testObject.b[5];
-		
-		if (a >= testObject.testingMore() - testObject.b[0] && c == d) B.putp(a, b);
-		else a = help(a, b);
-	}
-	
-	int help(int a, int b) {
-		a = 'f' + 'u' + 'c' + 'k';
-		b = 't'*'h'*'i'*'s';
-		return a * 5 - b;
 	}
 	
 }

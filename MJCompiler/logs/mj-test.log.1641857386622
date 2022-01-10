@@ -1,285 +1,281 @@
-INFO  00:30:50,353 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  00:30:50,397 - #2 program
-INFO  00:30:50,398 - #50 p
-INFO  00:30:50,398 - #7 const
-INFO  00:30:50,398 - #50 int
-INFO  00:30:50,398 - #50 size
-INFO  00:30:50,399 - #35 =
-INFO  00:30:50,399 - #48 10
-INFO  00:30:50,399 - #38 ;
-INFO  00:30:50,399 - #50 int
-INFO  00:30:50,400 - #50 a
-INFO  00:30:50,400 - #40 ,
-INFO  00:30:50,400 - #50 b
-INFO  00:30:50,400 - #38 ;
-INFO  00:30:50,401 - #50 int
-INFO  00:30:50,401 - #50 c
-INFO  00:30:50,401 - #38 ;
-INFO  00:30:50,401 - #4 class
-INFO  00:30:50,402 - #50 A
-INFO  00:30:50,402 - #46 {
-INFO  00:30:50,402 - #47 }
-INFO  00:30:50,402 - #4 class
-INFO  00:30:50,402 - #50 B
-INFO  00:30:50,403 - #16 extends
-INFO  00:30:50,403 - #50 A
-INFO  00:30:50,403 - #46 {
-INFO  00:30:50,403 - #50 int
-INFO  00:30:50,403 - #50 a
-INFO  00:30:50,403 - #40 ,
-INFO  00:30:50,403 - #50 b
-INFO  00:30:50,403 - #44 [
-INFO  00:30:50,403 - #45 ]
-INFO  00:30:50,403 - #38 ;
-INFO  00:30:50,403 - #50 string
-INFO  00:30:50,404 - #50 s
-INFO  00:30:50,404 - #38 ;
-INFO  00:30:50,404 - #46 {
-INFO  00:30:50,404 - #15 void
-INFO  00:30:50,405 - #50 putp
-INFO  00:30:50,405 - #42 (
-INFO  00:30:50,405 - #50 int
-INFO  00:30:50,405 - #50 a
-INFO  00:30:50,405 - #40 ,
-INFO  00:30:50,405 - #50 int
-INFO  00:30:50,405 - #50 idx
-INFO  00:30:50,405 - #43 )
-INFO  00:30:50,405 - #46 {
-INFO  00:30:50,406 - #47 }
-INFO  00:30:50,406 - #50 int
-INFO  00:30:50,406 - #50 testingMore
-INFO  00:30:50,407 - #42 (
-INFO  00:30:50,407 - #43 )
-INFO  00:30:50,407 - #50 float
-INFO  00:30:50,407 - #50 random
-INFO  00:30:50,407 - #38 ;
-INFO  00:30:50,407 - #46 {
-INFO  00:30:50,407 - #50 random
-INFO  00:30:50,407 - #35 =
-INFO  00:30:50,408 - #50 a
-INFO  00:30:50,409 - #41 .
-INFO  00:30:50,409 - #50 fetchRandomTest
-INFO  00:30:50,409 - #42 (
-INFO  00:30:50,409 - #43 )
-INFO  00:30:50,409 - #24 *
-INFO  00:30:50,409 - #48 100
-INFO  00:30:50,410 - #22 +
-INFO  00:30:50,411 - #48 1
-INFO  00:30:50,412 - #38 ;
-INFO  00:30:50,412 - #50 random
-INFO  00:30:50,412 - #36 ++
-INFO  00:30:50,420 - #38 ;
-INFO  00:30:50,420 - #8 if
-INFO  00:30:50,420 - #42 (
-INFO  00:30:50,420 - #50 random
-INFO  00:30:50,420 - #29 >
-INFO  00:30:50,420 - #48 25
-INFO  00:30:50,421 - #24 *
-INFO  00:30:50,421 - #48 2
-INFO  00:30:50,421 - #33 &&
-INFO  00:30:50,422 - #50 random
-INFO  00:30:50,422 - #32 <=
-INFO  00:30:50,422 - #48 1
-INFO  00:30:50,422 - #22 +
-INFO  00:30:50,422 - #48 50
-INFO  00:30:50,422 - #24 *
-INFO  00:30:50,422 - #48 2
-INFO  00:30:50,423 - #43 )
-INFO  00:30:50,423 - #46 {
-INFO  00:30:50,423 - #9 do
-INFO  00:30:50,423 - #46 {
-INFO  00:30:50,423 - #50 random
-INFO  00:30:50,423 - #35 =
-INFO  00:30:50,423 - #50 random
-INFO  00:30:50,423 - #23 -
-INFO  00:30:50,423 - #48 1
-INFO  00:30:50,424 - #38 ;
-INFO  00:30:50,424 - #8 if
-INFO  00:30:50,424 - #42 (
-INFO  00:30:50,424 - #50 WorldTime
-INFO  00:30:50,424 - #41 .
-INFO  00:30:50,424 - #50 currentTime
-INFO  00:30:50,424 - #44 [
-INFO  00:30:50,424 - #50 Today
-INFO  00:30:50,424 - #45 ]
-INFO  00:30:50,424 - #27 ==
-INFO  00:30:50,424 - #50 Late
-INFO  00:30:50,425 - #43 )
-INFO  00:30:50,425 - #17 continue
-INFO  00:30:50,425 - #38 ;
-INFO  00:30:50,425 - #47 }
-INFO  00:30:50,425 - #10 while
-INFO  00:30:50,426 - #42 (
-INFO  00:30:50,426 - #50 random
-INFO  00:30:50,426 - #28 !=
-INFO  00:30:50,426 - #48 0
-INFO  00:30:50,427 - #43 )
-INFO  00:30:50,427 - #38 ;
-INFO  00:30:50,427 - #3 break
-INFO  00:30:50,427 - #38 ;
-INFO  00:30:50,427 - #50 loop
-INFO  00:30:50,427 - #39 :
-INFO  00:30:50,428 - #9 do
-INFO  00:30:50,428 - #50 random
-INFO  00:30:50,428 - #36 ++
-INFO  00:30:50,428 - #38 ;
-INFO  00:30:50,428 - #10 while
-INFO  00:30:50,428 - #42 (
-INFO  00:30:50,428 - #50 random
-INFO  00:30:50,428 - #31 <
-INFO  00:30:50,428 - #48 50
-INFO  00:30:50,429 - #43 )
-INFO  00:30:50,429 - #38 ;
-INFO  00:30:50,429 - #47 }
-INFO  00:30:50,429 - #6 else
-INFO  00:30:50,429 - #20 goto
-INFO  00:30:50,429 - #50 loop
-INFO  00:30:50,429 - #38 ;
-INFO  00:30:50,429 - #12 print
-INFO  00:30:50,430 - #42 (
-INFO  00:30:50,430 - #23 -
-INFO  00:30:50,430 - #50 b
-INFO  00:30:50,430 - #44 [
-INFO  00:30:50,430 - #48 5
-INFO  00:30:50,430 - #45 ]
-INFO  00:30:50,430 - #40 ,
-INFO  00:30:50,430 - #48 10
-INFO  00:30:50,430 - #43 )
-INFO  00:30:50,430 - #38 ;
-INFO  00:30:50,430 - #14 return
-INFO  00:30:50,430 - #50 random
-INFO  00:30:50,430 - #38 ;
-INFO  00:30:50,430 - #47 }
-INFO  00:30:50,430 - #47 }
-INFO  00:30:50,431 - #47 }
-INFO  00:30:50,431 - #50 float
-INFO  00:30:50,431 - #50 c
-INFO  00:30:50,431 - #40 ,
-INFO  00:30:50,431 - #50 d
-INFO  00:30:50,431 - #38 ;
-INFO  00:30:50,431 - #21 record
-INFO  00:30:50,431 - #50 r
-INFO  00:30:50,431 - #46 {
-INFO  00:30:50,432 - #47 }
-INFO  00:30:50,432 - #50 B
-INFO  00:30:50,434 - #50 testObject
-INFO  00:30:50,434 - #38 ;
-INFO  00:30:50,434 - #46 {
-INFO  00:30:50,434 - #15 void
-INFO  00:30:50,434 - #50 main
-INFO  00:30:50,435 - #42 (
-INFO  00:30:50,435 - #43 )
-INFO  00:30:50,435 - #46 {
-INFO  00:30:50,435 - #50 testObject
-INFO  00:30:50,435 - #35 =
-INFO  00:30:50,435 - #11 new
-INFO  00:30:50,435 - #50 B
-INFO  00:30:50,435 - #44 [
-INFO  00:30:50,435 - #50 c
-INFO  00:30:50,435 - #22 +
-INFO  00:30:50,436 - #50 d
-INFO  00:30:50,436 - #45 ]
-INFO  00:30:50,436 - #38 ;
-INFO  00:30:50,436 - #50 a
-INFO  00:30:50,436 - #35 =
-INFO  00:30:50,436 - #50 testObject
-INFO  00:30:50,437 - #41 .
-INFO  00:30:50,437 - #50 testingMore
-INFO  00:30:50,437 - #42 (
-INFO  00:30:50,437 - #43 )
-INFO  00:30:50,437 - #26 %
-INFO  00:30:50,437 - #48 10
-INFO  00:30:50,438 - #38 ;
-INFO  00:30:50,438 - #50 b
-INFO  00:30:50,438 - #35 =
-INFO  00:30:50,438 - #50 testObject
-INFO  00:30:50,439 - #41 .
-INFO  00:30:50,439 - #50 b
-INFO  00:30:50,439 - #44 [
-INFO  00:30:50,439 - #48 5
-INFO  00:30:50,439 - #45 ]
-INFO  00:30:50,439 - #38 ;
-INFO  00:30:50,439 - #8 if
-INFO  00:30:50,439 - #42 (
-INFO  00:30:50,439 - #50 a
-INFO  00:30:50,439 - #30 >=
-INFO  00:30:50,440 - #50 testObject
-INFO  00:30:50,440 - #41 .
-INFO  00:30:50,440 - #50 testingMore
-INFO  00:30:50,440 - #42 (
-INFO  00:30:50,440 - #43 )
-INFO  00:30:50,440 - #23 -
-INFO  00:30:50,440 - #50 testObject
-INFO  00:30:50,440 - #41 .
-INFO  00:30:50,440 - #50 b
-INFO  00:30:50,441 - #44 [
-INFO  00:30:50,441 - #48 0
-INFO  00:30:50,441 - #45 ]
-INFO  00:30:50,441 - #33 &&
-INFO  00:30:50,441 - #50 c
-INFO  00:30:50,441 - #27 ==
-INFO  00:30:50,441 - #50 d
-INFO  00:30:50,441 - #43 )
-INFO  00:30:50,441 - #50 B
-INFO  00:30:50,441 - #41 .
-INFO  00:30:50,441 - #50 putp
-INFO  00:30:50,441 - #42 (
-INFO  00:30:50,441 - #50 a
-INFO  00:30:50,441 - #40 ,
-INFO  00:30:50,442 - #50 b
-INFO  00:30:50,442 - #43 )
-INFO  00:30:50,442 - #38 ;
-INFO  00:30:50,442 - #6 else
-INFO  00:30:50,442 - #50 a
-INFO  00:30:50,442 - #35 =
-INFO  00:30:50,442 - #50 help
-INFO  00:30:50,442 - #42 (
-INFO  00:30:50,442 - #50 a
-INFO  00:30:50,442 - #40 ,
-INFO  00:30:50,442 - #50 b
-INFO  00:30:50,442 - #43 )
-INFO  00:30:50,442 - #38 ;
-INFO  00:30:50,443 - #47 }
-INFO  00:30:50,443 - #50 int
-INFO  00:30:50,443 - #50 help
-INFO  00:30:50,443 - #42 (
-INFO  00:30:50,443 - #50 int
-INFO  00:30:50,443 - #50 a
-INFO  00:30:50,443 - #40 ,
-INFO  00:30:50,443 - #50 int
-INFO  00:30:50,443 - #50 b
-INFO  00:30:50,443 - #43 )
-INFO  00:30:50,443 - #46 {
-INFO  00:30:50,443 - #50 a
-INFO  00:30:50,443 - #35 =
-INFO  00:30:50,443 - #51 f
-INFO  00:30:50,443 - #22 +
-INFO  00:30:50,444 - #51 u
-INFO  00:30:50,444 - #22 +
-INFO  00:30:50,444 - #51 c
-INFO  00:30:50,444 - #22 +
-INFO  00:30:50,444 - #51 k
-INFO  00:30:50,444 - #38 ;
-INFO  00:30:50,444 - #50 b
-INFO  00:30:50,444 - #35 =
-INFO  00:30:50,444 - #51 t
-INFO  00:30:50,444 - #24 *
-INFO  00:30:50,445 - #51 h
-INFO  00:30:50,445 - #24 *
-INFO  00:30:50,445 - #51 i
-INFO  00:30:50,445 - #24 *
-INFO  00:30:50,445 - #51 s
-INFO  00:30:50,445 - #38 ;
-INFO  00:30:50,446 - #14 return
-INFO  00:30:50,447 - #50 a
-INFO  00:30:50,447 - #24 *
-INFO  00:30:50,447 - #48 5
-INFO  00:30:50,447 - #23 -
-INFO  00:30:50,447 - #50 b
-INFO  00:30:50,447 - #38 ;
-INFO  00:30:50,447 - #47 }
-INFO  00:30:50,447 - #47 }
-INFO  00:30:50,452 - Program(
+INFO  00:29:10,880 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  00:29:10,923 - #2 program
+INFO  00:29:10,923 - #50 p
+INFO  00:29:10,923 - #7 const
+INFO  00:29:10,923 - #50 int
+INFO  00:29:10,923 - #50 size
+INFO  00:29:10,924 - #35 =
+INFO  00:29:10,924 - #48 10
+INFO  00:29:10,924 - #38 ;
+INFO  00:29:10,924 - #50 int
+INFO  00:29:10,925 - #50 a
+INFO  00:29:10,925 - #40 ,
+INFO  00:29:10,925 - #50 b
+INFO  00:29:10,925 - #38 ;
+INFO  00:29:10,925 - #50 int
+INFO  00:29:10,926 - #50 c
+INFO  00:29:10,926 - #38 ;
+INFO  00:29:10,926 - #4 class
+INFO  00:29:10,926 - #50 A
+INFO  00:29:10,927 - #46 {
+INFO  00:29:10,927 - #47 }
+INFO  00:29:10,927 - #4 class
+INFO  00:29:10,927 - #50 B
+INFO  00:29:10,929 - #16 extends
+INFO  00:29:10,929 - #50 A
+INFO  00:29:10,929 - #46 {
+INFO  00:29:10,929 - #50 int
+INFO  00:29:10,929 - #50 a
+INFO  00:29:10,929 - #40 ,
+INFO  00:29:10,929 - #50 b
+INFO  00:29:10,929 - #44 [
+INFO  00:29:10,929 - #45 ]
+INFO  00:29:10,929 - #38 ;
+INFO  00:29:10,929 - #50 string
+INFO  00:29:10,929 - #50 s
+INFO  00:29:10,930 - #38 ;
+INFO  00:29:10,930 - #46 {
+INFO  00:29:10,930 - #15 void
+INFO  00:29:10,931 - #50 putp
+INFO  00:29:10,931 - #42 (
+INFO  00:29:10,931 - #50 int
+INFO  00:29:10,931 - #50 a
+INFO  00:29:10,931 - #40 ,
+INFO  00:29:10,931 - #50 int
+INFO  00:29:10,931 - #50 idx
+INFO  00:29:10,931 - #43 )
+INFO  00:29:10,931 - #46 {
+INFO  00:29:10,932 - #47 }
+INFO  00:29:10,932 - #50 int
+INFO  00:29:10,933 - #50 testingMore
+INFO  00:29:10,933 - #42 (
+INFO  00:29:10,933 - #43 )
+INFO  00:29:10,933 - #50 float
+INFO  00:29:10,933 - #50 random
+INFO  00:29:10,933 - #38 ;
+INFO  00:29:10,933 - #46 {
+INFO  00:29:10,933 - #50 random
+INFO  00:29:10,933 - #35 =
+INFO  00:29:10,934 - #50 a
+INFO  00:29:10,935 - #41 .
+INFO  00:29:10,935 - #50 fetchRandomTest
+INFO  00:29:10,935 - #42 (
+INFO  00:29:10,935 - #43 )
+INFO  00:29:10,936 - #24 *
+INFO  00:29:10,936 - #48 100
+INFO  00:29:10,937 - #22 +
+INFO  00:29:10,938 - #48 1
+INFO  00:29:10,939 - #38 ;
+INFO  00:29:10,939 - #50 random
+INFO  00:29:10,940 - #36 ++
+INFO  00:29:10,947 - #38 ;
+INFO  00:29:10,947 - #8 if
+INFO  00:29:10,947 - #42 (
+INFO  00:29:10,947 - #50 random
+INFO  00:29:10,947 - #29 >
+INFO  00:29:10,947 - #48 25
+INFO  00:29:10,948 - #24 *
+INFO  00:29:10,948 - #48 2
+INFO  00:29:10,948 - #33 &&
+INFO  00:29:10,949 - #50 random
+INFO  00:29:10,949 - #32 <=
+INFO  00:29:10,949 - #48 1
+INFO  00:29:10,949 - #22 +
+INFO  00:29:10,949 - #48 50
+INFO  00:29:10,949 - #24 *
+INFO  00:29:10,949 - #48 2
+INFO  00:29:10,950 - #43 )
+INFO  00:29:10,950 - #46 {
+INFO  00:29:10,950 - #9 do
+INFO  00:29:10,950 - #46 {
+INFO  00:29:10,950 - #50 random
+INFO  00:29:10,950 - #35 =
+INFO  00:29:10,950 - #50 random
+INFO  00:29:10,950 - #23 -
+INFO  00:29:10,950 - #48 1
+INFO  00:29:10,951 - #38 ;
+INFO  00:29:10,951 - #8 if
+INFO  00:29:10,951 - #42 (
+INFO  00:29:10,951 - #50 WorldTime
+INFO  00:29:10,951 - #41 .
+INFO  00:29:10,951 - #50 currentTime
+INFO  00:29:10,951 - #44 [
+INFO  00:29:10,951 - #50 Today
+INFO  00:29:10,951 - #45 ]
+INFO  00:29:10,951 - #27 ==
+INFO  00:29:10,951 - #50 Late
+INFO  00:29:10,952 - #43 )
+INFO  00:29:10,952 - #17 continue
+INFO  00:29:10,952 - #38 ;
+INFO  00:29:10,952 - #47 }
+INFO  00:29:10,953 - #10 while
+INFO  00:29:10,954 - #42 (
+INFO  00:29:10,954 - #50 random
+INFO  00:29:10,954 - #28 !=
+INFO  00:29:10,954 - #48 0
+INFO  00:29:10,954 - #43 )
+INFO  00:29:10,954 - #38 ;
+INFO  00:29:10,955 - #3 break
+INFO  00:29:10,955 - #38 ;
+INFO  00:29:10,955 - #50 loop
+INFO  00:29:10,955 - #39 :
+INFO  00:29:10,956 - #9 do
+INFO  00:29:10,956 - #50 random
+INFO  00:29:10,956 - #36 ++
+INFO  00:29:10,956 - #38 ;
+INFO  00:29:10,956 - #10 while
+INFO  00:29:10,956 - #42 (
+INFO  00:29:10,956 - #50 random
+INFO  00:29:10,956 - #31 <
+INFO  00:29:10,956 - #48 50
+INFO  00:29:10,957 - #43 )
+INFO  00:29:10,957 - #38 ;
+INFO  00:29:10,957 - #47 }
+INFO  00:29:10,957 - #6 else
+INFO  00:29:10,957 - #20 goto
+INFO  00:29:10,957 - #50 loop
+INFO  00:29:10,957 - #38 ;
+INFO  00:29:10,957 - #12 print
+INFO  00:29:10,957 - #42 (
+INFO  00:29:10,957 - #23 -
+INFO  00:29:10,957 - #50 b
+INFO  00:29:10,957 - #44 [
+INFO  00:29:10,957 - #48 5
+INFO  00:29:10,957 - #45 ]
+INFO  00:29:10,958 - #40 ,
+INFO  00:29:10,958 - #48 10
+INFO  00:29:10,958 - #43 )
+INFO  00:29:10,958 - #38 ;
+INFO  00:29:10,958 - #14 return
+INFO  00:29:10,958 - #50 random
+INFO  00:29:10,958 - #38 ;
+INFO  00:29:10,958 - #47 }
+INFO  00:29:10,958 - #47 }
+INFO  00:29:10,958 - #47 }
+INFO  00:29:10,958 - #50 float
+INFO  00:29:10,958 - #50 c
+INFO  00:29:10,959 - #40 ,
+INFO  00:29:10,959 - #50 d
+INFO  00:29:10,959 - #38 ;
+INFO  00:29:10,959 - #21 record
+INFO  00:29:10,959 - #50 r
+INFO  00:29:10,959 - #46 {
+INFO  00:29:10,959 - #47 }
+INFO  00:29:10,959 - #50 B
+INFO  00:29:10,960 - #50 testObject
+INFO  00:29:10,960 - #38 ;
+INFO  00:29:10,960 - #46 {
+INFO  00:29:10,960 - #15 void
+INFO  00:29:10,960 - #50 main
+INFO  00:29:10,960 - #42 (
+INFO  00:29:10,960 - #43 )
+INFO  00:29:10,960 - #46 {
+INFO  00:29:10,960 - #50 testObject
+INFO  00:29:10,960 - #35 =
+INFO  00:29:10,960 - #11 new
+INFO  00:29:10,960 - #50 B
+INFO  00:29:10,961 - #44 [
+INFO  00:29:10,961 - #50 c
+INFO  00:29:10,961 - #22 +
+INFO  00:29:10,961 - #50 d
+INFO  00:29:10,961 - #45 ]
+INFO  00:29:10,961 - #38 ;
+INFO  00:29:10,961 - #50 a
+INFO  00:29:10,961 - #35 =
+INFO  00:29:10,961 - #50 testObject
+INFO  00:29:10,961 - #41 .
+INFO  00:29:10,961 - #50 testingMore
+INFO  00:29:10,961 - #42 (
+INFO  00:29:10,961 - #43 )
+INFO  00:29:10,962 - #26 %
+INFO  00:29:10,962 - #48 10
+INFO  00:29:10,962 - #38 ;
+INFO  00:29:10,962 - #50 b
+INFO  00:29:10,962 - #35 =
+INFO  00:29:10,962 - #50 testObject
+INFO  00:29:10,962 - #41 .
+INFO  00:29:10,962 - #50 b
+INFO  00:29:10,962 - #44 [
+INFO  00:29:10,962 - #48 5
+INFO  00:29:10,963 - #45 ]
+INFO  00:29:10,963 - #38 ;
+INFO  00:29:10,963 - #8 if
+INFO  00:29:10,963 - #42 (
+INFO  00:29:10,963 - #50 a
+INFO  00:29:10,963 - #30 >=
+INFO  00:29:10,963 - #50 testObject
+INFO  00:29:10,963 - #41 .
+INFO  00:29:10,963 - #50 testingMore
+INFO  00:29:10,963 - #42 (
+INFO  00:29:10,963 - #43 )
+INFO  00:29:10,963 - #23 -
+INFO  00:29:10,963 - #50 testObject
+INFO  00:29:10,963 - #41 .
+INFO  00:29:10,963 - #50 b
+INFO  00:29:10,964 - #44 [
+INFO  00:29:10,964 - #48 0
+INFO  00:29:10,964 - #45 ]
+INFO  00:29:10,964 - #43 )
+INFO  00:29:10,964 - #50 B
+INFO  00:29:10,964 - #41 .
+INFO  00:29:10,964 - #50 putp
+INFO  00:29:10,964 - #42 (
+INFO  00:29:10,964 - #50 a
+INFO  00:29:10,964 - #40 ,
+INFO  00:29:10,964 - #50 b
+INFO  00:29:10,964 - #43 )
+INFO  00:29:10,964 - #38 ;
+INFO  00:29:10,964 - #6 else
+INFO  00:29:10,964 - #50 a
+INFO  00:29:10,964 - #35 =
+INFO  00:29:10,964 - #50 help
+INFO  00:29:10,964 - #42 (
+INFO  00:29:10,964 - #50 a
+INFO  00:29:10,964 - #40 ,
+INFO  00:29:10,965 - #50 b
+INFO  00:29:10,965 - #43 )
+INFO  00:29:10,965 - #38 ;
+INFO  00:29:10,965 - #47 }
+INFO  00:29:10,965 - #50 int
+INFO  00:29:10,965 - #50 help
+INFO  00:29:10,965 - #42 (
+INFO  00:29:10,965 - #50 int
+INFO  00:29:10,965 - #50 a
+INFO  00:29:10,965 - #40 ,
+INFO  00:29:10,965 - #50 int
+INFO  00:29:10,965 - #50 b
+INFO  00:29:10,965 - #43 )
+INFO  00:29:10,965 - #46 {
+INFO  00:29:10,965 - #50 a
+INFO  00:29:10,965 - #35 =
+INFO  00:29:10,965 - #51 f
+INFO  00:29:10,965 - #22 +
+INFO  00:29:10,965 - #51 u
+INFO  00:29:10,965 - #22 +
+INFO  00:29:10,966 - #51 c
+INFO  00:29:10,966 - #22 +
+INFO  00:29:10,966 - #51 k
+INFO  00:29:10,966 - #38 ;
+INFO  00:29:10,966 - #50 b
+INFO  00:29:10,966 - #35 =
+INFO  00:29:10,966 - #51 t
+INFO  00:29:10,966 - #24 *
+INFO  00:29:10,966 - #51 h
+INFO  00:29:10,966 - #24 *
+INFO  00:29:10,966 - #51 i
+INFO  00:29:10,966 - #24 *
+INFO  00:29:10,966 - #51 s
+INFO  00:29:10,966 - #38 ;
+INFO  00:29:10,966 - #14 return
+INFO  00:29:10,966 - #50 a
+INFO  00:29:10,966 - #24 *
+INFO  00:29:10,966 - #48 5
+INFO  00:29:10,966 - #23 -
+INFO  00:29:10,966 - #50 b
+INFO  00:29:10,966 - #38 ;
+INFO  00:29:10,967 - #47 }
+INFO  00:29:10,967 - #47 }
+INFO  00:29:10,972 - Program(
  p
   ListVar(
     ListRecord(
@@ -1011,75 +1007,13 @@ INFO  00:30:50,452 - Program(
           StatementWithSingleStatement(
             IfElseSingleStatement(
               SingleCondition(
-                MulCondTerm(
-                  SingleCondTerm(
-                    CondFactRelop(
-                      ExprPositive(
-                        SingleTerm(
-                          NormalFactor(
-                            DesignatorWithArr(
-                             a
-                              NoDesgArr(
-                              ) [NoDesgArr]
-                            ) [DesignatorWithArr]
-                          ) [NormalFactor]
-                        ) [SingleTerm]
-                        NoMoreExpr(
-                        ) [NoMoreExpr]
-                      ) [ExprPositive]
-                      GreaterOrEqual(
-                      ) [GreaterOrEqual]
-                      ExprPositive(
-                        SingleTerm(
-                          FactorWithoutActPars(
-                            DesignatorDot(
-                             testObject
-                              DesignatorWithArr(
-                               testingMore
-                                NoDesgArr(
-                                ) [NoDesgArr]
-                              ) [DesignatorWithArr]
-                            ) [DesignatorDot]
-                          ) [FactorWithoutActPars]
-                        ) [SingleTerm]
-                        ThereIsMoreExpr(
-                          NoMoreExpr(
-                          ) [NoMoreExpr]
-                          Minus(
-                          ) [Minus]
-                          SingleTerm(
-                            NormalFactor(
-                              DesignatorDot(
-                               testObject
-                                DesignatorWithArr(
-                                 b
-                                  DesigArr(
-                                    NoDesgArr(
-                                    ) [NoDesgArr]
-                                    ExprPositive(
-                                      SingleTerm(
-                                        Num(
-                                         0
-                                        ) [Num]
-                                      ) [SingleTerm]
-                                      NoMoreExpr(
-                                      ) [NoMoreExpr]
-                                    ) [ExprPositive]
-                                  ) [DesigArr]
-                                ) [DesignatorWithArr]
-                              ) [DesignatorDot]
-                            ) [NormalFactor]
-                          ) [SingleTerm]
-                        ) [ThereIsMoreExpr]
-                      ) [ExprPositive]
-                    ) [CondFactRelop]
-                  ) [SingleCondTerm]
+                SingleCondTerm(
                   CondFactRelop(
                     ExprPositive(
                       SingleTerm(
                         NormalFactor(
                           DesignatorWithArr(
-                           c
+                           a
                             NoDesgArr(
                             ) [NoDesgArr]
                           ) [DesignatorWithArr]
@@ -1088,23 +1022,53 @@ INFO  00:30:50,452 - Program(
                       NoMoreExpr(
                       ) [NoMoreExpr]
                     ) [ExprPositive]
-                    Equals(
-                    ) [Equals]
+                    GreaterOrEqual(
+                    ) [GreaterOrEqual]
                     ExprPositive(
                       SingleTerm(
-                        NormalFactor(
-                          DesignatorWithArr(
-                           d
-                            NoDesgArr(
-                            ) [NoDesgArr]
-                          ) [DesignatorWithArr]
-                        ) [NormalFactor]
+                        FactorWithoutActPars(
+                          DesignatorDot(
+                           testObject
+                            DesignatorWithArr(
+                             testingMore
+                              NoDesgArr(
+                              ) [NoDesgArr]
+                            ) [DesignatorWithArr]
+                          ) [DesignatorDot]
+                        ) [FactorWithoutActPars]
                       ) [SingleTerm]
-                      NoMoreExpr(
-                      ) [NoMoreExpr]
+                      ThereIsMoreExpr(
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                        Minus(
+                        ) [Minus]
+                        SingleTerm(
+                          NormalFactor(
+                            DesignatorDot(
+                             testObject
+                              DesignatorWithArr(
+                               b
+                                DesigArr(
+                                  NoDesgArr(
+                                  ) [NoDesgArr]
+                                  ExprPositive(
+                                    SingleTerm(
+                                      Num(
+                                       0
+                                      ) [Num]
+                                    ) [SingleTerm]
+                                    NoMoreExpr(
+                                    ) [NoMoreExpr]
+                                  ) [ExprPositive]
+                                ) [DesigArr]
+                              ) [DesignatorWithArr]
+                            ) [DesignatorDot]
+                          ) [NormalFactor]
+                        ) [SingleTerm]
+                      ) [ThereIsMoreExpr]
                     ) [ExprPositive]
                   ) [CondFactRelop]
-                ) [MulCondTerm]
+                ) [SingleCondTerm]
               ) [SingleCondition]
               StatementWithSingleStatement(
                 DesignatorSingleStatement(
@@ -1374,5 +1338,5 @@ INFO  00:30:50,452 - Program(
     ) [MethDeclParams]
   ) [MethodDeclarations]
 ) [Program]
-INFO  00:30:50,463 - ===================================
-INFO  00:30:50,465 -  Program count calls = 1
+INFO  00:29:10,974 - ===================================
+INFO  00:29:10,976 -  Program count calls = 1
