@@ -52,12 +52,13 @@ scan with {:
 	return s;
 :}
 
-terminal PROG, IDENT, BREAK, CLASS, ENUM, ELSE, CONST, IF, DO, WHILE, NEW, PRINT, READ;
+terminal PROG, BREAK, CLASS, ENUM, ELSE, CONST, IF, DO, WHILE, NEW, PRINT, READ;
 terminal RETURN, VOID, EXTENDS, CONT, THIS, SUPER, GOTO, RECORD, PLUS, MINUS, MUL, DIV, MOD;
 terminal EQEQ, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, EQUAL, INC, DEC, SEMI, COLON, COMMA, DOT;
 terminal LPAREN, RPAREN, LSQBR, RSQBR, LBRACE, RBRACE;
 terminal Integer NUMBER;
-terminal Boolean BOOL;
+terminal String BOOL;
+terminal String IDENT
 terminal Character CHAR;
 
 nonterminal Program, List, MethodDeclList;
@@ -68,9 +69,8 @@ nonterminal VarDeclList, VarDecl;
 nonterminal ClassDecl;
 nonterminal RecordDecl;
 nonterminal FormPars, StatementList;
-nonterminal ConstructorDecl;
 nonterminal FormPar;
-nonterminal Statement, SingleStatement, Statements;
+nonterminal Statement, SingleStatement, Statements, Label;
 nonterminal DesignatorStatement, Condition, Expr, Designator;
 nonterminal Assignop, ActPars;
 nonterminal CondTerm;
@@ -184,7 +184,7 @@ SingleStatement	::= (DesignatorSingleStatement) DesignatorStatement SEMI
 				|
 				(BreakSingleStatement) BREAK SEMI
 				|
-				(ContinueSingleStatement) CONTINUE SEMI
+				(ContinueSingleStatement) CONT SEMI
 				|
 				(ReturnExprSingleStatement) RETURN Expr SEMI
 				|
@@ -224,6 +224,11 @@ Expr			::= (MultipleExprNegative) MINUS Expr Addop Term
 				(SingleExpr)Term
 				|
 				(SingleExprNegative) MINUS Term
+				;
+				
+Addop			::= (Plus) PLUS
+				|
+				(Minus) MINUS
 				;
 				
 Designator		::= (DesignatorDot) IDENT DOT Designator
