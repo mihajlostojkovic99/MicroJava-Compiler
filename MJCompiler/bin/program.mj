@@ -42,7 +42,7 @@ program p
 	int help(int a, int b) {
 		a = 'f' + 'u' + 'c' + 'k';
 		b = 't'*'h'*'i'*'s';
-		return a * 5 - b;
+		return new ItWorks[a * 5 - b];
 	}
 	
 }
