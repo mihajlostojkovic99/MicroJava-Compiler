@@ -72,7 +72,7 @@ nonterminal FormPars, StatementList;
 nonterminal FormPar;
 nonterminal Statement, SingleStatement, Statements, Label;
 nonterminal DesignatorStatement, Condition, Expr, ExprMore, Designator;
-nonterminal Assignop, ActPars;
+nonterminal Assignop, AssignWrapper, ActPars;
 nonterminal CondTerm;
 nonterminal Addop, Term;
 nonterminal DesignatorArray;
@@ -150,6 +150,12 @@ MethodDecl		::= (MethDeclParams) Type IDENT LPAREN FormPars RPAREN ListVarDeclWr
 				(MethDeclVoidParams) VOID IDENT LPAREN FormPars RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
 				|
 				(MethDeclVoidNoParams) VOID IDENT LPAREN RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
+				/*|
+				(MethDeclParamsError) Type IDENT LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
+				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				|
+				(MethDeclVoidParamsError) VOID IDENT LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
+				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}*/
 				;
 
 Type			::= (Type) IDENT;
@@ -173,6 +179,9 @@ FormPars		::= (FormParameters) FormPars COMMA FormPar
 FormPar			::= (FormalParameter) Type IDENT
 				|
 				(FormalParameterArray) Type IDENT LSQBR RSQBR
+				|
+				(FormalParameterError) error:l
+				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
 				;
 				
 StatementList	::= (StatementListExists) StatementList Statement
@@ -218,7 +227,7 @@ Statements		::= (Statements) LBRACE StatementList RBRACE;
 
 
 
-DesignatorStatement ::= (DesStmAssign) Designator Assignop Expr SEMI
+DesignatorStatement ::= (DesStmAssign) Designator AssignWrapper
 					|
 					(DesStmFuncParams) Designator LPAREN ActPars RPAREN SEMI
 					|
@@ -227,14 +236,14 @@ DesignatorStatement ::= (DesStmAssign) Designator Assignop Expr SEMI
 					(DesStmInc) Designator INC SEMI
 					|
 					(DesStmDec) Designator DEC SEMI
-					|
-					(AssignmentError) error SEMI:l
-					{: parser.report_error("Oporavak od greske! Too easy! Greska pri dodeli vrednosti! " + lleft, null); :}
 					;
 					
 Condition		::= (MultipleCondition) Condition OR CondTerm
 				|
 				(SingleCondition) CondTerm
+				|
+				(ConditionError) error:l
+				{: parser.report_error("Oporavak od greske! Too easy! Greska u if uslovu! " + lleft, null); :}
 				;
 								
 ExprMore		::= (ThereIsMoreExpr) ExprMore Addop Term
@@ -263,6 +272,17 @@ DesignatorArray ::= (DesigArr) DesignatorArray LSQBR Expr RSQBR
 				;
 				
 Assignop		::= (Assignop) EQUAL;
+
+/* 
+	ASSIGN WRAPPER JE POTENCIJALNO LOSA IDEJA ZA TRECU FAZU! AKO NE BUDE MOGLO VRATI ASSIGNOP U DESIGNATOR STATEMENT
+   	I STAVI SAMO U SINGLESTATEMENT ERROR SEMI :( 
+ */
+
+AssignWrapper	::= (AssignWrap) Assignop Expr SEMI
+				|
+				(AssignWrapperError) error SEMI:l
+				{: parser.report_error("Oporavak od greske! Too easy! Greska pri dodeli vrednosti! " + lleft, null); :}
+				;
 
 ActPars			::= (MulActPars) ActPars COMMA Expr
 				|

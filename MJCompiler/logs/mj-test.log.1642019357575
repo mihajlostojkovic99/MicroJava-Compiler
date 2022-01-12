@@ -1,0 +1,104 @@
+INFO  21:16:28,148 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  21:16:28,190 - #2 program
+INFO  21:16:28,190 - #50 p
+INFO  21:16:28,191 - #7 const
+INFO  21:16:28,191 - #50 int
+INFO  21:16:28,191 - #50 size
+INFO  21:16:28,192 - #35 =
+INFO  21:16:28,192 - #48 10
+INFO  21:16:28,192 - #38 ;
+INFO  21:16:28,192 - #46 {
+INFO  21:16:28,192 - #15 void
+INFO  21:16:28,193 - #50 main
+INFO  21:16:28,193 - #42 (
+INFO  21:16:28,193 - #43 )
+INFO  21:16:28,193 - #46 {
+INFO  21:16:28,193 - #50 mojNiz
+INFO  21:16:28,194 - #35 =
+INFO  21:16:28,194 - #48 2
+INFO  21:16:28,195 - #38 ;
+INFO  21:16:28,195 - #50 blabla
+INFO  21:16:28,196 - #35 =
+INFO  21:16:28,196 - #48 5
+INFO  21:16:28,196 - #38 ;
+INFO  21:16:28,197 - #47 }
+INFO  21:16:28,197 - #47 }
+INFO  21:16:28,198 - Program(
+ p
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         size
+         10
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclVoidNoParams(
+     main
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          NoStatementList(
+          ) [NoStatementList]
+          StatementWithSingleStatement(
+            DesignatorSingleStatement(
+              DesStmAssign(
+                DesignatorWithArr(
+                 mojNiz
+                  NoDesgArr(
+                  ) [NoDesgArr]
+                ) [DesignatorWithArr]
+                Assignment(
+                  ExprPositive(
+                    SingleTerm(
+                      Num(
+                       2
+                      ) [Num]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [ExprPositive]
+                ) [Assignment]
+              ) [DesStmAssign]
+            ) [DesignatorSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          DesignatorSingleStatement(
+            DesStmAssign(
+              DesignatorWithArr(
+               blabla
+                NoDesgArr(
+                ) [NoDesgArr]
+              ) [DesignatorWithArr]
+              Assignment(
+                ExprPositive(
+                  SingleTerm(
+                    Num(
+                     5
+                    ) [Num]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [ExprPositive]
+              ) [Assignment]
+            ) [DesStmAssign]
+          ) [DesignatorSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclVoidNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  21:16:28,198 - ===================================
+INFO  21:16:28,200 -  Program count calls = 1

@@ -1,0 +1,131 @@
+INFO  22:03:12,042 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:03:12,087 - #2 program
+INFO  22:03:12,087 - #50 p
+INFO  22:03:12,087 - #7 const
+INFO  22:03:12,088 - #50 int
+INFO  22:03:12,088 - #50 size
+INFO  22:03:12,089 - #35 =
+INFO  22:03:12,089 - #48 10
+INFO  22:03:12,089 - #38 ;
+INFO  22:03:12,089 - #46 {
+INFO  22:03:12,089 - #15 void
+INFO  22:03:12,090 - #50 main
+INFO  22:03:12,090 - #42 (
+INFO  22:03:12,090 - #43 )
+INFO  22:03:12,090 - #46 {
+INFO  22:03:12,091 - #50 mojaProm
+INFO  22:03:12,091 - #35 =
+INFO  22:03:12,092 - #48 2
+INFO  22:03:12,093 - #38 ;
+INFO  22:03:12,094 - #50 blabla
+INFO  22:03:12,094 - #35 =
+INFO  22:03:12,094 - #48 5
+INFO  22:03:12,095 - #38 ;
+INFO  22:03:12,096 - #8 if
+INFO  22:03:12,096 - #42 (
+INFO  22:03:12,097 - #22 +
+ERROR 22:03:12,097 - 
+Sintaksna greska na liniji 7
+INFO  22:03:12,097 - #48 3
+INFO  22:03:12,097 - #27 ==
+INFO  22:03:12,097 - #43 )
+INFO  22:03:12,099 - #14 return
+INFO  22:03:12,099 - #38 ;
+INFO  22:03:12,099 - #47 }
+ERROR 22:03:12,099 - Oporavak od greske! Too easy! Greska u if uslovu! 7
+INFO  22:03:12,100 - #47 }
+INFO  22:03:12,102 - Program(
+ p
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         size
+         10
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclVoidNoParams(
+     main
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          StatementListExists(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementWithSingleStatement(
+              DesignatorSingleStatement(
+                DesStmAssign(
+                  DesignatorWithArr(
+                   mojaProm
+                    NoDesgArr(
+                    ) [NoDesgArr]
+                  ) [DesignatorWithArr]
+                  AssignWrap(
+                    Assignop(
+                    ) [Assignop]
+                    ExprPositive(
+                      SingleTerm(
+                        Num(
+                         2
+                        ) [Num]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [ExprPositive]
+                  ) [AssignWrap]
+                ) [DesStmAssign]
+              ) [DesignatorSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            DesignatorSingleStatement(
+              DesStmAssign(
+                DesignatorWithArr(
+                 blabla
+                  NoDesgArr(
+                  ) [NoDesgArr]
+                ) [DesignatorWithArr]
+                AssignWrap(
+                  Assignop(
+                  ) [Assignop]
+                  ExprPositive(
+                    SingleTerm(
+                      Num(
+                       5
+                      ) [Num]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [ExprPositive]
+                ) [AssignWrap]
+              ) [DesStmAssign]
+            ) [DesignatorSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          IfSingleStatement(
+            ConditionError(
+            ) [ConditionError]
+            StatementWithSingleStatement(
+              ReturnSingleStatement(
+              ) [ReturnSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [IfSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclVoidNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  22:03:12,102 - ===================================
+INFO  22:03:12,105 -  Program count calls = 1

@@ -89,6 +89,7 @@ nonterminal Expr Expr;
 nonterminal ExprMore ExprMore;
 nonterminal Designator Designator;
 nonterminal Assignop Assignop;
+nonterminal AssignWrapper AssignWrapper;
 nonterminal ActPars ActPars;
 nonterminal CondTerm CondTerm;
 nonterminal Addop Addop;
@@ -169,6 +170,12 @@ MethodDecl		::= (MethDeclParams) Type:T1 IDENT:I2 LPAREN FormPars:F3 RPAREN List
 				(MethDeclVoidParams) VOID IDENT:I1 LPAREN FormPars:F2 RPAREN ListVarDeclWrapper:L3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethDeclVoidParams(I1, F2, L3, S4); RESULT.setLine(I1left); :}
 				|
 				(MethDeclVoidNoParams) VOID IDENT:I1 LPAREN RPAREN ListVarDeclWrapper:L2 LBRACE StatementList:S3 RBRACE {: RESULT=new MethDeclVoidNoParams(I1, L2, S3); RESULT.setLine(I1left); :}
+				/*|
+				(MethDeclParamsError) Type IDENT LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
+				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				|
+				(MethDeclVoidParamsError) VOID IDENT LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
+				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}*/
 				;
 
 Type			::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};
@@ -192,6 +199,9 @@ FormPars		::= (FormParameters) FormPars:F1 COMMA FormPar:F2 {: RESULT=new FormPa
 FormPar			::= (FormalParameter) Type:T1 IDENT:I2 {: RESULT=new FormalParameter(T1, I2); RESULT.setLine(T1left); :}
 				|
 				(FormalParameterArray) Type:T1 IDENT:I2 LSQBR RSQBR {: RESULT=new FormalParameterArray(T1, I2); RESULT.setLine(T1left); :}
+				|
+				(FormalParameterError) error:l
+				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :} {: RESULT=new FormalParameterError(); :}
 				;
 				
 StatementList	::= (StatementListExists) StatementList:S1 Statement:S2 {: RESULT=new StatementListExists(S1, S2); RESULT.setLine(S1left); :}
@@ -237,7 +247,7 @@ Statements		::= (Statements) LBRACE StatementList:S1 RBRACE {: RESULT=new Statem
 
 
 
-DesignatorStatement ::= (DesStmAssign) Designator:D1 Assignop:A2 Expr:E3 SEMI {: RESULT=new DesStmAssign(D1, A2, E3); RESULT.setLine(D1left); :}
+DesignatorStatement ::= (DesStmAssign) Designator:D1 AssignWrapper:A2 {: RESULT=new DesStmAssign(D1, A2); RESULT.setLine(D1left); :}
 					|
 					(DesStmFuncParams) Designator:D1 LPAREN ActPars:A2 RPAREN SEMI {: RESULT=new DesStmFuncParams(D1, A2); RESULT.setLine(D1left); :}
 					|
@@ -246,14 +256,14 @@ DesignatorStatement ::= (DesStmAssign) Designator:D1 Assignop:A2 Expr:E3 SEMI {:
 					(DesStmInc) Designator:D1 INC SEMI {: RESULT=new DesStmInc(D1); RESULT.setLine(D1left); :}
 					|
 					(DesStmDec) Designator:D1 DEC SEMI {: RESULT=new DesStmDec(D1); RESULT.setLine(D1left); :}
-					|
-					(AssignmentError) error SEMI:l
-					{: parser.report_error("Oporavak od greske! Too easy! Greska pri dodeli vrednosti! " + lleft, null); :} {: RESULT=new AssignmentError(); :}
 					;
 					
 Condition		::= (MultipleCondition) Condition:C1 OR CondTerm:C2 {: RESULT=new MultipleCondition(C1, C2); RESULT.setLine(C1left); :}
 				|
 				(SingleCondition) CondTerm:C1 {: RESULT=new SingleCondition(C1); RESULT.setLine(C1left); :}
+				|
+				(ConditionError) error:l
+				{: parser.report_error("Oporavak od greske! Too easy! Greska u if uslovu! " + lleft, null); :} {: RESULT=new ConditionError(); :}
 				;
 								
 ExprMore		::= (ThereIsMoreExpr) ExprMore:E1 Addop:A2 Term:T3 {: RESULT=new ThereIsMoreExpr(E1, A2, T3); RESULT.setLine(E1left); :}
@@ -282,6 +292,17 @@ DesignatorArray ::= (DesigArr) DesignatorArray:D1 LSQBR Expr:E2 RSQBR {: RESULT=
 				;
 				
 Assignop		::= (Assignop) EQUAL {: RESULT=new Assignop(); :};
+
+/* 
+	ASSIGN WRAPPER JE POTENCIJALNO LOSA IDEJA ZA TRECU FAZU! AKO NE BUDE MOGLO VRATI ASSIGNOP U DESIGNATOR STATEMENT
+   	I STAVI SAMO U SINGLESTATEMENT ERROR SEMI :( 
+ */
+
+AssignWrapper	::= (AssignWrap) Assignop:A1 Expr:E2 SEMI {: RESULT=new AssignWrap(A1, E2); RESULT.setLine(A1left); :}
+				|
+				(AssignWrapperError) error SEMI:l
+				{: parser.report_error("Oporavak od greske! Too easy! Greska pri dodeli vrednosti! " + lleft, null); :} {: RESULT=new AssignWrapperError(); :}
+				;
 
 ActPars			::= (MulActPars) ActPars:A1 COMMA Expr:E2 {: RESULT=new MulActPars(A1, E2); RESULT.setLine(A1left); :}
 				|

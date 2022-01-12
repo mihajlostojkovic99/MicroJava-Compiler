@@ -1,0 +1,184 @@
+INFO  22:29:54,738 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:29:54,779 - #2 program
+INFO  22:29:54,780 - #50 p
+INFO  22:29:54,780 - #7 const
+INFO  22:29:54,780 - #50 int
+INFO  22:29:54,780 - #50 size
+INFO  22:29:54,781 - #35 =
+INFO  22:29:54,781 - #48 10
+INFO  22:29:54,781 - #38 ;
+INFO  22:29:54,781 - #46 {
+INFO  22:29:54,782 - #15 void
+INFO  22:29:54,782 - #50 main
+INFO  22:29:54,782 - #42 (
+INFO  22:29:54,782 - #50 int
+INFO  22:29:54,782 - #40 ,
+ERROR 22:29:54,782 - 
+Sintaksna greska na liniji 4
+INFO  22:29:54,782 - #50 int
+INFO  22:29:54,783 - #40 ,
+INFO  22:29:54,783 - #50 int
+INFO  22:29:54,783 - #50 c
+INFO  22:29:54,783 - #43 )
+ERROR 22:29:54,783 - Oporavak od greske! Too easy! 4
+INFO  22:29:54,785 - #46 {
+INFO  22:29:54,786 - #50 mojaProm
+INFO  22:29:54,786 - #35 =
+INFO  22:29:54,787 - #48 2
+INFO  22:29:54,787 - #38 ;
+INFO  22:29:54,788 - #50 blabla
+INFO  22:29:54,789 - #35 =
+INFO  22:29:54,789 - #48 5
+INFO  22:29:54,789 - #38 ;
+INFO  22:29:54,789 - #8 if
+INFO  22:29:54,789 - #42 (
+INFO  22:29:54,789 - #48 2
+INFO  22:29:54,789 - #22 +
+INFO  22:29:54,789 - #48 3
+INFO  22:29:54,790 - #27 ==
+INFO  22:29:54,790 - #48 5
+INFO  22:29:54,791 - #43 )
+INFO  22:29:54,792 - #14 return
+INFO  22:29:54,792 - #38 ;
+INFO  22:29:54,792 - #47 }
+INFO  22:29:54,793 - #47 }
+INFO  22:29:54,794 - Program(
+ p
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         size
+         10
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclVoidParams(
+     main
+      FormParameters(
+        SingleFormPars(
+          FormalParameterError(
+          ) [FormalParameterError]
+        ) [SingleFormPars]
+        FormalParameter(
+          Type(
+           int
+          ) [Type]
+         c
+        ) [FormalParameter]
+      ) [FormParameters]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          StatementListExists(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementWithSingleStatement(
+              DesignatorSingleStatement(
+                DesStmAssign(
+                  DesignatorWithArr(
+                   mojaProm
+                    NoDesgArr(
+                    ) [NoDesgArr]
+                  ) [DesignatorWithArr]
+                  AssignWrap(
+                    Assignop(
+                    ) [Assignop]
+                    ExprPositive(
+                      SingleTerm(
+                        Num(
+                         2
+                        ) [Num]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [ExprPositive]
+                  ) [AssignWrap]
+                ) [DesStmAssign]
+              ) [DesignatorSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            DesignatorSingleStatement(
+              DesStmAssign(
+                DesignatorWithArr(
+                 blabla
+                  NoDesgArr(
+                  ) [NoDesgArr]
+                ) [DesignatorWithArr]
+                AssignWrap(
+                  Assignop(
+                  ) [Assignop]
+                  ExprPositive(
+                    SingleTerm(
+                      Num(
+                       5
+                      ) [Num]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [ExprPositive]
+                ) [AssignWrap]
+              ) [DesStmAssign]
+            ) [DesignatorSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          IfSingleStatement(
+            SingleCondition(
+              SingleCondTerm(
+                CondFactRelop(
+                  ExprPositive(
+                    SingleTerm(
+                      Num(
+                       2
+                      ) [Num]
+                    ) [SingleTerm]
+                    ThereIsMoreExpr(
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                      Plus(
+                      ) [Plus]
+                      SingleTerm(
+                        Num(
+                         3
+                        ) [Num]
+                      ) [SingleTerm]
+                    ) [ThereIsMoreExpr]
+                  ) [ExprPositive]
+                  Equals(
+                  ) [Equals]
+                  ExprPositive(
+                    SingleTerm(
+                      Num(
+                       5
+                      ) [Num]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [ExprPositive]
+                ) [CondFactRelop]
+              ) [SingleCondTerm]
+            ) [SingleCondition]
+            StatementWithSingleStatement(
+              ReturnSingleStatement(
+              ) [ReturnSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [IfSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclVoidParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  22:29:54,795 - ===================================
+INFO  22:29:54,797 -  Program count calls = 1

@@ -1,0 +1,173 @@
+INFO  22:27:26,500 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:27:26,543 - #2 program
+INFO  22:27:26,543 - #50 p
+INFO  22:27:26,543 - #7 const
+INFO  22:27:26,543 - #50 int
+INFO  22:27:26,543 - #50 size
+INFO  22:27:26,544 - #35 =
+INFO  22:27:26,544 - #48 10
+INFO  22:27:26,544 - #38 ;
+INFO  22:27:26,544 - #46 {
+INFO  22:27:26,545 - #15 void
+INFO  22:27:26,545 - #50 main
+INFO  22:27:26,545 - #42 (
+INFO  22:27:26,545 - #50 int
+INFO  22:27:26,545 - #50 a
+INFO  22:27:26,545 - #43 )
+INFO  22:27:26,546 - #46 {
+INFO  22:27:26,546 - #50 mojaProm
+INFO  22:27:26,547 - #35 =
+INFO  22:27:26,548 - #48 2
+INFO  22:27:26,548 - #38 ;
+INFO  22:27:26,549 - #50 blabla
+INFO  22:27:26,551 - #35 =
+INFO  22:27:26,551 - #48 5
+INFO  22:27:26,551 - #38 ;
+INFO  22:27:26,551 - #8 if
+INFO  22:27:26,551 - #42 (
+INFO  22:27:26,551 - #48 2
+INFO  22:27:26,551 - #22 +
+INFO  22:27:26,551 - #48 3
+INFO  22:27:26,552 - #27 ==
+INFO  22:27:26,552 - #48 5
+INFO  22:27:26,553 - #43 )
+INFO  22:27:26,554 - #14 return
+INFO  22:27:26,554 - #38 ;
+INFO  22:27:26,554 - #47 }
+INFO  22:27:26,554 - #47 }
+INFO  22:27:26,556 - Program(
+ p
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         size
+         10
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclVoidParams(
+     main
+      SingleFormPars(
+        FormalParameter(
+          Type(
+           int
+          ) [Type]
+         a
+        ) [FormalParameter]
+      ) [SingleFormPars]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          StatementListExists(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementWithSingleStatement(
+              DesignatorSingleStatement(
+                DesStmAssign(
+                  DesignatorWithArr(
+                   mojaProm
+                    NoDesgArr(
+                    ) [NoDesgArr]
+                  ) [DesignatorWithArr]
+                  AssignWrap(
+                    Assignop(
+                    ) [Assignop]
+                    ExprPositive(
+                      SingleTerm(
+                        Num(
+                         2
+                        ) [Num]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [ExprPositive]
+                  ) [AssignWrap]
+                ) [DesStmAssign]
+              ) [DesignatorSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            DesignatorSingleStatement(
+              DesStmAssign(
+                DesignatorWithArr(
+                 blabla
+                  NoDesgArr(
+                  ) [NoDesgArr]
+                ) [DesignatorWithArr]
+                AssignWrap(
+                  Assignop(
+                  ) [Assignop]
+                  ExprPositive(
+                    SingleTerm(
+                      Num(
+                       5
+                      ) [Num]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [ExprPositive]
+                ) [AssignWrap]
+              ) [DesStmAssign]
+            ) [DesignatorSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          IfSingleStatement(
+            SingleCondition(
+              SingleCondTerm(
+                CondFactRelop(
+                  ExprPositive(
+                    SingleTerm(
+                      Num(
+                       2
+                      ) [Num]
+                    ) [SingleTerm]
+                    ThereIsMoreExpr(
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                      Plus(
+                      ) [Plus]
+                      SingleTerm(
+                        Num(
+                         3
+                        ) [Num]
+                      ) [SingleTerm]
+                    ) [ThereIsMoreExpr]
+                  ) [ExprPositive]
+                  Equals(
+                  ) [Equals]
+                  ExprPositive(
+                    SingleTerm(
+                      Num(
+                       5
+                      ) [Num]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [ExprPositive]
+                ) [CondFactRelop]
+              ) [SingleCondTerm]
+            ) [SingleCondition]
+            StatementWithSingleStatement(
+              ReturnSingleStatement(
+              ) [ReturnSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [IfSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclVoidParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  22:27:26,557 - ===================================
+INFO  22:27:26,558 -  Program count calls = 1

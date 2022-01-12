@@ -1,0 +1,101 @@
+INFO  21:29:30,900 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  21:29:30,939 - #2 program
+INFO  21:29:30,939 - #50 p
+INFO  21:29:30,939 - #7 const
+INFO  21:29:30,939 - #50 int
+INFO  21:29:30,939 - #50 size
+INFO  21:29:30,940 - #35 =
+INFO  21:29:30,940 - #48 10
+INFO  21:29:30,940 - #38 ;
+INFO  21:29:30,940 - #46 {
+INFO  21:29:30,941 - #15 void
+INFO  21:29:30,941 - #50 main
+INFO  21:29:30,941 - #42 (
+INFO  21:29:30,941 - #43 )
+INFO  21:29:30,941 - #46 {
+INFO  21:29:30,942 - #50 mojaProm
+INFO  21:29:30,942 - #35 =
+INFO  21:29:30,943 - #48 2
+INFO  21:29:30,943 - #22 +
+INFO  21:29:30,944 - #38 ;
+ERROR 21:29:30,944 - 
+Sintaksna greska na liniji 5
+INFO  21:29:30,944 - #50 blabla
+INFO  21:29:30,945 - #35 =
+INFO  21:29:30,945 - #48 5
+ERROR 21:29:30,946 - Oporavak od greske! Too easy! Greska pri dodeli vrednosti! 5
+INFO  21:29:30,947 - #38 ;
+INFO  21:29:30,947 - #47 }
+INFO  21:29:30,947 - #47 }
+INFO  21:29:30,949 - Program(
+ p
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         size
+         10
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclVoidNoParams(
+     main
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          NoStatementList(
+          ) [NoStatementList]
+          StatementWithSingleStatement(
+            DesignatorSingleStatement(
+              DesStmAssign(
+                DesignatorWithArr(
+                 mojaProm
+                  NoDesgArr(
+                  ) [NoDesgArr]
+                ) [DesignatorWithArr]
+                AssignWrapperError(
+                ) [AssignWrapperError]
+              ) [DesStmAssign]
+            ) [DesignatorSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          DesignatorSingleStatement(
+            DesStmAssign(
+              DesignatorWithArr(
+               blabla
+                NoDesgArr(
+                ) [NoDesgArr]
+              ) [DesignatorWithArr]
+              AssignWrap(
+                Assignop(
+                ) [Assignop]
+                ExprPositive(
+                  SingleTerm(
+                    Num(
+                     5
+                    ) [Num]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [ExprPositive]
+              ) [AssignWrap]
+            ) [DesStmAssign]
+          ) [DesignatorSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclVoidNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  21:29:30,949 - ===================================
+INFO  21:29:30,950 -  Program count calls = 1

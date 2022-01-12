@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/0/2022 21:10:54
+// 12/0/2022 22:26:56
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -17,6 +17,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ListVarDeclWrapper ListVarDeclWrapper) { }
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
+    public void visit(AssignWrapper AssignWrapper) { }
     public void visit(Designator Designator) { }
     public void visit(Term Term) { }
     public void visit(Condition Condition) { }
@@ -62,6 +63,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MulCondTerm MulCondTerm) { visit(); }
     public void visit(SingleActPar SingleActPar) { visit(); }
     public void visit(MulActPars MulActPars) { visit(); }
+    public void visit(AssignWrapperError AssignWrapperError) { visit(); }
+    public void visit(AssignWrap AssignWrap) { visit(); }
     public void visit(Assignop Assignop) { visit(); }
     public void visit(NoDesgArr NoDesgArr) { visit(); }
     public void visit(DesigArr DesigArr) { visit(); }
@@ -73,9 +76,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ExprNegative ExprNegative) { visit(); }
     public void visit(NoMoreExpr NoMoreExpr) { visit(); }
     public void visit(ThereIsMoreExpr ThereIsMoreExpr) { visit(); }
+    public void visit(ConditionError ConditionError) { visit(); }
     public void visit(SingleCondition SingleCondition) { visit(); }
     public void visit(MultipleCondition MultipleCondition) { visit(); }
-    public void visit(AssignmentError AssignmentError) { visit(); }
     public void visit(DesStmDec DesStmDec) { visit(); }
     public void visit(DesStmInc DesStmInc) { visit(); }
     public void visit(DesStmFunc DesStmFunc) { visit(); }
@@ -100,6 +103,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(StatementWithLabel StatementWithLabel) { visit(); }
     public void visit(NoStatementList NoStatementList) { visit(); }
     public void visit(StatementListExists StatementListExists) { visit(); }
+    public void visit(FormalParameterError FormalParameterError) { visit(); }
     public void visit(FormalParameterArray FormalParameterArray) { visit(); }
     public void visit(FormalParameter FormalParameter) { visit(); }
     public void visit(SingleFormPars SingleFormPars) { visit(); }

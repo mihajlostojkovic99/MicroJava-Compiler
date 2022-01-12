@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/0/2022 21:10:54
+// 12/0/2022 22:26:56
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -17,6 +17,7 @@ public interface Visitor {
     public void visit(ListVarDeclWrapper ListVarDeclWrapper);
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
+    public void visit(AssignWrapper AssignWrapper);
     public void visit(Designator Designator);
     public void visit(Term Term);
     public void visit(Condition Condition);
@@ -62,6 +63,8 @@ public interface Visitor {
     public void visit(MulCondTerm MulCondTerm);
     public void visit(SingleActPar SingleActPar);
     public void visit(MulActPars MulActPars);
+    public void visit(AssignWrapperError AssignWrapperError);
+    public void visit(AssignWrap AssignWrap);
     public void visit(Assignop Assignop);
     public void visit(NoDesgArr NoDesgArr);
     public void visit(DesigArr DesigArr);
@@ -73,9 +76,9 @@ public interface Visitor {
     public void visit(ExprNegative ExprNegative);
     public void visit(NoMoreExpr NoMoreExpr);
     public void visit(ThereIsMoreExpr ThereIsMoreExpr);
+    public void visit(ConditionError ConditionError);
     public void visit(SingleCondition SingleCondition);
     public void visit(MultipleCondition MultipleCondition);
-    public void visit(AssignmentError AssignmentError);
     public void visit(DesStmDec DesStmDec);
     public void visit(DesStmInc DesStmInc);
     public void visit(DesStmFunc DesStmFunc);
@@ -100,6 +103,7 @@ public interface Visitor {
     public void visit(StatementWithLabel StatementWithLabel);
     public void visit(NoStatementList NoStatementList);
     public void visit(StatementListExists StatementListExists);
+    public void visit(FormalParameterError FormalParameterError);
     public void visit(FormalParameterArray FormalParameterArray);
     public void visit(FormalParameter FormalParameter);
     public void visit(SingleFormPars SingleFormPars);

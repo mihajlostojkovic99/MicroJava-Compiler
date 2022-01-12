@@ -1,0 +1,8 @@
+program p
+	const int size = 10;
+{
+	void main() {
+		mojaProm = 2 +;
+		blabla = 5;
+	}
+}
