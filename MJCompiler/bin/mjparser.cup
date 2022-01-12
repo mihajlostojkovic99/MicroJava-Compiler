@@ -101,12 +101,10 @@ MethodDeclList	::= (MethodDeclarations) MethodDeclList MethodDecl
 				(NoMethodDecl) /* epsilon */
 				;
 
-ConstDeclWrapper ::= (ConstDeclWrapper) CONST Type ConstDeclList SEMI
+ConstDeclWrapper ::= (ConstDeclWrapperClass) CONST Type ConstDeclList SEMI
 				 |
-				 (ConstDeclWrapperError) error SEMI:l
-				 {:
-				 	parser.report_error("Oporavak od greske! Too easy!" + lleft, null);
-				 :}
+				 (ConstDeclWrapperError) CONST error SEMI:l /* npr const ; ili const int ; */
+				 {: parser.report_error("Oporavak od greske! Too easy!" + lleft, null); :}
 				 ;
 
 ConstDeclList	::= (ConstDeclarations) ConstDeclList COMMA ConstDecl

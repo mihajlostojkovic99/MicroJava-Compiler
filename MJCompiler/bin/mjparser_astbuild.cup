@@ -120,7 +120,11 @@ MethodDeclList	::= (MethodDeclarations) MethodDeclList:M1 MethodDecl:M2 {: RESUL
 				(NoMethodDecl) {: RESULT=new NoMethodDecl(); :} /* epsilon */
 				;
 
-ConstDeclWrapper ::= (ConstDeclWrapper) CONST Type:T1 ConstDeclList:C2 SEMI {: RESULT=new ConstDeclWrapper(T1, C2); RESULT.setLine(T1left); :};
+ConstDeclWrapper ::= (ConstDeclWrapperClass) CONST Type:T1 ConstDeclList:C2 SEMI {: RESULT=new ConstDeclWrapperClass(T1, C2); RESULT.setLine(T1left); :}
+				 |
+				 (ConstDeclWrapperError) CONST error SEMI:l
+				 {: parser.report_error("Oporavak od greske! Too easy!" + lleft, null); :} {: RESULT=new ConstDeclWrapperError(); :}
+				 ;
 
 ConstDeclList	::= (ConstDeclarations) ConstDeclList:C1 COMMA ConstDecl:C2 {: RESULT=new ConstDeclarations(C1, C2); RESULT.setLine(C1left); :}
 				|
