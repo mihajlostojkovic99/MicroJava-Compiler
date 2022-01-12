@@ -122,8 +122,8 @@ MethodDeclList	::= (MethodDeclarations) MethodDeclList:M1 MethodDecl:M2 {: RESUL
 
 ConstDeclWrapper ::= (ConstDeclWrapperClass) CONST Type:T1 ConstDeclList:C2 SEMI {: RESULT=new ConstDeclWrapperClass(T1, C2); RESULT.setLine(T1left); :}
 				 |
-				 (ConstDeclWrapperError) CONST error SEMI:l
-				 {: parser.report_error("Oporavak od greske! Too easy!" + lleft, null); :} {: RESULT=new ConstDeclWrapperError(); :}
+				 (ConstDeclWrapperError) CONST error SEMI:l /* npr const ; ili const int ; */
+				 {: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :} {: RESULT=new ConstDeclWrapperError(); :}
 				 ;
 
 ConstDeclList	::= (ConstDeclarations) ConstDeclList:C1 COMMA ConstDecl:C2 {: RESULT=new ConstDeclarations(C1, C2); RESULT.setLine(C1left); :}
@@ -135,7 +135,10 @@ ConstDecl		::= (ConstDeclNumber) IDENT:I1 EQUAL NUMBER:N2 {: RESULT=new ConstDec
 				|
 				(ConstDeclBool) IDENT:I1 EQUAL BOOL:B2 {: RESULT=new ConstDeclBool(I1, B2); RESULT.setLine(I1left); :}
 				|
-				(ConstDeclChar) IDENT:I1 EQUAL CHAR:C2 {: RESULT=new ConstDeclChar(I1, C2); RESULT.setLine(I1left); :} 
+				(ConstDeclChar) IDENT:I1 EQUAL CHAR:C2 {: RESULT=new ConstDeclChar(I1, C2); RESULT.setLine(I1left); :}
+				|
+				(ConstDeclError) error:l /* npr const int x y, z;*/
+				 {: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :} {: RESULT=new ConstDeclError(); :}
 				;
 
 VarDeclWrapper	::= (VarDeclWrapper) Type:T1 VarDeclList:V2 SEMI {: RESULT=new VarDeclWrapper(T1, V2); RESULT.setLine(T1left); :};
@@ -196,7 +199,7 @@ StatementList	::= (StatementListExists) StatementList:S1 Statement:S2 {: RESULT=
 				(NoStatementList) {: RESULT=new NoStatementList(); :} /* epsilon */
 				;
 
-Statement		::= (StatementWithColon) Label:L1 COLON SingleStatement:S2 {: RESULT=new StatementWithColon(L1, S2); RESULT.setLine(L1left); :}
+Statement		::= (StatementWithLabel) Label:L1 COLON SingleStatement:S2 {: RESULT=new StatementWithLabel(L1, S2); RESULT.setLine(L1left); :}
 				|
 				(StatementWithSingleStatement) SingleStatement:S1 {: RESULT=new StatementWithSingleStatement(S1); RESULT.setLine(S1left); :}
 				|
@@ -205,7 +208,7 @@ Statement		::= (StatementWithColon) Label:L1 COLON SingleStatement:S2 {: RESULT=
 				
 Label			::= (Label) IDENT:I1 {: RESULT=new Label(I1); RESULT.setLine(I1left); :};
 
-SingleStatement	::= (DesignatorSingleStatement) DesignatorStatement:D1 SEMI {: RESULT=new DesignatorSingleStatement(D1); RESULT.setLine(D1left); :}
+SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement:D1 {: RESULT=new DesignatorSingleStatement(D1); RESULT.setLine(D1left); :}
 				|
 				(IfElseSingleStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 ELSE Statement:S3 {: RESULT=new IfElseSingleStatement(C1, S2, S3); RESULT.setLine(C1left); :}
 				|
@@ -232,15 +235,20 @@ SingleStatement	::= (DesignatorSingleStatement) DesignatorStatement:D1 SEMI {: R
 				
 Statements		::= (Statements) LBRACE StatementList:S1 RBRACE {: RESULT=new Statements(S1); RESULT.setLine(S1left); :};
 
-DesignatorStatement ::= (DesStmAssign) Designator:D1 Assignop:A2 Expr:E3 {: RESULT=new DesStmAssign(D1, A2, E3); RESULT.setLine(D1left); :}
+
+
+DesignatorStatement ::= (DesStmAssign) Designator:D1 Assignop:A2 Expr:E3 SEMI {: RESULT=new DesStmAssign(D1, A2, E3); RESULT.setLine(D1left); :}
 					|
-					(DesStmFuncParams) Designator:D1 LPAREN ActPars:A2 RPAREN {: RESULT=new DesStmFuncParams(D1, A2); RESULT.setLine(D1left); :}
+					(DesStmFuncParams) Designator:D1 LPAREN ActPars:A2 RPAREN SEMI {: RESULT=new DesStmFuncParams(D1, A2); RESULT.setLine(D1left); :}
 					|
-					(DesStmFunc) Designator:D1 LPAREN RPAREN {: RESULT=new DesStmFunc(D1); RESULT.setLine(D1left); :}
+					(DesStmFunc) Designator:D1 LPAREN RPAREN SEMI {: RESULT=new DesStmFunc(D1); RESULT.setLine(D1left); :}
 					|
-					(DesStmInc) Designator:D1 INC {: RESULT=new DesStmInc(D1); RESULT.setLine(D1left); :}
+					(DesStmInc) Designator:D1 INC SEMI {: RESULT=new DesStmInc(D1); RESULT.setLine(D1left); :}
 					|
-					(DesStmDec) Designator:D1 DEC {: RESULT=new DesStmDec(D1); RESULT.setLine(D1left); :}
+					(DesStmDec) Designator:D1 DEC SEMI {: RESULT=new DesStmDec(D1); RESULT.setLine(D1left); :}
+					|
+					(AssignmentError) error SEMI:l
+					{: parser.report_error("Oporavak od greske! Too easy! Greska pri dodeli vrednosti! " + lleft, null); :} {: RESULT=new AssignmentError(); :}
 					;
 					
 Condition		::= (MultipleCondition) Condition:C1 OR CondTerm:C2 {: RESULT=new MultipleCondition(C1, C2); RESULT.setLine(C1left); :}

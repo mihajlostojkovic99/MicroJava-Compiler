@@ -1,0 +1,1406 @@
+INFO  19:43:08,657 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  19:43:08,708 - #2 program
+INFO  19:43:08,708 - #50 p
+INFO  19:43:08,708 - #7 const
+INFO  19:43:08,709 - #50 int
+INFO  19:43:08,709 - #50 size
+INFO  19:43:08,709 - #35 =
+INFO  19:43:08,710 - #48 10
+INFO  19:43:08,710 - #38 ;
+INFO  19:43:08,710 - #50 int
+INFO  19:43:08,710 - #50 a
+INFO  19:43:08,710 - #40 ,
+INFO  19:43:08,710 - #50 b
+INFO  19:43:08,710 - #38 ;
+INFO  19:43:08,711 - #50 int
+INFO  19:43:08,711 - #50 c
+INFO  19:43:08,711 - #38 ;
+INFO  19:43:08,711 - #4 class
+INFO  19:43:08,712 - #50 A
+INFO  19:43:08,712 - #46 {
+INFO  19:43:08,712 - #47 }
+INFO  19:43:08,713 - #4 class
+INFO  19:43:08,713 - #50 B
+INFO  19:43:08,713 - #16 extends
+INFO  19:43:08,713 - #50 A
+INFO  19:43:08,713 - #46 {
+INFO  19:43:08,714 - #50 int
+INFO  19:43:08,714 - #50 a
+INFO  19:43:08,714 - #40 ,
+INFO  19:43:08,714 - #50 b
+INFO  19:43:08,714 - #44 [
+INFO  19:43:08,714 - #45 ]
+INFO  19:43:08,714 - #38 ;
+INFO  19:43:08,714 - #50 string
+INFO  19:43:08,714 - #50 s
+INFO  19:43:08,714 - #38 ;
+INFO  19:43:08,714 - #46 {
+INFO  19:43:08,714 - #15 void
+INFO  19:43:08,715 - #50 putp
+INFO  19:43:08,715 - #42 (
+INFO  19:43:08,715 - #50 int
+INFO  19:43:08,715 - #50 a
+INFO  19:43:08,715 - #40 ,
+INFO  19:43:08,715 - #50 int
+INFO  19:43:08,715 - #50 idx
+INFO  19:43:08,716 - #43 )
+INFO  19:43:08,716 - #46 {
+INFO  19:43:08,716 - #47 }
+INFO  19:43:08,716 - #50 int
+INFO  19:43:08,717 - #50 testingMore
+INFO  19:43:08,717 - #42 (
+INFO  19:43:08,717 - #43 )
+INFO  19:43:08,717 - #50 float
+INFO  19:43:08,717 - #50 random
+INFO  19:43:08,717 - #38 ;
+INFO  19:43:08,717 - #46 {
+INFO  19:43:08,717 - #20 goto
+INFO  19:43:08,717 - #38 ;
+ERROR 19:43:08,717 - 
+Sintaksna greska na liniji 12
+INFO  19:43:08,717 - #50 random
+INFO  19:43:08,718 - #35 =
+INFO  19:43:08,718 - #50 a
+ERROR 19:43:08,718 - Oporavak od greske! Too easy! 12
+INFO  19:43:08,720 - #41 .
+INFO  19:43:08,720 - #50 fetchRandomTest
+INFO  19:43:08,720 - #42 (
+INFO  19:43:08,720 - #43 )
+INFO  19:43:08,720 - #24 *
+INFO  19:43:08,720 - #48 100
+INFO  19:43:08,721 - #22 +
+INFO  19:43:08,724 - #48 1
+INFO  19:43:08,725 - #38 ;
+INFO  19:43:08,725 - #50 random
+INFO  19:43:08,725 - #36 ++
+INFO  19:43:08,725 - #38 ;
+INFO  19:43:08,725 - #8 if
+INFO  19:43:08,726 - #42 (
+INFO  19:43:08,726 - #50 random
+INFO  19:43:08,726 - #29 >
+INFO  19:43:08,726 - #48 25
+INFO  19:43:08,726 - #24 *
+INFO  19:43:08,727 - #48 2
+INFO  19:43:08,727 - #33 &&
+INFO  19:43:08,727 - #50 random
+INFO  19:43:08,727 - #32 <=
+INFO  19:43:08,727 - #48 1
+INFO  19:43:08,728 - #22 +
+INFO  19:43:08,728 - #48 50
+INFO  19:43:08,728 - #24 *
+INFO  19:43:08,728 - #48 2
+INFO  19:43:08,728 - #43 )
+INFO  19:43:08,728 - #46 {
+INFO  19:43:08,728 - #9 do
+INFO  19:43:08,728 - #46 {
+INFO  19:43:08,728 - #50 random
+INFO  19:43:08,728 - #35 =
+INFO  19:43:08,728 - #50 random
+INFO  19:43:08,728 - #23 -
+INFO  19:43:08,728 - #48 1
+INFO  19:43:08,729 - #38 ;
+INFO  19:43:08,729 - #8 if
+INFO  19:43:08,729 - #42 (
+INFO  19:43:08,729 - #50 WorldTime
+INFO  19:43:08,729 - #41 .
+INFO  19:43:08,729 - #50 currentTime
+INFO  19:43:08,729 - #44 [
+INFO  19:43:08,729 - #50 Today
+INFO  19:43:08,729 - #45 ]
+INFO  19:43:08,729 - #27 ==
+INFO  19:43:08,729 - #50 Late
+INFO  19:43:08,730 - #43 )
+INFO  19:43:08,730 - #17 continue
+INFO  19:43:08,730 - #38 ;
+INFO  19:43:08,730 - #47 }
+INFO  19:43:08,731 - #10 while
+INFO  19:43:08,731 - #42 (
+INFO  19:43:08,731 - #50 random
+INFO  19:43:08,731 - #28 !=
+INFO  19:43:08,731 - #48 0
+INFO  19:43:08,732 - #43 )
+INFO  19:43:08,732 - #38 ;
+INFO  19:43:08,732 - #3 break
+INFO  19:43:08,732 - #38 ;
+INFO  19:43:08,732 - #50 loop
+INFO  19:43:08,732 - #39 :
+INFO  19:43:08,733 - #9 do
+INFO  19:43:08,733 - #50 random
+INFO  19:43:08,733 - #36 ++
+INFO  19:43:08,734 - #38 ;
+INFO  19:43:08,734 - #10 while
+INFO  19:43:08,734 - #42 (
+INFO  19:43:08,734 - #50 random
+INFO  19:43:08,734 - #31 <
+INFO  19:43:08,734 - #48 50
+INFO  19:43:08,734 - #43 )
+INFO  19:43:08,735 - #38 ;
+INFO  19:43:08,735 - #47 }
+INFO  19:43:08,735 - #6 else
+INFO  19:43:08,735 - #20 goto
+INFO  19:43:08,735 - #50 loop
+INFO  19:43:08,735 - #38 ;
+INFO  19:43:08,735 - #12 print
+INFO  19:43:08,735 - #42 (
+INFO  19:43:08,735 - #23 -
+INFO  19:43:08,735 - #50 b
+INFO  19:43:08,735 - #44 [
+INFO  19:43:08,735 - #48 5
+INFO  19:43:08,735 - #45 ]
+INFO  19:43:08,735 - #40 ,
+INFO  19:43:08,735 - #48 10
+INFO  19:43:08,735 - #43 )
+INFO  19:43:08,736 - #38 ;
+INFO  19:43:08,736 - #14 return
+INFO  19:43:08,736 - #50 random
+INFO  19:43:08,736 - #38 ;
+INFO  19:43:08,736 - #47 }
+INFO  19:43:08,736 - #47 }
+INFO  19:43:08,736 - #47 }
+INFO  19:43:08,736 - #50 float
+INFO  19:43:08,736 - #50 c
+INFO  19:43:08,736 - #40 ,
+INFO  19:43:08,736 - #50 d
+INFO  19:43:08,736 - #38 ;
+INFO  19:43:08,736 - #21 record
+INFO  19:43:08,736 - #50 r
+INFO  19:43:08,736 - #46 {
+INFO  19:43:08,736 - #47 }
+INFO  19:43:08,736 - #50 B
+INFO  19:43:08,737 - #50 testObject
+INFO  19:43:08,737 - #38 ;
+INFO  19:43:08,737 - #46 {
+INFO  19:43:08,737 - #15 void
+INFO  19:43:08,737 - #50 main
+INFO  19:43:08,737 - #42 (
+INFO  19:43:08,737 - #43 )
+INFO  19:43:08,737 - #46 {
+INFO  19:43:08,737 - #50 testObject
+INFO  19:43:08,737 - #35 =
+INFO  19:43:08,738 - #11 new
+INFO  19:43:08,738 - #50 B
+INFO  19:43:08,738 - #44 [
+INFO  19:43:08,738 - #50 c
+INFO  19:43:08,738 - #22 +
+INFO  19:43:08,738 - #50 d
+INFO  19:43:08,738 - #45 ]
+INFO  19:43:08,738 - #38 ;
+INFO  19:43:08,738 - #50 a
+INFO  19:43:08,739 - #35 =
+INFO  19:43:08,739 - #50 testObject
+INFO  19:43:08,739 - #41 .
+INFO  19:43:08,739 - #50 testingMore
+INFO  19:43:08,739 - #42 (
+INFO  19:43:08,739 - #43 )
+INFO  19:43:08,739 - #26 %
+INFO  19:43:08,739 - #48 10
+INFO  19:43:08,740 - #38 ;
+INFO  19:43:08,740 - #50 b
+INFO  19:43:08,740 - #35 =
+INFO  19:43:08,740 - #50 testObject
+INFO  19:43:08,740 - #41 .
+INFO  19:43:08,740 - #50 b
+INFO  19:43:08,740 - #44 [
+INFO  19:43:08,740 - #48 5
+INFO  19:43:08,740 - #45 ]
+INFO  19:43:08,740 - #38 ;
+INFO  19:43:08,740 - #8 if
+INFO  19:43:08,740 - #42 (
+INFO  19:43:08,740 - #50 a
+INFO  19:43:08,740 - #30 >=
+INFO  19:43:08,740 - #50 testObject
+INFO  19:43:08,740 - #41 .
+INFO  19:43:08,741 - #50 testingMore
+INFO  19:43:08,741 - #42 (
+INFO  19:43:08,741 - #43 )
+INFO  19:43:08,741 - #23 -
+INFO  19:43:08,741 - #50 testObject
+INFO  19:43:08,741 - #41 .
+INFO  19:43:08,741 - #50 b
+INFO  19:43:08,741 - #44 [
+INFO  19:43:08,741 - #48 0
+INFO  19:43:08,741 - #45 ]
+INFO  19:43:08,741 - #33 &&
+INFO  19:43:08,741 - #50 c
+INFO  19:43:08,741 - #27 ==
+INFO  19:43:08,741 - #50 d
+INFO  19:43:08,741 - #43 )
+INFO  19:43:08,741 - #50 B
+INFO  19:43:08,741 - #41 .
+INFO  19:43:08,741 - #50 putp
+INFO  19:43:08,741 - #42 (
+INFO  19:43:08,741 - #50 a
+INFO  19:43:08,741 - #40 ,
+INFO  19:43:08,742 - #50 b
+INFO  19:43:08,742 - #43 )
+INFO  19:43:08,742 - #38 ;
+INFO  19:43:08,742 - #6 else
+INFO  19:43:08,742 - #50 a
+INFO  19:43:08,742 - #35 =
+INFO  19:43:08,742 - #50 help
+INFO  19:43:08,742 - #42 (
+INFO  19:43:08,742 - #50 a
+INFO  19:43:08,742 - #40 ,
+INFO  19:43:08,742 - #50 b
+INFO  19:43:08,742 - #43 )
+INFO  19:43:08,743 - #38 ;
+INFO  19:43:08,743 - #47 }
+INFO  19:43:08,743 - #50 int
+INFO  19:43:08,743 - #50 help
+INFO  19:43:08,743 - #42 (
+INFO  19:43:08,743 - #50 int
+INFO  19:43:08,743 - #50 a
+INFO  19:43:08,743 - #40 ,
+INFO  19:43:08,743 - #50 int
+INFO  19:43:08,743 - #50 b
+INFO  19:43:08,743 - #43 )
+INFO  19:43:08,743 - #46 {
+INFO  19:43:08,743 - #50 a
+INFO  19:43:08,743 - #35 =
+INFO  19:43:08,743 - #51 f
+INFO  19:43:08,743 - #22 +
+INFO  19:43:08,743 - #51 u
+INFO  19:43:08,744 - #22 +
+INFO  19:43:08,744 - #51 c
+INFO  19:43:08,744 - #22 +
+INFO  19:43:08,744 - #51 k
+INFO  19:43:08,744 - #38 ;
+INFO  19:43:08,744 - #50 b
+INFO  19:43:08,744 - #35 =
+INFO  19:43:08,744 - #51 t
+INFO  19:43:08,744 - #24 *
+INFO  19:43:08,744 - #51 h
+INFO  19:43:08,744 - #24 *
+INFO  19:43:08,744 - #51 i
+INFO  19:43:08,744 - #24 *
+INFO  19:43:08,744 - #51 s
+INFO  19:43:08,744 - #38 ;
+INFO  19:43:08,744 - #14 return
+INFO  19:43:08,744 - #11 new
+INFO  19:43:08,744 - #50 ItWorks
+INFO  19:43:08,744 - #44 [
+INFO  19:43:08,744 - #50 a
+INFO  19:43:08,744 - #24 *
+INFO  19:43:08,744 - #48 5
+INFO  19:43:08,744 - #23 -
+INFO  19:43:08,744 - #50 b
+INFO  19:43:08,745 - #45 ]
+INFO  19:43:08,745 - #38 ;
+INFO  19:43:08,745 - #47 }
+INFO  19:43:08,745 - #47 }
+INFO  19:43:08,753 - Program(
+ p
+  ListVar(
+    ListRecord(
+      ListVar(
+        ListClass(
+          ListClass(
+            ListVar(
+              ListVar(
+                ListConst(
+                  NoList(
+                  ) [NoList]
+                  ConstDeclWrapperClass(
+                    Type(
+                     int
+                    ) [Type]
+                    SingleConstDeclaration(
+                      ConstDeclNumber(
+                       size
+                       10
+                      ) [ConstDeclNumber]
+                    ) [SingleConstDeclaration]
+                  ) [ConstDeclWrapperClass]
+                ) [ListConst]
+                VarDeclWrapper(
+                  Type(
+                   int
+                  ) [Type]
+                  VarDeclarations(
+                    SingleVarDecl(
+                      NormalVarDecl(
+                       a
+                      ) [NormalVarDecl]
+                    ) [SingleVarDecl]
+                    NormalVarDecl(
+                     b
+                    ) [NormalVarDecl]
+                  ) [VarDeclarations]
+                ) [VarDeclWrapper]
+              ) [ListVar]
+              VarDeclWrapper(
+                Type(
+                 int
+                ) [Type]
+                SingleVarDecl(
+                  NormalVarDecl(
+                   c
+                  ) [NormalVarDecl]
+                ) [SingleVarDecl]
+              ) [VarDeclWrapper]
+            ) [ListVar]
+            SimpleClassWithVars(
+             A
+              NoListVarDeclWrapper(
+              ) [NoListVarDeclWrapper]
+            ) [SimpleClassWithVars]
+          ) [ListClass]
+          ClassExtendsWithVarsAndMethods(
+           B
+            Type(
+             A
+            ) [Type]
+            IsListVarDeclWrapper(
+              IsListVarDeclWrapper(
+                NoListVarDeclWrapper(
+                ) [NoListVarDeclWrapper]
+                VarDeclWrapper(
+                  Type(
+                   int
+                  ) [Type]
+                  VarDeclarations(
+                    SingleVarDecl(
+                      NormalVarDecl(
+                       a
+                      ) [NormalVarDecl]
+                    ) [SingleVarDecl]
+                    ArrayVarDecl(
+                     b
+                    ) [ArrayVarDecl]
+                  ) [VarDeclarations]
+                ) [VarDeclWrapper]
+              ) [IsListVarDeclWrapper]
+              VarDeclWrapper(
+                Type(
+                 string
+                ) [Type]
+                SingleVarDecl(
+                  NormalVarDecl(
+                   s
+                  ) [NormalVarDecl]
+                ) [SingleVarDecl]
+              ) [VarDeclWrapper]
+            ) [IsListVarDeclWrapper]
+            MethodDeclarations(
+              MethodDeclarations(
+                NoMethodDecl(
+                ) [NoMethodDecl]
+                MethDeclVoidParams(
+                 putp
+                  FormParameters(
+                    SingleFormPars(
+                      FormalParameter(
+                        Type(
+                         int
+                        ) [Type]
+                       a
+                      ) [FormalParameter]
+                    ) [SingleFormPars]
+                    FormalParameter(
+                      Type(
+                       int
+                      ) [Type]
+                     idx
+                    ) [FormalParameter]
+                  ) [FormParameters]
+                  NoListVarDeclWrapper(
+                  ) [NoListVarDeclWrapper]
+                  NoStatementList(
+                  ) [NoStatementList]
+                ) [MethDeclVoidParams]
+              ) [MethodDeclarations]
+              MethDeclNoParams(
+                Type(
+                 int
+                ) [Type]
+               testingMore
+                IsListVarDeclWrapper(
+                  NoListVarDeclWrapper(
+                  ) [NoListVarDeclWrapper]
+                  VarDeclWrapper(
+                    Type(
+                     float
+                    ) [Type]
+                    SingleVarDecl(
+                      NormalVarDecl(
+                       random
+                      ) [NormalVarDecl]
+                    ) [SingleVarDecl]
+                  ) [VarDeclWrapper]
+                ) [IsListVarDeclWrapper]
+                StatementListExists(
+                  StatementListExists(
+                    StatementListExists(
+                      StatementListExists(
+                        StatementListExists(
+                          StatementListExists(
+                            NoStatementList(
+                            ) [NoStatementList]
+                            StatementWithSingleStatement(
+                              DesignatorSingleStatement(
+                                DesStmError(
+                                ) [DesStmError]
+                              ) [DesignatorSingleStatement]
+                            ) [StatementWithSingleStatement]
+                          ) [StatementListExists]
+                          StatementWithSingleStatement(
+                            DesignatorSingleStatement(
+                              DesStmAssign(
+                                DesignatorWithArr(
+                                 random
+                                  NoDesgArr(
+                                  ) [NoDesgArr]
+                                ) [DesignatorWithArr]
+                                Assignop(
+                                ) [Assignop]
+                                ExprPositive(
+                                  MultipleTerms(
+                                    SingleTerm(
+                                      FactorWithoutActPars(
+                                        DesignatorDot(
+                                         a
+                                          DesignatorWithArr(
+                                           fetchRandomTest
+                                            NoDesgArr(
+                                            ) [NoDesgArr]
+                                          ) [DesignatorWithArr]
+                                        ) [DesignatorDot]
+                                      ) [FactorWithoutActPars]
+                                    ) [SingleTerm]
+                                    Multiply(
+                                    ) [Multiply]
+                                    Num(
+                                     100
+                                    ) [Num]
+                                  ) [MultipleTerms]
+                                  ThereIsMoreExpr(
+                                    NoMoreExpr(
+                                    ) [NoMoreExpr]
+                                    Plus(
+                                    ) [Plus]
+                                    SingleTerm(
+                                      Num(
+                                       1
+                                      ) [Num]
+                                    ) [SingleTerm]
+                                  ) [ThereIsMoreExpr]
+                                ) [ExprPositive]
+                              ) [DesStmAssign]
+                            ) [DesignatorSingleStatement]
+                          ) [StatementWithSingleStatement]
+                        ) [StatementListExists]
+                        StatementWithSingleStatement(
+                          DesignatorSingleStatement(
+                            DesStmInc(
+                              DesignatorWithArr(
+                               random
+                                NoDesgArr(
+                                ) [NoDesgArr]
+                              ) [DesignatorWithArr]
+                            ) [DesStmInc]
+                          ) [DesignatorSingleStatement]
+                        ) [StatementWithSingleStatement]
+                      ) [StatementListExists]
+                      StatementWithSingleStatement(
+                        IfElseSingleStatement(
+                          SingleCondition(
+                            MulCondTerm(
+                              SingleCondTerm(
+                                CondFactRelop(
+                                  ExprPositive(
+                                    SingleTerm(
+                                      NormalFactor(
+                                        DesignatorWithArr(
+                                         random
+                                          NoDesgArr(
+                                          ) [NoDesgArr]
+                                        ) [DesignatorWithArr]
+                                      ) [NormalFactor]
+                                    ) [SingleTerm]
+                                    NoMoreExpr(
+                                    ) [NoMoreExpr]
+                                  ) [ExprPositive]
+                                  GreaterThan(
+                                  ) [GreaterThan]
+                                  ExprPositive(
+                                    MultipleTerms(
+                                      SingleTerm(
+                                        Num(
+                                         25
+                                        ) [Num]
+                                      ) [SingleTerm]
+                                      Multiply(
+                                      ) [Multiply]
+                                      Num(
+                                       2
+                                      ) [Num]
+                                    ) [MultipleTerms]
+                                    NoMoreExpr(
+                                    ) [NoMoreExpr]
+                                  ) [ExprPositive]
+                                ) [CondFactRelop]
+                              ) [SingleCondTerm]
+                              CondFactRelop(
+                                ExprPositive(
+                                  SingleTerm(
+                                    NormalFactor(
+                                      DesignatorWithArr(
+                                       random
+                                        NoDesgArr(
+                                        ) [NoDesgArr]
+                                      ) [DesignatorWithArr]
+                                    ) [NormalFactor]
+                                  ) [SingleTerm]
+                                  NoMoreExpr(
+                                  ) [NoMoreExpr]
+                                ) [ExprPositive]
+                                LessOrEqual(
+                                ) [LessOrEqual]
+                                ExprPositive(
+                                  SingleTerm(
+                                    Num(
+                                     1
+                                    ) [Num]
+                                  ) [SingleTerm]
+                                  ThereIsMoreExpr(
+                                    NoMoreExpr(
+                                    ) [NoMoreExpr]
+                                    Plus(
+                                    ) [Plus]
+                                    MultipleTerms(
+                                      SingleTerm(
+                                        Num(
+                                         50
+                                        ) [Num]
+                                      ) [SingleTerm]
+                                      Multiply(
+                                      ) [Multiply]
+                                      Num(
+                                       2
+                                      ) [Num]
+                                    ) [MultipleTerms]
+                                  ) [ThereIsMoreExpr]
+                                ) [ExprPositive]
+                              ) [CondFactRelop]
+                            ) [MulCondTerm]
+                          ) [SingleCondition]
+                          StatementWithStatements(
+                            Statements(
+                              StatementListExists(
+                                StatementListExists(
+                                  StatementListExists(
+                                    NoStatementList(
+                                    ) [NoStatementList]
+                                    StatementWithSingleStatement(
+                                      DoWhileSingleStatement(
+                                        StatementWithStatements(
+                                          Statements(
+                                            StatementListExists(
+                                              StatementListExists(
+                                                NoStatementList(
+                                                ) [NoStatementList]
+                                                StatementWithSingleStatement(
+                                                  DesignatorSingleStatement(
+                                                    DesStmAssign(
+                                                      DesignatorWithArr(
+                                                       random
+                                                        NoDesgArr(
+                                                        ) [NoDesgArr]
+                                                      ) [DesignatorWithArr]
+                                                      Assignop(
+                                                      ) [Assignop]
+                                                      ExprPositive(
+                                                        SingleTerm(
+                                                          NormalFactor(
+                                                            DesignatorWithArr(
+                                                             random
+                                                              NoDesgArr(
+                                                              ) [NoDesgArr]
+                                                            ) [DesignatorWithArr]
+                                                          ) [NormalFactor]
+                                                        ) [SingleTerm]
+                                                        ThereIsMoreExpr(
+                                                          NoMoreExpr(
+                                                          ) [NoMoreExpr]
+                                                          Minus(
+                                                          ) [Minus]
+                                                          SingleTerm(
+                                                            Num(
+                                                             1
+                                                            ) [Num]
+                                                          ) [SingleTerm]
+                                                        ) [ThereIsMoreExpr]
+                                                      ) [ExprPositive]
+                                                    ) [DesStmAssign]
+                                                  ) [DesignatorSingleStatement]
+                                                ) [StatementWithSingleStatement]
+                                              ) [StatementListExists]
+                                              StatementWithSingleStatement(
+                                                IfSingleStatement(
+                                                  SingleCondition(
+                                                    SingleCondTerm(
+                                                      CondFactRelop(
+                                                        ExprPositive(
+                                                          SingleTerm(
+                                                            NormalFactor(
+                                                              DesignatorDot(
+                                                               WorldTime
+                                                                DesignatorWithArr(
+                                                                 currentTime
+                                                                  DesigArr(
+                                                                    NoDesgArr(
+                                                                    ) [NoDesgArr]
+                                                                    ExprPositive(
+                                                                      SingleTerm(
+                                                                        NormalFactor(
+                                                                          DesignatorWithArr(
+                                                                           Today
+                                                                            NoDesgArr(
+                                                                            ) [NoDesgArr]
+                                                                          ) [DesignatorWithArr]
+                                                                        ) [NormalFactor]
+                                                                      ) [SingleTerm]
+                                                                      NoMoreExpr(
+                                                                      ) [NoMoreExpr]
+                                                                    ) [ExprPositive]
+                                                                  ) [DesigArr]
+                                                                ) [DesignatorWithArr]
+                                                              ) [DesignatorDot]
+                                                            ) [NormalFactor]
+                                                          ) [SingleTerm]
+                                                          NoMoreExpr(
+                                                          ) [NoMoreExpr]
+                                                        ) [ExprPositive]
+                                                        Equals(
+                                                        ) [Equals]
+                                                        ExprPositive(
+                                                          SingleTerm(
+                                                            NormalFactor(
+                                                              DesignatorWithArr(
+                                                               Late
+                                                                NoDesgArr(
+                                                                ) [NoDesgArr]
+                                                              ) [DesignatorWithArr]
+                                                            ) [NormalFactor]
+                                                          ) [SingleTerm]
+                                                          NoMoreExpr(
+                                                          ) [NoMoreExpr]
+                                                        ) [ExprPositive]
+                                                      ) [CondFactRelop]
+                                                    ) [SingleCondTerm]
+                                                  ) [SingleCondition]
+                                                  StatementWithSingleStatement(
+                                                    ContinueSingleStatement(
+                                                    ) [ContinueSingleStatement]
+                                                  ) [StatementWithSingleStatement]
+                                                ) [IfSingleStatement]
+                                              ) [StatementWithSingleStatement]
+                                            ) [StatementListExists]
+                                          ) [Statements]
+                                        ) [StatementWithStatements]
+                                        SingleCondition(
+                                          SingleCondTerm(
+                                            CondFactRelop(
+                                              ExprPositive(
+                                                SingleTerm(
+                                                  NormalFactor(
+                                                    DesignatorWithArr(
+                                                     random
+                                                      NoDesgArr(
+                                                      ) [NoDesgArr]
+                                                    ) [DesignatorWithArr]
+                                                  ) [NormalFactor]
+                                                ) [SingleTerm]
+                                                NoMoreExpr(
+                                                ) [NoMoreExpr]
+                                              ) [ExprPositive]
+                                              NotEqual(
+                                              ) [NotEqual]
+                                              ExprPositive(
+                                                SingleTerm(
+                                                  Num(
+                                                   0
+                                                  ) [Num]
+                                                ) [SingleTerm]
+                                                NoMoreExpr(
+                                                ) [NoMoreExpr]
+                                              ) [ExprPositive]
+                                            ) [CondFactRelop]
+                                          ) [SingleCondTerm]
+                                        ) [SingleCondition]
+                                      ) [DoWhileSingleStatement]
+                                    ) [StatementWithSingleStatement]
+                                  ) [StatementListExists]
+                                  StatementWithSingleStatement(
+                                    BreakSingleStatement(
+                                    ) [BreakSingleStatement]
+                                  ) [StatementWithSingleStatement]
+                                ) [StatementListExists]
+                                StatementWithColon(
+                                  Label(
+                                   loop
+                                  ) [Label]
+                                  DoWhileSingleStatement(
+                                    StatementWithSingleStatement(
+                                      DesignatorSingleStatement(
+                                        DesStmInc(
+                                          DesignatorWithArr(
+                                           random
+                                            NoDesgArr(
+                                            ) [NoDesgArr]
+                                          ) [DesignatorWithArr]
+                                        ) [DesStmInc]
+                                      ) [DesignatorSingleStatement]
+                                    ) [StatementWithSingleStatement]
+                                    SingleCondition(
+                                      SingleCondTerm(
+                                        CondFactRelop(
+                                          ExprPositive(
+                                            SingleTerm(
+                                              NormalFactor(
+                                                DesignatorWithArr(
+                                                 random
+                                                  NoDesgArr(
+                                                  ) [NoDesgArr]
+                                                ) [DesignatorWithArr]
+                                              ) [NormalFactor]
+                                            ) [SingleTerm]
+                                            NoMoreExpr(
+                                            ) [NoMoreExpr]
+                                          ) [ExprPositive]
+                                          LessThan(
+                                          ) [LessThan]
+                                          ExprPositive(
+                                            SingleTerm(
+                                              Num(
+                                               50
+                                              ) [Num]
+                                            ) [SingleTerm]
+                                            NoMoreExpr(
+                                            ) [NoMoreExpr]
+                                          ) [ExprPositive]
+                                        ) [CondFactRelop]
+                                      ) [SingleCondTerm]
+                                    ) [SingleCondition]
+                                  ) [DoWhileSingleStatement]
+                                ) [StatementWithColon]
+                              ) [StatementListExists]
+                            ) [Statements]
+                          ) [StatementWithStatements]
+                          StatementWithSingleStatement(
+                            GotoSingleStatement(
+                              Label(
+                               loop
+                              ) [Label]
+                            ) [GotoSingleStatement]
+                          ) [StatementWithSingleStatement]
+                        ) [IfElseSingleStatement]
+                      ) [StatementWithSingleStatement]
+                    ) [StatementListExists]
+                    StatementWithSingleStatement(
+                      PrintNumberSingleStatement(
+                        ExprNegative(
+                          SingleTerm(
+                            NormalFactor(
+                              DesignatorWithArr(
+                               b
+                                DesigArr(
+                                  NoDesgArr(
+                                  ) [NoDesgArr]
+                                  ExprPositive(
+                                    SingleTerm(
+                                      Num(
+                                       5
+                                      ) [Num]
+                                    ) [SingleTerm]
+                                    NoMoreExpr(
+                                    ) [NoMoreExpr]
+                                  ) [ExprPositive]
+                                ) [DesigArr]
+                              ) [DesignatorWithArr]
+                            ) [NormalFactor]
+                          ) [SingleTerm]
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                        ) [ExprNegative]
+                       10
+                      ) [PrintNumberSingleStatement]
+                    ) [StatementWithSingleStatement]
+                  ) [StatementListExists]
+                  StatementWithSingleStatement(
+                    ReturnExprSingleStatement(
+                      ExprPositive(
+                        SingleTerm(
+                          NormalFactor(
+                            DesignatorWithArr(
+                             random
+                              NoDesgArr(
+                              ) [NoDesgArr]
+                            ) [DesignatorWithArr]
+                          ) [NormalFactor]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [ExprPositive]
+                    ) [ReturnExprSingleStatement]
+                  ) [StatementWithSingleStatement]
+                ) [StatementListExists]
+              ) [MethDeclNoParams]
+            ) [MethodDeclarations]
+          ) [ClassExtendsWithVarsAndMethods]
+        ) [ListClass]
+        VarDeclWrapper(
+          Type(
+           float
+          ) [Type]
+          VarDeclarations(
+            SingleVarDecl(
+              NormalVarDecl(
+               c
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+            NormalVarDecl(
+             d
+            ) [NormalVarDecl]
+          ) [VarDeclarations]
+        ) [VarDeclWrapper]
+      ) [ListVar]
+      RecordDecl(
+       r
+        NoListVarDeclWrapper(
+        ) [NoListVarDeclWrapper]
+      ) [RecordDecl]
+    ) [ListRecord]
+    VarDeclWrapper(
+      Type(
+       B
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         testObject
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapper]
+  ) [ListVar]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethDeclVoidNoParams(
+       main
+        NoListVarDeclWrapper(
+        ) [NoListVarDeclWrapper]
+        StatementListExists(
+          StatementListExists(
+            StatementListExists(
+              StatementListExists(
+                NoStatementList(
+                ) [NoStatementList]
+                StatementWithSingleStatement(
+                  DesignatorSingleStatement(
+                    DesStmAssign(
+                      DesignatorWithArr(
+                       testObject
+                        NoDesgArr(
+                        ) [NoDesgArr]
+                      ) [DesignatorWithArr]
+                      Assignop(
+                      ) [Assignop]
+                      ExprPositive(
+                        SingleTerm(
+                          NewFactorWithPars(
+                            Type(
+                             B
+                            ) [Type]
+                            ExprPositive(
+                              SingleTerm(
+                                NormalFactor(
+                                  DesignatorWithArr(
+                                   c
+                                    NoDesgArr(
+                                    ) [NoDesgArr]
+                                  ) [DesignatorWithArr]
+                                ) [NormalFactor]
+                              ) [SingleTerm]
+                              ThereIsMoreExpr(
+                                NoMoreExpr(
+                                ) [NoMoreExpr]
+                                Plus(
+                                ) [Plus]
+                                SingleTerm(
+                                  NormalFactor(
+                                    DesignatorWithArr(
+                                     d
+                                      NoDesgArr(
+                                      ) [NoDesgArr]
+                                    ) [DesignatorWithArr]
+                                  ) [NormalFactor]
+                                ) [SingleTerm]
+                              ) [ThereIsMoreExpr]
+                            ) [ExprPositive]
+                          ) [NewFactorWithPars]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [ExprPositive]
+                    ) [DesStmAssign]
+                  ) [DesignatorSingleStatement]
+                ) [StatementWithSingleStatement]
+              ) [StatementListExists]
+              StatementWithSingleStatement(
+                DesignatorSingleStatement(
+                  DesStmAssign(
+                    DesignatorWithArr(
+                     a
+                      NoDesgArr(
+                      ) [NoDesgArr]
+                    ) [DesignatorWithArr]
+                    Assignop(
+                    ) [Assignop]
+                    ExprPositive(
+                      MultipleTerms(
+                        SingleTerm(
+                          FactorWithoutActPars(
+                            DesignatorDot(
+                             testObject
+                              DesignatorWithArr(
+                               testingMore
+                                NoDesgArr(
+                                ) [NoDesgArr]
+                              ) [DesignatorWithArr]
+                            ) [DesignatorDot]
+                          ) [FactorWithoutActPars]
+                        ) [SingleTerm]
+                        Mod(
+                        ) [Mod]
+                        Num(
+                         10
+                        ) [Num]
+                      ) [MultipleTerms]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [ExprPositive]
+                  ) [DesStmAssign]
+                ) [DesignatorSingleStatement]
+              ) [StatementWithSingleStatement]
+            ) [StatementListExists]
+            StatementWithSingleStatement(
+              DesignatorSingleStatement(
+                DesStmAssign(
+                  DesignatorWithArr(
+                   b
+                    NoDesgArr(
+                    ) [NoDesgArr]
+                  ) [DesignatorWithArr]
+                  Assignop(
+                  ) [Assignop]
+                  ExprPositive(
+                    SingleTerm(
+                      NormalFactor(
+                        DesignatorDot(
+                         testObject
+                          DesignatorWithArr(
+                           b
+                            DesigArr(
+                              NoDesgArr(
+                              ) [NoDesgArr]
+                              ExprPositive(
+                                SingleTerm(
+                                  Num(
+                                   5
+                                  ) [Num]
+                                ) [SingleTerm]
+                                NoMoreExpr(
+                                ) [NoMoreExpr]
+                              ) [ExprPositive]
+                            ) [DesigArr]
+                          ) [DesignatorWithArr]
+                        ) [DesignatorDot]
+                      ) [NormalFactor]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [ExprPositive]
+                ) [DesStmAssign]
+              ) [DesignatorSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            IfElseSingleStatement(
+              SingleCondition(
+                MulCondTerm(
+                  SingleCondTerm(
+                    CondFactRelop(
+                      ExprPositive(
+                        SingleTerm(
+                          NormalFactor(
+                            DesignatorWithArr(
+                             a
+                              NoDesgArr(
+                              ) [NoDesgArr]
+                            ) [DesignatorWithArr]
+                          ) [NormalFactor]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [ExprPositive]
+                      GreaterOrEqual(
+                      ) [GreaterOrEqual]
+                      ExprPositive(
+                        SingleTerm(
+                          FactorWithoutActPars(
+                            DesignatorDot(
+                             testObject
+                              DesignatorWithArr(
+                               testingMore
+                                NoDesgArr(
+                                ) [NoDesgArr]
+                              ) [DesignatorWithArr]
+                            ) [DesignatorDot]
+                          ) [FactorWithoutActPars]
+                        ) [SingleTerm]
+                        ThereIsMoreExpr(
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                          Minus(
+                          ) [Minus]
+                          SingleTerm(
+                            NormalFactor(
+                              DesignatorDot(
+                               testObject
+                                DesignatorWithArr(
+                                 b
+                                  DesigArr(
+                                    NoDesgArr(
+                                    ) [NoDesgArr]
+                                    ExprPositive(
+                                      SingleTerm(
+                                        Num(
+                                         0
+                                        ) [Num]
+                                      ) [SingleTerm]
+                                      NoMoreExpr(
+                                      ) [NoMoreExpr]
+                                    ) [ExprPositive]
+                                  ) [DesigArr]
+                                ) [DesignatorWithArr]
+                              ) [DesignatorDot]
+                            ) [NormalFactor]
+                          ) [SingleTerm]
+                        ) [ThereIsMoreExpr]
+                      ) [ExprPositive]
+                    ) [CondFactRelop]
+                  ) [SingleCondTerm]
+                  CondFactRelop(
+                    ExprPositive(
+                      SingleTerm(
+                        NormalFactor(
+                          DesignatorWithArr(
+                           c
+                            NoDesgArr(
+                            ) [NoDesgArr]
+                          ) [DesignatorWithArr]
+                        ) [NormalFactor]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [ExprPositive]
+                    Equals(
+                    ) [Equals]
+                    ExprPositive(
+                      SingleTerm(
+                        NormalFactor(
+                          DesignatorWithArr(
+                           d
+                            NoDesgArr(
+                            ) [NoDesgArr]
+                          ) [DesignatorWithArr]
+                        ) [NormalFactor]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [ExprPositive]
+                  ) [CondFactRelop]
+                ) [MulCondTerm]
+              ) [SingleCondition]
+              StatementWithSingleStatement(
+                DesignatorSingleStatement(
+                  DesStmFuncParams(
+                    DesignatorDot(
+                     B
+                      DesignatorWithArr(
+                       putp
+                        NoDesgArr(
+                        ) [NoDesgArr]
+                      ) [DesignatorWithArr]
+                    ) [DesignatorDot]
+                    MulActPars(
+                      SingleActPar(
+                        ExprPositive(
+                          SingleTerm(
+                            NormalFactor(
+                              DesignatorWithArr(
+                               a
+                                NoDesgArr(
+                                ) [NoDesgArr]
+                              ) [DesignatorWithArr]
+                            ) [NormalFactor]
+                          ) [SingleTerm]
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                        ) [ExprPositive]
+                      ) [SingleActPar]
+                      ExprPositive(
+                        SingleTerm(
+                          NormalFactor(
+                            DesignatorWithArr(
+                             b
+                              NoDesgArr(
+                              ) [NoDesgArr]
+                            ) [DesignatorWithArr]
+                          ) [NormalFactor]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [ExprPositive]
+                    ) [MulActPars]
+                  ) [DesStmFuncParams]
+                ) [DesignatorSingleStatement]
+              ) [StatementWithSingleStatement]
+              StatementWithSingleStatement(
+                DesignatorSingleStatement(
+                  DesStmAssign(
+                    DesignatorWithArr(
+                     a
+                      NoDesgArr(
+                      ) [NoDesgArr]
+                    ) [DesignatorWithArr]
+                    Assignop(
+                    ) [Assignop]
+                    ExprPositive(
+                      SingleTerm(
+                        FactorWithActPars(
+                          DesignatorWithArr(
+                           help
+                            NoDesgArr(
+                            ) [NoDesgArr]
+                          ) [DesignatorWithArr]
+                          MulActPars(
+                            SingleActPar(
+                              ExprPositive(
+                                SingleTerm(
+                                  NormalFactor(
+                                    DesignatorWithArr(
+                                     a
+                                      NoDesgArr(
+                                      ) [NoDesgArr]
+                                    ) [DesignatorWithArr]
+                                  ) [NormalFactor]
+                                ) [SingleTerm]
+                                NoMoreExpr(
+                                ) [NoMoreExpr]
+                              ) [ExprPositive]
+                            ) [SingleActPar]
+                            ExprPositive(
+                              SingleTerm(
+                                NormalFactor(
+                                  DesignatorWithArr(
+                                   b
+                                    NoDesgArr(
+                                    ) [NoDesgArr]
+                                  ) [DesignatorWithArr]
+                                ) [NormalFactor]
+                              ) [SingleTerm]
+                              NoMoreExpr(
+                              ) [NoMoreExpr]
+                            ) [ExprPositive]
+                          ) [MulActPars]
+                        ) [FactorWithActPars]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [ExprPositive]
+                  ) [DesStmAssign]
+                ) [DesignatorSingleStatement]
+              ) [StatementWithSingleStatement]
+            ) [IfElseSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+      ) [MethDeclVoidNoParams]
+    ) [MethodDeclarations]
+    MethDeclParams(
+      Type(
+       int
+      ) [Type]
+     help
+      FormParameters(
+        SingleFormPars(
+          FormalParameter(
+            Type(
+             int
+            ) [Type]
+           a
+          ) [FormalParameter]
+        ) [SingleFormPars]
+        FormalParameter(
+          Type(
+           int
+          ) [Type]
+         b
+        ) [FormalParameter]
+      ) [FormParameters]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          StatementListExists(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementWithSingleStatement(
+              DesignatorSingleStatement(
+                DesStmAssign(
+                  DesignatorWithArr(
+                   a
+                    NoDesgArr(
+                    ) [NoDesgArr]
+                  ) [DesignatorWithArr]
+                  Assignop(
+                  ) [Assignop]
+                  ExprPositive(
+                    SingleTerm(
+                      Char(
+                       f
+                      ) [Char]
+                    ) [SingleTerm]
+                    ThereIsMoreExpr(
+                      ThereIsMoreExpr(
+                        ThereIsMoreExpr(
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                          Plus(
+                          ) [Plus]
+                          SingleTerm(
+                            Char(
+                             u
+                            ) [Char]
+                          ) [SingleTerm]
+                        ) [ThereIsMoreExpr]
+                        Plus(
+                        ) [Plus]
+                        SingleTerm(
+                          Char(
+                           c
+                          ) [Char]
+                        ) [SingleTerm]
+                      ) [ThereIsMoreExpr]
+                      Plus(
+                      ) [Plus]
+                      SingleTerm(
+                        Char(
+                         k
+                        ) [Char]
+                      ) [SingleTerm]
+                    ) [ThereIsMoreExpr]
+                  ) [ExprPositive]
+                ) [DesStmAssign]
+              ) [DesignatorSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            DesignatorSingleStatement(
+              DesStmAssign(
+                DesignatorWithArr(
+                 b
+                  NoDesgArr(
+                  ) [NoDesgArr]
+                ) [DesignatorWithArr]
+                Assignop(
+                ) [Assignop]
+                ExprPositive(
+                  MultipleTerms(
+                    MultipleTerms(
+                      MultipleTerms(
+                        SingleTerm(
+                          Char(
+                           t
+                          ) [Char]
+                        ) [SingleTerm]
+                        Multiply(
+                        ) [Multiply]
+                        Char(
+                         h
+                        ) [Char]
+                      ) [MultipleTerms]
+                      Multiply(
+                      ) [Multiply]
+                      Char(
+                       i
+                      ) [Char]
+                    ) [MultipleTerms]
+                    Multiply(
+                    ) [Multiply]
+                    Char(
+                     s
+                    ) [Char]
+                  ) [MultipleTerms]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [ExprPositive]
+              ) [DesStmAssign]
+            ) [DesignatorSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          ReturnExprSingleStatement(
+            ExprPositive(
+              SingleTerm(
+                NewFactorWithPars(
+                  Type(
+                   ItWorks
+                  ) [Type]
+                  ExprPositive(
+                    MultipleTerms(
+                      SingleTerm(
+                        NormalFactor(
+                          DesignatorWithArr(
+                           a
+                            NoDesgArr(
+                            ) [NoDesgArr]
+                          ) [DesignatorWithArr]
+                        ) [NormalFactor]
+                      ) [SingleTerm]
+                      Multiply(
+                      ) [Multiply]
+                      Num(
+                       5
+                      ) [Num]
+                    ) [MultipleTerms]
+                    ThereIsMoreExpr(
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                      Minus(
+                      ) [Minus]
+                      SingleTerm(
+                        NormalFactor(
+                          DesignatorWithArr(
+                           b
+                            NoDesgArr(
+                            ) [NoDesgArr]
+                          ) [DesignatorWithArr]
+                        ) [NormalFactor]
+                      ) [SingleTerm]
+                    ) [ThereIsMoreExpr]
+                  ) [ExprPositive]
+                ) [NewFactorWithPars]
+              ) [SingleTerm]
+              NoMoreExpr(
+              ) [NoMoreExpr]
+            ) [ExprPositive]
+          ) [ReturnExprSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  19:43:08,755 - ===================================
+INFO  19:43:08,757 -  Program count calls = 1

@@ -1,0 +1,61 @@
+INFO  20:18:13,909 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  20:18:13,946 - #2 program
+INFO  20:18:13,947 - #50 p
+INFO  20:18:13,947 - #7 const
+INFO  20:18:13,947 - #50 int
+INFO  20:18:13,947 - #50 size
+INFO  20:18:13,948 - #35 =
+INFO  20:18:13,948 - #48 10
+INFO  20:18:13,948 - #38 ;
+INFO  20:18:13,948 - #46 {
+INFO  20:18:13,948 - #15 void
+INFO  20:18:13,949 - #50 main
+INFO  20:18:13,949 - #42 (
+INFO  20:18:13,949 - #43 )
+INFO  20:18:13,949 - #46 {
+INFO  20:18:13,949 - #20 goto
+INFO  20:18:13,950 - #38 ;
+ERROR 20:18:13,950 - 
+Sintaksna greska na liniji 5
+INFO  20:18:13,950 - #47 }
+INFO  20:18:13,950 - #47 }
+ERROR 20:18:13,951 - Oporavak od greske! Too easy! Greska pri dodeli vrednosti! 5
+INFO  20:18:13,953 - Program(
+ p
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         size
+         10
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclVoidNoParams(
+     main
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
+          DesignatorSingleStatement(
+            DesStmError(
+            ) [DesStmError]
+          ) [DesignatorSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclVoidNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  20:18:13,954 - ===================================
+INFO  20:18:13,955 -  Program count calls = 1

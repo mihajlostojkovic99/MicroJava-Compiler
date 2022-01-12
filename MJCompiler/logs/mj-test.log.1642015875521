@@ -1,0 +1,87 @@
+INFO  20:31:09,905 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  20:31:09,944 - #2 program
+INFO  20:31:09,944 - #50 p
+INFO  20:31:09,944 - #7 const
+INFO  20:31:09,945 - #50 int
+INFO  20:31:09,945 - #50 size
+INFO  20:31:09,945 - #35 =
+INFO  20:31:09,945 - #48 10
+INFO  20:31:09,946 - #38 ;
+INFO  20:31:09,946 - #46 {
+INFO  20:31:09,946 - #15 void
+INFO  20:31:09,946 - #50 main
+INFO  20:31:09,946 - #42 (
+INFO  20:31:09,947 - #43 )
+INFO  20:31:09,947 - #46 {
+INFO  20:31:09,947 - #50 mojNiz
+INFO  20:31:09,947 - #35 =
+INFO  20:31:09,948 - #48 2
+INFO  20:31:09,948 - #22 +
+INFO  20:31:09,949 - #48 2
+INFO  20:31:09,950 - #38 ;
+INFO  20:31:09,950 - #47 }
+INFO  20:31:09,950 - #47 }
+INFO  20:31:09,953 - Program(
+ p
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         size
+         10
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclVoidNoParams(
+     main
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
+          DesignatorSingleStatement(
+            DesStmAssign(
+              DesignatorWithArr(
+               mojNiz
+                NoDesgArr(
+                ) [NoDesgArr]
+              ) [DesignatorWithArr]
+              Assignop(
+              ) [Assignop]
+              ExprPositive(
+                SingleTerm(
+                  Num(
+                   2
+                  ) [Num]
+                ) [SingleTerm]
+                ThereIsMoreExpr(
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                  Plus(
+                  ) [Plus]
+                  SingleTerm(
+                    Num(
+                     2
+                    ) [Num]
+                  ) [SingleTerm]
+                ) [ThereIsMoreExpr]
+              ) [ExprPositive]
+            ) [DesStmAssign]
+          ) [DesignatorSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclVoidNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  20:31:09,953 - ===================================
+INFO  20:31:09,955 -  Program count calls = 1

@@ -104,7 +104,7 @@ MethodDeclList	::= (MethodDeclarations) MethodDeclList MethodDecl
 ConstDeclWrapper ::= (ConstDeclWrapperClass) CONST Type ConstDeclList SEMI
 				 |
 				 (ConstDeclWrapperError) CONST error SEMI:l /* npr const ; ili const int ; */
-				 {: parser.report_error("Oporavak od greske! Too easy!" + lleft, null); :}
+				 {: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
 				 ;
 
 ConstDeclList	::= (ConstDeclarations) ConstDeclList COMMA ConstDecl
@@ -116,7 +116,10 @@ ConstDecl		::= (ConstDeclNumber) IDENT EQUAL NUMBER
 				|
 				(ConstDeclBool) IDENT EQUAL BOOL
 				|
-				(ConstDeclChar) IDENT EQUAL CHAR 
+				(ConstDeclChar) IDENT EQUAL CHAR
+				|
+				(ConstDeclError) error:l /* npr const int x y, z;*/
+				 {: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
 				;
 
 VarDeclWrapper	::= (VarDeclWrapper) Type VarDeclList SEMI;
@@ -177,7 +180,7 @@ StatementList	::= (StatementListExists) StatementList Statement
 				(NoStatementList) /* epsilon */
 				;
 
-Statement		::= (StatementWithColon) Label COLON SingleStatement
+Statement		::= (StatementWithLabel) Label COLON SingleStatement
 				|
 				(StatementWithSingleStatement) SingleStatement
 				|
@@ -186,7 +189,7 @@ Statement		::= (StatementWithColon) Label COLON SingleStatement
 				
 Label			::= (Label) IDENT;
 
-SingleStatement	::= (DesignatorSingleStatement) DesignatorStatement SEMI
+SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement
 				|
 				(IfElseSingleStatement) IF LPAREN Condition RPAREN Statement ELSE Statement
 				|
@@ -213,15 +216,20 @@ SingleStatement	::= (DesignatorSingleStatement) DesignatorStatement SEMI
 				
 Statements		::= (Statements) LBRACE StatementList RBRACE;
 
-DesignatorStatement ::= (DesStmAssign) Designator Assignop Expr
+
+
+DesignatorStatement ::= (DesStmAssign) Designator Assignop Expr SEMI
 					|
-					(DesStmFuncParams) Designator LPAREN ActPars RPAREN
+					(DesStmFuncParams) Designator LPAREN ActPars RPAREN SEMI
 					|
-					(DesStmFunc) Designator LPAREN RPAREN
+					(DesStmFunc) Designator LPAREN RPAREN SEMI
 					|
-					(DesStmInc) Designator INC
+					(DesStmInc) Designator INC SEMI
 					|
-					(DesStmDec) Designator DEC
+					(DesStmDec) Designator DEC SEMI
+					|
+					(AssignmentError) error SEMI:l
+					{: parser.report_error("Oporavak od greske! Too easy! Greska pri dodeli vrednosti! " + lleft, null); :}
 					;
 					
 Condition		::= (MultipleCondition) Condition OR CondTerm

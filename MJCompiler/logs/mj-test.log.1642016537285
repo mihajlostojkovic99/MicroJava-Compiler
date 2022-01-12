@@ -1,0 +1,22 @@
+INFO  20:42:10,602 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  20:42:10,645 - #2 program
+INFO  20:42:10,645 - #50 p
+INFO  20:42:10,645 - #7 const
+INFO  20:42:10,646 - #50 int
+INFO  20:42:10,646 - #50 size
+INFO  20:42:10,646 - #35 =
+INFO  20:42:10,646 - #48 10
+INFO  20:42:10,646 - #38 ;
+INFO  20:42:10,647 - #46 {
+INFO  20:42:10,647 - #15 void
+INFO  20:42:10,647 - #50 main
+INFO  20:42:10,647 - #42 (
+INFO  20:42:10,647 - #43 )
+INFO  20:42:10,648 - #46 {
+INFO  20:42:10,648 - #50 mojNiz
+INFO  20:42:10,648 - #35 =
+INFO  20:42:10,649 - #50 a
+INFO  20:42:10,649 - #36 ++
+ERROR 20:42:10,650 - 
+Sintaksna greska na liniji 5
+ERROR 20:42:10,650 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5

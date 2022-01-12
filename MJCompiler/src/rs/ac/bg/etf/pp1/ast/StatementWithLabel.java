@@ -1,16 +1,16 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/0/2022 18:41:45
+// 12/0/2022 21:10:54
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class StatementWithColon extends Statement {
+public class StatementWithLabel extends Statement {
 
     private Label Label;
     private SingleStatement SingleStatement;
 
-    public StatementWithColon (Label Label, SingleStatement SingleStatement) {
+    public StatementWithLabel (Label Label, SingleStatement SingleStatement) {
         this.Label=Label;
         if(Label!=null) Label.setParent(this);
         this.SingleStatement=SingleStatement;
@@ -57,7 +57,7 @@ public class StatementWithColon extends Statement {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("StatementWithColon(\n");
+        buffer.append("StatementWithLabel(\n");
 
         if(Label!=null)
             buffer.append(Label.toString("  "+tab));
@@ -72,7 +72,7 @@ public class StatementWithColon extends Statement {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [StatementWithColon]");
+        buffer.append(") [StatementWithLabel]");
         return buffer.toString();
     }
 }
