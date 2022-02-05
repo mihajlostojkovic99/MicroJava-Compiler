@@ -14,6 +14,9 @@ import org.apache.log4j.xml.DOMConfigurator;
 
 import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.util.Log4JUtils;
+import rs.etf.pp1.symboltable.Tab;
+import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class MJParserTest {
 
@@ -47,6 +50,18 @@ public class MJParserTest {
 			prog.traverseBottomUp(v); 
 	      
 			log.info(" Program count calls = " + v.ProgramCount);
+			
+			// SymTable inicijalizacija
+			Tab.init();
+			Obj boolObj = Tab.insert(Obj.Type, "bool", new Struct(Struct.Bool));
+			boolObj.setLevel(-1);
+			boolObj.setAdr(-1);
+			
+			// semanticka analiza
+			
+			//SymTable dump
+			log.info("===================================");
+			Tab.dump();
 			
 		} 
 		finally {
