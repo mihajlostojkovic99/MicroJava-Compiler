@@ -1,25 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/0/2022 22:26:56
+// 5/1/2022 1:28:11
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class SingleTerm extends Term {
 
-    private Factor Factor;
+    private FactorWrapper FactorWrapper;
 
-    public SingleTerm (Factor Factor) {
-        this.Factor=Factor;
-        if(Factor!=null) Factor.setParent(this);
+    public SingleTerm (FactorWrapper FactorWrapper) {
+        this.FactorWrapper=FactorWrapper;
+        if(FactorWrapper!=null) FactorWrapper.setParent(this);
     }
 
-    public Factor getFactor() {
-        return Factor;
+    public FactorWrapper getFactorWrapper() {
+        return FactorWrapper;
     }
 
-    public void setFactor(Factor Factor) {
-        this.Factor=Factor;
+    public void setFactorWrapper(FactorWrapper FactorWrapper) {
+        this.FactorWrapper=FactorWrapper;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +27,16 @@ public class SingleTerm extends Term {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Factor!=null) Factor.accept(visitor);
+        if(FactorWrapper!=null) FactorWrapper.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Factor!=null) Factor.traverseTopDown(visitor);
+        if(FactorWrapper!=null) FactorWrapper.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Factor!=null) Factor.traverseBottomUp(visitor);
+        if(FactorWrapper!=null) FactorWrapper.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +45,8 @@ public class SingleTerm extends Term {
         buffer.append(tab);
         buffer.append("SingleTerm(\n");
 
-        if(Factor!=null)
-            buffer.append(Factor.toString("  "+tab));
+        if(FactorWrapper!=null)
+            buffer.append(FactorWrapper.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

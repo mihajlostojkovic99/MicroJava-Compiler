@@ -52,7 +52,7 @@ scan with {:
 	return s;
 :}
 
-terminal PROG, BREAK, CLASS, ENUM, ELSE, CONST, IF, DO, WHILE, NEW, PRINT, READ;
+terminal PROG, BREAK, ENUM, ELSE, CONST, IF, DO, WHILE, NEW, PRINT, READ;
 terminal RETURN, VOID, EXTENDS, CONT, THIS, SUPER, GOTO, RECORD, PLUS, MINUS, MUL, DIV, MOD;
 terminal EQEQ, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, EQUAL, INC, DEC, SEMI, COLON, COMMA, DOT;
 terminal LPAREN, RPAREN, LSQBR, RSQBR, LBRACE, RBRACE;
@@ -60,13 +60,13 @@ terminal Integer NUMBER;
 terminal String BOOL;
 terminal String IDENT;
 terminal Character CHAR;
+terminal CLASS;
 
 nonterminal Program, List, MethodDeclList;
-nonterminal ConstDeclWrapper, VarDeclWrapper, ClassDeclList, RecordDeclList;
+nonterminal ConstDeclWrapper, VarDeclWrapper, RecordDeclList;
 nonterminal MethodDecl;
 nonterminal Type, ConstDeclList, ConstDecl;
 nonterminal VarDeclList, VarDecl;
-nonterminal ClassDecl;
 nonterminal RecordDecl;
 nonterminal FormPars, StatementList;
 nonterminal FormPar;
@@ -75,9 +75,9 @@ nonterminal DesignatorStatement, Condition, Expr, ExprMore, Designator;
 nonterminal Assignop, AssignWrapper, ActPars;
 nonterminal CondTerm;
 nonterminal Addop, Term;
-nonterminal DesignatorArray;
+nonterminal DesignatorMore;
 nonterminal CondFact;
-nonterminal Mulop, Factor;
+nonterminal Mulop, Factor, FactorWrapper, Unary;
 nonterminal Relop;
 nonterminal ListVarDeclWrapper;
 
@@ -88,8 +88,6 @@ Program 		::= (Program) PROG IDENT List LBRACE MethodDeclList RBRACE;
 List 			::= (ListConst) List ConstDeclWrapper
 				|
 				(ListVar) List VarDeclWrapper
-				|
-				(ListClass) List ClassDecl
 				|
 				(ListRecord) List RecordDecl
 				|
@@ -139,9 +137,12 @@ VarDecl			::= (NormalVarDecl) IDENT
 				(ArrayVarDecl) IDENT LSQBR RSQBR
 				;
 
-ClassDeclList	::= (ClassDeclList) ClassDeclList ClassDecl;
-
-RecordDeclList	::= (RecordDeclList) RecordDeclList RecordDecl;
+/*
+RecordDeclList	::= (RecordDeclList) RecordDeclList RecordDecl
+				|
+				(SingleRecordDecl) RecordDecl
+				;
+*/
 
 MethodDecl		::= (MethDeclParams) Type IDENT LPAREN FormPars RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
 				|
@@ -159,15 +160,6 @@ MethodDecl		::= (MethDeclParams) Type IDENT LPAREN FormPars RPAREN ListVarDeclWr
 				;
 
 Type			::= (Type) IDENT;
-
-ClassDecl		::= (ClassExtends) CLASS IDENT EXTENDS Type LBRACE ListVarDeclWrapper RBRACE
-				|
-				(SimpleClassWithVars) CLASS IDENT LBRACE ListVarDeclWrapper RBRACE
-				|
-				(ClassExtendsWithVarsAndMethods) CLASS IDENT EXTENDS Type LBRACE ListVarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
-				|
-				(ClassWithVarsAndMethods) CLASS IDENT LBRACE ListVarDeclWrapper LBRACE MethodDeclList RBRACE RBRACE
-				;
 				
 RecordDecl		::= (RecordDecl) RECORD IDENT LBRACE ListVarDeclWrapper RBRACE;
 
@@ -251,24 +243,29 @@ ExprMore		::= (ThereIsMoreExpr) ExprMore Addop Term
 				(NoMoreExpr) /* epsilon */
 				;
 		
-Expr			::= (ExprNegative) MINUS Term ExprMore
-				|
-				(ExprPositive) Term ExprMore
-				;
+Expr			::= (Expr) Term ExprMore;
 				
 Addop			::= (Plus) PLUS
 				|
 				(Minus) MINUS
 				;
 				
-Designator		::= (DesignatorDot) IDENT DOT Designator
+Designator		::= (DesignatorSimple) IDENT
 				|
-				(DesignatorWithArr) IDENT DesignatorArray
+				(DesignatorArr) IDENT LSQBR Expr RSQBR
+				|
+				(DesignatorWithMore) IDENT DesignatorMore
+				|
+				(DesignatorArrWithMore) IDENT LSQBR Expr RSQBR DesignatorMore
 				;
 	
-DesignatorArray ::= (DesigArr) DesignatorArray LSQBR Expr RSQBR
+DesignatorMore ::= (DesigMoreDot) DOT IDENT
 				|
-				(NoDesgArr) /* epsilon */
+				(DesigMoreDotArr) DOT IDENT LSQBR Expr RSQBR
+				|
+				(DesigMoreDotList) DesignatorMore DOT IDENT
+				|
+				(DesigMoreDotArrList) DesignatorMore DOT IDENT LSQBR Expr RSQBR
 				;
 				
 Assignop		::= (Assignop) EQUAL;
@@ -294,9 +291,9 @@ CondTerm		::= (MulCondTerm) CondTerm AND CondFact
 				(SingleCondTerm) CondFact
 				;
 
-Term			::= (MultipleTerms) Term Mulop Factor
+Term			::= (MultipleTerms) Term Mulop FactorWrapper
 				|
-				(SingleTerm) Factor
+				(SingleTerm) FactorWrapper
 				;
 				
 CondFact		::= (CondFactExpr) Expr
@@ -310,7 +307,14 @@ Mulop			::= (Multiply) MUL
 				|
 				(Mod) MOD
 				;
-				
+
+FactorWrapper	::= (FactorWrapper) Unary Factor;
+
+Unary			::= (UnaryNegative) MINUS
+				|
+				(NoUnary) /* epsilon */
+				;
+
 Factor			::= (NormalFactor) Designator
 				|
 				(FactorWithActPars) Designator LPAREN ActPars RPAREN

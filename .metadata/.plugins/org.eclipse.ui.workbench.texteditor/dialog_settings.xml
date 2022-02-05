@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Error"/>
+		<item key="selection" value="RecordDecl"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="RecordDecl"/>
+			<item value="Factor"/>
+			<item value="class"/>
 			<item value="error"/>
 			<item value="Sintaksna greska"/>
 			<item value="testing"/>
@@ -18,17 +21,14 @@
 			<item value="PLUS"/>
 			<item value="Designator"/>
 			<item value="Relop"/>
-			<item value="Factor"/>
 			<item value="Mulop"/>
 			<item value="CondFact"/>
-			<item value="DesignatorArray"/>
-			<item value="Term"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1263"/>
+		<item key="DIALOG_X_ORIGIN" value="860"/>
 		<item key="DIALOG_Y_ORIGIN" value="203"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>

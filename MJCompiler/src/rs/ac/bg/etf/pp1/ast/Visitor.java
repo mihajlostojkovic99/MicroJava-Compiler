@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/0/2022 22:26:56
+// 5/1/2022 1:28:11
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,7 +9,9 @@ public interface Visitor {
 
     public void visit(Mulop Mulop);
     public void visit(MethodDecl MethodDecl);
+    public void visit(RecordDeclList RecordDeclList);
     public void visit(Relop Relop);
+    public void visit(Unary Unary);
     public void visit(StatementList StatementList);
     public void visit(Addop Addop);
     public void visit(ConstDeclWrapper ConstDeclWrapper);
@@ -22,19 +24,17 @@ public interface Visitor {
     public void visit(Term Term);
     public void visit(Condition Condition);
     public void visit(ConstDeclList ConstDeclList);
-    public void visit(DesignatorArray DesignatorArray);
     public void visit(VarDeclList VarDeclList);
-    public void visit(Expr Expr);
     public void visit(ActPars ActPars);
     public void visit(DesignatorStatement DesignatorStatement);
     public void visit(ExprMore ExprMore);
     public void visit(Statement Statement);
     public void visit(VarDecl VarDecl);
-    public void visit(ClassDecl ClassDecl);
     public void visit(ConstDecl ConstDecl);
     public void visit(CondFact CondFact);
     public void visit(FormPar FormPar);
     public void visit(MethodDeclList MethodDeclList);
+    public void visit(DesignatorMore DesignatorMore);
     public void visit(SingleStatement SingleStatement);
     public void visit(FormPars FormPars);
     public void visit(LessOrEqual LessOrEqual);
@@ -52,6 +52,9 @@ public interface Visitor {
     public void visit(FactorWithoutActPars FactorWithoutActPars);
     public void visit(FactorWithActPars FactorWithActPars);
     public void visit(NormalFactor NormalFactor);
+    public void visit(NoUnary NoUnary);
+    public void visit(UnaryNegative UnaryNegative);
+    public void visit(FactorWrapper FactorWrapper);
     public void visit(Mod Mod);
     public void visit(Divide Divide);
     public void visit(Multiply Multiply);
@@ -66,14 +69,17 @@ public interface Visitor {
     public void visit(AssignWrapperError AssignWrapperError);
     public void visit(AssignWrap AssignWrap);
     public void visit(Assignop Assignop);
-    public void visit(NoDesgArr NoDesgArr);
-    public void visit(DesigArr DesigArr);
-    public void visit(DesignatorWithArr DesignatorWithArr);
-    public void visit(DesignatorDot DesignatorDot);
+    public void visit(DesigMoreDotArrList DesigMoreDotArrList);
+    public void visit(DesigMoreDotList DesigMoreDotList);
+    public void visit(DesigMoreDotArr DesigMoreDotArr);
+    public void visit(DesigMoreDot DesigMoreDot);
+    public void visit(DesignatorArrWithMore DesignatorArrWithMore);
+    public void visit(DesignatorWithMore DesignatorWithMore);
+    public void visit(DesignatorArr DesignatorArr);
+    public void visit(DesignatorSimple DesignatorSimple);
     public void visit(Minus Minus);
     public void visit(Plus Plus);
-    public void visit(ExprPositive ExprPositive);
-    public void visit(ExprNegative ExprNegative);
+    public void visit(Expr Expr);
     public void visit(NoMoreExpr NoMoreExpr);
     public void visit(ThereIsMoreExpr ThereIsMoreExpr);
     public void visit(ConditionError ConditionError);
@@ -109,17 +115,11 @@ public interface Visitor {
     public void visit(SingleFormPars SingleFormPars);
     public void visit(FormParameters FormParameters);
     public void visit(RecordDecl RecordDecl);
-    public void visit(ClassWithVarsAndMethods ClassWithVarsAndMethods);
-    public void visit(ClassExtendsWithVarsAndMethods ClassExtendsWithVarsAndMethods);
-    public void visit(SimpleClassWithVars SimpleClassWithVars);
-    public void visit(ClassExtends ClassExtends);
     public void visit(Type Type);
     public void visit(MethDeclVoidNoParams MethDeclVoidNoParams);
     public void visit(MethDeclVoidParams MethDeclVoidParams);
     public void visit(MethDeclNoParams MethDeclNoParams);
     public void visit(MethDeclParams MethDeclParams);
-    public void visit(RecordDeclList RecordDeclList);
-    public void visit(ClassDeclList ClassDeclList);
     public void visit(ArrayVarDecl ArrayVarDecl);
     public void visit(NormalVarDecl NormalVarDecl);
     public void visit(SingleVarDecl SingleVarDecl);
@@ -139,7 +139,6 @@ public interface Visitor {
     public void visit(MethodDeclarations MethodDeclarations);
     public void visit(NoList NoList);
     public void visit(ListRecord ListRecord);
-    public void visit(ListClass ListClass);
     public void visit(ListVar ListVar);
     public void visit(ListConst ListConst);
     public void visit(Program Program);
