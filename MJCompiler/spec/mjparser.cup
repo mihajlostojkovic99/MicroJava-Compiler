@@ -57,7 +57,7 @@ terminal RETURN, VOID, EXTENDS, CONT, THIS, SUPER, GOTO, RECORD, PLUS, MINUS, MU
 terminal EQEQ, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, EQUAL, INC, DEC, SEMI, COLON, COMMA, DOT;
 terminal LPAREN, RPAREN, LSQBR, RSQBR, LBRACE, RBRACE;
 terminal Integer NUMBER;
-terminal String BOOL;
+terminal Integer BOOL;
 terminal String IDENT;
 terminal Character CHAR;
 terminal CLASS;
@@ -81,9 +81,13 @@ nonterminal Mulop, Factor, FactorWrapper, Unary;
 nonterminal Relop;
 nonterminal ListVarDeclWrapper;
 
+nonterminal ProgramName;
+
 precedence left ELSE;
 
-Program 		::= (Program) PROG IDENT List LBRACE MethodDeclList RBRACE;
+Program 		::= (Program) PROG ProgramName List LBRACE MethodDeclList RBRACE;
+
+ProgramName		::= (ProgramName) IDENT;
 
 List 			::= (ListConst) List ConstDeclWrapper
 				|

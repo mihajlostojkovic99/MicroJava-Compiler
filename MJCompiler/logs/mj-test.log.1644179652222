@@ -1,0 +1,38 @@
+INFO  21:33:57,512 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  21:33:57,546 - #2 program
+INFO  21:33:57,546 - #49 Test
+INFO  21:33:57,546 - #6 const
+INFO  21:33:57,547 - #49 Test
+INFO  21:33:57,547 - #49 a
+INFO  21:33:57,548 - #34 =
+INFO  21:33:57,548 - #47 3
+INFO  21:33:57,548 - #37 ;
+INFO  21:33:57,548 - #45 {
+INFO  21:33:57,548 - #46 }
+INFO  21:33:57,549 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       Test
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         a
+         3
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  NoMethodDecl(
+  ) [NoMethodDecl]
+) [Program]
+INFO  21:33:57,551 - ===================================
+INFO  21:33:57,552 -  Program count calls = 1
+ERROR 21:33:57,561 - Unallowed type Test in line 3.
+INFO  21:33:57,561 - ===================================
+ERROR 21:33:57,561 - Parsiranje NIJE uspesno zavrseno!

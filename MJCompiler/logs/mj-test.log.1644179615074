@@ -1,0 +1,38 @@
+INFO  21:33:15,982 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  21:33:16,017 - #2 program
+INFO  21:33:16,017 - #49 Test
+INFO  21:33:16,017 - #6 const
+INFO  21:33:16,018 - #49 byte
+INFO  21:33:16,018 - #49 a
+INFO  21:33:16,018 - #34 =
+INFO  21:33:16,018 - #47 3
+INFO  21:33:16,019 - #37 ;
+INFO  21:33:16,019 - #45 {
+INFO  21:33:16,019 - #46 }
+INFO  21:33:16,020 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       byte
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         a
+         3
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  NoMethodDecl(
+  ) [NoMethodDecl]
+) [Program]
+INFO  21:33:16,021 - ===================================
+INFO  21:33:16,022 -  Program count calls = 1
+ERROR 21:33:16,030 - Type byte is not defined in line 3.
+INFO  21:33:16,030 - ===================================
+ERROR 21:33:16,031 - Parsiranje NIJE uspesno zavrseno!

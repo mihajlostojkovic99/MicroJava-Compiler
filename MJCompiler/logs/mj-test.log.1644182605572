@@ -1,0 +1,57 @@
+INFO  22:22:35,521 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:22:35,554 - #2 program
+INFO  22:22:35,554 - #49 Test
+INFO  22:22:35,554 - #6 const
+INFO  22:22:35,555 - #49 int
+INFO  22:22:35,555 - #49 a
+INFO  22:22:35,555 - #34 =
+INFO  22:22:35,555 - #47 3
+INFO  22:22:35,555 - #37 ;
+INFO  22:22:35,556 - #6 const
+INFO  22:22:35,556 - #49 int
+INFO  22:22:35,556 - #49 a
+INFO  22:22:35,556 - #34 =
+INFO  22:22:35,556 - #47 5
+INFO  22:22:35,556 - #37 ;
+INFO  22:22:35,556 - #45 {
+INFO  22:22:35,556 - #46 }
+INFO  22:22:35,557 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListConst(
+    ListConst(
+      NoList(
+      ) [NoList]
+      ConstDeclWrapperClass(
+        Type(
+         int
+        ) [Type]
+        SingleConstDeclaration(
+          ConstDeclNumber(
+           a
+           3
+          ) [ConstDeclNumber]
+        ) [SingleConstDeclaration]
+      ) [ConstDeclWrapperClass]
+    ) [ListConst]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         a
+         5
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  NoMethodDecl(
+  ) [NoMethodDecl]
+) [Program]
+INFO  22:22:35,559 - ===================================
+INFO  22:22:35,560 -  Program count calls = 1
+ERROR 22:22:35,569 - Multiple definitions of constant 'a' in line 4.
+INFO  22:22:35,569 - ===================================
+ERROR 22:22:35,569 - Parsiranje NIJE uspesno zavrseno!

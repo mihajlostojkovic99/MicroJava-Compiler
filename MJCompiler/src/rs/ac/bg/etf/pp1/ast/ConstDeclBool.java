@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 5/1/2022 1:28:11
+// 6/1/2022 22:13:14
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,9 +8,9 @@ package rs.ac.bg.etf.pp1.ast;
 public class ConstDeclBool extends ConstDecl {
 
     private String I1;
-    private String B2;
+    private Integer B2;
 
-    public ConstDeclBool (String I1, String B2) {
+    public ConstDeclBool (String I1, Integer B2) {
         this.I1=I1;
         this.B2=B2;
     }
@@ -23,11 +23,11 @@ public class ConstDeclBool extends ConstDecl {
         this.I1=I1;
     }
 
-    public String getB2() {
+    public Integer getB2() {
         return B2;
     }
 
-    public void setB2(String B2) {
+    public void setB2(Integer B2) {
         this.B2=B2;
     }
 

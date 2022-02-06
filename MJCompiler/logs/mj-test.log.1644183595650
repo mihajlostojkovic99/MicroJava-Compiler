@@ -1,0 +1,77 @@
+INFO  22:39:40,280 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:39:40,321 - #2 program
+INFO  22:39:40,321 - #49 Test
+INFO  22:39:40,321 - #6 const
+INFO  22:39:40,322 - #49 int
+INFO  22:39:40,322 - #49 a
+INFO  22:39:40,322 - #34 =
+INFO  22:39:40,323 - #47 3
+INFO  22:39:40,323 - #39 ,
+INFO  22:39:40,323 - #49 g
+INFO  22:39:40,323 - #34 =
+INFO  22:39:40,323 - #47 11
+INFO  22:39:40,323 - #37 ;
+INFO  22:39:40,323 - #6 const
+INFO  22:39:40,324 - #49 bool
+INFO  22:39:40,324 - #49 b
+INFO  22:39:40,324 - #34 =
+INFO  22:39:40,324 - #49 truee
+ERROR 22:39:40,324 - 
+Sintaksna greska na liniji 4
+INFO  22:39:40,324 - #39 ,
+INFO  22:39:40,324 - #49 f
+INFO  22:39:40,324 - #34 =
+INFO  22:39:40,327 - #48 0
+ERROR 22:39:40,327 - Oporavak od greske! Too easy! 4
+INFO  22:39:40,331 - #37 ;
+INFO  22:39:40,331 - #45 {
+INFO  22:39:40,332 - #46 }
+INFO  22:39:40,333 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListConst(
+    ListConst(
+      NoList(
+      ) [NoList]
+      ConstDeclWrapperClass(
+        Type(
+         int
+        ) [Type]
+        ConstDeclarations(
+          SingleConstDeclaration(
+            ConstDeclNumber(
+             a
+             3
+            ) [ConstDeclNumber]
+          ) [SingleConstDeclaration]
+          ConstDeclNumber(
+           g
+           11
+          ) [ConstDeclNumber]
+        ) [ConstDeclarations]
+      ) [ConstDeclWrapperClass]
+    ) [ListConst]
+    ConstDeclWrapperClass(
+      Type(
+       bool
+      ) [Type]
+      ConstDeclarations(
+        SingleConstDeclaration(
+          ConstDeclError(
+          ) [ConstDeclError]
+        ) [SingleConstDeclaration]
+        ConstDeclBool(
+         f
+         0
+        ) [ConstDeclBool]
+      ) [ConstDeclarations]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  NoMethodDecl(
+  ) [NoMethodDecl]
+) [Program]
+INFO  22:39:40,333 - ===================================
+INFO  22:39:40,335 -  Program count calls = 1
+INFO  22:39:40,344 - ===================================
+ERROR 22:39:40,344 - Parsiranje NIJE uspesno zavrseno!

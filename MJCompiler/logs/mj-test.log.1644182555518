@@ -1,0 +1,56 @@
+INFO  22:21:00,526 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:21:00,558 - #2 program
+INFO  22:21:00,558 - #49 Test
+INFO  22:21:00,558 - #6 const
+INFO  22:21:00,559 - #49 int
+INFO  22:21:00,559 - #49 a
+INFO  22:21:00,560 - #34 =
+INFO  22:21:00,560 - #47 3
+INFO  22:21:00,560 - #37 ;
+INFO  22:21:00,560 - #6 const
+INFO  22:21:00,560 - #49 int
+INFO  22:21:00,560 - #49 a
+INFO  22:21:00,560 - #34 =
+INFO  22:21:00,560 - #47 5
+INFO  22:21:00,560 - #37 ;
+INFO  22:21:00,561 - #45 {
+INFO  22:21:00,561 - #46 }
+INFO  22:21:00,562 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListConst(
+    ListConst(
+      NoList(
+      ) [NoList]
+      ConstDeclWrapperClass(
+        Type(
+         int
+        ) [Type]
+        SingleConstDeclaration(
+          ConstDeclNumber(
+           a
+           3
+          ) [ConstDeclNumber]
+        ) [SingleConstDeclaration]
+      ) [ConstDeclWrapperClass]
+    ) [ListConst]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         a
+         5
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  NoMethodDecl(
+  ) [NoMethodDecl]
+) [Program]
+INFO  22:21:00,562 - ===================================
+INFO  22:21:00,563 -  Program count calls = 1
+INFO  22:21:00,575 - ===================================
+INFO  22:21:00,576 - Parsiranje uspesno zavrseno!

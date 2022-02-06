@@ -1,0 +1,77 @@
+INFO  22:39:17,814 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:39:17,846 - #2 program
+INFO  22:39:17,847 - #49 Test
+INFO  22:39:17,847 - #6 const
+INFO  22:39:17,847 - #49 int
+INFO  22:39:17,847 - #49 a
+INFO  22:39:17,848 - #34 =
+INFO  22:39:17,848 - #48 0
+INFO  22:39:17,848 - #39 ,
+INFO  22:39:17,848 - #49 g
+INFO  22:39:17,849 - #34 =
+INFO  22:39:17,849 - #47 11
+INFO  22:39:17,849 - #37 ;
+INFO  22:39:17,849 - #6 const
+INFO  22:39:17,849 - #49 bool
+INFO  22:39:17,849 - #49 b
+INFO  22:39:17,849 - #34 =
+INFO  22:39:17,849 - #48 1
+INFO  22:39:17,849 - #39 ,
+INFO  22:39:17,850 - #49 f
+INFO  22:39:17,850 - #34 =
+INFO  22:39:17,850 - #48 0
+INFO  22:39:17,850 - #37 ;
+INFO  22:39:17,850 - #45 {
+INFO  22:39:17,850 - #46 }
+INFO  22:39:17,851 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListConst(
+    ListConst(
+      NoList(
+      ) [NoList]
+      ConstDeclWrapperClass(
+        Type(
+         int
+        ) [Type]
+        ConstDeclarations(
+          SingleConstDeclaration(
+            ConstDeclBool(
+             a
+             0
+            ) [ConstDeclBool]
+          ) [SingleConstDeclaration]
+          ConstDeclNumber(
+           g
+           11
+          ) [ConstDeclNumber]
+        ) [ConstDeclarations]
+      ) [ConstDeclWrapperClass]
+    ) [ListConst]
+    ConstDeclWrapperClass(
+      Type(
+       bool
+      ) [Type]
+      ConstDeclarations(
+        SingleConstDeclaration(
+          ConstDeclBool(
+           b
+           1
+          ) [ConstDeclBool]
+        ) [SingleConstDeclaration]
+        ConstDeclBool(
+         f
+         0
+        ) [ConstDeclBool]
+      ) [ConstDeclarations]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  NoMethodDecl(
+  ) [NoMethodDecl]
+) [Program]
+INFO  22:39:17,851 - ===================================
+INFO  22:39:17,853 -  Program count calls = 1
+ERROR 22:39:17,862 - Forbidden assignment for 'a' in line 3.
+INFO  22:39:17,862 - ===================================
+ERROR 22:39:17,862 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,37 @@
+INFO  22:14:04,339 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:14:04,375 - #2 program
+INFO  22:14:04,375 - #49 Test
+INFO  22:14:04,375 - #6 const
+INFO  22:14:04,376 - #49 int
+INFO  22:14:04,376 - #49 a
+INFO  22:14:04,377 - #34 =
+INFO  22:14:04,377 - #47 3
+INFO  22:14:04,377 - #37 ;
+INFO  22:14:04,377 - #45 {
+INFO  22:14:04,377 - #46 }
+INFO  22:14:04,378 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclNumber(
+         a
+         3
+        ) [ConstDeclNumber]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  NoMethodDecl(
+  ) [NoMethodDecl]
+) [Program]
+INFO  22:14:04,380 - ===================================
+INFO  22:14:04,381 -  Program count calls = 1
+INFO  22:14:04,390 - ===================================
+INFO  22:14:04,390 - Parsiranje uspesno zavrseno!

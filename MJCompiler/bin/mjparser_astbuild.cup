@@ -57,7 +57,7 @@ terminal RETURN, VOID, EXTENDS, CONT, THIS, SUPER, GOTO, RECORD, PLUS, MINUS, MU
 terminal EQEQ, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, EQUAL, INC, DEC, SEMI, COLON, COMMA, DOT;
 terminal LPAREN, RPAREN, LSQBR, RSQBR, LBRACE, RBRACE;
 terminal Integer NUMBER;
-terminal String BOOL;
+terminal Integer BOOL;
 terminal String IDENT;
 terminal Character CHAR;
 terminal CLASS;
@@ -102,9 +102,13 @@ nonterminal Unary Unary;
 nonterminal Relop Relop;
 nonterminal ListVarDeclWrapper ListVarDeclWrapper;
 
+nonterminal ProgramName ProgramName;
+
 precedence left ELSE;
 
-Program 		::= (Program) PROG IDENT:I1 List:L2 LBRACE MethodDeclList:M3 RBRACE {: RESULT=new Program(I1, L2, M3); RESULT.setLine(I1left); :};
+Program 		::= (Program) PROG ProgramName:P1 List:L2 LBRACE MethodDeclList:M3 RBRACE {: RESULT=new Program(P1, L2, M3); RESULT.setLine(P1left); :};
+
+ProgramName		::= (ProgramName) IDENT:I1 {: RESULT=new ProgramName(I1); RESULT.setLine(I1left); :};
 
 List 			::= (ListConst) List:L1 ConstDeclWrapper:C2 {: RESULT=new ListConst(L1, C2); RESULT.setLine(L1left); :}
 				|

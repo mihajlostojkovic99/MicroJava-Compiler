@@ -1,23 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 5/1/2022 1:28:11
+// 6/1/2022 22:13:14
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class Bool extends Factor {
 
-    private String B1;
+    private Integer B1;
 
-    public Bool (String B1) {
+    public Bool (Integer B1) {
         this.B1=B1;
     }
 
-    public String getB1() {
+    public Integer getB1() {
         return B1;
     }
 
-    public void setB1(String B1) {
+    public void setB1(Integer B1) {
         this.B1=B1;
     }
 
