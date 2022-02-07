@@ -96,8 +96,6 @@ nonterminal Term Term;
 nonterminal DesignatorMore DesignatorMore;
 nonterminal CondFact CondFact;
 nonterminal Mulop Mulop;
-nonterminal Factor Factor;
-nonterminal FactorWrapper FactorWrapper;
 nonterminal Unary Unary;
 nonterminal Relop Relop;
 nonterminal ListVarDeclWrapper ListVarDeclWrapper;
@@ -105,6 +103,9 @@ nonterminal ListVarDeclWrapper ListVarDeclWrapper;
 nonterminal ProgramName ProgramName;
 nonterminal MethodName MethodName;
 nonterminal MethodRet MethodRet;
+nonterminal RecordDeclName RecordDeclName;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, FactorWrapper;
 
 precedence left ELSE;
 
@@ -193,7 +194,9 @@ MethodRet		::= (MethodRetVoid) VOID {: RESULT=new MethodRetVoid(); :}
 
 Type			::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};
 				
-RecordDecl		::= (RecordDecl) RECORD IDENT:I1 LBRACE ListVarDeclWrapper:L2 RBRACE {: RESULT=new RecordDecl(I1, L2); RESULT.setLine(I1left); :};
+RecordDecl		::= (RecordDecl) RECORD RecordDeclName:R1 LBRACE ListVarDeclWrapper:L2 RBRACE {: RESULT=new RecordDecl(R1, L2); RESULT.setLine(R1left); :};
+
+RecordDeclName	::= (RecordDeclName) IDENT:I1 {: RESULT=new RecordDeclName(I1); RESULT.setLine(I1left); :};
 
 FormPars		::= (FormParameters) FormPars:F1 COMMA FormPar:F2 {: RESULT=new FormParameters(F1, F2); RESULT.setLine(F1left); :}
 				|

@@ -22,6 +22,8 @@ public class SemanticPass extends VisitorAdaptor {
 
 	private Obj currMethod;
 
+	private Struct currRecord;
+
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
 		StringBuilder msg = new StringBuilder(message);
@@ -116,11 +118,12 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(NormalVarDecl normalVarDecl) {
 		Obj tmp = null;
-		if (currMethod == null) tmp = Tab.find(normalVarDecl.getI1());
+		if (currMethod == null && currRecord == null) tmp = Tab.find(normalVarDecl.getI1());
 		else tmp = Tab.currentScope().findSymbol(normalVarDecl.getI1());
 		
 		if (tmp == Tab.noObj || tmp == null) {
-			tmp = Tab.insert(Obj.Var, normalVarDecl.getI1(), currentType);
+			tmp = Tab.insert(currRecord == null ? Obj.Var : Obj.Fld, normalVarDecl.getI1(), currentType);
+			if (currRecord != null) tmp.setLevel(2);
 		}
 		else {
 			report_error("Multiple definitions of variable '" + normalVarDecl.getI1() + "'", normalVarDecl);
@@ -130,11 +133,12 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(ArrayVarDecl arrayVarDecl) {
 		Obj tmp = null;
-		if (currMethod == null) tmp = Tab.find(arrayVarDecl.getI1());
+		if (currMethod == null && currRecord == null) tmp = Tab.find(arrayVarDecl.getI1());
 		else tmp = Tab.currentScope().findSymbol(arrayVarDecl.getI1());
 		
 		if (tmp == Tab.noObj || tmp == null) {
-			tmp = Tab.insert(Obj.Var, arrayVarDecl.getI1(), new Struct(Struct.Array, currentType));
+			tmp = Tab.insert(currRecord == null ? Obj.Var : Obj.Fld, arrayVarDecl.getI1(), new Struct(Struct.Array, currentType));
+			if (currRecord != null) tmp.setLevel(2);
 		}
 		else {
 			report_error("Multiple definitions of variable '" + arrayVarDecl.getI1() + "'", arrayVarDecl);
@@ -206,6 +210,30 @@ public class SemanticPass extends VisitorAdaptor {
 		else {
 			report_error("Multiple definitions of variable '" + formalParameterArray.getI2() + "'", formalParameterArray);
 		}
+	}
+	
+	/*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	/* ----------------------------------------------------------------------- RECORD_DECLARATIONS ---------------------------------------------------------------- */
+	/*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	
+	@Override
+	public void visit(RecordDeclName recordDeclName) {
+		Obj tmp = Tab.find(recordDeclName.getI1());
+		if (tmp != Tab.noObj) {
+			report_error("Multiple definitions of record '" + recordDeclName.getI1() + "'", recordDeclName);
+		}
+		else {
+			currRecord = new Struct(Struct.Class);
+			tmp = Tab.insert(Obj.Type, recordDeclName.getI1(), currRecord);
+			Tab.openScope();
+		}
+	}
+	
+	@Override
+	public void visit(RecordDecl recordDecl) {
+		Tab.chainLocalSymbols(currRecord);
+		Tab.closeScope();
+		currRecord = null;
 	}
 	
 	@Override

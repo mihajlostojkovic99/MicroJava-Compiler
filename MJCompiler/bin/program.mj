@@ -3,12 +3,23 @@ const int a = 5;
 char x, y[];
 bool w[];
 int s;
+
+record proba {
+	int p;
+	char str[];
+	char x;
+}
+
+record recinrec {
+	proba p1;
+	int p;
+}
 { 
-	void main() int a, b[]; int s; char y[]; {
+	void main() int a, b[]; proba s; char y[]; {
 	
 	}
 	
-	int m1(int p1[], char p2) int a, b[]; bool w; {
+	int m1(int p1[], char p2) int a, b[]; recinrec w[]; {
 	
 	}
 	

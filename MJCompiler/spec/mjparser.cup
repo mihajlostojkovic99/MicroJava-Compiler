@@ -77,11 +77,13 @@ nonterminal CondTerm;
 nonterminal Addop, Term;
 nonterminal DesignatorMore;
 nonterminal CondFact;
-nonterminal Mulop, Factor, FactorWrapper, Unary;
+nonterminal Mulop, Unary;
 nonterminal Relop;
 nonterminal ListVarDeclWrapper;
 
-nonterminal ProgramName, MethodName, MethodRet;
+nonterminal ProgramName, MethodName, MethodRet, RecordDeclName;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, FactorWrapper;
 
 precedence left ELSE;
 
@@ -170,7 +172,9 @@ MethodRet		::= (MethodRetVoid) VOID
 
 Type			::= (Type) IDENT;
 				
-RecordDecl		::= (RecordDecl) RECORD IDENT LBRACE ListVarDeclWrapper RBRACE;
+RecordDecl		::= (RecordDecl) RECORD RecordDeclName LBRACE ListVarDeclWrapper RBRACE;
+
+RecordDeclName	::= (RecordDeclName) IDENT;
 
 FormPars		::= (FormParameters) FormPars COMMA FormPar
 				|

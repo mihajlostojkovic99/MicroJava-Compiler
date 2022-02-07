@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/1/2022 0:7:32
+// 7/1/2022 13:17:23
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,21 +9,22 @@ public class RecordDecl implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private String I1;
+    private RecordDeclName RecordDeclName;
     private ListVarDeclWrapper ListVarDeclWrapper;
 
-    public RecordDecl (String I1, ListVarDeclWrapper ListVarDeclWrapper) {
-        this.I1=I1;
+    public RecordDecl (RecordDeclName RecordDeclName, ListVarDeclWrapper ListVarDeclWrapper) {
+        this.RecordDeclName=RecordDeclName;
+        if(RecordDeclName!=null) RecordDeclName.setParent(this);
         this.ListVarDeclWrapper=ListVarDeclWrapper;
         if(ListVarDeclWrapper!=null) ListVarDeclWrapper.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public RecordDeclName getRecordDeclName() {
+        return RecordDeclName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setRecordDeclName(RecordDeclName RecordDeclName) {
+        this.RecordDeclName=RecordDeclName;
     }
 
     public ListVarDeclWrapper getListVarDeclWrapper() {
@@ -55,15 +56,18 @@ public class RecordDecl implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(RecordDeclName!=null) RecordDeclName.accept(visitor);
         if(ListVarDeclWrapper!=null) ListVarDeclWrapper.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(RecordDeclName!=null) RecordDeclName.traverseTopDown(visitor);
         if(ListVarDeclWrapper!=null) ListVarDeclWrapper.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(RecordDeclName!=null) RecordDeclName.traverseBottomUp(visitor);
         if(ListVarDeclWrapper!=null) ListVarDeclWrapper.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -73,7 +77,10 @@ public class RecordDecl implements SyntaxNode {
         buffer.append(tab);
         buffer.append("RecordDecl(\n");
 
-        buffer.append(" "+tab+I1);
+        if(RecordDeclName!=null)
+            buffer.append(RecordDeclName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(ListVarDeclWrapper!=null)
