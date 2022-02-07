@@ -101,7 +101,7 @@ nonterminal MethodRet MethodRet;
 nonterminal RecordDeclName RecordDeclName;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, FactorWrapper, Term, ExprMore, Expr;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorArrName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName;
 
 precedence left ELSE;
 
@@ -285,20 +285,24 @@ Designator		::= (DesignatorSimple) IDENT:I1 {: RESULT=new DesignatorSimple(I1); 
 				|
 				(DesignatorArr) DesignatorArrName:D1 LSQBR Expr:E2 RSQBR {: RESULT=new DesignatorArr(D1, E2); RESULT.setLine(D1left); :}
 				|
-				(DesignatorWithMore) IDENT:I1 DesignatorMore:D2 {: RESULT=new DesignatorWithMore(I1, D2); RESULT.setLine(I1left); :}
+				(DesignatorWithMore) DesignatorWithMoreName:D1 DesignatorMore:D2 {: RESULT=new DesignatorWithMore(D1, D2); RESULT.setLine(D1left); :}
 				|
-				(DesignatorArrWithMore) DesignatorArrName:D1 LSQBR Expr:E2 RSQBR DesignatorMore:D3 {: RESULT=new DesignatorArrWithMore(D1, E2, D3); RESULT.setLine(D1left); :}
+				(DesignatorArrWithMore) DesignatorMoreElem:D1 DesignatorMore:D2 {: RESULT=new DesignatorArrWithMore(D1, D2); RESULT.setLine(D1left); :}
 				;
 				
 DesignatorArrName ::= (DesignatorArrName) IDENT:I1 {: RESULT=new DesignatorArrName(I1); RESULT.setLine(I1left); :};
+
+DesignatorWithMoreName ::= (DesignatorWithMoreName) IDENT:I1 {: RESULT=new DesignatorWithMoreName(I1); RESULT.setLine(I1left); :};
+
+DesignatorMoreElem ::= (DesignatorMoreElem) DesignatorArrName:D1 LSQBR Expr:E2 RSQBR {: RESULT=new DesignatorMoreElem(D1, E2); RESULT.setLine(D1left); :};
 	
 DesignatorMore ::= (DesigMoreDot) DOT IDENT:I1 {: RESULT=new DesigMoreDot(I1); RESULT.setLine(I1left); :}
 				|
-				(DesigMoreDotArr) DOT IDENT:I1 LSQBR Expr:E2 RSQBR {: RESULT=new DesigMoreDotArr(I1, E2); RESULT.setLine(I1left); :}
+				(DesigMoreDotArr) DOT DesignatorArrName:D1 LSQBR Expr:E2 RSQBR {: RESULT=new DesigMoreDotArr(D1, E2); RESULT.setLine(D1left); :}
 				|
 				(DesigMoreDotList) DesignatorMore:D1 DOT IDENT:I2 {: RESULT=new DesigMoreDotList(D1, I2); RESULT.setLine(D1left); :}
 				|
-				(DesigMoreDotArrList) DesignatorMore:D1 DOT IDENT:I2 LSQBR Expr:E3 RSQBR {: RESULT=new DesigMoreDotArrList(D1, I2, E3); RESULT.setLine(D1left); :}
+				(DesigMoreDotArrList) DesignatorMore:D1 DOT DesignatorArrName:D2 LSQBR Expr:E3 RSQBR {: RESULT=new DesigMoreDotArrList(D1, D2, E3); RESULT.setLine(D1left); :}
 				;
 				
 Assignop		::= (Assignop) EQUAL {: RESULT=new Assignop(); :};

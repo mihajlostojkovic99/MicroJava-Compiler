@@ -5,27 +5,20 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class DesigMoreDotArrList extends DesignatorMore {
+public class DesignatorMoreElem implements SyntaxNode {
 
-    private DesignatorMore DesignatorMore;
+    private SyntaxNode parent;
+    private int line;
+    public rs.etf.pp1.symboltable.concepts.Obj obj = null;
+
     private DesignatorArrName DesignatorArrName;
     private Expr Expr;
 
-    public DesigMoreDotArrList (DesignatorMore DesignatorMore, DesignatorArrName DesignatorArrName, Expr Expr) {
-        this.DesignatorMore=DesignatorMore;
-        if(DesignatorMore!=null) DesignatorMore.setParent(this);
+    public DesignatorMoreElem (DesignatorArrName DesignatorArrName, Expr Expr) {
         this.DesignatorArrName=DesignatorArrName;
         if(DesignatorArrName!=null) DesignatorArrName.setParent(this);
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
-    }
-
-    public DesignatorMore getDesignatorMore() {
-        return DesignatorMore;
-    }
-
-    public void setDesignatorMore(DesignatorMore DesignatorMore) {
-        this.DesignatorMore=DesignatorMore;
     }
 
     public DesignatorArrName getDesignatorArrName() {
@@ -44,25 +37,38 @@ public class DesigMoreDotArrList extends DesignatorMore {
         this.Expr=Expr;
     }
 
+    public SyntaxNode getParent() {
+        return parent;
+    }
+
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(DesignatorMore!=null) DesignatorMore.accept(visitor);
         if(DesignatorArrName!=null) DesignatorArrName.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(DesignatorMore!=null) DesignatorMore.traverseTopDown(visitor);
         if(DesignatorArrName!=null) DesignatorArrName.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(DesignatorMore!=null) DesignatorMore.traverseBottomUp(visitor);
         if(DesignatorArrName!=null) DesignatorArrName.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
@@ -71,13 +77,7 @@ public class DesigMoreDotArrList extends DesignatorMore {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("DesigMoreDotArrList(\n");
-
-        if(DesignatorMore!=null)
-            buffer.append(DesignatorMore.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
+        buffer.append("DesignatorMoreElem(\n");
 
         if(DesignatorArrName!=null)
             buffer.append(DesignatorArrName.toString("  "+tab));
@@ -92,7 +92,7 @@ public class DesigMoreDotArrList extends DesignatorMore {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [DesigMoreDotArrList]");
+        buffer.append(") [DesignatorMoreElem]");
         return buffer.toString();
     }
 }

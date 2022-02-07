@@ -83,7 +83,7 @@ nonterminal ListVarDeclWrapper;
 nonterminal ProgramName, MethodName, MethodRet, RecordDeclName;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, FactorWrapper, Term, ExprMore, Expr;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorArrName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName;
 
 precedence left ELSE;
 
@@ -267,20 +267,24 @@ Designator		::= (DesignatorSimple) IDENT
 				|
 				(DesignatorArr) DesignatorArrName LSQBR Expr RSQBR
 				|
-				(DesignatorWithMore) IDENT DesignatorMore
+				(DesignatorWithMore) DesignatorWithMoreName DesignatorMore
 				|
-				(DesignatorArrWithMore) DesignatorArrName LSQBR Expr RSQBR DesignatorMore
+				(DesignatorArrWithMore) DesignatorMoreElem DesignatorMore
 				;
 				
 DesignatorArrName ::= (DesignatorArrName) IDENT;
+
+DesignatorWithMoreName ::= (DesignatorWithMoreName) IDENT;
+
+DesignatorMoreElem ::= (DesignatorMoreElem) DesignatorArrName LSQBR Expr RSQBR;
 	
 DesignatorMore ::= (DesigMoreDot) DOT IDENT
 				|
-				(DesigMoreDotArr) DOT IDENT LSQBR Expr RSQBR
+				(DesigMoreDotArr) DOT DesignatorArrName LSQBR Expr RSQBR
 				|
 				(DesigMoreDotList) DesignatorMore DOT IDENT
 				|
-				(DesigMoreDotArrList) DesignatorMore DOT IDENT LSQBR Expr RSQBR
+				(DesigMoreDotArrList) DesignatorMore DOT DesignatorArrName LSQBR Expr RSQBR
 				;
 				
 Assignop		::= (Assignop) EQUAL;

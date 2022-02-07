@@ -1,27 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/1/2022 20:20:37
+// 7/1/2022 22:21:32
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class DesignatorWithMore extends Designator {
 
-    private String I1;
+    private DesignatorWithMoreName DesignatorWithMoreName;
     private DesignatorMore DesignatorMore;
 
-    public DesignatorWithMore (String I1, DesignatorMore DesignatorMore) {
-        this.I1=I1;
+    public DesignatorWithMore (DesignatorWithMoreName DesignatorWithMoreName, DesignatorMore DesignatorMore) {
+        this.DesignatorWithMoreName=DesignatorWithMoreName;
+        if(DesignatorWithMoreName!=null) DesignatorWithMoreName.setParent(this);
         this.DesignatorMore=DesignatorMore;
         if(DesignatorMore!=null) DesignatorMore.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public DesignatorWithMoreName getDesignatorWithMoreName() {
+        return DesignatorWithMoreName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setDesignatorWithMoreName(DesignatorWithMoreName DesignatorWithMoreName) {
+        this.DesignatorWithMoreName=DesignatorWithMoreName;
     }
 
     public DesignatorMore getDesignatorMore() {
@@ -37,15 +38,18 @@ public class DesignatorWithMore extends Designator {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(DesignatorWithMoreName!=null) DesignatorWithMoreName.accept(visitor);
         if(DesignatorMore!=null) DesignatorMore.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(DesignatorWithMoreName!=null) DesignatorWithMoreName.traverseTopDown(visitor);
         if(DesignatorMore!=null) DesignatorMore.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(DesignatorWithMoreName!=null) DesignatorWithMoreName.traverseBottomUp(visitor);
         if(DesignatorMore!=null) DesignatorMore.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -55,7 +59,10 @@ public class DesignatorWithMore extends Designator {
         buffer.append(tab);
         buffer.append("DesignatorWithMore(\n");
 
-        buffer.append(" "+tab+I1);
+        if(DesignatorWithMoreName!=null)
+            buffer.append(DesignatorWithMoreName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(DesignatorMore!=null)

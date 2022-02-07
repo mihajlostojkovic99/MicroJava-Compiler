@@ -262,6 +262,16 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(FactorWithActPars factorWithActPars) {
+		factorWithActPars.struct = factorWithActPars.getDesignator().obj.getType();
+	}
+	
+	@Override
+	public void visit(NewFactor newFactor) {
+		newFactor.struct = new Struct(Struct.Class, currentType.getMembersTable());
+	}
+	
+	@Override
 	public void visit(NewFactorWithPars newFactorWithPars) {
 		if (!newFactorWithPars.getExpr().struct.equals(Tab.intType)) {
 			report_error("(NewFactorWithPars) Trying to make an array with a non-int length", newFactorWithPars);
@@ -289,7 +299,7 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(DesignatorSimple designatorSimple) {
 		designatorSimple.obj = Tab.find(designatorSimple.getI1());
 		if (designatorSimple.obj == Tab.noObj) report_error("(designatorSimple) Variable '" + designatorSimple.getI1() + "' not defined,", designatorSimple);
-		else if (designatorSimple.obj.getKind() != Obj.Var && designatorSimple.obj.getKind() != Obj.Con) {
+		else if (designatorSimple.obj.getKind() != Obj.Var && designatorSimple.obj.getKind() != Obj.Con && designatorSimple.obj.getKind() != Obj.Meth) {
 			report_error("(designatorSimple) Forbidden use of variable '" + designatorSimple.getI1() + "'", designatorSimple);
 			designatorSimple.obj = Tab.noObj;
 		}
@@ -302,6 +312,7 @@ public class SemanticPass extends VisitorAdaptor {
 		else if (designatorArrName.obj.getKind() != Obj.Var || designatorArrName.obj.getType().getKind() != Struct.Array) {
 			report_error("(DesignatorArrName) Variable '" + designatorArrName.getI1() + "' is probably not an array", designatorArrName);
 			designatorArrName.obj = Tab.noObj;
+			currRecord = Tab.noType;
 		}
 	}
 	
@@ -311,9 +322,130 @@ public class SemanticPass extends VisitorAdaptor {
 		if (!designatorArr.getExpr().struct.equals(Tab.intType)) {
 			report_error("Array can only be addresed with int", designatorArr);
 			designatorArr.obj = Tab.noObj;
+			currRecord = Tab.noType;
 		}
 		else if (designatorArr.obj != Tab.noObj) {
 			designatorArr.obj = new Obj(Obj.Elem, designatorArr.getDesignatorArrName().getI1() + "[$]", designatorArr.obj.getType().getElemType());
+		}
+	}
+	
+	@Override
+	public void visit(DesignatorWithMore designatorWithMore) {
+		designatorWithMore.obj = designatorWithMore.getDesignatorMore().obj;
+	}
+	
+	@Override
+	public void visit(DesignatorWithMoreName designatorWithMoreName) {
+		designatorWithMoreName.obj = Tab.find(designatorWithMoreName.getI1());
+		currRecord = designatorWithMoreName.obj.getType();
+		if (designatorWithMoreName.obj == Tab.noObj) report_error("(DesignatorWithMoreName) Record '" + designatorWithMoreName.getI1() + "' not defined,", designatorWithMoreName);
+		else if (designatorWithMoreName.obj.getKind() != Struct.Class || designatorWithMoreName.obj.getType().getKind() != Obj.Var) {
+			report_error("(DesignatorWithMoreName) Variable '" + designatorWithMoreName.getI1() + "' is probably not a record", designatorWithMoreName);
+			designatorWithMoreName.obj = Tab.noObj;
+			currRecord = Tab.noType;
+		}
+	}
+	
+	@Override
+	public void visit(DesignatorMoreElem designatorMoreElem) {
+		designatorMoreElem.obj = designatorMoreElem.getDesignatorArrName().obj;
+		currRecord = Tab.noType;
+		if (!designatorMoreElem.getExpr().struct.equals(Tab.intType)) {
+			report_error("Array can only be addresed with int", designatorMoreElem);
+			designatorMoreElem.obj = Tab.noObj;
+			currRecord = Tab.noType;
+		}
+		else if (designatorMoreElem.obj != Tab.noObj) {
+			designatorMoreElem.obj = new Obj(Obj.Elem, designatorMoreElem.getDesignatorArrName().getI1() + "[$]", designatorMoreElem.obj.getType().getElemType());
+			currRecord = designatorMoreElem.obj.getType();
+			
+			if (designatorMoreElem.obj.getType().getKind() != Struct.Class) {
+				report_error("(DesignatorMoreElem) Variable in '" + designatorMoreElem.getDesignatorArrName() + "' is probably not a record", designatorMoreElem);
+				designatorMoreElem.obj = Tab.noObj;
+				currRecord = Tab.noType;
+			}
+		}
+	}
+	
+	@Override
+	public void visit(DesigMoreDot desigMoreDot) {
+		if (currRecord == Tab.noType) desigMoreDot.obj = Tab.noObj;
+		else {
+			boolean found = false;
+			for (Obj tmp : currRecord.getMembers()) {
+				if (tmp.getName().equals(desigMoreDot.getI1())) {
+					desigMoreDot.obj = tmp;
+					found = true;
+					currRecord = null;
+					break;
+				}
+			}
+			if (!found) {
+				desigMoreDot.obj = Tab.noObj;
+				report_error("(DesigMoreDot) Variable '" + desigMoreDot.getI1() + "' not found in the record", desigMoreDot);
+			}
+		}
+	}
+	
+	@Override
+	public void visit(DesigMoreDotArr desigMoreDotArr) {
+		if (currRecord == Tab.noType) desigMoreDotArr.obj = Tab.noObj;
+		else {
+			boolean found = false;
+			for (Obj tmp : currRecord.getMembers()) {
+				if (tmp.getName().equals(desigMoreDotArr.getDesignatorArrName().getI1()) && tmp.getType().getKind() == Struct.Array) {
+					desigMoreDotArr.obj = tmp;
+					found = true;
+					currRecord = null;
+					break;
+				}
+			}
+			if (!found) {
+				desigMoreDotArr.obj = Tab.noObj;
+				report_error("(DesigMoreDot) Variable '" + desigMoreDotArr.getDesignatorArrName().getI1() + "' not found in the record", desigMoreDotArr);
+			}
+		}
+	}
+	
+	@Override
+	public void visit(DesigMoreDotList desigMoreDotList) {
+		if (desigMoreDotList.getDesignatorMore().obj.getType() == Tab.noType) desigMoreDotList.obj = Tab.noObj;
+		else {
+			boolean found = false;
+			for (Obj tmp : currRecord.getMembers()) {
+				if (tmp.getName().equals(desigMoreDotList.getI2())) {
+					desigMoreDotList.obj = tmp;
+					found = true;
+					break;
+				}
+			}
+			if (!found) {
+				desigMoreDotList.obj = Tab.noObj;
+				report_error("(DesigMoreDotList) Variable '" + desigMoreDotList.getI2() + "' not found in the record", desigMoreDotList);
+			}
+		}
+	}
+	
+	@Override
+	public void visit(DesigMoreDotArrList desigMoreDotArrList) {
+		if (desigMoreDotArrList.getDesignatorMore().obj.getType() == Tab.noType) desigMoreDotArrList.obj = Tab.noObj;
+		else if (!desigMoreDotArrList.getExpr().struct.equals(Tab.intType)) {
+			report_error("(DesigMoreDotList) Array can only be addresed with int", desigMoreDotArrList);
+			desigMoreDotArrList.obj = Tab.noObj;
+		}
+		else {
+			boolean found = false;
+			for (Obj tmp : currRecord.getMembers()) {
+				if (tmp.getName().equals(desigMoreDotArrList.getDesignatorArrName().getI1()) && tmp.getType().getKind() == Struct.Array) {
+					desigMoreDotArrList.obj = tmp;
+					found = true;
+					break;
+				}
+			}
+			if (!found) {
+				desigMoreDotArrList.obj = Tab.noObj;
+				report_error("(DesigMoreDotList) Variable '" + desigMoreDotArrList.getDesignatorArrName().getI1() + "' not found in the record", desigMoreDotArrList);
+			}
 		}
 	}
 	

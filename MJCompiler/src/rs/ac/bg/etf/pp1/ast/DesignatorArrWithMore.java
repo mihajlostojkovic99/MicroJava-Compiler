@@ -1,39 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/1/2022 20:20:37
+// 7/1/2022 22:21:32
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class DesignatorArrWithMore extends Designator {
 
-    private DesignatorArrName DesignatorArrName;
-    private Expr Expr;
+    private DesignatorMoreElem DesignatorMoreElem;
     private DesignatorMore DesignatorMore;
 
-    public DesignatorArrWithMore (DesignatorArrName DesignatorArrName, Expr Expr, DesignatorMore DesignatorMore) {
-        this.DesignatorArrName=DesignatorArrName;
-        if(DesignatorArrName!=null) DesignatorArrName.setParent(this);
-        this.Expr=Expr;
-        if(Expr!=null) Expr.setParent(this);
+    public DesignatorArrWithMore (DesignatorMoreElem DesignatorMoreElem, DesignatorMore DesignatorMore) {
+        this.DesignatorMoreElem=DesignatorMoreElem;
+        if(DesignatorMoreElem!=null) DesignatorMoreElem.setParent(this);
         this.DesignatorMore=DesignatorMore;
         if(DesignatorMore!=null) DesignatorMore.setParent(this);
     }
 
-    public DesignatorArrName getDesignatorArrName() {
-        return DesignatorArrName;
+    public DesignatorMoreElem getDesignatorMoreElem() {
+        return DesignatorMoreElem;
     }
 
-    public void setDesignatorArrName(DesignatorArrName DesignatorArrName) {
-        this.DesignatorArrName=DesignatorArrName;
-    }
-
-    public Expr getExpr() {
-        return Expr;
-    }
-
-    public void setExpr(Expr Expr) {
-        this.Expr=Expr;
+    public void setDesignatorMoreElem(DesignatorMoreElem DesignatorMoreElem) {
+        this.DesignatorMoreElem=DesignatorMoreElem;
     }
 
     public DesignatorMore getDesignatorMore() {
@@ -49,21 +38,18 @@ public class DesignatorArrWithMore extends Designator {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(DesignatorArrName!=null) DesignatorArrName.accept(visitor);
-        if(Expr!=null) Expr.accept(visitor);
+        if(DesignatorMoreElem!=null) DesignatorMoreElem.accept(visitor);
         if(DesignatorMore!=null) DesignatorMore.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(DesignatorArrName!=null) DesignatorArrName.traverseTopDown(visitor);
-        if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(DesignatorMoreElem!=null) DesignatorMoreElem.traverseTopDown(visitor);
         if(DesignatorMore!=null) DesignatorMore.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(DesignatorArrName!=null) DesignatorArrName.traverseBottomUp(visitor);
-        if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(DesignatorMoreElem!=null) DesignatorMoreElem.traverseBottomUp(visitor);
         if(DesignatorMore!=null) DesignatorMore.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -73,14 +59,8 @@ public class DesignatorArrWithMore extends Designator {
         buffer.append(tab);
         buffer.append("DesignatorArrWithMore(\n");
 
-        if(DesignatorArrName!=null)
-            buffer.append(DesignatorArrName.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
+        if(DesignatorMoreElem!=null)
+            buffer.append(DesignatorMoreElem.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

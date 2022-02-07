@@ -5,23 +5,24 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class Statements implements SyntaxNode {
+public class DesignatorWithMoreName implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private StatementList StatementList;
+    public rs.etf.pp1.symboltable.concepts.Obj obj = null;
 
-    public Statements (StatementList StatementList) {
-        this.StatementList=StatementList;
-        if(StatementList!=null) StatementList.setParent(this);
+    private String I1;
+
+    public DesignatorWithMoreName (String I1) {
+        this.I1=I1;
     }
 
-    public StatementList getStatementList() {
-        return StatementList;
+    public String getI1() {
+        return I1;
     }
 
-    public void setStatementList(StatementList StatementList) {
-        this.StatementList=StatementList;
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public SyntaxNode getParent() {
@@ -45,32 +46,26 @@ public class Statements implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(StatementList!=null) StatementList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(StatementList!=null) StatementList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(StatementList!=null) StatementList.traverseBottomUp(visitor);
         accept(visitor);
     }
 
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("Statements(\n");
+        buffer.append("DesignatorWithMoreName(\n");
 
-        if(StatementList!=null)
-            buffer.append(StatementList.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+I1);
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [Statements]");
+        buffer.append(") [DesignatorWithMoreName]");
         return buffer.toString();
     }
 }
