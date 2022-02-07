@@ -1,0 +1,413 @@
+INFO  20:04:19,150 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  20:04:19,193 - #2 program
+INFO  20:04:19,193 - #49 Test
+INFO  20:04:19,193 - #6 const
+INFO  20:04:19,194 - #49 int
+INFO  20:04:19,194 - #49 a
+INFO  20:04:19,195 - #34 =
+INFO  20:04:19,195 - #47 5
+INFO  20:04:19,195 - #37 ;
+INFO  20:04:19,195 - #49 char
+INFO  20:04:19,195 - #49 x
+INFO  20:04:19,195 - #39 ,
+INFO  20:04:19,196 - #49 y
+INFO  20:04:19,196 - #43 [
+INFO  20:04:19,196 - #44 ]
+INFO  20:04:19,196 - #37 ;
+INFO  20:04:19,196 - #49 bool
+INFO  20:04:19,197 - #49 w
+INFO  20:04:19,197 - #43 [
+INFO  20:04:19,197 - #44 ]
+INFO  20:04:19,197 - #37 ;
+INFO  20:04:19,197 - #49 int
+INFO  20:04:19,197 - #49 s
+INFO  20:04:19,199 - #37 ;
+INFO  20:04:19,199 - #20 record
+INFO  20:04:19,199 - #49 proba
+INFO  20:04:19,199 - #45 {
+INFO  20:04:19,199 - #49 int
+INFO  20:04:19,200 - #49 p
+INFO  20:04:19,200 - #37 ;
+INFO  20:04:19,200 - #49 char
+INFO  20:04:19,200 - #49 str
+INFO  20:04:19,200 - #43 [
+INFO  20:04:19,200 - #44 ]
+INFO  20:04:19,200 - #37 ;
+INFO  20:04:19,200 - #49 char
+INFO  20:04:19,200 - #49 x
+INFO  20:04:19,200 - #37 ;
+INFO  20:04:19,200 - #46 }
+INFO  20:04:19,201 - #20 record
+INFO  20:04:19,202 - #49 recinrec
+INFO  20:04:19,202 - #45 {
+INFO  20:04:19,202 - #49 proba
+INFO  20:04:19,202 - #49 p1
+INFO  20:04:19,202 - #37 ;
+INFO  20:04:19,202 - #49 int
+INFO  20:04:19,202 - #49 p
+INFO  20:04:19,202 - #37 ;
+INFO  20:04:19,202 - #46 }
+INFO  20:04:19,202 - #45 {
+INFO  20:04:19,202 - #14 void
+INFO  20:04:19,203 - #49 main
+INFO  20:04:19,203 - #41 (
+INFO  20:04:19,204 - #42 )
+INFO  20:04:19,204 - #49 int
+INFO  20:04:19,204 - #49 a
+INFO  20:04:19,204 - #39 ,
+INFO  20:04:19,204 - #49 b
+INFO  20:04:19,204 - #43 [
+INFO  20:04:19,205 - #44 ]
+INFO  20:04:19,205 - #37 ;
+INFO  20:04:19,205 - #49 proba
+INFO  20:04:19,205 - #49 s
+INFO  20:04:19,205 - #37 ;
+INFO  20:04:19,205 - #49 char
+INFO  20:04:19,205 - #49 y
+INFO  20:04:19,205 - #43 [
+INFO  20:04:19,205 - #44 ]
+INFO  20:04:19,205 - #37 ;
+INFO  20:04:19,206 - #45 {
+INFO  20:04:19,206 - #11 print
+INFO  20:04:19,206 - #41 (
+INFO  20:04:19,207 - #49 Test
+INFO  20:04:19,208 - #42 )
+INFO  20:04:19,210 - #37 ;
+INFO  20:04:19,210 - #46 }
+INFO  20:04:19,210 - #49 int
+INFO  20:04:19,211 - #49 m1
+INFO  20:04:19,211 - #41 (
+INFO  20:04:19,211 - #49 int
+INFO  20:04:19,211 - #49 p1
+INFO  20:04:19,211 - #43 [
+INFO  20:04:19,211 - #44 ]
+INFO  20:04:19,211 - #39 ,
+INFO  20:04:19,211 - #49 char
+INFO  20:04:19,211 - #49 p2
+INFO  20:04:19,211 - #42 )
+INFO  20:04:19,211 - #49 int
+INFO  20:04:19,211 - #49 a
+INFO  20:04:19,212 - #39 ,
+INFO  20:04:19,212 - #49 b
+INFO  20:04:19,212 - #43 [
+INFO  20:04:19,212 - #44 ]
+INFO  20:04:19,212 - #37 ;
+INFO  20:04:19,212 - #49 recinrec
+INFO  20:04:19,212 - #49 w
+INFO  20:04:19,212 - #43 [
+INFO  20:04:19,212 - #44 ]
+INFO  20:04:19,212 - #37 ;
+INFO  20:04:19,212 - #45 {
+INFO  20:04:19,212 - #46 }
+INFO  20:04:19,212 - #14 void
+INFO  20:04:19,212 - #49 tralala
+INFO  20:04:19,212 - #41 (
+INFO  20:04:19,213 - #49 int
+INFO  20:04:19,213 - #49 a
+INFO  20:04:19,213 - #42 )
+INFO  20:04:19,213 - #45 {
+INFO  20:04:19,213 - #46 }
+INFO  20:04:19,213 - #46 }
+INFO  20:04:19,215 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListRecord(
+    ListRecord(
+      ListVar(
+        ListVar(
+          ListVar(
+            ListConst(
+              NoList(
+              ) [NoList]
+              ConstDeclWrapperClass(
+                Type(
+                 int
+                ) [Type]
+                SingleConstDeclaration(
+                  ConstDeclNumber(
+                   a
+                   5
+                  ) [ConstDeclNumber]
+                ) [SingleConstDeclaration]
+              ) [ConstDeclWrapperClass]
+            ) [ListConst]
+            VarDeclWrapper(
+              Type(
+               char
+              ) [Type]
+              VarDeclarations(
+                SingleVarDecl(
+                  NormalVarDecl(
+                   x
+                  ) [NormalVarDecl]
+                ) [SingleVarDecl]
+                ArrayVarDecl(
+                 y
+                ) [ArrayVarDecl]
+              ) [VarDeclarations]
+            ) [VarDeclWrapper]
+          ) [ListVar]
+          VarDeclWrapper(
+            Type(
+             bool
+            ) [Type]
+            SingleVarDecl(
+              ArrayVarDecl(
+               w
+              ) [ArrayVarDecl]
+            ) [SingleVarDecl]
+          ) [VarDeclWrapper]
+        ) [ListVar]
+        VarDeclWrapper(
+          Type(
+           int
+          ) [Type]
+          SingleVarDecl(
+            NormalVarDecl(
+             s
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [ListVar]
+      RecordDecl(
+        RecordDeclName(
+         proba
+        ) [RecordDeclName]
+        IsListVarDeclWrapper(
+          IsListVarDeclWrapper(
+            IsListVarDeclWrapper(
+              NoListVarDeclWrapper(
+              ) [NoListVarDeclWrapper]
+              VarDeclWrapper(
+                Type(
+                 int
+                ) [Type]
+                SingleVarDecl(
+                  NormalVarDecl(
+                   p
+                  ) [NormalVarDecl]
+                ) [SingleVarDecl]
+              ) [VarDeclWrapper]
+            ) [IsListVarDeclWrapper]
+            VarDeclWrapper(
+              Type(
+               char
+              ) [Type]
+              SingleVarDecl(
+                ArrayVarDecl(
+                 str
+                ) [ArrayVarDecl]
+              ) [SingleVarDecl]
+            ) [VarDeclWrapper]
+          ) [IsListVarDeclWrapper]
+          VarDeclWrapper(
+            Type(
+             char
+            ) [Type]
+            SingleVarDecl(
+              NormalVarDecl(
+               x
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+          ) [VarDeclWrapper]
+        ) [IsListVarDeclWrapper]
+      ) [RecordDecl]
+    ) [ListRecord]
+    RecordDecl(
+      RecordDeclName(
+       recinrec
+      ) [RecordDeclName]
+      IsListVarDeclWrapper(
+        IsListVarDeclWrapper(
+          NoListVarDeclWrapper(
+          ) [NoListVarDeclWrapper]
+          VarDeclWrapper(
+            Type(
+             proba
+            ) [Type]
+            SingleVarDecl(
+              NormalVarDecl(
+               p1
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+          ) [VarDeclWrapper]
+        ) [IsListVarDeclWrapper]
+        VarDeclWrapper(
+          Type(
+           int
+          ) [Type]
+          SingleVarDecl(
+            NormalVarDecl(
+             p
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [IsListVarDeclWrapper]
+    ) [RecordDecl]
+  ) [ListRecord]
+  MethodDeclarations(
+    MethodDeclarations(
+      MethodDeclarations(
+        NoMethodDecl(
+        ) [NoMethodDecl]
+        MethDeclNoParams(
+          MethodRetVoid(
+          ) [MethodRetVoid]
+          MethodName(
+           main
+          ) [MethodName]
+          IsListVarDeclWrapper(
+            IsListVarDeclWrapper(
+              IsListVarDeclWrapper(
+                NoListVarDeclWrapper(
+                ) [NoListVarDeclWrapper]
+                VarDeclWrapper(
+                  Type(
+                   int
+                  ) [Type]
+                  VarDeclarations(
+                    SingleVarDecl(
+                      NormalVarDecl(
+                       a
+                      ) [NormalVarDecl]
+                    ) [SingleVarDecl]
+                    ArrayVarDecl(
+                     b
+                    ) [ArrayVarDecl]
+                  ) [VarDeclarations]
+                ) [VarDeclWrapper]
+              ) [IsListVarDeclWrapper]
+              VarDeclWrapper(
+                Type(
+                 proba
+                ) [Type]
+                SingleVarDecl(
+                  NormalVarDecl(
+                   s
+                  ) [NormalVarDecl]
+                ) [SingleVarDecl]
+              ) [VarDeclWrapper]
+            ) [IsListVarDeclWrapper]
+            VarDeclWrapper(
+              Type(
+               char
+              ) [Type]
+              SingleVarDecl(
+                ArrayVarDecl(
+                 y
+                ) [ArrayVarDecl]
+              ) [SingleVarDecl]
+            ) [VarDeclWrapper]
+          ) [IsListVarDeclWrapper]
+          StatementListExists(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementWithSingleStatement(
+              PrintSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      NormalFactor(
+                        DesignatorSimple(
+                         Test
+                        ) [DesignatorSimple]
+                      ) [NormalFactor]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [PrintSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+        ) [MethDeclNoParams]
+      ) [MethodDeclarations]
+      MethDeclParams(
+        MethodRetType(
+          Type(
+           int
+          ) [Type]
+        ) [MethodRetType]
+        MethodName(
+         m1
+        ) [MethodName]
+        FormParameters(
+          SingleFormPars(
+            FormalParameterArray(
+              Type(
+               int
+              ) [Type]
+             p1
+            ) [FormalParameterArray]
+          ) [SingleFormPars]
+          FormalParameter(
+            Type(
+             char
+            ) [Type]
+           p2
+          ) [FormalParameter]
+        ) [FormParameters]
+        IsListVarDeclWrapper(
+          IsListVarDeclWrapper(
+            NoListVarDeclWrapper(
+            ) [NoListVarDeclWrapper]
+            VarDeclWrapper(
+              Type(
+               int
+              ) [Type]
+              VarDeclarations(
+                SingleVarDecl(
+                  NormalVarDecl(
+                   a
+                  ) [NormalVarDecl]
+                ) [SingleVarDecl]
+                ArrayVarDecl(
+                 b
+                ) [ArrayVarDecl]
+              ) [VarDeclarations]
+            ) [VarDeclWrapper]
+          ) [IsListVarDeclWrapper]
+          VarDeclWrapper(
+            Type(
+             recinrec
+            ) [Type]
+            SingleVarDecl(
+              ArrayVarDecl(
+               w
+              ) [ArrayVarDecl]
+            ) [SingleVarDecl]
+          ) [VarDeclWrapper]
+        ) [IsListVarDeclWrapper]
+        NoStatementList(
+        ) [NoStatementList]
+      ) [MethDeclParams]
+    ) [MethodDeclarations]
+    MethDeclParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       tralala
+      ) [MethodName]
+      SingleFormPars(
+        FormalParameter(
+          Type(
+           int
+          ) [Type]
+         a
+        ) [FormalParameter]
+      ) [SingleFormPars]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      NoStatementList(
+      ) [NoStatementList]
+    ) [MethDeclParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  20:04:19,215 - ===================================
+INFO  20:04:19,217 -  Program count calls = 1
+ERROR 20:04:19,226 - (designatorSimple) Forbidden use of variable 'Test' in line 19.
+INFO  20:04:19,227 - ===================================
+ERROR 20:04:19,228 - Parsiranje NIJE uspesno zavrseno!

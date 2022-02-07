@@ -16,7 +16,7 @@ record recinrec {
 }
 { 
 	void main() int a, b[]; proba s; char y[]; {
-	
+		print(x);
 	}
 	
 	int m1(int p1[], char p2) int a, b[]; recinrec w[]; {

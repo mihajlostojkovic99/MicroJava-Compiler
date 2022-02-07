@@ -1,17 +1,17 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/1/2022 13:17:23
+// 7/1/2022 20:20:37
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class MultipleTerms extends Term {
+public class MulTerms extends Term {
 
     private Term Term;
     private Mulop Mulop;
     private FactorWrapper FactorWrapper;
 
-    public MultipleTerms (Term Term, Mulop Mulop, FactorWrapper FactorWrapper) {
+    public MulTerms (Term Term, Mulop Mulop, FactorWrapper FactorWrapper) {
         this.Term=Term;
         if(Term!=null) Term.setParent(this);
         this.Mulop=Mulop;
@@ -71,7 +71,7 @@ public class MultipleTerms extends Term {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("MultipleTerms(\n");
+        buffer.append("MulTerms(\n");
 
         if(Term!=null)
             buffer.append(Term.toString("  "+tab));
@@ -92,7 +92,7 @@ public class MultipleTerms extends Term {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [MultipleTerms]");
+        buffer.append(") [MulTerms]");
         return buffer.toString();
     }
 }

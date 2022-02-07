@@ -71,11 +71,10 @@ nonterminal RecordDecl;
 nonterminal FormPars, StatementList;
 nonterminal FormPar;
 nonterminal Statement, SingleStatement, Statements, Label;
-nonterminal DesignatorStatement, Condition, Expr, ExprMore, Designator;
+nonterminal DesignatorStatement, Condition;
 nonterminal Assignop, AssignWrapper, ActPars;
 nonterminal CondTerm;
-nonterminal Addop, Term;
-nonterminal DesignatorMore;
+nonterminal Addop;
 nonterminal CondFact;
 nonterminal Mulop, Unary;
 nonterminal Relop;
@@ -83,7 +82,8 @@ nonterminal ListVarDeclWrapper;
 
 nonterminal ProgramName, MethodName, MethodRet, RecordDeclName;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, FactorWrapper;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, FactorWrapper, Term, ExprMore, Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorArrName;
 
 precedence left ELSE;
 
@@ -265,12 +265,14 @@ Addop			::= (Plus) PLUS
 				
 Designator		::= (DesignatorSimple) IDENT
 				|
-				(DesignatorArr) IDENT LSQBR Expr RSQBR
+				(DesignatorArr) DesignatorArrName LSQBR Expr RSQBR
 				|
 				(DesignatorWithMore) IDENT DesignatorMore
 				|
-				(DesignatorArrWithMore) IDENT LSQBR Expr RSQBR DesignatorMore
+				(DesignatorArrWithMore) DesignatorArrName LSQBR Expr RSQBR DesignatorMore
 				;
+				
+DesignatorArrName ::= (DesignatorArrName) IDENT;
 	
 DesignatorMore ::= (DesigMoreDot) DOT IDENT
 				|
@@ -304,7 +306,7 @@ CondTerm		::= (MulCondTerm) CondTerm AND CondFact
 				(SingleCondTerm) CondFact
 				;
 
-Term			::= (MultipleTerms) Term Mulop FactorWrapper
+Term			::= (MulTerms) Term Mulop FactorWrapper
 				|
 				(SingleTerm) FactorWrapper
 				;

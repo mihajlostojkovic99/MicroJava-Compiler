@@ -84,16 +84,11 @@ nonterminal Statements Statements;
 nonterminal Label Label;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal Condition Condition;
-nonterminal Expr Expr;
-nonterminal ExprMore ExprMore;
-nonterminal Designator Designator;
 nonterminal Assignop Assignop;
 nonterminal AssignWrapper AssignWrapper;
 nonterminal ActPars ActPars;
 nonterminal CondTerm CondTerm;
 nonterminal Addop Addop;
-nonterminal Term Term;
-nonterminal DesignatorMore DesignatorMore;
 nonterminal CondFact CondFact;
 nonterminal Mulop Mulop;
 nonterminal Unary Unary;
@@ -105,7 +100,8 @@ nonterminal MethodName MethodName;
 nonterminal MethodRet MethodRet;
 nonterminal RecordDeclName RecordDeclName;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, FactorWrapper;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, FactorWrapper, Term, ExprMore, Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorArrName;
 
 precedence left ELSE;
 
@@ -287,12 +283,14 @@ Addop			::= (Plus) PLUS {: RESULT=new Plus(); :}
 				
 Designator		::= (DesignatorSimple) IDENT:I1 {: RESULT=new DesignatorSimple(I1); RESULT.setLine(I1left); :}
 				|
-				(DesignatorArr) IDENT:I1 LSQBR Expr:E2 RSQBR {: RESULT=new DesignatorArr(I1, E2); RESULT.setLine(I1left); :}
+				(DesignatorArr) DesignatorArrName:D1 LSQBR Expr:E2 RSQBR {: RESULT=new DesignatorArr(D1, E2); RESULT.setLine(D1left); :}
 				|
 				(DesignatorWithMore) IDENT:I1 DesignatorMore:D2 {: RESULT=new DesignatorWithMore(I1, D2); RESULT.setLine(I1left); :}
 				|
-				(DesignatorArrWithMore) IDENT:I1 LSQBR Expr:E2 RSQBR DesignatorMore:D3 {: RESULT=new DesignatorArrWithMore(I1, E2, D3); RESULT.setLine(I1left); :}
+				(DesignatorArrWithMore) DesignatorArrName:D1 LSQBR Expr:E2 RSQBR DesignatorMore:D3 {: RESULT=new DesignatorArrWithMore(D1, E2, D3); RESULT.setLine(D1left); :}
 				;
+				
+DesignatorArrName ::= (DesignatorArrName) IDENT:I1 {: RESULT=new DesignatorArrName(I1); RESULT.setLine(I1left); :};
 	
 DesignatorMore ::= (DesigMoreDot) DOT IDENT:I1 {: RESULT=new DesigMoreDot(I1); RESULT.setLine(I1left); :}
 				|
@@ -326,7 +324,7 @@ CondTerm		::= (MulCondTerm) CondTerm:C1 AND CondFact:C2 {: RESULT=new MulCondTer
 				(SingleCondTerm) CondFact:C1 {: RESULT=new SingleCondTerm(C1); RESULT.setLine(C1left); :}
 				;
 
-Term			::= (MultipleTerms) Term:T1 Mulop:M2 FactorWrapper:F3 {: RESULT=new MultipleTerms(T1, M2, F3); RESULT.setLine(T1left); :}
+Term			::= (MulTerms) Term:T1 Mulop:M2 FactorWrapper:F3 {: RESULT=new MulTerms(T1, M2, F3); RESULT.setLine(T1left); :}
 				|
 				(SingleTerm) FactorWrapper:F1 {: RESULT=new SingleTerm(F1); RESULT.setLine(F1left); :}
 				;

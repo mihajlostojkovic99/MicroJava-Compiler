@@ -236,6 +236,87 @@ public class SemanticPass extends VisitorAdaptor {
 		currRecord = null;
 	}
 	
+	/*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	/* -------------------------------------------------------------------- CONTEXT_CONDITIONS -------------------------------------------------------------------- */
+	/*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	
+	/* ---------------------------------------------------------------------- VISIT_FACTOR ------------------------------------------------------------------------ */
+	@Override
+	public void visit(Char character) {
+		character.struct = Tab.charType;
+	}
+	
+	@Override
+	public void visit(Num num) {
+		num.struct = Tab.intType;
+	}
+	
+	@Override
+	public void visit(Bool b) {
+		b.struct = boolType;
+	}
+	
+	@Override
+	public void visit(NormalFactor normalFactor) {
+		normalFactor.struct = normalFactor.getDesignator().obj.getType();
+	}
+	
+	@Override
+	public void visit(NewFactorWithPars newFactorWithPars) {
+		if (!newFactorWithPars.getExpr().struct.equals(Tab.intType)) {
+			report_error("(NewFactorWithPars) Trying to make an array with a non-int length", newFactorWithPars);
+			newFactorWithPars.struct = Tab.noType;
+		}
+		else newFactorWithPars.struct = new Struct(Struct.Array, currentType);
+	}
+	
+	@Override
+	public void visit(FactorWithExpr factorWithExpr) {
+		factorWithExpr.struct = factorWithExpr.getExpr().struct;
+	}
+	
+	@Override
+	public void visit(FactorWrapper factorWrapper) {
+		if (factorWrapper.getUnary() instanceof UnaryNegative && !factorWrapper.getFactor().struct.equals(Tab.intType)) {
+			report_error("Negating a non-int parameter", factorWrapper);
+			factorWrapper.struct = Tab.noType;
+		}
+		else factorWrapper.struct = factorWrapper.getFactor().struct;
+	}
+	
+	/* -------------------------------------------------------------------- VISIT_DESIGNATOR ---------------------------------------------------------------------- */
+	@Override
+	public void visit(DesignatorSimple designatorSimple) {
+		designatorSimple.obj = Tab.find(designatorSimple.getI1());
+		if (designatorSimple.obj == Tab.noObj) report_error("(designatorSimple) Variable '" + designatorSimple.getI1() + "' not defined,", designatorSimple);
+		else if (designatorSimple.obj.getKind() != Obj.Var && designatorSimple.obj.getKind() != Obj.Con) {
+			report_error("(designatorSimple) Forbidden use of variable '" + designatorSimple.getI1() + "'", designatorSimple);
+			designatorSimple.obj = Tab.noObj;
+		}
+	}
+	
+	@Override
+	public void visit(DesignatorArrName designatorArrName) {
+		designatorArrName.obj = Tab.find(designatorArrName.getI1());
+		if (designatorArrName.obj == Tab.noObj) report_error("(DesignatorArrName) Array '" + designatorArrName.getI1() + "' not defined,", designatorArrName);
+		else if (designatorArrName.obj.getKind() != Obj.Var || designatorArrName.obj.getType().getKind() != Struct.Array) {
+			report_error("(DesignatorArrName) Variable '" + designatorArrName.getI1() + "' is probably not an array", designatorArrName);
+			designatorArrName.obj = Tab.noObj;
+		}
+	}
+	
+	@Override
+	public void visit(DesignatorArr designatorArr) {
+		designatorArr.obj = designatorArr.getDesignatorArrName().obj;
+		if (!designatorArr.getExpr().struct.equals(Tab.intType)) {
+			report_error("Array can only be addresed with int", designatorArr);
+			designatorArr.obj = Tab.noObj;
+		}
+		else if (designatorArr.obj != Tab.noObj) {
+			designatorArr.obj = new Obj(Obj.Elem, designatorArr.getDesignatorArrName().getI1() + "[$]", designatorArr.obj.getType().getElemType());
+		}
+	}
+	
 	@Override
 	public void visit(Type type) {
 		Obj typeObj = Tab.find(type.getI1());
