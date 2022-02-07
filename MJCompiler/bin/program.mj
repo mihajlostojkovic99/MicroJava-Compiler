@@ -1,11 +1,18 @@
 program Test 
-
-const int a = 3, g = 11;
-const bool b = true, f = false;
-
+const int a = 5;
 char x, y[];
 bool w[];
 int s;
 { 
-
+	void main() int a, b[]; int s; char y[]; {
+	
+	}
+	
+	int m1(int p1[], char p2) int a, b[]; bool w; {
+	
+	}
+	
+	void tralala(int a) {
+	
+	}
 }

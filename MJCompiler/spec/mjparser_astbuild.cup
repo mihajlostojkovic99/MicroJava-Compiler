@@ -103,6 +103,8 @@ nonterminal Relop Relop;
 nonterminal ListVarDeclWrapper ListVarDeclWrapper;
 
 nonterminal ProgramName ProgramName;
+nonterminal MethodName MethodName;
+nonterminal MethodRet MethodRet;
 
 precedence left ELSE;
 
@@ -169,19 +171,24 @@ RecordDeclList	::= (RecordDeclList) RecordDeclList RecordDecl
 				;
 */
 
-MethodDecl		::= (MethDeclParams) Type:T1 IDENT:I2 LPAREN FormPars:F3 RPAREN ListVarDeclWrapper:L4 LBRACE StatementList:S5 RBRACE {: RESULT=new MethDeclParams(T1, I2, F3, L4, S5); RESULT.setLine(T1left); :}
+MethodDecl		::= (MethDeclParams) MethodRet:M1 MethodName:M2 LPAREN FormPars:F3 RPAREN ListVarDeclWrapper:L4 LBRACE StatementList:S5 RBRACE {: RESULT=new MethDeclParams(M1, M2, F3, L4, S5); RESULT.setLine(M1left); :}
 				|
-				(MethDeclNoParams) Type:T1 IDENT:I2 LPAREN RPAREN ListVarDeclWrapper:L3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethDeclNoParams(T1, I2, L3, S4); RESULT.setLine(T1left); :}
+				(MethDeclNoParams) MethodRet:M1 MethodName:M2 LPAREN RPAREN ListVarDeclWrapper:L3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethDeclNoParams(M1, M2, L3, S4); RESULT.setLine(M1left); :}
+				/*
 				|
-				(MethDeclVoidParams) VOID IDENT:I1 LPAREN FormPars:F2 RPAREN ListVarDeclWrapper:L3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethDeclVoidParams(I1, F2, L3, S4); RESULT.setLine(I1left); :}
-				|
-				(MethDeclVoidNoParams) VOID IDENT:I1 LPAREN RPAREN ListVarDeclWrapper:L2 LBRACE StatementList:S3 RBRACE {: RESULT=new MethDeclVoidNoParams(I1, L2, S3); RESULT.setLine(I1left); :}
-				/*|
-				(MethDeclParamsError) Type IDENT LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
+				(MethDeclParamsError) Type MethodName LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
 				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
 				|
-				(MethDeclVoidParamsError) VOID IDENT LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
-				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}*/
+				(MethDeclVoidParamsError) VOID MethodName LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
+				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				*/
+				;
+				
+MethodName		::= (MethodName) IDENT:I1 {: RESULT=new MethodName(I1); RESULT.setLine(I1left); :};
+
+MethodRet		::= (MethodRetVoid) VOID {: RESULT=new MethodRetVoid(); :}
+				|
+				(MethodRetType) Type:T1 {: RESULT=new MethodRetType(T1); RESULT.setLine(T1left); :}
 				;
 
 Type			::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};

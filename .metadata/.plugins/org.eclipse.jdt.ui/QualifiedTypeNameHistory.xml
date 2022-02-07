@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.VisitorAdaptor"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.SyntaxNode"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.SemanticAnalyzer"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ProgramName"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.Tab"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Type"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ConstDeclChar"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ConstDeclNumber"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ConstDeclBool"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Obj"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodName"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodRet"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodRetType"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodRetVoid"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodDecl"/>
 </qualifiedTypeNameHistroy>

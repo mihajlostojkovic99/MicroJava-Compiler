@@ -1,22 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 6/1/2022 22:13:14
+// 7/1/2022 0:7:32
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MethDeclParams extends MethodDecl {
 
-    private Type Type;
-    private String I2;
+    private MethodRet MethodRet;
+    private MethodName MethodName;
     private FormPars FormPars;
     private ListVarDeclWrapper ListVarDeclWrapper;
     private StatementList StatementList;
 
-    public MethDeclParams (Type Type, String I2, FormPars FormPars, ListVarDeclWrapper ListVarDeclWrapper, StatementList StatementList) {
-        this.Type=Type;
-        if(Type!=null) Type.setParent(this);
-        this.I2=I2;
+    public MethDeclParams (MethodRet MethodRet, MethodName MethodName, FormPars FormPars, ListVarDeclWrapper ListVarDeclWrapper, StatementList StatementList) {
+        this.MethodRet=MethodRet;
+        if(MethodRet!=null) MethodRet.setParent(this);
+        this.MethodName=MethodName;
+        if(MethodName!=null) MethodName.setParent(this);
         this.FormPars=FormPars;
         if(FormPars!=null) FormPars.setParent(this);
         this.ListVarDeclWrapper=ListVarDeclWrapper;
@@ -25,20 +26,20 @@ public class MethDeclParams extends MethodDecl {
         if(StatementList!=null) StatementList.setParent(this);
     }
 
-    public Type getType() {
-        return Type;
+    public MethodRet getMethodRet() {
+        return MethodRet;
     }
 
-    public void setType(Type Type) {
-        this.Type=Type;
+    public void setMethodRet(MethodRet MethodRet) {
+        this.MethodRet=MethodRet;
     }
 
-    public String getI2() {
-        return I2;
+    public MethodName getMethodName() {
+        return MethodName;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setMethodName(MethodName MethodName) {
+        this.MethodName=MethodName;
     }
 
     public FormPars getFormPars() {
@@ -70,7 +71,8 @@ public class MethDeclParams extends MethodDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Type!=null) Type.accept(visitor);
+        if(MethodRet!=null) MethodRet.accept(visitor);
+        if(MethodName!=null) MethodName.accept(visitor);
         if(FormPars!=null) FormPars.accept(visitor);
         if(ListVarDeclWrapper!=null) ListVarDeclWrapper.accept(visitor);
         if(StatementList!=null) StatementList.accept(visitor);
@@ -78,14 +80,16 @@ public class MethDeclParams extends MethodDecl {
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Type!=null) Type.traverseTopDown(visitor);
+        if(MethodRet!=null) MethodRet.traverseTopDown(visitor);
+        if(MethodName!=null) MethodName.traverseTopDown(visitor);
         if(FormPars!=null) FormPars.traverseTopDown(visitor);
         if(ListVarDeclWrapper!=null) ListVarDeclWrapper.traverseTopDown(visitor);
         if(StatementList!=null) StatementList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Type!=null) Type.traverseBottomUp(visitor);
+        if(MethodRet!=null) MethodRet.traverseBottomUp(visitor);
+        if(MethodName!=null) MethodName.traverseBottomUp(visitor);
         if(FormPars!=null) FormPars.traverseBottomUp(visitor);
         if(ListVarDeclWrapper!=null) ListVarDeclWrapper.traverseBottomUp(visitor);
         if(StatementList!=null) StatementList.traverseBottomUp(visitor);
@@ -97,13 +101,16 @@ public class MethDeclParams extends MethodDecl {
         buffer.append(tab);
         buffer.append("MethDeclParams(\n");
 
-        if(Type!=null)
-            buffer.append(Type.toString("  "+tab));
+        if(MethodRet!=null)
+            buffer.append(MethodRet.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
+        if(MethodName!=null)
+            buffer.append(MethodName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(FormPars!=null)

@@ -1,0 +1,155 @@
+INFO  00:31:18,394 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  00:31:18,426 - #2 program
+INFO  00:31:18,426 - #49 Test
+INFO  00:31:18,427 - #6 const
+INFO  00:31:18,427 - #49 int
+INFO  00:31:18,427 - #49 a
+INFO  00:31:18,428 - #34 =
+INFO  00:31:18,428 - #47 3
+INFO  00:31:18,428 - #39 ,
+INFO  00:31:18,428 - #49 g
+INFO  00:31:18,428 - #34 =
+INFO  00:31:18,428 - #47 11
+INFO  00:31:18,428 - #37 ;
+INFO  00:31:18,428 - #6 const
+INFO  00:31:18,429 - #49 bool
+INFO  00:31:18,429 - #49 b
+INFO  00:31:18,429 - #34 =
+INFO  00:31:18,429 - #48 1
+INFO  00:31:18,429 - #39 ,
+INFO  00:31:18,429 - #49 f
+INFO  00:31:18,429 - #34 =
+INFO  00:31:18,429 - #48 0
+INFO  00:31:18,429 - #37 ;
+INFO  00:31:18,431 - #49 char
+INFO  00:31:18,431 - #49 x
+INFO  00:31:18,431 - #39 ,
+INFO  00:31:18,431 - #49 y
+INFO  00:31:18,431 - #43 [
+INFO  00:31:18,431 - #44 ]
+INFO  00:31:18,431 - #37 ;
+INFO  00:31:18,431 - #49 bool
+INFO  00:31:18,432 - #49 w
+INFO  00:31:18,432 - #43 [
+INFO  00:31:18,432 - #44 ]
+INFO  00:31:18,432 - #37 ;
+INFO  00:31:18,432 - #49 int
+INFO  00:31:18,432 - #49 s
+INFO  00:31:18,432 - #37 ;
+INFO  00:31:18,432 - #45 {
+INFO  00:31:18,432 - #49 int
+INFO  00:31:18,433 - #49 main
+INFO  00:31:18,433 - #41 (
+INFO  00:31:18,433 - #42 )
+INFO  00:31:18,434 - #45 {
+INFO  00:31:18,434 - #46 }
+INFO  00:31:18,434 - #46 }
+INFO  00:31:18,436 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListVar(
+      ListVar(
+        ListConst(
+          ListConst(
+            NoList(
+            ) [NoList]
+            ConstDeclWrapperClass(
+              Type(
+               int
+              ) [Type]
+              ConstDeclarations(
+                SingleConstDeclaration(
+                  ConstDeclNumber(
+                   a
+                   3
+                  ) [ConstDeclNumber]
+                ) [SingleConstDeclaration]
+                ConstDeclNumber(
+                 g
+                 11
+                ) [ConstDeclNumber]
+              ) [ConstDeclarations]
+            ) [ConstDeclWrapperClass]
+          ) [ListConst]
+          ConstDeclWrapperClass(
+            Type(
+             bool
+            ) [Type]
+            ConstDeclarations(
+              SingleConstDeclaration(
+                ConstDeclBool(
+                 b
+                 1
+                ) [ConstDeclBool]
+              ) [SingleConstDeclaration]
+              ConstDeclBool(
+               f
+               0
+              ) [ConstDeclBool]
+            ) [ConstDeclarations]
+          ) [ConstDeclWrapperClass]
+        ) [ListConst]
+        VarDeclWrapper(
+          Type(
+           char
+          ) [Type]
+          VarDeclarations(
+            SingleVarDecl(
+              NormalVarDecl(
+               x
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+            ArrayVarDecl(
+             y
+            ) [ArrayVarDecl]
+          ) [VarDeclarations]
+        ) [VarDeclWrapper]
+      ) [ListVar]
+      VarDeclWrapper(
+        Type(
+         bool
+        ) [Type]
+        SingleVarDecl(
+          ArrayVarDecl(
+           w
+          ) [ArrayVarDecl]
+        ) [SingleVarDecl]
+      ) [VarDeclWrapper]
+    ) [ListVar]
+    VarDeclWrapper(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         s
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapper]
+  ) [ListVar]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetType(
+        Type(
+         int
+        ) [Type]
+      ) [MethodRetType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      NoStatementList(
+      ) [NoStatementList]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  00:31:18,436 - ===================================
+INFO  00:31:18,437 -  Program count calls = 1
+ERROR 00:31:18,446 - void main() method is not defined in line 1.
+INFO  00:31:18,446 - ===================================
+ERROR 00:31:18,447 - Parsiranje NIJE uspesno zavrseno!

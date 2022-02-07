@@ -81,7 +81,7 @@ nonterminal Mulop, Factor, FactorWrapper, Unary;
 nonterminal Relop;
 nonterminal ListVarDeclWrapper;
 
-nonterminal ProgramName;
+nonterminal ProgramName, MethodName, MethodRet;
 
 precedence left ELSE;
 
@@ -148,19 +148,24 @@ RecordDeclList	::= (RecordDeclList) RecordDeclList RecordDecl
 				;
 */
 
-MethodDecl		::= (MethDeclParams) Type IDENT LPAREN FormPars RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
+MethodDecl		::= (MethDeclParams) MethodRet MethodName LPAREN FormPars RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
 				|
-				(MethDeclNoParams) Type IDENT LPAREN RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
+				(MethDeclNoParams) MethodRet MethodName LPAREN RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
+				/*
 				|
-				(MethDeclVoidParams) VOID IDENT LPAREN FormPars RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
-				|
-				(MethDeclVoidNoParams) VOID IDENT LPAREN RPAREN ListVarDeclWrapper LBRACE StatementList RBRACE
-				/*|
-				(MethDeclParamsError) Type IDENT LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
+				(MethDeclParamsError) Type MethodName LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
 				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
 				|
-				(MethDeclVoidParamsError) VOID IDENT LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
-				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}*/
+				(MethDeclVoidParamsError) VOID MethodName LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
+				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				*/
+				;
+				
+MethodName		::= (MethodName) IDENT;
+
+MethodRet		::= (MethodRetVoid) VOID
+				|
+				(MethodRetType) Type
 				;
 
 Type			::= (Type) IDENT;

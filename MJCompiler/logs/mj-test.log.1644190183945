@@ -1,0 +1,132 @@
+INFO  00:27:13,185 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  00:27:13,500 - #2 program
+INFO  00:27:13,500 - #49 Test
+INFO  00:27:13,500 - #6 const
+INFO  00:27:13,507 - #49 int
+INFO  00:27:13,507 - #49 a
+INFO  00:27:13,510 - #34 =
+INFO  00:27:13,510 - #47 3
+INFO  00:27:13,510 - #39 ,
+INFO  00:27:13,511 - #49 g
+INFO  00:27:13,511 - #34 =
+INFO  00:27:13,511 - #47 11
+INFO  00:27:13,511 - #37 ;
+INFO  00:27:13,511 - #6 const
+INFO  00:27:13,511 - #49 bool
+INFO  00:27:13,511 - #49 b
+INFO  00:27:13,512 - #34 =
+INFO  00:27:13,512 - #48 1
+INFO  00:27:13,512 - #39 ,
+INFO  00:27:13,512 - #49 f
+INFO  00:27:13,512 - #34 =
+INFO  00:27:13,512 - #48 0
+INFO  00:27:13,512 - #37 ;
+INFO  00:27:13,514 - #49 char
+INFO  00:27:13,514 - #49 x
+INFO  00:27:13,514 - #39 ,
+INFO  00:27:13,514 - #49 y
+INFO  00:27:13,514 - #43 [
+INFO  00:27:13,514 - #44 ]
+INFO  00:27:13,514 - #37 ;
+INFO  00:27:13,514 - #49 bool
+INFO  00:27:13,518 - #49 w
+INFO  00:27:13,519 - #43 [
+INFO  00:27:13,519 - #44 ]
+INFO  00:27:13,519 - #37 ;
+INFO  00:27:13,519 - #49 int
+INFO  00:27:13,519 - #49 s
+INFO  00:27:13,519 - #37 ;
+INFO  00:27:13,519 - #45 {
+INFO  00:27:13,519 - #46 }
+INFO  00:27:13,526 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListVar(
+      ListVar(
+        ListConst(
+          ListConst(
+            NoList(
+            ) [NoList]
+            ConstDeclWrapperClass(
+              Type(
+               int
+              ) [Type]
+              ConstDeclarations(
+                SingleConstDeclaration(
+                  ConstDeclNumber(
+                   a
+                   3
+                  ) [ConstDeclNumber]
+                ) [SingleConstDeclaration]
+                ConstDeclNumber(
+                 g
+                 11
+                ) [ConstDeclNumber]
+              ) [ConstDeclarations]
+            ) [ConstDeclWrapperClass]
+          ) [ListConst]
+          ConstDeclWrapperClass(
+            Type(
+             bool
+            ) [Type]
+            ConstDeclarations(
+              SingleConstDeclaration(
+                ConstDeclBool(
+                 b
+                 1
+                ) [ConstDeclBool]
+              ) [SingleConstDeclaration]
+              ConstDeclBool(
+               f
+               0
+              ) [ConstDeclBool]
+            ) [ConstDeclarations]
+          ) [ConstDeclWrapperClass]
+        ) [ListConst]
+        VarDeclWrapper(
+          Type(
+           char
+          ) [Type]
+          VarDeclarations(
+            SingleVarDecl(
+              NormalVarDecl(
+               x
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+            ArrayVarDecl(
+             y
+            ) [ArrayVarDecl]
+          ) [VarDeclarations]
+        ) [VarDeclWrapper]
+      ) [ListVar]
+      VarDeclWrapper(
+        Type(
+         bool
+        ) [Type]
+        SingleVarDecl(
+          ArrayVarDecl(
+           w
+          ) [ArrayVarDecl]
+        ) [SingleVarDecl]
+      ) [VarDeclWrapper]
+    ) [ListVar]
+    VarDeclWrapper(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         s
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapper]
+  ) [ListVar]
+  NoMethodDecl(
+  ) [NoMethodDecl]
+) [Program]
+INFO  00:27:13,527 - ===================================
+INFO  00:27:13,533 -  Program count calls = 1
+INFO  00:27:13,542 - ===================================
+INFO  00:27:13,542 - Parsiranje uspesno zavrseno!

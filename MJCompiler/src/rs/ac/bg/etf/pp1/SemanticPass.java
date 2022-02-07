@@ -18,6 +18,10 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	private Struct boolType = Tab.find("bool").getType();
 
+	private boolean mainHappened = false;
+
+	private Obj currMethod;
+
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
 		StringBuilder msg = new StringBuilder(message);
@@ -45,6 +49,9 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(Program program) {		
 		Tab.chainLocalSymbols(thisProgram);
 		Tab.closeScope();
+		
+		if (!mainHappened)
+			report_error("void main() method is not defined", program);
 	}
 	
 	/*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -108,23 +115,96 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(NormalVarDecl normalVarDecl) {
-		Obj tmp = Tab.find(normalVarDecl.getI1());
-		if (tmp != Tab.noObj) {
-			report_error("Multiple definitions of variable '" + normalVarDecl.getI1() + "'", normalVarDecl);
+		Obj tmp = null;
+		if (currMethod == null) tmp = Tab.find(normalVarDecl.getI1());
+		else tmp = Tab.currentScope().findSymbol(normalVarDecl.getI1());
+		
+		if (tmp == Tab.noObj || tmp == null) {
+			tmp = Tab.insert(Obj.Var, normalVarDecl.getI1(), currentType);
 		}
 		else {
-			tmp = Tab.insert(Obj.Var, normalVarDecl.getI1(), currentType);
+			report_error("Multiple definitions of variable '" + normalVarDecl.getI1() + "'", normalVarDecl);
 		}
 	}
 	
 	@Override
 	public void visit(ArrayVarDecl arrayVarDecl) {
-		Obj tmp = Tab.find(arrayVarDecl.getI1());
-		if (tmp != Tab.noObj) {
-			report_error("Multiple definitions of variable '" + arrayVarDecl.getI1() + "'", arrayVarDecl);
+		Obj tmp = null;
+		if (currMethod == null) tmp = Tab.find(arrayVarDecl.getI1());
+		else tmp = Tab.currentScope().findSymbol(arrayVarDecl.getI1());
+		
+		if (tmp == Tab.noObj || tmp == null) {
+			tmp = Tab.insert(Obj.Var, arrayVarDecl.getI1(), new Struct(Struct.Array, currentType));
 		}
 		else {
-			tmp = Tab.insert(Obj.Var, arrayVarDecl.getI1(), new Struct(Struct.Array, currentType)); //Da li ovo dobro radi za bool posto pise Arr of pa prazno?
+			report_error("Multiple definitions of variable '" + arrayVarDecl.getI1() + "'", arrayVarDecl);
+		}
+	}
+	
+	/*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	/* ----------------------------------------------------------------------- METHOD_DECLARATIONS ---------------------------------------------------------------- */
+	/*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	
+	@Override
+	public void visit(MethodName methodName) {
+		if (methodName.getI1().equalsIgnoreCase("main") && currentType == Tab.noType) mainHappened  = true;
+		currMethod = Tab.insert(Obj.Meth, methodName.getI1(), currentType);
+		Tab.openScope();
+	}
+	
+	@Override
+	public void visit(MethodRetVoid methodRetVoid) {
+		currentType = Tab.noType;
+	}
+	
+	@Override
+	public void visit(MethDeclParams methDeclParams) {
+		Tab.chainLocalSymbols(currMethod);
+		Tab.closeScope();
+		currMethod = null;
+	}
+	
+	@Override
+	public void visit(MethDeclNoParams methDeclNoParams) {
+		Tab.chainLocalSymbols(currMethod);
+		Tab.closeScope();
+		currMethod = null;
+	}
+	
+	@Override
+	public void visit(FormalParameter formalParameter) {
+		Obj tmp = null;
+		if (currMethod == null) report_error("No current method for formal parameters. Error in class singleFormPars", formalParameter);
+		else tmp = Tab.currentScope().findSymbol(formalParameter.getI2());
+		
+		if (currMethod.getName().equalsIgnoreCase("main") && currMethod.getType() == Tab.noType) 
+			report_error("Formal parameters in void main() are forbidden", formalParameter);
+		
+		if (tmp == Tab.noObj || tmp == null) {
+			tmp = Tab.insert(Obj.Var, formalParameter.getI2(), currentType);
+			currMethod.setLevel(currMethod.getLevel() + 1);
+			tmp.setFpPos(1);
+		}
+		else {
+			report_error("Multiple definitions of formal parameter '" + formalParameter.getI2() + "'", formalParameter);
+		}
+	}
+	
+	@Override
+	public void visit(FormalParameterArray formalParameterArray) {
+		Obj tmp = null;
+		if (currMethod == null) report_error("No current method for formal parameters. Error in class singleFormPars", formalParameterArray);
+		else tmp = Tab.currentScope().findSymbol(formalParameterArray.getI2());
+		
+		if (currMethod.getName().equalsIgnoreCase("main")) report_error("Formal parameters in void main() are forbidden", formalParameterArray);
+		
+		if (tmp == Tab.noObj || tmp == null) {
+			tmp = Tab.insert(Obj.Var, formalParameterArray.getI2(), new Struct(Struct.Array, currentType));
+			currMethod.setLevel(currMethod.getLevel() + 1);
+			tmp.setFpPos(1);
+		}
+		else {
+			report_error("Multiple definitions of variable '" + formalParameterArray.getI2() + "'", formalParameterArray);
 		}
 	}
 	

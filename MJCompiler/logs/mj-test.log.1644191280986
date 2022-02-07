@@ -1,0 +1,159 @@
+INFO  00:47:29,705 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  00:47:29,737 - #2 program
+INFO  00:47:29,737 - #49 Test
+INFO  00:47:29,737 - #6 const
+INFO  00:47:29,738 - #49 int
+INFO  00:47:29,738 - #49 a
+INFO  00:47:29,739 - #34 =
+INFO  00:47:29,739 - #47 5
+INFO  00:47:29,739 - #37 ;
+INFO  00:47:29,739 - #49 char
+INFO  00:47:29,739 - #49 x
+INFO  00:47:29,739 - #39 ,
+INFO  00:47:29,740 - #49 y
+INFO  00:47:29,740 - #43 [
+INFO  00:47:29,740 - #44 ]
+INFO  00:47:29,740 - #37 ;
+INFO  00:47:29,740 - #49 bool
+INFO  00:47:29,741 - #49 w
+INFO  00:47:29,741 - #43 [
+INFO  00:47:29,741 - #44 ]
+INFO  00:47:29,741 - #37 ;
+INFO  00:47:29,741 - #49 int
+INFO  00:47:29,741 - #49 s
+INFO  00:47:29,742 - #37 ;
+INFO  00:47:29,742 - #45 {
+INFO  00:47:29,742 - #14 void
+INFO  00:47:29,743 - #49 main
+INFO  00:47:29,743 - #41 (
+INFO  00:47:29,744 - #42 )
+INFO  00:47:29,744 - #49 int
+INFO  00:47:29,744 - #49 x
+INFO  00:47:29,744 - #37 ;
+INFO  00:47:29,744 - #49 int
+INFO  00:47:29,744 - #49 s
+INFO  00:47:29,744 - #37 ;
+INFO  00:47:29,744 - #49 char
+INFO  00:47:29,744 - #49 y
+INFO  00:47:29,744 - #43 [
+INFO  00:47:29,744 - #44 ]
+INFO  00:47:29,744 - #37 ;
+INFO  00:47:29,745 - #45 {
+INFO  00:47:29,745 - #46 }
+INFO  00:47:29,745 - #46 }
+INFO  00:47:29,746 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListVar(
+      ListVar(
+        ListConst(
+          NoList(
+          ) [NoList]
+          ConstDeclWrapperClass(
+            Type(
+             int
+            ) [Type]
+            SingleConstDeclaration(
+              ConstDeclNumber(
+               a
+               5
+              ) [ConstDeclNumber]
+            ) [SingleConstDeclaration]
+          ) [ConstDeclWrapperClass]
+        ) [ListConst]
+        VarDeclWrapper(
+          Type(
+           char
+          ) [Type]
+          VarDeclarations(
+            SingleVarDecl(
+              NormalVarDecl(
+               x
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+            ArrayVarDecl(
+             y
+            ) [ArrayVarDecl]
+          ) [VarDeclarations]
+        ) [VarDeclWrapper]
+      ) [ListVar]
+      VarDeclWrapper(
+        Type(
+         bool
+        ) [Type]
+        SingleVarDecl(
+          ArrayVarDecl(
+           w
+          ) [ArrayVarDecl]
+        ) [SingleVarDecl]
+      ) [VarDeclWrapper]
+    ) [ListVar]
+    VarDeclWrapper(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         s
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapper]
+  ) [ListVar]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      IsListVarDeclWrapper(
+        IsListVarDeclWrapper(
+          IsListVarDeclWrapper(
+            NoListVarDeclWrapper(
+            ) [NoListVarDeclWrapper]
+            VarDeclWrapper(
+              Type(
+               int
+              ) [Type]
+              SingleVarDecl(
+                NormalVarDecl(
+                 x
+                ) [NormalVarDecl]
+              ) [SingleVarDecl]
+            ) [VarDeclWrapper]
+          ) [IsListVarDeclWrapper]
+          VarDeclWrapper(
+            Type(
+             int
+            ) [Type]
+            SingleVarDecl(
+              NormalVarDecl(
+               s
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+          ) [VarDeclWrapper]
+        ) [IsListVarDeclWrapper]
+        VarDeclWrapper(
+          Type(
+           char
+          ) [Type]
+          SingleVarDecl(
+            ArrayVarDecl(
+             y
+            ) [ArrayVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [IsListVarDeclWrapper]
+      NoStatementList(
+      ) [NoStatementList]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  00:47:29,747 - ===================================
+INFO  00:47:29,748 -  Program count calls = 1
+INFO  00:47:29,757 - ===================================
+INFO  00:47:29,757 - Parsiranje uspesno zavrseno!
