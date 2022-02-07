@@ -11,11 +11,14 @@
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ConstDeclNumber"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ConstDeclBool"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Obj"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodName"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodRet"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodRetType"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodRetVoid"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodDecl"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Char"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.UnaryNegative"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.DesignatorArrName"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>

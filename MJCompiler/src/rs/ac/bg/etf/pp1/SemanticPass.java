@@ -376,7 +376,6 @@ public class SemanticPass extends VisitorAdaptor {
 				if (tmp.getName().equals(desigMoreDot.getI1())) {
 					desigMoreDot.obj = tmp;
 					found = true;
-					currRecord = null;
 					break;
 				}
 			}
@@ -385,18 +384,22 @@ public class SemanticPass extends VisitorAdaptor {
 				report_error("(DesigMoreDot) Variable '" + desigMoreDot.getI1() + "' not found in the record", desigMoreDot);
 			}
 		}
+		currRecord = null;
 	}
 	
 	@Override
 	public void visit(DesigMoreDotArr desigMoreDotArr) {
 		if (currRecord == Tab.noType) desigMoreDotArr.obj = Tab.noObj;
+		else if (!desigMoreDotArr.getExpr().struct.equals(Tab.intType)) {
+			report_error("(DesigMoreDotArr) Array can only be addresed with int", desigMoreDotArr);
+			desigMoreDotArr.obj = Tab.noObj;
+		}
 		else {
 			boolean found = false;
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDotArr.getDesignatorArrName().getI1()) && tmp.getType().getKind() == Struct.Array) {
 					desigMoreDotArr.obj = tmp;
 					found = true;
-					currRecord = null;
 					break;
 				}
 			}
@@ -405,6 +408,7 @@ public class SemanticPass extends VisitorAdaptor {
 				report_error("(DesigMoreDot) Variable '" + desigMoreDotArr.getDesignatorArrName().getI1() + "' not found in the record", desigMoreDotArr);
 			}
 		}
+		currRecord = null;
 	}
 	
 	@Override
