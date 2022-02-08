@@ -85,7 +85,6 @@ nonterminal Label Label;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal Condition Condition;
 nonterminal Assignop Assignop;
-nonterminal AssignWrapper AssignWrapper;
 nonterminal ActPars ActPars;
 nonterminal CondTerm CondTerm;
 nonterminal Addop Addop;
@@ -100,7 +99,7 @@ nonterminal MethodName MethodName;
 nonterminal MethodRet MethodRet;
 nonterminal RecordDeclName RecordDeclName;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, FactorWrapper, Term, ExprMore, Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName;
 
 precedence left ELSE;
@@ -243,7 +242,7 @@ SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement:D1 {: RESULT=
 				|
 				(PrintSingleStatement) PRINT LPAREN Expr:E1 RPAREN SEMI {: RESULT=new PrintSingleStatement(E1); RESULT.setLine(E1left); :}
 				|
-				(GotoSingleStatement) GOTO Label:L1 SEMI {: RESULT=new GotoSingleStatement(L1); RESULT.setLine(L1left); :}
+				(GotoSingleStatement) GOTO IDENT:I1 SEMI {: RESULT=new GotoSingleStatement(I1); RESULT.setLine(I1left); :}
 				;
 				
 Statements		::= (Statements) LBRACE StatementList:S1 RBRACE {: RESULT=new Statements(S1); RESULT.setLine(S1left); :};

@@ -9,10 +9,18 @@ char b;
 int c;
 { 
 
-	void main() r1 o1; r2 o2; r3 o3; r3 o3arr[];{ 
+	void main() r1 o1; r2 o2; r3 o3; r3 o3arr[]; int a, b[]; char x;{ 
 		
-		o1 = new r1; 
-		o1.x = new int[1];
-
+		a = 5;
+		a++;
+		b = new int[5];
+		b[3] = 10;
+		b[3]--;
+		b[4]--;
+		
+		x = 'a';
+		print(x, 2);
+		print(Test);
+		
 	}
 }

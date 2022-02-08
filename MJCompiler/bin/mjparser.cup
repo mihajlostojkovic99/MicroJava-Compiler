@@ -72,7 +72,7 @@ nonterminal FormPars, StatementList;
 nonterminal FormPar;
 nonterminal Statement, SingleStatement, Statements, Label;
 nonterminal DesignatorStatement, Condition;
-nonterminal Assignop, AssignWrapper, ActPars;
+nonterminal Assignop, ActPars;
 nonterminal CondTerm;
 nonterminal Addop;
 nonterminal CondFact;
@@ -82,7 +82,7 @@ nonterminal ListVarDeclWrapper;
 
 nonterminal ProgramName, MethodName, MethodRet, RecordDeclName;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, FactorWrapper, Term, ExprMore, Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName;
 
 precedence left ELSE;
@@ -225,7 +225,7 @@ SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement
 				|
 				(PrintSingleStatement) PRINT LPAREN Expr RPAREN SEMI
 				|
-				(GotoSingleStatement) GOTO Label SEMI
+				(GotoSingleStatement) GOTO IDENT SEMI
 				;
 				
 Statements		::= (Statements) LBRACE StatementList RBRACE;

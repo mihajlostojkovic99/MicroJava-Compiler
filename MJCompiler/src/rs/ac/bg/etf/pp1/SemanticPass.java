@@ -1,4 +1,6 @@
 package rs.ac.bg.etf.pp1;
+import java.util.HashSet;
+
 import org.apache.log4j.Logger;
 
 import rs.ac.bg.etf.pp1.ast.*;
@@ -23,6 +25,10 @@ public class SemanticPass extends VisitorAdaptor {
 	private Obj currMethod;
 
 	private Struct currRecord;
+	
+	private HashSet<String> methodLabels;
+
+	private HashSet<String> methodCalledLabels;
 
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
@@ -154,6 +160,8 @@ public class SemanticPass extends VisitorAdaptor {
 		if (methodName.getI1().equalsIgnoreCase("main") && currentType == Tab.noType) mainHappened  = true;
 		currMethod = Tab.insert(Obj.Meth, methodName.getI1(), currentType);
 		Tab.openScope();
+		methodLabels = new HashSet<String>();
+		methodCalledLabels = new HashSet<String>();
 	}
 	
 	@Override
@@ -166,6 +174,9 @@ public class SemanticPass extends VisitorAdaptor {
 		Tab.chainLocalSymbols(currMethod);
 		Tab.closeScope();
 		currMethod = null;
+		if (!methodLabels.containsAll(methodCalledLabels)) report_error("(MethDeclParams) Some labels are undefined!", methDeclParams);
+		methodLabels = null;
+		methodCalledLabels = null;
 	}
 	
 	@Override
@@ -173,6 +184,9 @@ public class SemanticPass extends VisitorAdaptor {
 		Tab.chainLocalSymbols(currMethod);
 		Tab.closeScope();
 		currMethod = null;
+		if (!methodLabels.containsAll(methodCalledLabels)) report_error("(MethDeclNoParams) Some labels are undefined!", methDeclNoParams);
+		methodLabels = null;
+		methodCalledLabels = null;
 	}
 	
 	@Override
@@ -339,7 +353,7 @@ public class SemanticPass extends VisitorAdaptor {
 		designatorWithMoreName.obj = Tab.find(designatorWithMoreName.getI1());
 		currRecord = designatorWithMoreName.obj.getType();
 		if (designatorWithMoreName.obj == Tab.noObj) report_error("(DesignatorWithMoreName) Record '" + designatorWithMoreName.getI1() + "' not defined,", designatorWithMoreName);
-		else if (designatorWithMoreName.obj.getKind() != Struct.Class || designatorWithMoreName.obj.getType().getKind() != Obj.Var) {
+		else if (designatorWithMoreName.obj.getKind() != Struct.Class && designatorWithMoreName.obj.getType().getKind() != Obj.Var) {
 			report_error("(DesignatorWithMoreName) Variable '" + designatorWithMoreName.getI1() + "' is probably not a record", designatorWithMoreName);
 			designatorWithMoreName.obj = Tab.noObj;
 			currRecord = Tab.noType;
@@ -451,6 +465,108 @@ public class SemanticPass extends VisitorAdaptor {
 				report_error("(DesigMoreDotList) Variable '" + desigMoreDotArrList.getDesignatorArrName().getI1() + "' not found in the record", desigMoreDotArrList);
 			}
 		}
+	}
+	
+	/* -------------------------------------------------------------------- VISIT_TERM ---------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(SingleTerm singleTerm) {
+		singleTerm.struct = singleTerm.getFactorWrapper().struct;
+	}
+	
+	@Override
+	public void visit(MulTerms mulTerms) {
+		mulTerms.struct = mulTerms.getTerm().struct;
+		
+		if (!mulTerms.getFactorWrapper().struct.equals(Tab.intType) || !mulTerms.getTerm().struct.equals(Tab.intType)) {
+			mulTerms.struct = Tab.noType;
+			report_error("(MulTerms) Multiplication of non-int values detected", mulTerms);
+		}
+	}
+	
+	/* -------------------------------------------------------------------- VISIT_EXPR ---------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(Expr expr) { //Expr ::= (Expr) Term ExprMore
+		expr.struct = expr.getTerm().struct;
+		if (expr.getExprMore() instanceof ThereIsMoreExpr && (!expr.getExprMore().struct.equals(Tab.intType) || !expr.getTerm().struct.equals(Tab.intType))) {
+			expr.struct = Tab.noType;
+			if (!expr.getExprMore().struct.equals(Tab.noType) && !expr.getTerm().struct.equals(Tab.noType))
+				report_error("(Expr) Sum of non-int values detected", expr);
+		}
+	}
+	
+	@Override
+	public void visit(ThereIsMoreExpr thereIsMoreExpr) { 
+		thereIsMoreExpr.struct = thereIsMoreExpr.getTerm().struct;
+		if (thereIsMoreExpr.getExprMore() instanceof ThereIsMoreExpr && (!thereIsMoreExpr.getExprMore().struct.equals(Tab.intType) || !thereIsMoreExpr.getTerm().struct.equals(Tab.intType))) {
+			thereIsMoreExpr.struct = Tab.noType;
+			if (!thereIsMoreExpr.getExprMore().struct.equals(Tab.noType) && !thereIsMoreExpr.getTerm().struct.equals(Tab.noType))
+				report_error("(ThereIsMoreExpr) Sum of non-int values detected", thereIsMoreExpr);
+		}
+	}
+	
+	/* ------------------------------------------------------------------- VISIT_DESIG_STM --------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(AssignWrap assignWrap) {
+		assignWrap.struct = assignWrap.getExpr().struct;
+	}
+	
+	@Override
+	public void visit(DesStmAssign desStmAssign) {
+		if (desStmAssign.getDesignator().obj.getKind() != Obj.Var && desStmAssign.getDesignator().obj.getKind() != Obj.Elem && desStmAssign.getDesignator().obj.getKind() != Obj.Fld) 
+			report_error("(DesStmAssign) Left hand variable is of wrong type", desStmAssign);
+		else if (!desStmAssign.getAssignWrapper().struct.assignableTo(desStmAssign.getDesignator().obj.getType()))
+			report_error("(DesStmAssign) Error with assignement to variable '" + desStmAssign.getDesignator().obj.getName() + "'", desStmAssign); 
+	}
+	
+	@Override
+	public void visit(DesStmInc desStmInc) {
+		if ((desStmInc.getDesignator().obj.getKind() != Obj.Var && desStmInc.getDesignator().obj.getKind() != Obj.Elem && desStmInc.getDesignator().obj.getKind() != Obj.Fld) 
+				|| !desStmInc.getDesignator().obj.getType().equals(Tab.intType)) 
+			report_error("(DesStmInc) Left hand variable, '" + desStmInc.getDesignator().obj.getName() + "', of increment is of wrong type", desStmInc);
+	}
+	
+	@Override
+	public void visit(DesStmDec desStmDec) {
+		if ((desStmDec.getDesignator().obj.getKind() != Obj.Var && desStmDec.getDesignator().obj.getKind() != Obj.Elem && desStmDec.getDesignator().obj.getKind() != Obj.Fld) 
+				|| !desStmDec.getDesignator().obj.getType().equals(Tab.intType)) 
+			report_error("(DesStmInc) Left hand variable, '" + desStmDec.getDesignator().obj.getName() + "', of decrement is of wrong type", desStmDec);
+	}
+	
+	/* ------------------------------------------------------------------- VISIT_STATEMENT --------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(Label label) {
+		if (!methodLabels.add(label.getI1())) report_error("Multiple label definitions for label '" + label.getI1() + "'", label);
+	}
+	
+	@Override
+	public void visit(GotoSingleStatement gotoSingleStatement) {
+		methodCalledLabels.add(gotoSingleStatement.getI1());
+	}
+	
+	@Override
+	public void visit(ReadSingleStatement readSingleStatement) {
+		if ((readSingleStatement.getDesignator().obj.getKind() != Obj.Var && readSingleStatement.getDesignator().obj.getKind() != Obj.Elem && readSingleStatement.getDesignator().obj.getKind() != Obj.Fld) 
+				|| (!readSingleStatement.getDesignator().obj.getType().equals(Tab.intType)) && !readSingleStatement.getDesignator().obj.getType().equals(Tab.charType)
+				&& !readSingleStatement.getDesignator().obj.getType().equals(boolType))
+			report_error("(ReadSingleStatement) Read variable, '" + readSingleStatement.getDesignator().obj.getName() + "', is of wrong type", readSingleStatement);
+	}
+	
+	@Override
+	public void visit(PrintNumberSingleStatement printNumberSingleStatement) {
+		if (!printNumberSingleStatement.getExpr().struct.equals(Tab.intType) && !printNumberSingleStatement.getExpr().struct.equals(Tab.charType)
+				&& !printNumberSingleStatement.getExpr().struct.equals(boolType))
+			report_error("(PrintNumberSingleStatement) Incorrect expr in print in method '" + currMethod.getName() + "'", printNumberSingleStatement);
+	}
+	
+	@Override
+	public void visit(PrintSingleStatement printSingleStatement) {
+		if (!printSingleStatement.getExpr().struct.equals(Tab.intType) && !printSingleStatement.getExpr().struct.equals(Tab.charType)
+				&& !printSingleStatement.getExpr().struct.equals(boolType))
+			report_error("(PrintSingleStatement) Incorrect expr in print in method '" + currMethod.getName() + "'", printSingleStatement);
 	}
 	
 	@Override
