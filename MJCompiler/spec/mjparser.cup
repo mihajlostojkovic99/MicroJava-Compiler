@@ -78,7 +78,7 @@ nonterminal Mulop, Unary;
 nonterminal Relop;
 nonterminal ListVarDeclWrapper;
 
-nonterminal ProgramName, MethodName, MethodRet, RecordDeclName, DoWhileHelp;
+nonterminal ProgramName, MethodName, MethodRet, RecordDeclName, DoWhileHelp, ActParsHelp;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName;
@@ -234,7 +234,7 @@ Statements		::= (Statements) LBRACE StatementList RBRACE;
 
 DesignatorStatement ::= (DesStmAssign) Designator AssignWrapper
 					|
-					(DesStmFuncParams) Designator LPAREN ActPars RPAREN SEMI
+					(DesStmFuncParams) Designator ActParsHelp ActPars RPAREN SEMI
 					|
 					(DesStmFunc) Designator LPAREN RPAREN SEMI
 					|
@@ -242,6 +242,8 @@ DesignatorStatement ::= (DesStmAssign) Designator AssignWrapper
 					|
 					(DesStmDec) Designator DEC SEMI
 					;
+					
+ActParsHelp			::= (ActParsHelp) LPAREN;
 					
 Condition		::= (MultipleCondition) Condition OR CondTerm
 				|
@@ -336,7 +338,7 @@ Unary			::= (UnaryNegative) MINUS
 
 Factor			::= (NormalFactor) Designator
 				|
-				(FactorWithActPars) Designator LPAREN ActPars RPAREN
+				(FactorWithActPars) Designator ActParsHelp ActPars RPAREN
 				|
 				(FactorWithoutActPars) Designator LPAREN RPAREN
 				|

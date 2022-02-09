@@ -9,19 +9,19 @@ char b;
 int c;
 { 
 
-	void main() r1 o1; r2 o2; r3 o3; r3 o3arr[]; int a, b[]; char x;{ 
+	void main() r1 o1; r2 o2; r3 o3; r3 o3arr[];{ 
 		
 		o1 = new r1; 
 		o1.x = new int[1];
-		//o1.x[0] = 0; 
-		//o1.x[0]++; 
-		//print(o1.x[0]); 
+		o1.x[0] = 0; 
+		o1.x[0]++; 
+		print(o1.x[0]); 
 		print(eol);
 		o1.y = 1;
 		o1.y++; 
 		print(o1.y);
 		print(eol);
-		
+		 
 		o2 = new r2; 
 		o2.obj = new r1[1]; 
 		o2.obj[0] = new r1; 
@@ -31,45 +31,39 @@ int c;
 		print(eol); 
 		o2.obj[0].x = new int[1]; 
 		o2.obj[0].x[0] = 3;
-	}
-	
-	int abc() int b; {
-		b = 5;
-		return b;
-	}
-	
-	int m2() int x, b[]; bool tst; char c[]; r1 obj, tmp; {
-		obj = new r1;
-		obj.x = new int[1];
-		obj.x[0]++;
-		x = a;
-		x++;
-		do {
-			a--;
-			if (x < 5) break;
-			else {
-				do {
-					x--;
-					break;
-				} while (tst || false && x > 0 && obj != null);
-				continue;
-			}
-			break;
-			
-		} while (a > 0);
+		 
+		o3 = new r3; 
+		o3.obj = new r2[1]; 
+		o3.obj[0] = new r2; 
+		o3.obj[0].obj = new r1[1]; 
+		o3.obj[0].obj[0] = new r1; 
+		o3.obj[0].obj[0].y = 4; 
+		o3.obj[0].obj[0].y++; 
+		print(o3.obj[0].obj[0].y); 
+		print(eol); 
+		o3.obj[0].obj[0].x = new int[1]; 
+		o3.obj[0].obj[0].x[0] = 5; 
+		o3.obj[0].obj[0].x[0]++; 
+		print(o3.obj[0].obj[0].x[0]); 
+		print(eol); 
 		
-		a--;
-		x = x + abc();
-		l1: c = new char[4];
-		c[0] = 'T';
-		c[1] = 'E';
-		c[2] = 'S';
-		c[3] = 'T';
-		tst = true;
-		goto l1;
-		print(c[0], 4);
-		return a;
-	}
-	
+		
+		o3arr = new r3 [1]; 
+		
+		o3arr[0] = new r3; 
+		o3arr[0].obj = new r2[1]; 
+		o3arr[0].obj[0] = new r2; 
+		o3arr[0].obj[0].obj = new r1[1]; 
+		o3arr[0].obj[0].obj[0] = new r1; 
+		o3arr[0].obj[0].obj[0].y = 6; 
+		o3arr[0].obj[0].obj[0].y++; 
+		print(o3arr[0].obj[0].obj[0].y); 
+		print(eol);
+		o3arr[0].obj[0].obj[0].x = new int[1];
+		o3arr[0].obj[0].obj[0].x[0] = 7;
+		o3arr[0].obj[0].obj[0].x[0]++;
+		print(o3arr[0].obj[0].obj[0].x); 
+		print(eol);
 
+	}
 }

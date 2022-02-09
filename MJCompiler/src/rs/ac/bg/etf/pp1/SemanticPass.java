@@ -1,4 +1,7 @@
 package rs.ac.bg.etf.pp1;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 import java.util.HashSet;
 
 import org.apache.log4j.Logger;
@@ -33,6 +36,10 @@ public class SemanticPass extends VisitorAdaptor {
 	private boolean returnHappened;
 
 	private int doWhileCnt = 0;
+
+	private List<Struct> currActPars;
+	
+	private Stack<List<Struct>> stackActPars = new Stack<List<Struct>>();
 
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
@@ -287,14 +294,38 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(FactorWithActPars factorWithActPars) {
 		factorWithActPars.struct = Tab.noType;
 		if (factorWithActPars.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + factorWithActPars.getDesignator().obj.getName() + "' not found", factorWithActPars);
-		else factorWithActPars.struct = factorWithActPars.getDesignator().obj.getType();
+		else {
+			currActPars = stackActPars.pop();
+			List<Struct> paramsList = new ArrayList<>();
+			for (Obj tmp : factorWithActPars.getDesignator().obj.getLocalSymbols()) {
+				if (tmp.getFpPos() == 1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
+			}
+			if (paramsList.size() < currActPars.size()) report_error("(DesStmFuncParams) Method '" + factorWithActPars.getDesignator().obj.getName() + "' has more arguments than expected", factorWithActPars);
+			else if (paramsList.size() > currActPars.size()) report_error("(DesStmFuncParams) Method '" + factorWithActPars.getDesignator().obj.getName() + "' has missing arguments", factorWithActPars);
+			else {
+				for (int i = 0; i < paramsList.size(); i++) {
+					if (!currActPars.get(i).assignableTo(paramsList.get(i))) {
+						report_error("(DesStmFuncParams) Method '" + factorWithActPars.getDesignator().obj.getName() + "' arguments are incompatible", factorWithActPars);
+						break;
+					}
+				}
+				factorWithActPars.struct = factorWithActPars.getDesignator().obj.getType(); //PROSLO SVE PROVERE
+			}
+		}
 	}
 	
 	@Override
 	public void visit(FactorWithoutActPars factorWithoutActPars) {
 		factorWithoutActPars.struct = Tab.noType;
 		if (factorWithoutActPars.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + factorWithoutActPars.getDesignator().obj.getName() + "' not found", factorWithoutActPars);
-		else factorWithoutActPars.struct = factorWithoutActPars.getDesignator().obj.getType();
+		else {
+			List<Struct> paramsList = new ArrayList<>();
+			for (Obj tmp : factorWithoutActPars.getDesignator().obj.getLocalSymbols()) {
+				if (tmp.getFpPos() == 1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
+			}
+			if (paramsList.size() > 0) report_error("(DesStmFunc) Method '" + factorWithoutActPars.getDesignator().obj.getName() + "' is missing arguments", factorWithoutActPars);
+			else factorWithoutActPars.struct = factorWithoutActPars.getDesignator().obj.getType(); //PROSLO SVE PROVERE
+		}
 	}
 	
 	@Override
@@ -539,15 +570,52 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(ActParsHelp actParsHelp) {
+		stackActPars.push(new ArrayList<>());
+	}
+	
+	@Override
+	public void visit(SingleActPar singleActPar) {
+		stackActPars.peek().add(singleActPar.getExpr().struct);
+	}
+	
+	@Override
+	public void visit(MulActPars mulActPars) {
+		stackActPars.peek().add(mulActPars.getExpr().struct);
+	}
+	
+	@Override
 	public void visit(DesStmFuncParams desStmFuncParams) {
-		if (desStmFuncParams.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + desStmFuncParams.getDesignator().obj.getName() + "' not found", desStmFuncParams);
-		// DODAJ PROVERU DA IMA PARAMETRE
+		currActPars = stackActPars.pop();
+		if (desStmFuncParams.getDesignator().obj.getKind() != Obj.Meth) report_error("(DesStmFuncParams) Method '" + desStmFuncParams.getDesignator().obj.getName() + "' not found", desStmFuncParams);
+		else {
+			List<Struct> paramsList = new ArrayList<>();
+			for (Obj tmp : desStmFuncParams.getDesignator().obj.getLocalSymbols()) {
+				if (tmp.getFpPos() == 1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
+			}
+			if (paramsList.size() < currActPars.size()) report_error("(DesStmFuncParams) Method '" + desStmFuncParams.getDesignator().obj.getName() + "' has more arguments than expected", desStmFuncParams);
+			else if (paramsList.size() > currActPars.size()) report_error("(DesStmFuncParams) Method '" + desStmFuncParams.getDesignator().obj.getName() + "' has missing arguments", desStmFuncParams);
+			else {
+				for (int i = 0; i < paramsList.size(); i++) {
+					if (!currActPars.get(i).assignableTo(paramsList.get(i))) {
+						report_error("(DesStmFuncParams) Method '" + desStmFuncParams.getDesignator().obj.getName() + "' arguments are incompatible", desStmFuncParams);
+						break;
+					}
+				}
+			}
+		}
 	}
 	
 	@Override
 	public void visit(DesStmFunc desStmFunc) {
-		if (desStmFunc.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + desStmFunc.getDesignator().obj.getName() + "' not found", desStmFunc);
-		// DODAJ PROVERU DA NEMA PARAMETARA
+		if (desStmFunc.getDesignator().obj.getKind() != Obj.Meth) report_error("(DesStmFunc) Method '" + desStmFunc.getDesignator().obj.getName() + "' not found", desStmFunc);
+		else {
+			List<Struct> paramsList = new ArrayList<>();
+			for (Obj tmp : desStmFunc.getDesignator().obj.getLocalSymbols()) {
+				if (tmp.getFpPos() == 1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
+			}
+			if (paramsList.size() > 0) report_error("(DesStmFunc) Method '" + desStmFunc.getDesignator().obj.getName() + "' is missing arguments", desStmFunc);
+		}
 	}
 	
 	@Override
@@ -621,7 +689,7 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(ReturnExprSingleStatement returnExprSingleStatement) {
 		returnHappened = true;
-		if (currMethod.getType() != returnExprSingleStatement.getExpr().struct) report_error("Wrong return type for method '" + currMethod.getName() + "'", returnExprSingleStatement);
+		if (!currMethod.getType().equals(returnExprSingleStatement.getExpr().struct)) report_error("Wrong type in return for method '" + currMethod.getName() + "'", returnExprSingleStatement);
 	}
 	
 	/* ----------------------------------------------------------------- VISIT_CONDITIONALS -------------------------------------------------------------------- */

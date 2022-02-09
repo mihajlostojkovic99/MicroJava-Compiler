@@ -96,6 +96,7 @@ nonterminal MethodName MethodName;
 nonterminal MethodRet MethodRet;
 nonterminal RecordDeclName RecordDeclName;
 nonterminal DoWhileHelp DoWhileHelp;
+nonterminal ActParsHelp ActParsHelp;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName;
@@ -251,7 +252,7 @@ Statements		::= (Statements) LBRACE StatementList:S1 RBRACE {: RESULT=new Statem
 
 DesignatorStatement ::= (DesStmAssign) Designator:D1 AssignWrapper:A2 {: RESULT=new DesStmAssign(D1, A2); RESULT.setLine(D1left); :}
 					|
-					(DesStmFuncParams) Designator:D1 LPAREN ActPars:A2 RPAREN SEMI {: RESULT=new DesStmFuncParams(D1, A2); RESULT.setLine(D1left); :}
+					(DesStmFuncParams) Designator:D1 ActParsHelp:A2 ActPars:A3 RPAREN SEMI {: RESULT=new DesStmFuncParams(D1, A2, A3); RESULT.setLine(D1left); :}
 					|
 					(DesStmFunc) Designator:D1 LPAREN RPAREN SEMI {: RESULT=new DesStmFunc(D1); RESULT.setLine(D1left); :}
 					|
@@ -259,6 +260,8 @@ DesignatorStatement ::= (DesStmAssign) Designator:D1 AssignWrapper:A2 {: RESULT=
 					|
 					(DesStmDec) Designator:D1 DEC SEMI {: RESULT=new DesStmDec(D1); RESULT.setLine(D1left); :}
 					;
+					
+ActParsHelp			::= (ActParsHelp) LPAREN {: RESULT=new ActParsHelp(); :};
 					
 Condition		::= (MultipleCondition) Condition:C1 OR CondTerm:C2 {: RESULT=new MultipleCondition(C1, C2); RESULT.setLine(C1left); :}
 				|
@@ -353,7 +356,7 @@ Unary			::= (UnaryNegative) MINUS {: RESULT=new UnaryNegative(); :}
 
 Factor			::= (NormalFactor) Designator:D1 {: RESULT=new NormalFactor(D1); RESULT.setLine(D1left); :}
 				|
-				(FactorWithActPars) Designator:D1 LPAREN ActPars:A2 RPAREN {: RESULT=new FactorWithActPars(D1, A2); RESULT.setLine(D1left); :}
+				(FactorWithActPars) Designator:D1 ActParsHelp:A2 ActPars:A3 RPAREN {: RESULT=new FactorWithActPars(D1, A2, A3); RESULT.setLine(D1left); :}
 				|
 				(FactorWithoutActPars) Designator:D1 LPAREN RPAREN {: RESULT=new FactorWithoutActPars(D1); RESULT.setLine(D1left); :}
 				|
