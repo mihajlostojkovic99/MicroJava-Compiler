@@ -98,6 +98,7 @@ nonterminal ProgramName ProgramName;
 nonterminal MethodName MethodName;
 nonterminal MethodRet MethodRet;
 nonterminal RecordDeclName RecordDeclName;
+nonterminal DoWhileHelp DoWhileHelp;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName;
@@ -220,13 +221,15 @@ Statement		::= (StatementWithLabel) Label:L1 COLON SingleStatement:S2 {: RESULT=
 				
 Label			::= (Label) IDENT:I1 {: RESULT=new Label(I1); RESULT.setLine(I1left); :};
 
+DoWhileHelp		::= (DoWhileHelp) DO {: RESULT=new DoWhileHelp(); :};
+
 SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement:D1 {: RESULT=new DesignatorSingleStatement(D1); RESULT.setLine(D1left); :}
 				|
 				(IfElseSingleStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 ELSE Statement:S3 {: RESULT=new IfElseSingleStatement(C1, S2, S3); RESULT.setLine(C1left); :}
 				|
 				(IfSingleStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new IfSingleStatement(C1, S2); RESULT.setLine(C1left); :}
 				|
-				(DoWhileSingleStatement) DO Statement:S1 WHILE LPAREN Condition:C2 RPAREN SEMI {: RESULT=new DoWhileSingleStatement(S1, C2); RESULT.setLine(S1left); :}
+				(DoWhileSingleStatement) DoWhileHelp:D1 Statement:S2 WHILE LPAREN Condition:C3 RPAREN SEMI {: RESULT=new DoWhileSingleStatement(D1, S2, C3); RESULT.setLine(D1left); :}
 				|
 				(BreakSingleStatement) BREAK SEMI {: RESULT=new BreakSingleStatement(); :}
 				|

@@ -11,24 +11,38 @@ int c;
 
 	void main() r1 o1; r2 o2; r3 o3; r3 o3arr[]; int a, b[]; char x;{ 
 		
-		a = 5;
-		a++;
-		l1: b = new int[5];
-		b[3] = 10;
-		b[3]--;
-		b[4]--;
-		goto l1;
-		goto l2;
-		x = 'a';
-		l2: print(x, 2);
-		return;
-		
+		o1 = new r1;
+		o1.x = new int[1];
+		//o1.x[0]++;
 	}
 	
-	int m2() int x, b[]; bool tst; char c[]; {
+	int abc() int b; {
+		b = 5;
+		return b;
+	}
+	
+	int m2() int x, b[]; bool tst; char c[]; r1 obj; {
+		obj = new r1;
+		obj.x = new int[1];
+		obj.x[0]++;
 		x = a;
 		x++;
+		do {
+			a--;
+			if (x < 5) break;
+			else {
+				do {
+					x--;
+					break;
+				} while (x > 0);
+				continue;
+			}
+			break;
+			
+		} while (a > 0);
+		
 		a--;
+		x = x + abc();
 		l1: c = new char[4];
 		c[0] = 'T';
 		c[1] = 'E';
@@ -39,4 +53,6 @@ int c;
 		print(c[0], 4);
 		return a;
 	}
+	
+
 }

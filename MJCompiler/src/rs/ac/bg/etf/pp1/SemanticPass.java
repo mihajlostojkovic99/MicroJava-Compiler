@@ -32,6 +32,8 @@ public class SemanticPass extends VisitorAdaptor {
 
 	private boolean returnHappened;
 
+	private int doWhileCnt = 0;
+
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
 		StringBuilder msg = new StringBuilder(message);
@@ -283,7 +285,16 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(FactorWithActPars factorWithActPars) {
-		factorWithActPars.struct = factorWithActPars.getDesignator().obj.getType();
+		factorWithActPars.struct = Tab.noType;
+		if (factorWithActPars.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + factorWithActPars.getDesignator().obj.getName() + "' not found", factorWithActPars);
+		else factorWithActPars.struct = factorWithActPars.getDesignator().obj.getType();
+	}
+	
+	@Override
+	public void visit(FactorWithoutActPars factorWithoutActPars) {
+		factorWithoutActPars.struct = Tab.noType;
+		if (factorWithoutActPars.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + factorWithoutActPars.getDesignator().obj.getName() + "' not found", factorWithoutActPars);
+		else factorWithoutActPars.struct = factorWithoutActPars.getDesignator().obj.getType();
 	}
 	
 	@Override
@@ -329,7 +340,7 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(DesignatorArrName designatorArrName) {
 		designatorArrName.obj = Tab.find(designatorArrName.getI1());
 		if (designatorArrName.obj == Tab.noObj) report_error("(DesignatorArrName) Array '" + designatorArrName.getI1() + "' not defined,", designatorArrName);
-		else if (designatorArrName.obj.getKind() != Obj.Var || designatorArrName.obj.getType().getKind() != Struct.Array) {
+		else if (designatorArrName.obj.getType().getKind() != Obj.Var && designatorArrName.obj.getType().getKind() != Struct.Array) {
 			report_error("(DesignatorArrName) Variable '" + designatorArrName.getI1() + "' is probably not an array", designatorArrName);
 			designatorArrName.obj = Tab.noObj;
 			currRecord = Tab.noType;
@@ -359,7 +370,7 @@ public class SemanticPass extends VisitorAdaptor {
 		designatorWithMoreName.obj = Tab.find(designatorWithMoreName.getI1());
 		currRecord = designatorWithMoreName.obj.getType();
 		if (designatorWithMoreName.obj == Tab.noObj) report_error("(DesignatorWithMoreName) Record '" + designatorWithMoreName.getI1() + "' not defined,", designatorWithMoreName);
-		else if (designatorWithMoreName.obj.getKind() != Struct.Class && designatorWithMoreName.obj.getType().getKind() != Obj.Var) {
+		else if (designatorWithMoreName.obj.getType().getKind() != Struct.Class && designatorWithMoreName.obj.getType().getKind() != Obj.Var) {
 			report_error("(DesignatorWithMoreName) Variable '" + designatorWithMoreName.getI1() + "' is probably not a record", designatorWithMoreName);
 			designatorWithMoreName.obj = Tab.noObj;
 			currRecord = Tab.noType;
@@ -528,6 +539,18 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(DesStmFuncParams desStmFuncParams) {
+		if (desStmFuncParams.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + desStmFuncParams.getDesignator().obj.getName() + "' not found", desStmFuncParams);
+		// DODAJ PROVERU DA IMA PARAMETRE
+	}
+	
+	@Override
+	public void visit(DesStmFunc desStmFunc) {
+		if (desStmFunc.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + desStmFunc.getDesignator().obj.getName() + "' not found", desStmFunc);
+		// DODAJ PROVERU DA NEMA PARAMETARA
+	}
+	
+	@Override
 	public void visit(DesStmInc desStmInc) {
 		if ((desStmInc.getDesignator().obj.getKind() != Obj.Var && desStmInc.getDesignator().obj.getKind() != Obj.Elem && desStmInc.getDesignator().obj.getKind() != Obj.Fld) 
 				|| !desStmInc.getDesignator().obj.getType().equals(Tab.intType)) 
@@ -542,6 +565,26 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	/* ----------------------------------------------------------------- VISIT_SING_STATEMENT ------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(DoWhileSingleStatement doWhileSingleStatement) {
+		doWhileCnt--;
+	}
+	
+	@Override
+	public void visit(DoWhileHelp doWhileHelp) {
+		doWhileCnt++;
+	}
+	
+	@Override
+	public void visit(BreakSingleStatement breakSingleStatement) {
+		if (doWhileCnt  == 0) report_error("(BreakSingleStatement) Break was called outside of do-while", breakSingleStatement);
+	}
+	
+	@Override
+	public void visit(ContinueSingleStatement continueSingleStatement) {
+		if (doWhileCnt  == 0) report_error("(ContinueSingleStatement) Continue was called outside of do-while", continueSingleStatement);
+	}
 	
 	@Override
 	public void visit(Label label) {
