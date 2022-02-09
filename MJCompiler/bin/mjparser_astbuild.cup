@@ -83,12 +83,9 @@ nonterminal SingleStatement SingleStatement;
 nonterminal Statements Statements;
 nonterminal Label Label;
 nonterminal DesignatorStatement DesignatorStatement;
-nonterminal Condition Condition;
 nonterminal Assignop Assignop;
 nonterminal ActPars ActPars;
-nonterminal CondTerm CondTerm;
 nonterminal Addop Addop;
-nonterminal CondFact CondFact;
 nonterminal Mulop Mulop;
 nonterminal Unary Unary;
 nonterminal Relop Relop;
@@ -100,7 +97,7 @@ nonterminal MethodRet MethodRet;
 nonterminal RecordDeclName RecordDeclName;
 nonterminal DoWhileHelp DoWhileHelp;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName;
 
 precedence left ELSE;

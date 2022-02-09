@@ -71,18 +71,16 @@ nonterminal RecordDecl;
 nonterminal FormPars, StatementList;
 nonterminal FormPar;
 nonterminal Statement, SingleStatement, Statements, Label;
-nonterminal DesignatorStatement, Condition;
+nonterminal DesignatorStatement;
 nonterminal Assignop, ActPars;
-nonterminal CondTerm;
 nonterminal Addop;
-nonterminal CondFact;
 nonterminal Mulop, Unary;
 nonterminal Relop;
 nonterminal ListVarDeclWrapper;
 
 nonterminal ProgramName, MethodName, MethodRet, RecordDeclName, DoWhileHelp;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName;
 
 precedence left ELSE;

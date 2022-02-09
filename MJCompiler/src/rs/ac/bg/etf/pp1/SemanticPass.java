@@ -624,6 +624,55 @@ public class SemanticPass extends VisitorAdaptor {
 		if (currMethod.getType() != returnExprSingleStatement.getExpr().struct) report_error("Wrong return type for method '" + currMethod.getName() + "'", returnExprSingleStatement);
 	}
 	
+	/* ----------------------------------------------------------------- VISIT_CONDITIONALS -------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(CondFactExpr condFactExpr) {
+		condFactExpr.struct = condFactExpr.getExpr().struct;
+		if (!condFactExpr.getExpr().struct.equals(boolType)) {
+			condFactExpr.struct = Tab.noType;
+			report_error("(CondFactExpr) Conditional factor is not boolean", condFactExpr);
+		}
+	}
+	
+	@Override
+	public void visit(CondFactRelop condFactRelop) {
+		condFactRelop.struct = Tab.noType;
+		if (condFactRelop.getExpr().struct.compatibleWith(condFactRelop.getExpr1().struct)) {
+			if ((condFactRelop.getExpr().struct.isRefType() || condFactRelop.getExpr1().struct.isRefType()) && 
+					(!(condFactRelop.getRelop() instanceof Equals) && !(condFactRelop.getRelop() instanceof NotEqual)))
+				report_error("Arrays or records in conditions can only be used with == or !=", condFactRelop);
+			else
+			condFactRelop.struct = boolType;
+			
+		}
+		else report_error("(CondFactRelop) Incompatible expressions in conditional factor", condFactRelop);
+	}
+	
+	@Override
+	public void visit(SingleCondTerm singleCondTerm) {
+		singleCondTerm.struct = singleCondTerm.getCondFact().struct;
+	}
+	
+	@Override
+	public void visit(MulCondTerm mulCondTerm) {
+		if (mulCondTerm.getCondFact().struct == Tab.noType || mulCondTerm.getCondTerm().struct == Tab.noType) mulCondTerm.struct = Tab.noType;
+		else mulCondTerm.struct = mulCondTerm.getCondFact().struct;
+	}
+	
+	@Override
+	public void visit(SingleCondition singleCondition) {
+		singleCondition.struct = singleCondition.getCondTerm().struct;
+		if (singleCondition.struct == Tab.noType) report_error("Error in condition, look above for details", singleCondition);
+	}
+	
+	@Override
+	public void visit(MultipleCondition multipleCondition) {
+		if (multipleCondition.getCondTerm().struct == Tab.noType || multipleCondition.getCondition().struct == Tab.noType) multipleCondition.struct = Tab.noType;
+		else multipleCondition.struct = multipleCondition.getCondTerm().struct;
+		if (multipleCondition.struct == Tab.noType) report_error("Error in condition, look above for details", multipleCondition);
+	}
+	
 	@Override
 	public void visit(Type type) {
 		Obj typeObj = Tab.find(type.getI1());

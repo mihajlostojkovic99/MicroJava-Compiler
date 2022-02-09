@@ -11,9 +11,26 @@ int c;
 
 	void main() r1 o1; r2 o2; r3 o3; r3 o3arr[]; int a, b[]; char x;{ 
 		
-		o1 = new r1;
+		o1 = new r1; 
 		o1.x = new int[1];
-		//o1.x[0]++;
+		//o1.x[0] = 0; 
+		//o1.x[0]++; 
+		//print(o1.x[0]); 
+		print(eol);
+		o1.y = 1;
+		o1.y++; 
+		print(o1.y);
+		print(eol);
+		
+		o2 = new r2; 
+		o2.obj = new r1[1]; 
+		o2.obj[0] = new r1; 
+		o2.obj[0].y = 2; 
+		o2.obj[0].y++; 
+		print(o2.obj[0].y); 
+		print(eol); 
+		o2.obj[0].x = new int[1]; 
+		o2.obj[0].x[0] = 3;
 	}
 	
 	int abc() int b; {
@@ -21,7 +38,7 @@ int c;
 		return b;
 	}
 	
-	int m2() int x, b[]; bool tst; char c[]; r1 obj; {
+	int m2() int x, b[]; bool tst; char c[]; r1 obj, tmp; {
 		obj = new r1;
 		obj.x = new int[1];
 		obj.x[0]++;
@@ -34,7 +51,7 @@ int c;
 				do {
 					x--;
 					break;
-				} while (x > 0);
+				} while (tst || false && x > 0 && obj != null);
 				continue;
 			}
 			break;
