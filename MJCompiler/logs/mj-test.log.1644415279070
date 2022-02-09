@@ -1,224 +1,222 @@
-INFO  15:01:28,505 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  15:01:28,544 - #2 program
-INFO  15:01:28,544 - #49 Test
-INFO  15:01:28,544 - #20 record
-INFO  15:01:28,545 - #49 r1
-INFO  15:01:28,545 - #45 {
-INFO  15:01:28,546 - #49 int
-INFO  15:01:28,546 - #49 x
-INFO  15:01:28,546 - #43 [
-INFO  15:01:28,547 - #44 ]
-INFO  15:01:28,547 - #37 ;
-INFO  15:01:28,547 - #49 int
-INFO  15:01:28,548 - #49 y
-INFO  15:01:28,548 - #37 ;
-INFO  15:01:28,548 - #46 }
-INFO  15:01:28,548 - #20 record
-INFO  15:01:28,549 - #49 r2
-INFO  15:01:28,549 - #45 {
-INFO  15:01:28,549 - #49 r1
-INFO  15:01:28,549 - #49 obj
-INFO  15:01:28,549 - #43 [
-INFO  15:01:28,549 - #44 ]
-INFO  15:01:28,549 - #37 ;
-INFO  15:01:28,549 - #46 }
-INFO  15:01:28,550 - #20 record
-INFO  15:01:28,550 - #49 r3
-INFO  15:01:28,550 - #45 {
-INFO  15:01:28,550 - #49 r2
-INFO  15:01:28,550 - #49 obj
-INFO  15:01:28,550 - #43 [
-INFO  15:01:28,550 - #44 ]
-INFO  15:01:28,550 - #37 ;
-INFO  15:01:28,550 - #46 }
-INFO  15:01:28,550 - #49 int
-INFO  15:01:28,550 - #49 a
-INFO  15:01:28,550 - #37 ;
-INFO  15:01:28,550 - #49 char
-INFO  15:01:28,551 - #49 b
-INFO  15:01:28,551 - #37 ;
-INFO  15:01:28,551 - #49 int
-INFO  15:01:28,551 - #49 c
-INFO  15:01:28,551 - #37 ;
-INFO  15:01:28,551 - #45 {
-INFO  15:01:28,551 - #14 void
-INFO  15:01:28,552 - #49 main
-INFO  15:01:28,552 - #41 (
-INFO  15:01:28,553 - #42 )
-INFO  15:01:28,553 - #49 r1
-INFO  15:01:28,553 - #49 o1
-INFO  15:01:28,553 - #37 ;
-INFO  15:01:28,553 - #49 r2
-INFO  15:01:28,553 - #49 o2
-INFO  15:01:28,553 - #37 ;
-INFO  15:01:28,553 - #49 r3
-INFO  15:01:28,553 - #49 o3
-INFO  15:01:28,553 - #37 ;
-INFO  15:01:28,553 - #49 r3
-INFO  15:01:28,553 - #49 o3arr
-INFO  15:01:28,553 - #43 [
-INFO  15:01:28,553 - #44 ]
-INFO  15:01:28,553 - #37 ;
-INFO  15:01:28,553 - #49 int
-INFO  15:01:28,553 - #49 a
-INFO  15:01:28,554 - #39 ,
-INFO  15:01:28,554 - #49 b
-INFO  15:01:28,554 - #43 [
-INFO  15:01:28,554 - #44 ]
-INFO  15:01:28,554 - #37 ;
-INFO  15:01:28,554 - #49 char
-INFO  15:01:28,554 - #49 x
-INFO  15:01:28,554 - #37 ;
-INFO  15:01:28,554 - #45 {
-INFO  15:01:28,554 - #49 a
-INFO  15:01:28,555 - #34 =
-INFO  15:01:28,555 - #47 5
-INFO  15:01:28,556 - #37 ;
-INFO  15:01:28,558 - #49 a
-INFO  15:01:28,558 - #35 ++
-INFO  15:01:28,558 - #37 ;
-INFO  15:01:28,558 - #49 l1
-INFO  15:01:28,558 - #38 :
-INFO  15:01:28,559 - #49 b
-INFO  15:01:28,559 - #34 =
-INFO  15:01:28,559 - #10 new
-INFO  15:01:28,559 - #49 int
-INFO  15:01:28,559 - #43 [
-INFO  15:01:28,559 - #47 5
-INFO  15:01:28,559 - #44 ]
-INFO  15:01:28,559 - #37 ;
-INFO  15:01:28,560 - #49 b
-INFO  15:01:28,560 - #43 [
-INFO  15:01:28,560 - #47 3
-INFO  15:01:28,561 - #44 ]
-INFO  15:01:28,561 - #34 =
-INFO  15:01:28,561 - #47 10
-INFO  15:01:28,561 - #37 ;
-INFO  15:01:28,561 - #49 b
-INFO  15:01:28,561 - #43 [
-INFO  15:01:28,561 - #47 3
-INFO  15:01:28,561 - #44 ]
-INFO  15:01:28,561 - #36 --
-INFO  15:01:28,561 - #37 ;
-INFO  15:01:28,561 - #49 b
-INFO  15:01:28,562 - #43 [
-INFO  15:01:28,562 - #47 4
-INFO  15:01:28,562 - #44 ]
-INFO  15:01:28,562 - #36 --
-INFO  15:01:28,562 - #37 ;
-INFO  15:01:28,562 - #19 goto
-INFO  15:01:28,562 - #49 l1
-INFO  15:01:28,562 - #37 ;
-INFO  15:01:28,562 - #19 goto
-INFO  15:01:28,562 - #49 l2
-INFO  15:01:28,562 - #37 ;
-INFO  15:01:28,562 - #49 x
-INFO  15:01:28,562 - #34 =
-INFO  15:01:28,562 - #50 a
-INFO  15:01:28,562 - #37 ;
-INFO  15:01:28,562 - #49 l2
-INFO  15:01:28,562 - #38 :
-INFO  15:01:28,562 - #11 print
-INFO  15:01:28,563 - #41 (
-INFO  15:01:28,563 - #49 x
-INFO  15:01:28,563 - #39 ,
-INFO  15:01:28,563 - #47 2
-INFO  15:01:28,563 - #42 )
-INFO  15:01:28,563 - #37 ;
-INFO  15:01:28,563 - #13 return
-INFO  15:01:28,563 - #37 ;
-INFO  15:01:28,563 - #46 }
-INFO  15:01:28,564 - #49 int
-INFO  15:01:28,564 - #49 m2
-INFO  15:01:28,564 - #41 (
-INFO  15:01:28,566 - #42 )
-INFO  15:01:28,566 - #49 int
-INFO  15:01:28,566 - #49 x
-INFO  15:01:28,566 - #39 ,
-INFO  15:01:28,567 - #49 b
-INFO  15:01:28,567 - #43 [
-INFO  15:01:28,567 - #44 ]
-INFO  15:01:28,567 - #37 ;
-INFO  15:01:28,567 - #49 bool
-INFO  15:01:28,567 - #49 tst
-INFO  15:01:28,567 - #37 ;
-INFO  15:01:28,567 - #49 char
-INFO  15:01:28,567 - #49 c
-INFO  15:01:28,567 - #43 [
-INFO  15:01:28,567 - #44 ]
-INFO  15:01:28,567 - #37 ;
-INFO  15:01:28,567 - #45 {
-INFO  15:01:28,567 - #49 x
-INFO  15:01:28,567 - #34 =
-INFO  15:01:28,567 - #49 a
-INFO  15:01:28,567 - #37 ;
-INFO  15:01:28,567 - #49 x
-INFO  15:01:28,567 - #35 ++
-INFO  15:01:28,567 - #37 ;
-INFO  15:01:28,567 - #49 a
-INFO  15:01:28,567 - #36 --
-INFO  15:01:28,567 - #37 ;
-INFO  15:01:28,567 - #49 l1
-INFO  15:01:28,568 - #38 :
-INFO  15:01:28,568 - #49 c
-INFO  15:01:28,568 - #34 =
-INFO  15:01:28,568 - #10 new
-INFO  15:01:28,568 - #49 char
-INFO  15:01:28,568 - #43 [
-INFO  15:01:28,568 - #47 4
-INFO  15:01:28,568 - #44 ]
-INFO  15:01:28,568 - #37 ;
-INFO  15:01:28,568 - #49 c
-INFO  15:01:28,568 - #43 [
-INFO  15:01:28,568 - #47 0
-INFO  15:01:28,568 - #44 ]
-INFO  15:01:28,568 - #34 =
-INFO  15:01:28,568 - #50 T
-INFO  15:01:28,568 - #37 ;
-INFO  15:01:28,568 - #49 c
-INFO  15:01:28,568 - #43 [
-INFO  15:01:28,568 - #47 1
-INFO  15:01:28,568 - #44 ]
-INFO  15:01:28,568 - #34 =
-INFO  15:01:28,568 - #50 E
-INFO  15:01:28,569 - #37 ;
-INFO  15:01:28,569 - #49 c
-INFO  15:01:28,569 - #43 [
-INFO  15:01:28,569 - #47 2
-INFO  15:01:28,569 - #44 ]
-INFO  15:01:28,569 - #34 =
-INFO  15:01:28,569 - #50 S
-INFO  15:01:28,569 - #37 ;
-INFO  15:01:28,569 - #49 c
-INFO  15:01:28,569 - #43 [
-INFO  15:01:28,569 - #47 3
-INFO  15:01:28,569 - #44 ]
-INFO  15:01:28,569 - #34 =
-INFO  15:01:28,569 - #50 T
-INFO  15:01:28,569 - #37 ;
-INFO  15:01:28,569 - #49 tst
-INFO  15:01:28,569 - #34 =
-INFO  15:01:28,569 - #48 1
-INFO  15:01:28,569 - #37 ;
-INFO  15:01:28,569 - #19 goto
-INFO  15:01:28,569 - #49 l1
-INFO  15:01:28,569 - #37 ;
-INFO  15:01:28,569 - #11 print
-INFO  15:01:28,569 - #41 (
-INFO  15:01:28,570 - #49 c
-INFO  15:01:28,570 - #43 [
-INFO  15:01:28,570 - #47 0
-INFO  15:01:28,570 - #44 ]
-INFO  15:01:28,570 - #39 ,
-INFO  15:01:28,570 - #47 4
-INFO  15:01:28,570 - #42 )
-INFO  15:01:28,570 - #37 ;
-INFO  15:01:28,570 - #13 return
-INFO  15:01:28,570 - #49 a
-INFO  15:01:28,570 - #37 ;
-INFO  15:01:28,570 - #46 }
-INFO  15:01:28,570 - #46 }
-INFO  15:01:28,574 - Program(
+INFO  15:01:13,944 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  15:01:13,986 - #2 program
+INFO  15:01:13,986 - #49 Test
+INFO  15:01:13,987 - #20 record
+INFO  15:01:13,987 - #49 r1
+INFO  15:01:13,988 - #45 {
+INFO  15:01:13,988 - #49 int
+INFO  15:01:13,989 - #49 x
+INFO  15:01:13,989 - #43 [
+INFO  15:01:13,989 - #44 ]
+INFO  15:01:13,989 - #37 ;
+INFO  15:01:13,990 - #49 int
+INFO  15:01:13,990 - #49 y
+INFO  15:01:13,990 - #37 ;
+INFO  15:01:13,990 - #46 }
+INFO  15:01:13,991 - #20 record
+INFO  15:01:13,991 - #49 r2
+INFO  15:01:13,991 - #45 {
+INFO  15:01:13,992 - #49 r1
+INFO  15:01:13,992 - #49 obj
+INFO  15:01:13,992 - #43 [
+INFO  15:01:13,992 - #44 ]
+INFO  15:01:13,992 - #37 ;
+INFO  15:01:13,992 - #46 }
+INFO  15:01:13,992 - #20 record
+INFO  15:01:13,992 - #49 r3
+INFO  15:01:13,992 - #45 {
+INFO  15:01:13,992 - #49 r2
+INFO  15:01:13,992 - #49 obj
+INFO  15:01:13,993 - #43 [
+INFO  15:01:13,993 - #44 ]
+INFO  15:01:13,993 - #37 ;
+INFO  15:01:13,993 - #46 }
+INFO  15:01:13,993 - #49 int
+INFO  15:01:13,993 - #49 a
+INFO  15:01:13,993 - #37 ;
+INFO  15:01:13,993 - #49 char
+INFO  15:01:13,993 - #49 b
+INFO  15:01:13,993 - #37 ;
+INFO  15:01:13,993 - #49 int
+INFO  15:01:13,994 - #49 c
+INFO  15:01:13,994 - #37 ;
+INFO  15:01:13,994 - #45 {
+INFO  15:01:13,994 - #14 void
+INFO  15:01:13,994 - #49 main
+INFO  15:01:13,995 - #41 (
+INFO  15:01:13,995 - #42 )
+INFO  15:01:13,995 - #49 r1
+INFO  15:01:13,996 - #49 o1
+INFO  15:01:13,996 - #37 ;
+INFO  15:01:13,996 - #49 r2
+INFO  15:01:13,996 - #49 o2
+INFO  15:01:13,996 - #37 ;
+INFO  15:01:13,996 - #49 r3
+INFO  15:01:13,996 - #49 o3
+INFO  15:01:13,996 - #37 ;
+INFO  15:01:13,996 - #49 r3
+INFO  15:01:13,996 - #49 o3arr
+INFO  15:01:13,996 - #43 [
+INFO  15:01:13,996 - #44 ]
+INFO  15:01:13,996 - #37 ;
+INFO  15:01:13,997 - #49 int
+INFO  15:01:13,997 - #49 a
+INFO  15:01:13,997 - #39 ,
+INFO  15:01:13,997 - #49 b
+INFO  15:01:13,997 - #43 [
+INFO  15:01:13,997 - #44 ]
+INFO  15:01:13,998 - #37 ;
+INFO  15:01:13,998 - #49 char
+INFO  15:01:14,000 - #49 x
+INFO  15:01:14,000 - #37 ;
+INFO  15:01:14,000 - #45 {
+INFO  15:01:14,000 - #49 a
+INFO  15:01:14,001 - #34 =
+INFO  15:01:14,001 - #47 5
+INFO  15:01:14,003 - #37 ;
+INFO  15:01:14,004 - #49 a
+INFO  15:01:14,005 - #35 ++
+INFO  15:01:14,005 - #37 ;
+INFO  15:01:14,005 - #49 l1
+INFO  15:01:14,005 - #38 :
+INFO  15:01:14,005 - #49 b
+INFO  15:01:14,005 - #34 =
+INFO  15:01:14,006 - #10 new
+INFO  15:01:14,006 - #49 int
+INFO  15:01:14,006 - #43 [
+INFO  15:01:14,006 - #47 5
+INFO  15:01:14,006 - #44 ]
+INFO  15:01:14,006 - #37 ;
+INFO  15:01:14,006 - #49 b
+INFO  15:01:14,006 - #43 [
+INFO  15:01:14,007 - #47 3
+INFO  15:01:14,007 - #44 ]
+INFO  15:01:14,007 - #34 =
+INFO  15:01:14,007 - #47 10
+INFO  15:01:14,007 - #37 ;
+INFO  15:01:14,007 - #49 b
+INFO  15:01:14,007 - #43 [
+INFO  15:01:14,007 - #47 3
+INFO  15:01:14,007 - #44 ]
+INFO  15:01:14,007 - #36 --
+INFO  15:01:14,007 - #37 ;
+INFO  15:01:14,007 - #49 b
+INFO  15:01:14,007 - #43 [
+INFO  15:01:14,007 - #47 4
+INFO  15:01:14,007 - #44 ]
+INFO  15:01:14,008 - #36 --
+INFO  15:01:14,008 - #37 ;
+INFO  15:01:14,008 - #19 goto
+INFO  15:01:14,008 - #49 l1
+INFO  15:01:14,008 - #37 ;
+INFO  15:01:14,008 - #19 goto
+INFO  15:01:14,008 - #49 l2
+INFO  15:01:14,008 - #37 ;
+INFO  15:01:14,008 - #49 x
+INFO  15:01:14,008 - #34 =
+INFO  15:01:14,008 - #50 a
+INFO  15:01:14,008 - #37 ;
+INFO  15:01:14,008 - #49 l2
+INFO  15:01:14,008 - #38 :
+INFO  15:01:14,009 - #11 print
+INFO  15:01:14,009 - #41 (
+INFO  15:01:14,009 - #49 x
+INFO  15:01:14,009 - #39 ,
+INFO  15:01:14,009 - #47 2
+INFO  15:01:14,009 - #42 )
+INFO  15:01:14,009 - #37 ;
+INFO  15:01:14,009 - #46 }
+INFO  15:01:14,009 - #49 int
+INFO  15:01:14,010 - #49 m2
+INFO  15:01:14,010 - #41 (
+INFO  15:01:14,010 - #42 )
+INFO  15:01:14,010 - #49 int
+INFO  15:01:14,010 - #49 x
+INFO  15:01:14,010 - #39 ,
+INFO  15:01:14,010 - #49 b
+INFO  15:01:14,010 - #43 [
+INFO  15:01:14,010 - #44 ]
+INFO  15:01:14,010 - #37 ;
+INFO  15:01:14,010 - #49 bool
+INFO  15:01:14,010 - #49 tst
+INFO  15:01:14,010 - #37 ;
+INFO  15:01:14,010 - #49 char
+INFO  15:01:14,010 - #49 c
+INFO  15:01:14,010 - #43 [
+INFO  15:01:14,010 - #44 ]
+INFO  15:01:14,010 - #37 ;
+INFO  15:01:14,010 - #45 {
+INFO  15:01:14,010 - #49 x
+INFO  15:01:14,011 - #34 =
+INFO  15:01:14,011 - #49 a
+INFO  15:01:14,011 - #37 ;
+INFO  15:01:14,011 - #49 x
+INFO  15:01:14,011 - #35 ++
+INFO  15:01:14,011 - #37 ;
+INFO  15:01:14,011 - #49 a
+INFO  15:01:14,011 - #36 --
+INFO  15:01:14,011 - #37 ;
+INFO  15:01:14,011 - #49 l1
+INFO  15:01:14,011 - #38 :
+INFO  15:01:14,011 - #49 c
+INFO  15:01:14,011 - #34 =
+INFO  15:01:14,011 - #10 new
+INFO  15:01:14,011 - #49 char
+INFO  15:01:14,011 - #43 [
+INFO  15:01:14,011 - #47 4
+INFO  15:01:14,011 - #44 ]
+INFO  15:01:14,011 - #37 ;
+INFO  15:01:14,011 - #49 c
+INFO  15:01:14,012 - #43 [
+INFO  15:01:14,012 - #47 0
+INFO  15:01:14,012 - #44 ]
+INFO  15:01:14,012 - #34 =
+INFO  15:01:14,012 - #50 T
+INFO  15:01:14,012 - #37 ;
+INFO  15:01:14,012 - #49 c
+INFO  15:01:14,012 - #43 [
+INFO  15:01:14,012 - #47 1
+INFO  15:01:14,012 - #44 ]
+INFO  15:01:14,012 - #34 =
+INFO  15:01:14,012 - #50 E
+INFO  15:01:14,012 - #37 ;
+INFO  15:01:14,012 - #49 c
+INFO  15:01:14,012 - #43 [
+INFO  15:01:14,012 - #47 2
+INFO  15:01:14,012 - #44 ]
+INFO  15:01:14,012 - #34 =
+INFO  15:01:14,012 - #50 S
+INFO  15:01:14,012 - #37 ;
+INFO  15:01:14,012 - #49 c
+INFO  15:01:14,012 - #43 [
+INFO  15:01:14,013 - #47 3
+INFO  15:01:14,013 - #44 ]
+INFO  15:01:14,013 - #34 =
+INFO  15:01:14,013 - #50 T
+INFO  15:01:14,013 - #37 ;
+INFO  15:01:14,013 - #49 tst
+INFO  15:01:14,013 - #34 =
+INFO  15:01:14,013 - #48 1
+INFO  15:01:14,013 - #37 ;
+INFO  15:01:14,013 - #19 goto
+INFO  15:01:14,013 - #49 l1
+INFO  15:01:14,013 - #37 ;
+INFO  15:01:14,013 - #11 print
+INFO  15:01:14,013 - #41 (
+INFO  15:01:14,013 - #49 c
+INFO  15:01:14,013 - #43 [
+INFO  15:01:14,013 - #47 0
+INFO  15:01:14,014 - #44 ]
+INFO  15:01:14,014 - #39 ,
+INFO  15:01:14,014 - #47 4
+INFO  15:01:14,014 - #42 )
+INFO  15:01:14,014 - #37 ;
+INFO  15:01:14,014 - #13 return
+INFO  15:01:14,014 - #49 tst
+INFO  15:01:14,014 - #37 ;
+INFO  15:01:14,014 - #46 }
+INFO  15:01:14,014 - #46 }
+INFO  15:01:14,019 - Program(
   ProgramName(
    Test
   ) [ProgramName]
@@ -434,112 +432,54 @@ INFO  15:01:28,574 - Program(
                       StatementListExists(
                         StatementListExists(
                           StatementListExists(
-                            StatementListExists(
-                              NoStatementList(
-                              ) [NoStatementList]
-                              StatementWithSingleStatement(
-                                DesignatorSingleStatement(
-                                  DesStmAssign(
-                                    DesignatorSimple(
-                                     a
-                                    ) [DesignatorSimple]
-                                    AssignWrap(
-                                      Assignop(
-                                      ) [Assignop]
-                                      Expr(
-                                        SingleTerm(
-                                          FactorWrapper(
-                                            NoUnary(
-                                            ) [NoUnary]
-                                            Num(
-                                             5
-                                            ) [Num]
-                                          ) [FactorWrapper]
-                                        ) [SingleTerm]
-                                        NoMoreExpr(
-                                        ) [NoMoreExpr]
-                                      ) [Expr]
-                                    ) [AssignWrap]
-                                  ) [DesStmAssign]
-                                ) [DesignatorSingleStatement]
-                              ) [StatementWithSingleStatement]
-                            ) [StatementListExists]
+                            NoStatementList(
+                            ) [NoStatementList]
                             StatementWithSingleStatement(
                               DesignatorSingleStatement(
-                                DesStmInc(
+                                DesStmAssign(
                                   DesignatorSimple(
                                    a
                                   ) [DesignatorSimple]
-                                ) [DesStmInc]
+                                  AssignWrap(
+                                    Assignop(
+                                    ) [Assignop]
+                                    Expr(
+                                      SingleTerm(
+                                        FactorWrapper(
+                                          NoUnary(
+                                          ) [NoUnary]
+                                          Num(
+                                           5
+                                          ) [Num]
+                                        ) [FactorWrapper]
+                                      ) [SingleTerm]
+                                      NoMoreExpr(
+                                      ) [NoMoreExpr]
+                                    ) [Expr]
+                                  ) [AssignWrap]
+                                ) [DesStmAssign]
                               ) [DesignatorSingleStatement]
                             ) [StatementWithSingleStatement]
                           ) [StatementListExists]
-                          StatementWithLabel(
-                            Label(
-                             l1
-                            ) [Label]
+                          StatementWithSingleStatement(
                             DesignatorSingleStatement(
-                              DesStmAssign(
+                              DesStmInc(
                                 DesignatorSimple(
-                                 b
+                                 a
                                 ) [DesignatorSimple]
-                                AssignWrap(
-                                  Assignop(
-                                  ) [Assignop]
-                                  Expr(
-                                    SingleTerm(
-                                      FactorWrapper(
-                                        NoUnary(
-                                        ) [NoUnary]
-                                        NewFactorWithPars(
-                                          Type(
-                                           int
-                                          ) [Type]
-                                          Expr(
-                                            SingleTerm(
-                                              FactorWrapper(
-                                                NoUnary(
-                                                ) [NoUnary]
-                                                Num(
-                                                 5
-                                                ) [Num]
-                                              ) [FactorWrapper]
-                                            ) [SingleTerm]
-                                            NoMoreExpr(
-                                            ) [NoMoreExpr]
-                                          ) [Expr]
-                                        ) [NewFactorWithPars]
-                                      ) [FactorWrapper]
-                                    ) [SingleTerm]
-                                    NoMoreExpr(
-                                    ) [NoMoreExpr]
-                                  ) [Expr]
-                                ) [AssignWrap]
-                              ) [DesStmAssign]
+                              ) [DesStmInc]
                             ) [DesignatorSingleStatement]
-                          ) [StatementWithLabel]
+                          ) [StatementWithSingleStatement]
                         ) [StatementListExists]
-                        StatementWithSingleStatement(
+                        StatementWithLabel(
+                          Label(
+                           l1
+                          ) [Label]
                           DesignatorSingleStatement(
                             DesStmAssign(
-                              DesignatorArr(
-                                DesignatorArrName(
-                                 b
-                                ) [DesignatorArrName]
-                                Expr(
-                                  SingleTerm(
-                                    FactorWrapper(
-                                      NoUnary(
-                                      ) [NoUnary]
-                                      Num(
-                                       3
-                                      ) [Num]
-                                    ) [FactorWrapper]
-                                  ) [SingleTerm]
-                                  NoMoreExpr(
-                                  ) [NoMoreExpr]
-                                ) [Expr]
-                              ) [DesignatorArr]
+                              DesignatorSimple(
+                               b
+                              ) [DesignatorSimple]
                               AssignWrap(
                                 Assignop(
                                 ) [Assignop]
@@ -548,9 +488,24 @@ INFO  15:01:28,574 - Program(
                                     FactorWrapper(
                                       NoUnary(
                                       ) [NoUnary]
-                                      Num(
-                                       10
-                                      ) [Num]
+                                      NewFactorWithPars(
+                                        Type(
+                                         int
+                                        ) [Type]
+                                        Expr(
+                                          SingleTerm(
+                                            FactorWrapper(
+                                              NoUnary(
+                                              ) [NoUnary]
+                                              Num(
+                                               5
+                                              ) [Num]
+                                            ) [FactorWrapper]
+                                          ) [SingleTerm]
+                                          NoMoreExpr(
+                                          ) [NoMoreExpr]
+                                        ) [Expr]
+                                      ) [NewFactorWithPars]
                                     ) [FactorWrapper]
                                   ) [SingleTerm]
                                   NoMoreExpr(
@@ -559,11 +514,11 @@ INFO  15:01:28,574 - Program(
                               ) [AssignWrap]
                             ) [DesStmAssign]
                           ) [DesignatorSingleStatement]
-                        ) [StatementWithSingleStatement]
+                        ) [StatementWithLabel]
                       ) [StatementListExists]
                       StatementWithSingleStatement(
                         DesignatorSingleStatement(
-                          DesStmDec(
+                          DesStmAssign(
                             DesignatorArr(
                               DesignatorArrName(
                                b
@@ -582,7 +537,24 @@ INFO  15:01:28,574 - Program(
                                 ) [NoMoreExpr]
                               ) [Expr]
                             ) [DesignatorArr]
-                          ) [DesStmDec]
+                            AssignWrap(
+                              Assignop(
+                              ) [Assignop]
+                              Expr(
+                                SingleTerm(
+                                  FactorWrapper(
+                                    NoUnary(
+                                    ) [NoUnary]
+                                    Num(
+                                     10
+                                    ) [Num]
+                                  ) [FactorWrapper]
+                                ) [SingleTerm]
+                                NoMoreExpr(
+                                ) [NoMoreExpr]
+                              ) [Expr]
+                            ) [AssignWrap]
+                          ) [DesStmAssign]
                         ) [DesignatorSingleStatement]
                       ) [StatementWithSingleStatement]
                     ) [StatementListExists]
@@ -599,7 +571,7 @@ INFO  15:01:28,574 - Program(
                                   NoUnary(
                                   ) [NoUnary]
                                   Num(
-                                   4
+                                   3
                                   ) [Num]
                                 ) [FactorWrapper]
                               ) [SingleTerm]
@@ -612,72 +584,92 @@ INFO  15:01:28,574 - Program(
                     ) [StatementWithSingleStatement]
                   ) [StatementListExists]
                   StatementWithSingleStatement(
-                    GotoSingleStatement(
-                     l1
-                    ) [GotoSingleStatement]
+                    DesignatorSingleStatement(
+                      DesStmDec(
+                        DesignatorArr(
+                          DesignatorArrName(
+                           b
+                          ) [DesignatorArrName]
+                          Expr(
+                            SingleTerm(
+                              FactorWrapper(
+                                NoUnary(
+                                ) [NoUnary]
+                                Num(
+                                 4
+                                ) [Num]
+                              ) [FactorWrapper]
+                            ) [SingleTerm]
+                            NoMoreExpr(
+                            ) [NoMoreExpr]
+                          ) [Expr]
+                        ) [DesignatorArr]
+                      ) [DesStmDec]
+                    ) [DesignatorSingleStatement]
                   ) [StatementWithSingleStatement]
                 ) [StatementListExists]
                 StatementWithSingleStatement(
                   GotoSingleStatement(
-                   l2
+                   l1
                   ) [GotoSingleStatement]
                 ) [StatementWithSingleStatement]
               ) [StatementListExists]
               StatementWithSingleStatement(
-                DesignatorSingleStatement(
-                  DesStmAssign(
-                    DesignatorSimple(
-                     x
-                    ) [DesignatorSimple]
-                    AssignWrap(
-                      Assignop(
-                      ) [Assignop]
-                      Expr(
-                        SingleTerm(
-                          FactorWrapper(
-                            NoUnary(
-                            ) [NoUnary]
-                            Char(
-                             a
-                            ) [Char]
-                          ) [FactorWrapper]
-                        ) [SingleTerm]
-                        NoMoreExpr(
-                        ) [NoMoreExpr]
-                      ) [Expr]
-                    ) [AssignWrap]
-                  ) [DesStmAssign]
-                ) [DesignatorSingleStatement]
+                GotoSingleStatement(
+                 l2
+                ) [GotoSingleStatement]
               ) [StatementWithSingleStatement]
             ) [StatementListExists]
-            StatementWithLabel(
-              Label(
-               l2
-              ) [Label]
-              PrintNumberSingleStatement(
-                Expr(
-                  SingleTerm(
-                    FactorWrapper(
-                      NoUnary(
-                      ) [NoUnary]
-                      NormalFactor(
-                        DesignatorSimple(
-                         x
-                        ) [DesignatorSimple]
-                      ) [NormalFactor]
-                    ) [FactorWrapper]
-                  ) [SingleTerm]
-                  NoMoreExpr(
-                  ) [NoMoreExpr]
-                ) [Expr]
-               2
-              ) [PrintNumberSingleStatement]
-            ) [StatementWithLabel]
+            StatementWithSingleStatement(
+              DesignatorSingleStatement(
+                DesStmAssign(
+                  DesignatorSimple(
+                   x
+                  ) [DesignatorSimple]
+                  AssignWrap(
+                    Assignop(
+                    ) [Assignop]
+                    Expr(
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          Char(
+                           a
+                          ) [Char]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [Expr]
+                  ) [AssignWrap]
+                ) [DesStmAssign]
+              ) [DesignatorSingleStatement]
+            ) [StatementWithSingleStatement]
           ) [StatementListExists]
-          StatementWithSingleStatement(
-            ReturnSingleStatement(
-            ) [ReturnSingleStatement]
-          ) [StatementWithSingleStatement]
+          StatementWithLabel(
+            Label(
+             l2
+            ) [Label]
+            PrintNumberSingleStatement(
+              Expr(
+                SingleTerm(
+                  FactorWrapper(
+                    NoUnary(
+                    ) [NoUnary]
+                    NormalFactor(
+                      DesignatorSimple(
+                       x
+                      ) [DesignatorSimple]
+                    ) [NormalFactor]
+                  ) [FactorWrapper]
+                ) [SingleTerm]
+                NoMoreExpr(
+                ) [NoMoreExpr]
+              ) [Expr]
+             2
+            ) [PrintNumberSingleStatement]
+          ) [StatementWithLabel]
         ) [StatementListExists]
       ) [MethDeclNoParams]
     ) [MethodDeclarations]
@@ -1087,7 +1079,7 @@ INFO  15:01:28,574 - Program(
                   ) [NoUnary]
                   NormalFactor(
                     DesignatorSimple(
-                     a
+                     tst
                     ) [DesignatorSimple]
                   ) [NormalFactor]
                 ) [FactorWrapper]
@@ -1101,7 +1093,8 @@ INFO  15:01:28,574 - Program(
     ) [MethDeclNoParams]
   ) [MethodDeclarations]
 ) [Program]
-INFO  15:01:28,575 - ===================================
-INFO  15:01:28,578 -  Program count calls = 1
-INFO  15:01:28,589 - ===================================
-INFO  15:01:28,589 - Parsiranje uspesno zavrseno!
+INFO  15:01:14,020 - ===================================
+INFO  15:01:14,023 -  Program count calls = 1
+ERROR 15:01:14,034 - Wrong return type for method 'm2' in line 2.
+INFO  15:01:14,034 - ===================================
+ERROR 15:01:14,034 - Parsiranje NIJE uspesno zavrseno!

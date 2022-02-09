@@ -21,4 +21,5 @@
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.DesignatorArrName"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
 </qualifiedTypeNameHistroy>

@@ -13,14 +13,30 @@ int c;
 		
 		a = 5;
 		a++;
-		b = new int[5];
+		l1: b = new int[5];
 		b[3] = 10;
 		b[3]--;
 		b[4]--;
-		
+		goto l1;
+		goto l2;
 		x = 'a';
-		print(x, 2);
-		print(Test);
+		l2: print(x, 2);
+		return;
 		
+	}
+	
+	int m2() int x, b[]; bool tst; char c[]; {
+		x = a;
+		x++;
+		a--;
+		l1: c = new char[4];
+		c[0] = 'T';
+		c[1] = 'E';
+		c[2] = 'S';
+		c[3] = 'T';
+		tst = true;
+		goto l1;
+		print(c[0], 4);
+		return a;
 	}
 }

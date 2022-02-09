@@ -30,6 +30,8 @@ public class SemanticPass extends VisitorAdaptor {
 
 	private HashSet<String> methodCalledLabels;
 
+	private boolean returnHappened;
+
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
 		StringBuilder msg = new StringBuilder(message);
@@ -173,8 +175,10 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(MethDeclParams methDeclParams) {
 		Tab.chainLocalSymbols(currMethod);
 		Tab.closeScope();
-		currMethod = null;
 		if (!methodLabels.containsAll(methodCalledLabels)) report_error("(MethDeclParams) Some labels are undefined!", methDeclParams);
+		if (!returnHappened && currMethod.getType() != Tab.noType) report_error("(MethDeclParams) Method '" + currMethod.getName() + "' has no return", methDeclParams);
+		returnHappened = false;
+		currMethod = null;
 		methodLabels = null;
 		methodCalledLabels = null;
 	}
@@ -183,8 +187,10 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(MethDeclNoParams methDeclNoParams) {
 		Tab.chainLocalSymbols(currMethod);
 		Tab.closeScope();
-		currMethod = null;
 		if (!methodLabels.containsAll(methodCalledLabels)) report_error("(MethDeclNoParams) Some labels are undefined!", methDeclNoParams);
+		if (!returnHappened && currMethod.getType() != Tab.noType) report_error("(MethDeclParams) Method '" + currMethod.getName() + "' has no return", methDeclNoParams);
+		returnHappened = false;
+		currMethod = null;
 		methodLabels = null;
 		methodCalledLabels = null;
 	}
@@ -535,7 +541,7 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("(DesStmInc) Left hand variable, '" + desStmDec.getDesignator().obj.getName() + "', of decrement is of wrong type", desStmDec);
 	}
 	
-	/* ------------------------------------------------------------------- VISIT_STATEMENT --------------------------------------------------------------------- */
+	/* ----------------------------------------------------------------- VISIT_SING_STATEMENT ------------------------------------------------------------------- */
 	
 	@Override
 	public void visit(Label label) {
@@ -567,6 +573,12 @@ public class SemanticPass extends VisitorAdaptor {
 		if (!printSingleStatement.getExpr().struct.equals(Tab.intType) && !printSingleStatement.getExpr().struct.equals(Tab.charType)
 				&& !printSingleStatement.getExpr().struct.equals(boolType))
 			report_error("(PrintSingleStatement) Incorrect expr in print in method '" + currMethod.getName() + "'", printSingleStatement);
+	}
+	
+	@Override
+	public void visit(ReturnExprSingleStatement returnExprSingleStatement) {
+		returnHappened = true;
+		if (currMethod.getType() != returnExprSingleStatement.getExpr().struct) report_error("Wrong return type for method '" + currMethod.getName() + "'", returnExprSingleStatement);
 	}
 	
 	@Override
