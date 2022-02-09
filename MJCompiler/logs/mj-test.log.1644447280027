@@ -1,139 +1,118 @@
-INFO  00:16:09,060 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  00:16:09,099 - #2 program
-INFO  00:16:09,099 - #49 Test
-INFO  00:16:09,099 - #20 record
-INFO  00:16:09,100 - #49 r1
-INFO  00:16:09,100 - #45 {
-INFO  00:16:09,101 - #49 int
-INFO  00:16:09,101 - #49 x
-INFO  00:16:09,102 - #43 [
-INFO  00:16:09,102 - #44 ]
-INFO  00:16:09,102 - #37 ;
-INFO  00:16:09,102 - #49 int
-INFO  00:16:09,103 - #49 y
-INFO  00:16:09,103 - #37 ;
-INFO  00:16:09,103 - #46 }
-INFO  00:16:09,103 - #20 record
-INFO  00:16:09,104 - #49 r2
-INFO  00:16:09,104 - #45 {
-INFO  00:16:09,104 - #49 r1
-INFO  00:16:09,104 - #49 obj
-INFO  00:16:09,104 - #43 [
-INFO  00:16:09,104 - #44 ]
-INFO  00:16:09,104 - #37 ;
-INFO  00:16:09,105 - #46 }
-INFO  00:16:09,105 - #20 record
-INFO  00:16:09,105 - #49 r3
-INFO  00:16:09,106 - #45 {
-INFO  00:16:09,106 - #49 r2
-INFO  00:16:09,106 - #49 obj
-INFO  00:16:09,106 - #43 [
-INFO  00:16:09,106 - #44 ]
-INFO  00:16:09,106 - #37 ;
-INFO  00:16:09,106 - #46 }
-INFO  00:16:09,106 - #20 record
-INFO  00:16:09,106 - #49 r4
-INFO  00:16:09,106 - #45 {
-INFO  00:16:09,106 - #49 int
-INFO  00:16:09,106 - #49 a
-INFO  00:16:09,106 - #43 [
-INFO  00:16:09,106 - #44 ]
-INFO  00:16:09,106 - #37 ;
-INFO  00:16:09,106 - #49 int
-INFO  00:16:09,107 - #49 y
-INFO  00:16:09,107 - #37 ;
-INFO  00:16:09,107 - #46 }
-INFO  00:16:09,107 - #49 int
-INFO  00:16:09,107 - #49 a
-INFO  00:16:09,107 - #43 [
-INFO  00:16:09,107 - #44 ]
-INFO  00:16:09,107 - #37 ;
-INFO  00:16:09,107 - #49 char
-INFO  00:16:09,107 - #49 b
-INFO  00:16:09,107 - #37 ;
-INFO  00:16:09,107 - #49 int
-INFO  00:16:09,107 - #49 c
-INFO  00:16:09,107 - #37 ;
-INFO  00:16:09,108 - #45 {
-INFO  00:16:09,108 - #14 void
-INFO  00:16:09,108 - #49 main
-INFO  00:16:09,109 - #41 (
-INFO  00:16:09,109 - #42 )
-INFO  00:16:09,109 - #49 r1
-INFO  00:16:09,109 - #49 o1
-INFO  00:16:09,109 - #37 ;
-INFO  00:16:09,109 - #49 r2
-INFO  00:16:09,109 - #49 o2
-INFO  00:16:09,109 - #37 ;
-INFO  00:16:09,109 - #49 r3
-INFO  00:16:09,110 - #49 o3
-INFO  00:16:09,110 - #37 ;
-INFO  00:16:09,110 - #49 r3
-INFO  00:16:09,110 - #49 o3arr
-INFO  00:16:09,110 - #43 [
-INFO  00:16:09,110 - #44 ]
-INFO  00:16:09,110 - #37 ;
-INFO  00:16:09,110 - #45 {
-INFO  00:16:09,110 - #49 o1
-INFO  00:16:09,110 - #34 =
-INFO  00:16:09,111 - #10 new
-INFO  00:16:09,112 - #49 r1
-INFO  00:16:09,112 - #37 ;
-INFO  00:16:09,113 - #49 o1
-INFO  00:16:09,114 - #40 .
-INFO  00:16:09,114 - #49 x
-INFO  00:16:09,114 - #34 =
-INFO  00:16:09,114 - #10 new
-INFO  00:16:09,115 - #49 int
-INFO  00:16:09,115 - #43 [
-INFO  00:16:09,115 - #47 1
-INFO  00:16:09,115 - #44 ]
-INFO  00:16:09,115 - #37 ;
-INFO  00:16:09,115 - #49 o1
-INFO  00:16:09,115 - #40 .
-INFO  00:16:09,115 - #49 x
-INFO  00:16:09,115 - #43 [
-INFO  00:16:09,116 - #47 0
-INFO  00:16:09,116 - #44 ]
-INFO  00:16:09,116 - #34 =
-INFO  00:16:09,116 - #47 2
-INFO  00:16:09,116 - #37 ;
-INFO  00:16:09,116 - #46 }
-INFO  00:16:09,116 - #14 void
-INFO  00:16:09,116 - #49 proba
-INFO  00:16:09,116 - #41 (
-INFO  00:16:09,117 - #42 )
-INFO  00:16:09,117 - #49 r4
-INFO  00:16:09,117 - #49 y
-INFO  00:16:09,117 - #37 ;
-INFO  00:16:09,117 - #45 {
-INFO  00:16:09,117 - #49 y
-INFO  00:16:09,117 - #34 =
-INFO  00:16:09,117 - #10 new
-INFO  00:16:09,117 - #49 r4
-INFO  00:16:09,117 - #37 ;
-INFO  00:16:09,117 - #49 y
-INFO  00:16:09,117 - #40 .
-INFO  00:16:09,117 - #49 a
-INFO  00:16:09,117 - #34 =
-INFO  00:16:09,117 - #10 new
-INFO  00:16:09,117 - #49 int
-INFO  00:16:09,117 - #43 [
-INFO  00:16:09,117 - #47 3
-INFO  00:16:09,117 - #44 ]
-INFO  00:16:09,117 - #37 ;
-INFO  00:16:09,117 - #49 y
-INFO  00:16:09,117 - #40 .
-INFO  00:16:09,118 - #49 a
-INFO  00:16:09,118 - #43 [
-INFO  00:16:09,118 - #47 0
-INFO  00:16:09,118 - #44 ]
-INFO  00:16:09,118 - #34 =
-INFO  00:16:09,118 - #47 2
-INFO  00:16:09,118 - #37 ;
-INFO  00:16:09,120 - #46 }
-INFO  00:16:09,120 - #46 }
-INFO  00:16:09,122 - Program(
+INFO  23:49:29,479 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  23:49:29,528 - #2 program
+INFO  23:49:29,528 - #49 Test
+INFO  23:49:29,528 - #20 record
+INFO  23:49:29,529 - #49 r1
+INFO  23:49:29,529 - #45 {
+INFO  23:49:29,530 - #49 int
+INFO  23:49:29,530 - #49 a
+INFO  23:49:29,531 - #43 [
+INFO  23:49:29,531 - #44 ]
+INFO  23:49:29,531 - #37 ;
+INFO  23:49:29,531 - #49 int
+INFO  23:49:29,533 - #49 y
+INFO  23:49:29,533 - #37 ;
+INFO  23:49:29,533 - #46 }
+INFO  23:49:29,533 - #20 record
+INFO  23:49:29,534 - #49 r2
+INFO  23:49:29,534 - #45 {
+INFO  23:49:29,535 - #49 r1
+INFO  23:49:29,535 - #49 obj
+INFO  23:49:29,535 - #43 [
+INFO  23:49:29,535 - #44 ]
+INFO  23:49:29,535 - #37 ;
+INFO  23:49:29,537 - #46 }
+INFO  23:49:29,537 - #20 record
+INFO  23:49:29,537 - #49 r3
+INFO  23:49:29,537 - #45 {
+INFO  23:49:29,537 - #49 r2
+INFO  23:49:29,537 - #49 obj
+INFO  23:49:29,537 - #43 [
+INFO  23:49:29,537 - #44 ]
+INFO  23:49:29,537 - #37 ;
+INFO  23:49:29,537 - #46 }
+INFO  23:49:29,537 - #49 int
+INFO  23:49:29,538 - #49 a
+INFO  23:49:29,538 - #43 [
+INFO  23:49:29,538 - #44 ]
+INFO  23:49:29,538 - #37 ;
+INFO  23:49:29,538 - #49 char
+INFO  23:49:29,538 - #49 b
+INFO  23:49:29,538 - #37 ;
+INFO  23:49:29,538 - #49 int
+INFO  23:49:29,539 - #49 c
+INFO  23:49:29,539 - #37 ;
+INFO  23:49:29,539 - #45 {
+INFO  23:49:29,539 - #14 void
+INFO  23:49:29,540 - #49 main
+INFO  23:49:29,540 - #41 (
+INFO  23:49:29,541 - #42 )
+INFO  23:49:29,541 - #49 r1
+INFO  23:49:29,541 - #49 o1
+INFO  23:49:29,541 - #37 ;
+INFO  23:49:29,541 - #49 r2
+INFO  23:49:29,541 - #49 o2
+INFO  23:49:29,541 - #37 ;
+INFO  23:49:29,541 - #49 r3
+INFO  23:49:29,541 - #49 o3
+INFO  23:49:29,541 - #37 ;
+INFO  23:49:29,541 - #49 r3
+INFO  23:49:29,541 - #49 o3arr
+INFO  23:49:29,541 - #43 [
+INFO  23:49:29,542 - #44 ]
+INFO  23:49:29,542 - #37 ;
+INFO  23:49:29,542 - #45 {
+INFO  23:49:29,542 - #49 o1
+INFO  23:49:29,542 - #34 =
+INFO  23:49:29,543 - #10 new
+INFO  23:49:29,546 - #49 r1
+INFO  23:49:29,546 - #37 ;
+INFO  23:49:29,550 - #49 o1
+INFO  23:49:29,550 - #40 .
+INFO  23:49:29,551 - #49 a
+INFO  23:49:29,551 - #34 =
+INFO  23:49:29,551 - #10 new
+INFO  23:49:29,551 - #49 int
+INFO  23:49:29,551 - #43 [
+INFO  23:49:29,551 - #47 1
+INFO  23:49:29,552 - #44 ]
+INFO  23:49:29,552 - #37 ;
+INFO  23:49:29,552 - #46 }
+INFO  23:49:29,552 - #14 void
+INFO  23:49:29,552 - #49 proba
+INFO  23:49:29,552 - #41 (
+INFO  23:49:29,552 - #42 )
+INFO  23:49:29,552 - #49 r1
+INFO  23:49:29,552 - #49 y
+INFO  23:49:29,552 - #37 ;
+INFO  23:49:29,552 - #45 {
+INFO  23:49:29,552 - #49 y
+INFO  23:49:29,552 - #34 =
+INFO  23:49:29,552 - #10 new
+INFO  23:49:29,553 - #49 r1
+INFO  23:49:29,553 - #37 ;
+INFO  23:49:29,553 - #49 y
+INFO  23:49:29,553 - #40 .
+INFO  23:49:29,553 - #49 a
+INFO  23:49:29,553 - #34 =
+INFO  23:49:29,553 - #10 new
+INFO  23:49:29,553 - #49 int
+INFO  23:49:29,553 - #43 [
+INFO  23:49:29,553 - #47 3
+INFO  23:49:29,553 - #44 ]
+INFO  23:49:29,553 - #37 ;
+INFO  23:49:29,553 - #49 y
+INFO  23:49:29,553 - #40 .
+INFO  23:49:29,553 - #49 a
+INFO  23:49:29,553 - #43 [
+INFO  23:49:29,554 - #47 0
+INFO  23:49:29,554 - #44 ]
+INFO  23:49:29,554 - #34 =
+INFO  23:49:29,554 - #47 2
+INFO  23:49:29,554 - #37 ;
+INFO  23:49:29,554 - #46 }
+INFO  23:49:29,555 - #46 }
+INFO  23:49:29,557 - Program(
   ProgramName(
    Test
   ) [ProgramName]
@@ -143,56 +122,35 @@ INFO  00:16:09,122 - Program(
         ListRecord(
           ListRecord(
             ListRecord(
-              ListRecord(
-                NoList(
-                ) [NoList]
-                RecordDecl(
-                  RecordDeclName(
-                   r1
-                  ) [RecordDeclName]
+              NoList(
+              ) [NoList]
+              RecordDecl(
+                RecordDeclName(
+                 r1
+                ) [RecordDeclName]
+                IsListVarDeclWrapper(
                   IsListVarDeclWrapper(
-                    IsListVarDeclWrapper(
-                      NoListVarDeclWrapper(
-                      ) [NoListVarDeclWrapper]
-                      VarDeclWrapper(
-                        Type(
-                         int
-                        ) [Type]
-                        SingleVarDecl(
-                          ArrayVarDecl(
-                           x
-                          ) [ArrayVarDecl]
-                        ) [SingleVarDecl]
-                      ) [VarDeclWrapper]
-                    ) [IsListVarDeclWrapper]
+                    NoListVarDeclWrapper(
+                    ) [NoListVarDeclWrapper]
                     VarDeclWrapper(
                       Type(
                        int
                       ) [Type]
                       SingleVarDecl(
-                        NormalVarDecl(
-                         y
-                        ) [NormalVarDecl]
+                        ArrayVarDecl(
+                         a
+                        ) [ArrayVarDecl]
                       ) [SingleVarDecl]
                     ) [VarDeclWrapper]
                   ) [IsListVarDeclWrapper]
-                ) [RecordDecl]
-              ) [ListRecord]
-              RecordDecl(
-                RecordDeclName(
-                 r2
-                ) [RecordDeclName]
-                IsListVarDeclWrapper(
-                  NoListVarDeclWrapper(
-                  ) [NoListVarDeclWrapper]
                   VarDeclWrapper(
                     Type(
-                     r1
+                     int
                     ) [Type]
                     SingleVarDecl(
-                      ArrayVarDecl(
-                       obj
-                      ) [ArrayVarDecl]
+                      NormalVarDecl(
+                       y
+                      ) [NormalVarDecl]
                     ) [SingleVarDecl]
                   ) [VarDeclWrapper]
                 ) [IsListVarDeclWrapper]
@@ -200,14 +158,14 @@ INFO  00:16:09,122 - Program(
             ) [ListRecord]
             RecordDecl(
               RecordDeclName(
-               r3
+               r2
               ) [RecordDeclName]
               IsListVarDeclWrapper(
                 NoListVarDeclWrapper(
                 ) [NoListVarDeclWrapper]
                 VarDeclWrapper(
                   Type(
-                   r2
+                   r1
                   ) [Type]
                   SingleVarDecl(
                     ArrayVarDecl(
@@ -220,31 +178,19 @@ INFO  00:16:09,122 - Program(
           ) [ListRecord]
           RecordDecl(
             RecordDeclName(
-             r4
+             r3
             ) [RecordDeclName]
             IsListVarDeclWrapper(
-              IsListVarDeclWrapper(
-                NoListVarDeclWrapper(
-                ) [NoListVarDeclWrapper]
-                VarDeclWrapper(
-                  Type(
-                   int
-                  ) [Type]
-                  SingleVarDecl(
-                    ArrayVarDecl(
-                     a
-                    ) [ArrayVarDecl]
-                  ) [SingleVarDecl]
-                ) [VarDeclWrapper]
-              ) [IsListVarDeclWrapper]
+              NoListVarDeclWrapper(
+              ) [NoListVarDeclWrapper]
               VarDeclWrapper(
                 Type(
-                 int
+                 r2
                 ) [Type]
                 SingleVarDecl(
-                  NormalVarDecl(
-                   y
-                  ) [NormalVarDecl]
+                  ArrayVarDecl(
+                   obj
+                  ) [ArrayVarDecl]
                 ) [SingleVarDecl]
               ) [VarDeclWrapper]
             ) [IsListVarDeclWrapper]
@@ -345,49 +291,14 @@ INFO  00:16:09,122 - Program(
         ) [IsListVarDeclWrapper]
         StatementListExists(
           StatementListExists(
-            StatementListExists(
-              NoStatementList(
-              ) [NoStatementList]
-              StatementWithSingleStatement(
-                DesignatorSingleStatement(
-                  DesStmAssign(
-                    DesignatorSimple(
-                     o1
-                    ) [DesignatorSimple]
-                    AssignWrap(
-                      Assignop(
-                      ) [Assignop]
-                      Expr(
-                        SingleTerm(
-                          FactorWrapper(
-                            NoUnary(
-                            ) [NoUnary]
-                            NewFactor(
-                              Type(
-                               r1
-                              ) [Type]
-                            ) [NewFactor]
-                          ) [FactorWrapper]
-                        ) [SingleTerm]
-                        NoMoreExpr(
-                        ) [NoMoreExpr]
-                      ) [Expr]
-                    ) [AssignWrap]
-                  ) [DesStmAssign]
-                ) [DesignatorSingleStatement]
-              ) [StatementWithSingleStatement]
-            ) [StatementListExists]
+            NoStatementList(
+            ) [NoStatementList]
             StatementWithSingleStatement(
               DesignatorSingleStatement(
                 DesStmAssign(
-                  DesignatorWithMore(
-                    DesignatorWithMoreName(
-                     o1
-                    ) [DesignatorWithMoreName]
-                    DesigMoreDot(
-                     x
-                    ) [DesigMoreDot]
-                  ) [DesignatorWithMore]
+                  DesignatorSimple(
+                   o1
+                  ) [DesignatorSimple]
                   AssignWrap(
                     Assignop(
                     ) [Assignop]
@@ -396,24 +307,11 @@ INFO  00:16:09,122 - Program(
                         FactorWrapper(
                           NoUnary(
                           ) [NoUnary]
-                          NewFactorWithPars(
+                          NewFactor(
                             Type(
-                             int
+                             r1
                             ) [Type]
-                            Expr(
-                              SingleTerm(
-                                FactorWrapper(
-                                  NoUnary(
-                                  ) [NoUnary]
-                                  Num(
-                                   1
-                                  ) [Num]
-                                ) [FactorWrapper]
-                              ) [SingleTerm]
-                              NoMoreExpr(
-                              ) [NoMoreExpr]
-                            ) [Expr]
-                          ) [NewFactorWithPars]
+                          ) [NewFactor]
                         ) [FactorWrapper]
                       ) [SingleTerm]
                       NoMoreExpr(
@@ -431,24 +329,9 @@ INFO  00:16:09,122 - Program(
                   DesignatorWithMoreName(
                    o1
                   ) [DesignatorWithMoreName]
-                  DesigMoreDotArr(
-                    DesignatorArrName(
-                     x
-                    ) [DesignatorArrName]
-                    Expr(
-                      SingleTerm(
-                        FactorWrapper(
-                          NoUnary(
-                          ) [NoUnary]
-                          Num(
-                           0
-                          ) [Num]
-                        ) [FactorWrapper]
-                      ) [SingleTerm]
-                      NoMoreExpr(
-                      ) [NoMoreExpr]
-                    ) [Expr]
-                  ) [DesigMoreDotArr]
+                  DesigMoreDot(
+                   a
+                  ) [DesigMoreDot]
                 ) [DesignatorWithMore]
                 AssignWrap(
                   Assignop(
@@ -458,9 +341,24 @@ INFO  00:16:09,122 - Program(
                       FactorWrapper(
                         NoUnary(
                         ) [NoUnary]
-                        Num(
-                         2
-                        ) [Num]
+                        NewFactorWithPars(
+                          Type(
+                           int
+                          ) [Type]
+                          Expr(
+                            SingleTerm(
+                              FactorWrapper(
+                                NoUnary(
+                                ) [NoUnary]
+                                Num(
+                                 1
+                                ) [Num]
+                              ) [FactorWrapper]
+                            ) [SingleTerm]
+                            NoMoreExpr(
+                            ) [NoMoreExpr]
+                          ) [Expr]
+                        ) [NewFactorWithPars]
                       ) [FactorWrapper]
                     ) [SingleTerm]
                     NoMoreExpr(
@@ -484,7 +382,7 @@ INFO  00:16:09,122 - Program(
         ) [NoListVarDeclWrapper]
         VarDeclWrapper(
           Type(
-           r4
+           r1
           ) [Type]
           SingleVarDecl(
             NormalVarDecl(
@@ -514,7 +412,7 @@ INFO  00:16:09,122 - Program(
                           ) [NoUnary]
                           NewFactor(
                             Type(
-                             r4
+                             r1
                             ) [Type]
                           ) [NewFactor]
                         ) [FactorWrapper]
@@ -624,10 +522,7 @@ INFO  00:16:09,122 - Program(
     ) [MethDeclNoParams]
   ) [MethodDeclarations]
 ) [Program]
-INFO  00:16:09,123 - ===================================
-INFO  00:16:09,125 -  Program count calls = 1
-INFO  00:16:09,135 - noObj in line 17.
-ERROR 00:16:09,136 - (DesignatorArrName) Array 'x' not defined, in line 17.
-INFO  00:16:09,136 - a in line 24.
-INFO  00:16:09,136 - ===================================
-ERROR 00:16:09,136 - Parsiranje NIJE uspesno zavrseno!
+INFO  23:49:29,557 - ===================================
+INFO  23:49:29,559 -  Program count calls = 1
+INFO  23:49:29,570 - ===================================
+INFO  23:49:29,571 - Parsiranje uspesno zavrseno!

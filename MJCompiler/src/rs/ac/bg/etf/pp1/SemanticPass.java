@@ -370,6 +370,7 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorArrName designatorArrName) {
 		designatorArrName.obj = Tab.find(designatorArrName.getI1());
+		report_info(designatorArrName.obj.getName(), designatorArrName);
 		if (designatorArrName.obj == Tab.noObj) report_error("(DesignatorArrName) Array '" + designatorArrName.getI1() + "' not defined,", designatorArrName);
 		else if (designatorArrName.obj.getType().getKind() != Obj.Var && designatorArrName.obj.getType().getKind() != Struct.Array) {
 			report_error("(DesignatorArrName) Variable '" + designatorArrName.getI1() + "' is probably not an array", designatorArrName);
