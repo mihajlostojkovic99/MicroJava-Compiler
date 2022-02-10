@@ -1,106 +1,105 @@
-INFO  16:32:22,110 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  16:32:22,168 - #2 program
-INFO  16:32:22,168 - #49 Test
-INFO  16:32:22,169 - #20 record
-INFO  16:32:22,170 - #49 r1
-INFO  16:32:22,170 - #45 {
-INFO  16:32:22,170 - #49 int
-INFO  16:32:22,171 - #49 x
-INFO  16:32:22,172 - #43 [
-INFO  16:32:22,172 - #44 ]
-INFO  16:32:22,172 - #37 ;
-INFO  16:32:22,172 - #49 int
-INFO  16:32:22,173 - #49 y
-INFO  16:32:22,173 - #37 ;
-INFO  16:32:22,173 - #46 }
-INFO  16:32:22,173 - #20 record
-INFO  16:32:22,174 - #49 r2
-INFO  16:32:22,174 - #45 {
-INFO  16:32:22,175 - #49 r1
-INFO  16:32:22,175 - #49 obj
-INFO  16:32:22,175 - #43 [
-INFO  16:32:22,175 - #44 ]
-INFO  16:32:22,175 - #37 ;
-INFO  16:32:22,176 - #46 }
-INFO  16:32:22,176 - #20 record
-INFO  16:32:22,176 - #49 r3
-INFO  16:32:22,176 - #45 {
-INFO  16:32:22,176 - #49 r2
-INFO  16:32:22,176 - #49 obj
-INFO  16:32:22,176 - #43 [
-INFO  16:32:22,176 - #44 ]
-INFO  16:32:22,176 - #37 ;
-INFO  16:32:22,176 - #46 }
-INFO  16:32:22,176 - #49 int
-INFO  16:32:22,176 - #49 a
-INFO  16:32:22,176 - #37 ;
-INFO  16:32:22,176 - #49 char
-INFO  16:32:22,177 - #49 b
-INFO  16:32:22,177 - #37 ;
-INFO  16:32:22,177 - #49 int
-INFO  16:32:22,177 - #49 c
-INFO  16:32:22,177 - #37 ;
-INFO  16:32:22,177 - #45 {
-INFO  16:32:22,177 - #14 void
-INFO  16:32:22,178 - #49 main
-INFO  16:32:22,178 - #41 (
-INFO  16:32:22,179 - #42 )
-INFO  16:32:22,179 - #49 r1
-INFO  16:32:22,179 - #49 o1
-INFO  16:32:22,179 - #37 ;
-INFO  16:32:22,179 - #49 r2
-INFO  16:32:22,179 - #49 o2
-INFO  16:32:22,179 - #37 ;
-INFO  16:32:22,179 - #49 r3
-INFO  16:32:22,179 - #49 o3
-INFO  16:32:22,179 - #37 ;
-INFO  16:32:22,179 - #49 r3
-INFO  16:32:22,179 - #49 o3arr
-INFO  16:32:22,179 - #43 [
-INFO  16:32:22,179 - #44 ]
-INFO  16:32:22,179 - #37 ;
-INFO  16:32:22,179 - #45 {
-INFO  16:32:22,180 - #46 }
-INFO  16:32:22,180 - #49 int
-INFO  16:32:22,181 - #49 m1
-INFO  16:32:22,181 - #41 (
-INFO  16:32:22,181 - #49 int
-INFO  16:32:22,181 - #49 a
-INFO  16:32:22,181 - #39 ,
-INFO  16:32:22,181 - #49 int
-INFO  16:32:22,181 - #49 b
-INFO  16:32:22,181 - #39 ,
-INFO  16:32:22,181 - #49 int
-INFO  16:32:22,181 - #49 c
-INFO  16:32:22,181 - #42 )
-INFO  16:32:22,181 - #45 {
-INFO  16:32:22,181 - #13 return
-INFO  16:32:22,181 - #47 5
-INFO  16:32:22,182 - #37 ;
-INFO  16:32:22,184 - #46 }
-INFO  16:32:22,185 - #49 int
-INFO  16:32:22,185 - #49 m2
-INFO  16:32:22,185 - #41 (
-INFO  16:32:22,185 - #49 int
-INFO  16:32:22,185 - #49 x
-INFO  16:32:22,185 - #39 ,
-INFO  16:32:22,185 - #49 int
-INFO  16:32:22,185 - #49 y
-INFO  16:32:22,185 - #42 )
-INFO  16:32:22,185 - #45 {
-INFO  16:32:22,185 - #49 m2
-INFO  16:32:22,186 - #41 (
-INFO  16:32:22,186 - #47 2
-INFO  16:32:22,186 - #39 ,
-INFO  16:32:22,186 - #47 2
-INFO  16:32:22,186 - #42 )
-INFO  16:32:22,187 - #37 ;
-INFO  16:32:22,187 - #13 return
-INFO  16:32:22,187 - #47 2
-INFO  16:32:22,187 - #37 ;
-INFO  16:32:22,187 - #46 }
-INFO  16:32:22,187 - #46 }
-INFO  16:32:22,189 - Program(
+INFO  16:29:35,275 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  16:29:35,314 - #2 program
+INFO  16:29:35,314 - #49 Test
+INFO  16:29:35,315 - #20 record
+INFO  16:29:35,315 - #49 r1
+INFO  16:29:35,315 - #45 {
+INFO  16:29:35,316 - #49 int
+INFO  16:29:35,317 - #49 x
+INFO  16:29:35,317 - #43 [
+INFO  16:29:35,317 - #44 ]
+INFO  16:29:35,317 - #37 ;
+INFO  16:29:35,317 - #49 int
+INFO  16:29:35,318 - #49 y
+INFO  16:29:35,318 - #37 ;
+INFO  16:29:35,318 - #46 }
+INFO  16:29:35,318 - #20 record
+INFO  16:29:35,319 - #49 r2
+INFO  16:29:35,319 - #45 {
+INFO  16:29:35,319 - #49 r1
+INFO  16:29:35,319 - #49 obj
+INFO  16:29:35,319 - #43 [
+INFO  16:29:35,320 - #44 ]
+INFO  16:29:35,320 - #37 ;
+INFO  16:29:35,322 - #46 }
+INFO  16:29:35,322 - #20 record
+INFO  16:29:35,322 - #49 r3
+INFO  16:29:35,322 - #45 {
+INFO  16:29:35,322 - #49 r2
+INFO  16:29:35,322 - #49 obj
+INFO  16:29:35,322 - #43 [
+INFO  16:29:35,322 - #44 ]
+INFO  16:29:35,322 - #37 ;
+INFO  16:29:35,322 - #46 }
+INFO  16:29:35,322 - #49 int
+INFO  16:29:35,322 - #49 a
+INFO  16:29:35,322 - #37 ;
+INFO  16:29:35,322 - #49 char
+INFO  16:29:35,322 - #49 b
+INFO  16:29:35,322 - #37 ;
+INFO  16:29:35,322 - #49 int
+INFO  16:29:35,322 - #49 c
+INFO  16:29:35,322 - #37 ;
+INFO  16:29:35,322 - #45 {
+INFO  16:29:35,322 - #14 void
+INFO  16:29:35,323 - #49 main
+INFO  16:29:35,323 - #41 (
+INFO  16:29:35,324 - #42 )
+INFO  16:29:35,324 - #49 r1
+INFO  16:29:35,324 - #49 o1
+INFO  16:29:35,324 - #37 ;
+INFO  16:29:35,324 - #49 r2
+INFO  16:29:35,324 - #49 o2
+INFO  16:29:35,324 - #37 ;
+INFO  16:29:35,324 - #49 r3
+INFO  16:29:35,324 - #49 o3
+INFO  16:29:35,325 - #37 ;
+INFO  16:29:35,325 - #49 r3
+INFO  16:29:35,325 - #49 o3arr
+INFO  16:29:35,325 - #43 [
+INFO  16:29:35,325 - #44 ]
+INFO  16:29:35,325 - #37 ;
+INFO  16:29:35,325 - #45 {
+INFO  16:29:35,325 - #46 }
+INFO  16:29:35,325 - #49 int
+INFO  16:29:35,326 - #49 m1
+INFO  16:29:35,326 - #41 (
+INFO  16:29:35,326 - #49 int
+INFO  16:29:35,326 - #49 a
+INFO  16:29:35,326 - #39 ,
+INFO  16:29:35,328 - #49 int
+INFO  16:29:35,328 - #49 b
+INFO  16:29:35,329 - #39 ,
+INFO  16:29:35,329 - #49 int
+INFO  16:29:35,329 - #49 c
+INFO  16:29:35,329 - #42 )
+INFO  16:29:35,329 - #45 {
+INFO  16:29:35,329 - #13 return
+INFO  16:29:35,329 - #47 5
+INFO  16:29:35,330 - #37 ;
+INFO  16:29:35,331 - #46 }
+INFO  16:29:35,331 - #49 int
+INFO  16:29:35,332 - #49 m2
+INFO  16:29:35,332 - #41 (
+INFO  16:29:35,332 - #49 int
+INFO  16:29:35,332 - #49 x
+INFO  16:29:35,332 - #39 ,
+INFO  16:29:35,332 - #49 int
+INFO  16:29:35,332 - #49 y
+INFO  16:29:35,332 - #42 )
+INFO  16:29:35,332 - #45 {
+INFO  16:29:35,332 - #49 m1
+INFO  16:29:35,332 - #41 (
+INFO  16:29:35,332 - #47 1
+INFO  16:29:35,333 - #39 ,
+INFO  16:29:35,333 - #47 2
+INFO  16:29:35,333 - #39 ,
+INFO  16:29:35,333 - #47 3
+INFO  16:29:35,333 - #42 )
+INFO  16:29:35,333 - #37 ;
+INFO  16:29:35,334 - #46 }
+INFO  16:29:35,334 - #46 }
+INFO  16:29:35,335 - Program(
   ProgramName(
    Test
   ) [ProgramName]
@@ -368,17 +367,17 @@ INFO  16:32:22,189 - Program(
       NoListVarDeclWrapper(
       ) [NoListVarDeclWrapper]
       StatementListExists(
-        StatementListExists(
-          NoStatementList(
-          ) [NoStatementList]
-          StatementWithSingleStatement(
-            DesignatorSingleStatement(
-              DesStmFuncParams(
-                DesignatorSimple(
-                 m2
-                ) [DesignatorSimple]
-                ActParsHelp(
-                ) [ActParsHelp]
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
+          DesignatorSingleStatement(
+            DesStmFuncParams(
+              DesignatorSimple(
+               m1
+              ) [DesignatorSimple]
+              ActParsHelp(
+              ) [ActParsHelp]
+              MulActPars(
                 MulActPars(
                   SingleActPar(
                     Expr(
@@ -387,7 +386,7 @@ INFO  16:32:22,189 - Program(
                           NoUnary(
                           ) [NoUnary]
                           Num(
-                           2
+                           1
                           ) [Num]
                         ) [FactorWrapper]
                       ) [SingleTerm]
@@ -409,31 +408,29 @@ INFO  16:32:22,189 - Program(
                     ) [NoMoreExpr]
                   ) [Expr]
                 ) [MulActPars]
-              ) [DesStmFuncParams]
-            ) [DesignatorSingleStatement]
-          ) [StatementWithSingleStatement]
-        ) [StatementListExists]
-        StatementWithSingleStatement(
-          ReturnExprSingleStatement(
-            Expr(
-              SingleTerm(
-                FactorWrapper(
-                  NoUnary(
-                  ) [NoUnary]
-                  Num(
-                   2
-                  ) [Num]
-                ) [FactorWrapper]
-              ) [SingleTerm]
-              NoMoreExpr(
-              ) [NoMoreExpr]
-            ) [Expr]
-          ) [ReturnExprSingleStatement]
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Num(
+                       3
+                      ) [Num]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [MulActPars]
+            ) [DesStmFuncParams]
+          ) [DesignatorSingleStatement]
         ) [StatementWithSingleStatement]
       ) [StatementListExists]
     ) [MethDeclParams]
   ) [MethodDeclarations]
 ) [Program]
-INFO  16:32:22,189 - ===================================
-INFO  16:32:22,191 -  Program count calls = 1
-ERROR 16:35:06,295 - (DesStmFuncParams) Method 'm2' has more arguments than expected in line 22.
+INFO  16:29:35,336 - ===================================
+INFO  16:29:35,337 -  Program count calls = 1
+ERROR 16:29:35,348 - (MethDeclParams) Method 'm2' has no return in line 20.
+INFO  16:29:35,348 - ===================================
+ERROR 16:29:35,349 - Parsiranje NIJE uspesno zavrseno!
