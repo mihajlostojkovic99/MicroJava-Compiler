@@ -1,1415 +1,651 @@
-INFO  15:57:46,115 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  15:57:46,177 - #2 program
-INFO  15:57:46,177 - #49 Test
-INFO  15:57:46,177 - #20 record
-INFO  15:57:46,179 - #49 r1
-INFO  15:57:46,179 - #45 {
-INFO  15:57:46,180 - #49 int
-INFO  15:57:46,180 - #49 x
-INFO  15:57:46,181 - #43 [
-INFO  15:57:46,181 - #44 ]
-INFO  15:57:46,181 - #37 ;
-INFO  15:57:46,181 - #49 int
-INFO  15:57:46,182 - #49 y
-INFO  15:57:46,182 - #37 ;
-INFO  15:57:46,182 - #46 }
-INFO  15:57:46,183 - #20 record
-INFO  15:57:46,183 - #49 r2
-INFO  15:57:46,184 - #45 {
-INFO  15:57:46,184 - #49 r1
-INFO  15:57:46,184 - #49 obj
-INFO  15:57:46,184 - #43 [
-INFO  15:57:46,184 - #44 ]
-INFO  15:57:46,184 - #37 ;
-INFO  15:57:46,186 - #46 }
-INFO  15:57:46,186 - #20 record
-INFO  15:57:46,186 - #49 r3
-INFO  15:57:46,186 - #45 {
-INFO  15:57:46,186 - #49 r2
-INFO  15:57:46,186 - #49 obj
-INFO  15:57:46,186 - #43 [
-INFO  15:57:46,186 - #44 ]
-INFO  15:57:46,186 - #37 ;
-INFO  15:57:46,186 - #46 }
-INFO  15:57:46,186 - #49 int
-INFO  15:57:46,186 - #49 a
-INFO  15:57:46,186 - #37 ;
-INFO  15:57:46,186 - #49 char
-INFO  15:57:46,186 - #49 b
-INFO  15:57:46,186 - #37 ;
-INFO  15:57:46,187 - #49 int
-INFO  15:57:46,187 - #49 c
-INFO  15:57:46,187 - #37 ;
-INFO  15:57:46,187 - #45 {
-INFO  15:57:46,187 - #14 void
-INFO  15:57:46,187 - #49 main
-INFO  15:57:46,188 - #41 (
-INFO  15:57:46,189 - #42 )
-INFO  15:57:46,189 - #49 r1
-INFO  15:57:46,189 - #49 o1
-INFO  15:57:46,189 - #37 ;
-INFO  15:57:46,189 - #49 r2
-INFO  15:57:46,189 - #49 o2
-INFO  15:57:46,189 - #37 ;
-INFO  15:57:46,189 - #49 r3
-INFO  15:57:46,189 - #49 o3
-INFO  15:57:46,189 - #37 ;
-INFO  15:57:46,189 - #49 r3
-INFO  15:57:46,189 - #49 o3arr
-INFO  15:57:46,189 - #43 [
-INFO  15:57:46,189 - #44 ]
-INFO  15:57:46,189 - #37 ;
-INFO  15:57:46,190 - #45 {
-INFO  15:57:46,190 - #11 print
-INFO  15:57:46,190 - #41 (
-INFO  15:57:46,190 - #49 o3arr
-INFO  15:57:46,191 - #43 [
-INFO  15:57:46,192 - #47 0
-INFO  15:57:46,194 - #44 ]
-INFO  15:57:46,196 - #40 .
-INFO  15:57:46,197 - #49 obj
-INFO  15:57:46,197 - #43 [
-INFO  15:57:46,197 - #47 0
-INFO  15:57:46,197 - #44 ]
-INFO  15:57:46,197 - #40 .
-INFO  15:57:46,197 - #49 obj
-INFO  15:57:46,198 - #43 [
-INFO  15:57:46,198 - #47 0
-INFO  15:57:46,198 - #44 ]
-INFO  15:57:46,198 - #40 .
-INFO  15:57:46,198 - #49 x
-INFO  15:57:46,198 - #42 )
-INFO  15:57:46,198 - #37 ;
-INFO  15:57:46,198 - #11 print
-INFO  15:57:46,199 - #41 (
-INFO  15:57:46,199 - #49 eol
-INFO  15:57:46,199 - #42 )
-INFO  15:57:46,199 - #37 ;
-INFO  15:57:46,199 - #46 }
-INFO  15:57:46,199 - #46 }
-INFO  15:57:46,201 - Program(
-  ProgramName(
-   Test
-  ) [ProgramName]
-  ListVar(
-    ListVar(
-      ListVar(
-        ListRecord(
-          ListRecord(
-            ListRecord(
-              NoList(
-              ) [NoList]
-              RecordDecl(
-                RecordDeclName(
-                 r1
-                ) [RecordDeclName]
-                IsListVarDeclWrapper(
-                  IsListVarDeclWrapper(
-                    NoListVarDeclWrapper(
-                    ) [NoListVarDeclWrapper]
-                    VarDeclWrapper(
-                      Type(
-                       int
-                      ) [Type]
-                      SingleVarDecl(
-                        ArrayVarDecl(
-                         x
-                        ) [ArrayVarDecl]
-                      ) [SingleVarDecl]
-                    ) [VarDeclWrapper]
-                  ) [IsListVarDeclWrapper]
-                  VarDeclWrapper(
-                    Type(
-                     int
-                    ) [Type]
-                    SingleVarDecl(
-                      NormalVarDecl(
-                       y
-                      ) [NormalVarDecl]
-                    ) [SingleVarDecl]
-                  ) [VarDeclWrapper]
-                ) [IsListVarDeclWrapper]
-              ) [RecordDecl]
-            ) [ListRecord]
-            RecordDecl(
-              RecordDeclName(
-               r2
-              ) [RecordDeclName]
-              IsListVarDeclWrapper(
-                NoListVarDeclWrapper(
-                ) [NoListVarDeclWrapper]
-                VarDeclWrapper(
-                  Type(
-                   r1
-                  ) [Type]
-                  SingleVarDecl(
-                    ArrayVarDecl(
-                     obj
-                    ) [ArrayVarDecl]
-                  ) [SingleVarDecl]
-                ) [VarDeclWrapper]
-              ) [IsListVarDeclWrapper]
-            ) [RecordDecl]
-          ) [ListRecord]
-          RecordDecl(
-            RecordDeclName(
-             r3
-            ) [RecordDeclName]
-            IsListVarDeclWrapper(
-              NoListVarDeclWrapper(
-              ) [NoListVarDeclWrapper]
-              VarDeclWrapper(
-                Type(
-                 r2
-                ) [Type]
-                SingleVarDecl(
-                  ArrayVarDecl(
-                   obj
-                  ) [ArrayVarDecl]
-                ) [SingleVarDecl]
-              ) [VarDeclWrapper]
-            ) [IsListVarDeclWrapper]
-          ) [RecordDecl]
-        ) [ListRecord]
-        VarDeclWrapper(
-          Type(
-           int
-          ) [Type]
-          SingleVarDecl(
-            NormalVarDecl(
-             a
-            ) [NormalVarDecl]
-          ) [SingleVarDecl]
-        ) [VarDeclWrapper]
-      ) [ListVar]
-      VarDeclWrapper(
-        Type(
-         char
-        ) [Type]
-        SingleVarDecl(
-          NormalVarDecl(
-           b
-          ) [NormalVarDecl]
-        ) [SingleVarDecl]
-      ) [VarDeclWrapper]
-    ) [ListVar]
-    VarDeclWrapper(
-      Type(
-       int
-      ) [Type]
-      SingleVarDecl(
-        NormalVarDecl(
-         c
-        ) [NormalVarDecl]
-      ) [SingleVarDecl]
-    ) [VarDeclWrapper]
-  ) [ListVar]
-  MethodDeclarations(
-    NoMethodDecl(
-    ) [NoMethodDecl]
-    MethDeclNoParams(
-      MethodRetVoid(
-      ) [MethodRetVoid]
-      MethodName(
-       main
-      ) [MethodName]
-      IsListVarDeclWrapper(
-        IsListVarDeclWrapper(
-          IsListVarDeclWrapper(
-            IsListVarDeclWrapper(
-              NoListVarDeclWrapper(
-              ) [NoListVarDeclWrapper]
-              VarDeclWrapper(
-                Type(
-                 r1
-                ) [Type]
-                SingleVarDecl(
-                  NormalVarDecl(
-                   o1
-                  ) [NormalVarDecl]
-                ) [SingleVarDecl]
-              ) [VarDeclWrapper]
-            ) [IsListVarDeclWrapper]
-            VarDeclWrapper(
-              Type(
-               r2
-              ) [Type]
-              SingleVarDecl(
-                NormalVarDecl(
-                 o2
-                ) [NormalVarDecl]
-              ) [SingleVarDecl]
-            ) [VarDeclWrapper]
-          ) [IsListVarDeclWrapper]
-          VarDeclWrapper(
-            Type(
-             r3
-            ) [Type]
-            SingleVarDecl(
-              NormalVarDecl(
-               o3
-              ) [NormalVarDecl]
-            ) [SingleVarDecl]
-          ) [VarDeclWrapper]
-        ) [IsListVarDeclWrapper]
-        VarDeclWrapper(
-          Type(
-           r3
-          ) [Type]
-          SingleVarDecl(
-            ArrayVarDecl(
-             o3arr
-            ) [ArrayVarDecl]
-          ) [SingleVarDecl]
-        ) [VarDeclWrapper]
-      ) [IsListVarDeclWrapper]
-      StatementListExists(
-        StatementListExists(
-          NoStatementList(
-          ) [NoStatementList]
-          StatementWithSingleStatement(
-            PrintSingleStatement(
-              Expr(
-                SingleTerm(
-                  FactorWrapper(
-                    NoUnary(
-                    ) [NoUnary]
-                    NormalFactor(
-                      DesignatorArrWithMore(
-                        DesignatorMoreElem(
-                          DesignatorArrName(
-                           o3arr
-                          ) [DesignatorArrName]
-                          Expr(
-                            SingleTerm(
-                              FactorWrapper(
-                                NoUnary(
-                                ) [NoUnary]
-                                Num(
-                                 0
-                                ) [Num]
-                              ) [FactorWrapper]
-                            ) [SingleTerm]
-                            NoMoreExpr(
-                            ) [NoMoreExpr]
-                          ) [Expr]
-                        ) [DesignatorMoreElem]
-                        DesigMoreDotList(
-                          DesigMoreDotArrList(
-                            DesigMoreDotArr(
-                              DesignatorArrName(
-                               obj
-                              ) [DesignatorArrName]
-                              Expr(
-                                SingleTerm(
-                                  FactorWrapper(
-                                    NoUnary(
-                                    ) [NoUnary]
-                                    Num(
-                                     0
-                                    ) [Num]
-                                  ) [FactorWrapper]
-                                ) [SingleTerm]
-                                NoMoreExpr(
-                                ) [NoMoreExpr]
-                              ) [Expr]
-                            ) [DesigMoreDotArr]
-                            DesignatorArrName(
-                             obj
-                            ) [DesignatorArrName]
-                            Expr(
-                              SingleTerm(
-                                FactorWrapper(
-                                  NoUnary(
-                                  ) [NoUnary]
-                                  Num(
-                                   0
-                                  ) [Num]
-                                ) [FactorWrapper]
-                              ) [SingleTerm]
-                              NoMoreExpr(
-                              ) [NoMoreExpr]
-                            ) [Expr]
-                          ) [DesigMoreDotArrList]
-                         x
-                        ) [DesigMoreDotList]
-                      ) [DesignatorArrWithMore]
-                    ) [NormalFactor]
-                  ) [FactorWrapper]
-                ) [SingleTerm]
-                NoMoreExpr(
-                ) [NoMoreExpr]
-              ) [Expr]
-            ) [PrintSingleStatement]
-          ) [StatementWithSingleStatement]
-        ) [StatementListExists]
-        StatementWithSingleStatement(
-          PrintSingleStatement(
-            Expr(
-              SingleTerm(
-                FactorWrapper(
-                  NoUnary(
-                  ) [NoUnary]
-                  NormalFactor(
-                    DesignatorSimple(
-                     eol
-                    ) [DesignatorSimple]
-                  ) [NormalFactor]
-                ) [FactorWrapper]
-              ) [SingleTerm]
-              NoMoreExpr(
-              ) [NoMoreExpr]
-            ) [Expr]
-          ) [PrintSingleStatement]
-        ) [StatementWithSingleStatement]
-      ) [StatementListExists]
-    ) [MethDeclNoParams]
-  ) [MethodDeclarations]
-) [Program]
-INFO  15:57:46,201 - ===================================
-INFO  15:57:46,203 -  Program count calls = 1
-INFO  15:58:36,723 - o3arr in line 13.
-INFO  16:05:37,605 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  16:05:37,643 - #2 program
-INFO  16:05:37,643 - #49 Test
-INFO  16:05:37,644 - #20 record
-INFO  16:05:37,644 - #49 r1
-INFO  16:05:37,644 - #45 {
-INFO  16:05:37,645 - #49 int
-INFO  16:05:37,645 - #49 x
-INFO  16:05:37,646 - #43 [
-INFO  16:05:37,646 - #44 ]
-INFO  16:05:37,646 - #37 ;
-INFO  16:05:37,646 - #49 int
-INFO  16:05:37,647 - #49 y
-INFO  16:05:37,647 - #37 ;
-INFO  16:05:37,647 - #46 }
-INFO  16:05:37,647 - #20 record
-INFO  16:05:37,647 - #49 r2
-INFO  16:05:37,648 - #45 {
-INFO  16:05:37,648 - #49 r1
-INFO  16:05:37,648 - #49 obj
-INFO  16:05:37,648 - #43 [
-INFO  16:05:37,648 - #44 ]
-INFO  16:05:37,648 - #37 ;
-INFO  16:05:37,648 - #46 }
-INFO  16:05:37,648 - #20 record
-INFO  16:05:37,648 - #49 r3
-INFO  16:05:37,648 - #45 {
-INFO  16:05:37,648 - #49 r2
-INFO  16:05:37,648 - #49 obj
-INFO  16:05:37,648 - #43 [
-INFO  16:05:37,648 - #44 ]
-INFO  16:05:37,648 - #37 ;
-INFO  16:05:37,648 - #46 }
-INFO  16:05:37,649 - #49 int
-INFO  16:05:37,649 - #49 a
-INFO  16:05:37,649 - #37 ;
-INFO  16:05:37,649 - #49 char
-INFO  16:05:37,649 - #49 b
-INFO  16:05:37,649 - #37 ;
-INFO  16:05:37,649 - #49 int
-INFO  16:05:37,649 - #49 c
-INFO  16:05:37,649 - #37 ;
-INFO  16:05:37,649 - #45 {
-INFO  16:05:37,649 - #14 void
-INFO  16:05:37,650 - #49 main
-INFO  16:05:37,650 - #41 (
-INFO  16:05:37,651 - #42 )
-INFO  16:05:37,651 - #49 r1
-INFO  16:05:37,651 - #49 o1
-INFO  16:05:37,651 - #37 ;
-INFO  16:05:37,651 - #49 r2
-INFO  16:05:37,651 - #49 o2
-INFO  16:05:37,651 - #37 ;
-INFO  16:05:37,651 - #49 r3
-INFO  16:05:37,651 - #49 o3
-INFO  16:05:37,651 - #37 ;
-INFO  16:05:37,652 - #49 r3
-INFO  16:05:37,652 - #49 o3arr
-INFO  16:05:37,652 - #43 [
-INFO  16:05:37,652 - #44 ]
-INFO  16:05:37,652 - #37 ;
-INFO  16:05:37,652 - #45 {
-INFO  16:05:37,652 - #11 print
-INFO  16:05:37,652 - #41 (
-INFO  16:05:37,652 - #49 o3arr
-INFO  16:05:37,652 - #43 [
-INFO  16:05:37,653 - #47 0
-INFO  16:05:37,653 - #44 ]
-INFO  16:05:37,654 - #40 .
-INFO  16:05:37,657 - #49 obj
-INFO  16:05:37,657 - #43 [
-INFO  16:05:37,657 - #47 0
-INFO  16:05:37,657 - #44 ]
-INFO  16:05:37,657 - #40 .
-INFO  16:05:37,657 - #49 obj
-INFO  16:05:37,657 - #43 [
-INFO  16:05:37,657 - #47 0
-INFO  16:05:37,657 - #44 ]
-INFO  16:05:37,657 - #40 .
-INFO  16:05:37,657 - #49 x
-INFO  16:05:37,658 - #43 [
-INFO  16:05:37,658 - #47 5
-INFO  16:05:37,658 - #44 ]
-INFO  16:05:37,658 - #42 )
-INFO  16:05:37,658 - #37 ;
-INFO  16:05:37,658 - #11 print
-INFO  16:05:37,658 - #41 (
-INFO  16:05:37,658 - #49 eol
-INFO  16:05:37,658 - #42 )
-INFO  16:05:37,658 - #37 ;
-INFO  16:05:37,658 - #46 }
-INFO  16:05:37,658 - #46 }
-INFO  16:05:37,660 - Program(
-  ProgramName(
-   Test
-  ) [ProgramName]
-  ListVar(
-    ListVar(
-      ListVar(
-        ListRecord(
-          ListRecord(
-            ListRecord(
-              NoList(
-              ) [NoList]
-              RecordDecl(
-                RecordDeclName(
-                 r1
-                ) [RecordDeclName]
-                IsListVarDeclWrapper(
-                  IsListVarDeclWrapper(
-                    NoListVarDeclWrapper(
-                    ) [NoListVarDeclWrapper]
-                    VarDeclWrapper(
-                      Type(
-                       int
-                      ) [Type]
-                      SingleVarDecl(
-                        ArrayVarDecl(
-                         x
-                        ) [ArrayVarDecl]
-                      ) [SingleVarDecl]
-                    ) [VarDeclWrapper]
-                  ) [IsListVarDeclWrapper]
-                  VarDeclWrapper(
-                    Type(
-                     int
-                    ) [Type]
-                    SingleVarDecl(
-                      NormalVarDecl(
-                       y
-                      ) [NormalVarDecl]
-                    ) [SingleVarDecl]
-                  ) [VarDeclWrapper]
-                ) [IsListVarDeclWrapper]
-              ) [RecordDecl]
-            ) [ListRecord]
-            RecordDecl(
-              RecordDeclName(
-               r2
-              ) [RecordDeclName]
-              IsListVarDeclWrapper(
-                NoListVarDeclWrapper(
-                ) [NoListVarDeclWrapper]
-                VarDeclWrapper(
-                  Type(
-                   r1
-                  ) [Type]
-                  SingleVarDecl(
-                    ArrayVarDecl(
-                     obj
-                    ) [ArrayVarDecl]
-                  ) [SingleVarDecl]
-                ) [VarDeclWrapper]
-              ) [IsListVarDeclWrapper]
-            ) [RecordDecl]
-          ) [ListRecord]
-          RecordDecl(
-            RecordDeclName(
-             r3
-            ) [RecordDeclName]
-            IsListVarDeclWrapper(
-              NoListVarDeclWrapper(
-              ) [NoListVarDeclWrapper]
-              VarDeclWrapper(
-                Type(
-                 r2
-                ) [Type]
-                SingleVarDecl(
-                  ArrayVarDecl(
-                   obj
-                  ) [ArrayVarDecl]
-                ) [SingleVarDecl]
-              ) [VarDeclWrapper]
-            ) [IsListVarDeclWrapper]
-          ) [RecordDecl]
-        ) [ListRecord]
-        VarDeclWrapper(
-          Type(
-           int
-          ) [Type]
-          SingleVarDecl(
-            NormalVarDecl(
-             a
-            ) [NormalVarDecl]
-          ) [SingleVarDecl]
-        ) [VarDeclWrapper]
-      ) [ListVar]
-      VarDeclWrapper(
-        Type(
-         char
-        ) [Type]
-        SingleVarDecl(
-          NormalVarDecl(
-           b
-          ) [NormalVarDecl]
-        ) [SingleVarDecl]
-      ) [VarDeclWrapper]
-    ) [ListVar]
-    VarDeclWrapper(
-      Type(
-       int
-      ) [Type]
-      SingleVarDecl(
-        NormalVarDecl(
-         c
-        ) [NormalVarDecl]
-      ) [SingleVarDecl]
-    ) [VarDeclWrapper]
-  ) [ListVar]
-  MethodDeclarations(
-    NoMethodDecl(
-    ) [NoMethodDecl]
-    MethDeclNoParams(
-      MethodRetVoid(
-      ) [MethodRetVoid]
-      MethodName(
-       main
-      ) [MethodName]
-      IsListVarDeclWrapper(
-        IsListVarDeclWrapper(
-          IsListVarDeclWrapper(
-            IsListVarDeclWrapper(
-              NoListVarDeclWrapper(
-              ) [NoListVarDeclWrapper]
-              VarDeclWrapper(
-                Type(
-                 r1
-                ) [Type]
-                SingleVarDecl(
-                  NormalVarDecl(
-                   o1
-                  ) [NormalVarDecl]
-                ) [SingleVarDecl]
-              ) [VarDeclWrapper]
-            ) [IsListVarDeclWrapper]
-            VarDeclWrapper(
-              Type(
-               r2
-              ) [Type]
-              SingleVarDecl(
-                NormalVarDecl(
-                 o2
-                ) [NormalVarDecl]
-              ) [SingleVarDecl]
-            ) [VarDeclWrapper]
-          ) [IsListVarDeclWrapper]
-          VarDeclWrapper(
-            Type(
-             r3
-            ) [Type]
-            SingleVarDecl(
-              NormalVarDecl(
-               o3
-              ) [NormalVarDecl]
-            ) [SingleVarDecl]
-          ) [VarDeclWrapper]
-        ) [IsListVarDeclWrapper]
-        VarDeclWrapper(
-          Type(
-           r3
-          ) [Type]
-          SingleVarDecl(
-            ArrayVarDecl(
-             o3arr
-            ) [ArrayVarDecl]
-          ) [SingleVarDecl]
-        ) [VarDeclWrapper]
-      ) [IsListVarDeclWrapper]
-      StatementListExists(
-        StatementListExists(
-          NoStatementList(
-          ) [NoStatementList]
-          StatementWithSingleStatement(
-            PrintSingleStatement(
-              Expr(
-                SingleTerm(
-                  FactorWrapper(
-                    NoUnary(
-                    ) [NoUnary]
-                    NormalFactor(
-                      DesignatorArrWithMore(
-                        DesignatorMoreElem(
-                          DesignatorArrName(
-                           o3arr
-                          ) [DesignatorArrName]
-                          Expr(
-                            SingleTerm(
-                              FactorWrapper(
-                                NoUnary(
-                                ) [NoUnary]
-                                Num(
-                                 0
-                                ) [Num]
-                              ) [FactorWrapper]
-                            ) [SingleTerm]
-                            NoMoreExpr(
-                            ) [NoMoreExpr]
-                          ) [Expr]
-                        ) [DesignatorMoreElem]
-                        DesigMoreDotArrList(
-                          DesigMoreDotArrList(
-                            DesigMoreDotArr(
-                              DesignatorArrName(
-                               obj
-                              ) [DesignatorArrName]
-                              Expr(
-                                SingleTerm(
-                                  FactorWrapper(
-                                    NoUnary(
-                                    ) [NoUnary]
-                                    Num(
-                                     0
-                                    ) [Num]
-                                  ) [FactorWrapper]
-                                ) [SingleTerm]
-                                NoMoreExpr(
-                                ) [NoMoreExpr]
-                              ) [Expr]
-                            ) [DesigMoreDotArr]
-                            DesignatorArrName(
-                             obj
-                            ) [DesignatorArrName]
-                            Expr(
-                              SingleTerm(
-                                FactorWrapper(
-                                  NoUnary(
-                                  ) [NoUnary]
-                                  Num(
-                                   0
-                                  ) [Num]
-                                ) [FactorWrapper]
-                              ) [SingleTerm]
-                              NoMoreExpr(
-                              ) [NoMoreExpr]
-                            ) [Expr]
-                          ) [DesigMoreDotArrList]
-                          DesignatorArrName(
-                           x
-                          ) [DesignatorArrName]
-                          Expr(
-                            SingleTerm(
-                              FactorWrapper(
-                                NoUnary(
-                                ) [NoUnary]
-                                Num(
-                                 5
-                                ) [Num]
-                              ) [FactorWrapper]
-                            ) [SingleTerm]
-                            NoMoreExpr(
-                            ) [NoMoreExpr]
-                          ) [Expr]
-                        ) [DesigMoreDotArrList]
-                      ) [DesignatorArrWithMore]
-                    ) [NormalFactor]
-                  ) [FactorWrapper]
-                ) [SingleTerm]
-                NoMoreExpr(
-                ) [NoMoreExpr]
-              ) [Expr]
-            ) [PrintSingleStatement]
-          ) [StatementWithSingleStatement]
-        ) [StatementListExists]
-        StatementWithSingleStatement(
-          PrintSingleStatement(
-            Expr(
-              SingleTerm(
-                FactorWrapper(
-                  NoUnary(
-                  ) [NoUnary]
-                  NormalFactor(
-                    DesignatorSimple(
-                     eol
-                    ) [DesignatorSimple]
-                  ) [NormalFactor]
-                ) [FactorWrapper]
-              ) [SingleTerm]
-              NoMoreExpr(
-              ) [NoMoreExpr]
-            ) [Expr]
-          ) [PrintSingleStatement]
-        ) [StatementWithSingleStatement]
-      ) [StatementListExists]
-    ) [MethDeclNoParams]
-  ) [MethodDeclarations]
-) [Program]
-INFO  16:05:37,661 - ===================================
-INFO  16:05:37,662 -  Program count calls = 1
-INFO  16:05:37,673 - ===================================
-INFO  16:05:37,674 - Parsiranje uspesno zavrseno!
-INFO  16:05:52,353 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  16:05:52,397 - #2 program
-INFO  16:05:52,397 - #49 Test
-INFO  16:05:52,398 - #20 record
-INFO  16:05:52,398 - #49 r1
-INFO  16:05:52,399 - #45 {
-INFO  16:05:52,399 - #49 int
-INFO  16:05:52,400 - #49 x
-INFO  16:05:52,400 - #43 [
-INFO  16:05:52,400 - #44 ]
-INFO  16:05:52,400 - #37 ;
-INFO  16:05:52,401 - #49 int
-INFO  16:05:52,401 - #49 y
-INFO  16:05:52,401 - #37 ;
-INFO  16:05:52,401 - #46 }
-INFO  16:05:52,402 - #20 record
-INFO  16:05:52,402 - #49 r2
-INFO  16:05:52,402 - #45 {
-INFO  16:05:52,403 - #49 r1
-INFO  16:05:52,403 - #49 obj
-INFO  16:05:52,403 - #43 [
-INFO  16:05:52,403 - #44 ]
-INFO  16:05:52,403 - #37 ;
-INFO  16:05:52,403 - #46 }
-INFO  16:05:52,403 - #20 record
-INFO  16:05:52,403 - #49 r3
-INFO  16:05:52,403 - #45 {
-INFO  16:05:52,403 - #49 r2
-INFO  16:05:52,404 - #49 obj
-INFO  16:05:52,404 - #43 [
-INFO  16:05:52,404 - #44 ]
-INFO  16:05:52,404 - #37 ;
-INFO  16:05:52,404 - #46 }
-INFO  16:05:52,404 - #49 int
-INFO  16:05:52,404 - #49 a
-INFO  16:05:52,404 - #37 ;
-INFO  16:05:52,404 - #49 char
-INFO  16:05:52,404 - #49 b
-INFO  16:05:52,404 - #37 ;
-INFO  16:05:52,405 - #49 int
-INFO  16:05:52,405 - #49 c
-INFO  16:05:52,405 - #37 ;
-INFO  16:05:52,405 - #45 {
-INFO  16:05:52,405 - #14 void
-INFO  16:05:52,406 - #49 main
-INFO  16:05:52,406 - #41 (
-INFO  16:05:52,407 - #42 )
-INFO  16:05:52,407 - #49 r1
-INFO  16:05:52,407 - #49 o1
-INFO  16:05:52,407 - #37 ;
-INFO  16:05:52,407 - #49 r2
-INFO  16:05:52,407 - #49 o2
-INFO  16:05:52,407 - #37 ;
-INFO  16:05:52,407 - #49 r3
-INFO  16:05:52,407 - #49 o3
-INFO  16:05:52,407 - #37 ;
-INFO  16:05:52,407 - #49 r3
-INFO  16:05:52,407 - #49 o3arr
-INFO  16:05:52,407 - #43 [
-INFO  16:05:52,407 - #44 ]
-INFO  16:05:52,408 - #37 ;
-INFO  16:05:52,408 - #45 {
-INFO  16:05:52,408 - #49 o1
-INFO  16:05:52,408 - #34 =
-INFO  16:05:52,409 - #10 new
-INFO  16:05:52,410 - #49 r1
-INFO  16:05:52,410 - #37 ;
-INFO  16:05:52,412 - #49 o1
-INFO  16:05:52,413 - #40 .
-INFO  16:05:52,415 - #49 x
-INFO  16:05:52,415 - #34 =
-INFO  16:05:52,416 - #10 new
-INFO  16:05:52,416 - #49 int
-INFO  16:05:52,416 - #43 [
-INFO  16:05:52,416 - #47 1
-INFO  16:05:52,416 - #44 ]
-INFO  16:05:52,416 - #37 ;
-INFO  16:05:52,416 - #49 o1
-INFO  16:05:52,416 - #40 .
-INFO  16:05:52,416 - #49 x
-INFO  16:05:52,416 - #43 [
-INFO  16:05:52,417 - #47 0
-INFO  16:05:52,417 - #44 ]
-INFO  16:05:52,417 - #34 =
-INFO  16:05:52,417 - #47 0
-INFO  16:05:52,417 - #37 ;
-INFO  16:05:52,417 - #49 o1
-INFO  16:05:52,417 - #40 .
-INFO  16:05:52,417 - #49 x
-INFO  16:05:52,417 - #43 [
-INFO  16:05:52,417 - #47 0
-INFO  16:05:52,418 - #44 ]
-INFO  16:05:52,418 - #35 ++
-INFO  16:05:52,418 - #37 ;
-INFO  16:05:52,418 - #11 print
-INFO  16:05:52,418 - #41 (
-INFO  16:05:52,418 - #49 o1
-INFO  16:05:52,418 - #40 .
-INFO  16:05:52,418 - #49 x
-INFO  16:05:52,418 - #43 [
-INFO  16:05:52,418 - #47 0
-INFO  16:05:52,418 - #44 ]
-INFO  16:05:52,418 - #42 )
-INFO  16:05:52,418 - #37 ;
-INFO  16:05:52,418 - #11 print
-INFO  16:05:52,418 - #41 (
-INFO  16:05:52,419 - #49 eol
-INFO  16:05:52,419 - #42 )
-INFO  16:05:52,419 - #37 ;
-INFO  16:05:52,419 - #49 o1
-INFO  16:05:52,419 - #40 .
-INFO  16:05:52,419 - #49 y
-INFO  16:05:52,419 - #34 =
-INFO  16:05:52,419 - #47 1
-INFO  16:05:52,419 - #37 ;
-INFO  16:05:52,419 - #49 o1
-INFO  16:05:52,419 - #40 .
-INFO  16:05:52,419 - #49 y
-INFO  16:05:52,419 - #35 ++
-INFO  16:05:52,419 - #37 ;
-INFO  16:05:52,419 - #11 print
-INFO  16:05:52,419 - #41 (
-INFO  16:05:52,419 - #49 o1
-INFO  16:05:52,419 - #40 .
-INFO  16:05:52,419 - #49 y
-INFO  16:05:52,420 - #42 )
-INFO  16:05:52,420 - #37 ;
-INFO  16:05:52,420 - #11 print
-INFO  16:05:52,420 - #41 (
-INFO  16:05:52,420 - #49 eol
-INFO  16:05:52,420 - #42 )
-INFO  16:05:52,420 - #37 ;
-INFO  16:05:52,420 - #49 o2
-INFO  16:05:52,420 - #34 =
-INFO  16:05:52,420 - #10 new
-INFO  16:05:52,420 - #49 r2
-INFO  16:05:52,420 - #37 ;
-INFO  16:05:52,420 - #49 o2
-INFO  16:05:52,420 - #40 .
-INFO  16:05:52,420 - #49 obj
-INFO  16:05:52,420 - #34 =
-INFO  16:05:52,420 - #10 new
-INFO  16:05:52,420 - #49 r1
-INFO  16:05:52,420 - #43 [
-INFO  16:05:52,421 - #47 1
-INFO  16:05:52,421 - #44 ]
-INFO  16:05:52,421 - #37 ;
-INFO  16:05:52,421 - #49 o2
-INFO  16:05:52,421 - #40 .
-INFO  16:05:52,421 - #49 obj
-INFO  16:05:52,421 - #43 [
-INFO  16:05:52,421 - #47 0
-INFO  16:05:52,421 - #44 ]
-INFO  16:05:52,421 - #34 =
-INFO  16:05:52,421 - #10 new
-INFO  16:05:52,421 - #49 r1
-INFO  16:05:52,421 - #37 ;
-INFO  16:05:52,421 - #49 o2
-INFO  16:05:52,421 - #40 .
-INFO  16:05:52,421 - #49 obj
-INFO  16:05:52,421 - #43 [
-INFO  16:05:52,421 - #47 0
-INFO  16:05:52,421 - #44 ]
-INFO  16:05:52,421 - #40 .
-INFO  16:05:52,421 - #49 y
-INFO  16:05:52,421 - #34 =
-INFO  16:05:52,422 - #47 2
-INFO  16:05:52,422 - #37 ;
-INFO  16:05:52,422 - #49 o2
-INFO  16:05:52,422 - #40 .
-INFO  16:05:52,422 - #49 obj
-INFO  16:05:52,422 - #43 [
-INFO  16:05:52,422 - #47 0
-INFO  16:05:52,422 - #44 ]
-INFO  16:05:52,422 - #40 .
-INFO  16:05:52,422 - #49 y
-INFO  16:05:52,422 - #35 ++
-INFO  16:05:52,422 - #37 ;
-INFO  16:05:52,422 - #11 print
-INFO  16:05:52,422 - #41 (
-INFO  16:05:52,422 - #49 o2
-INFO  16:05:52,422 - #40 .
-INFO  16:05:52,423 - #49 obj
-INFO  16:05:52,423 - #43 [
-INFO  16:05:52,423 - #47 0
-INFO  16:05:52,423 - #44 ]
-INFO  16:05:52,423 - #40 .
-INFO  16:05:52,423 - #49 y
-INFO  16:05:52,423 - #42 )
-INFO  16:05:52,423 - #37 ;
-INFO  16:05:52,423 - #11 print
-INFO  16:05:52,423 - #41 (
-INFO  16:05:52,423 - #49 eol
-INFO  16:05:52,423 - #42 )
-INFO  16:05:52,423 - #37 ;
-INFO  16:05:52,423 - #49 o2
-INFO  16:05:52,423 - #40 .
-INFO  16:05:52,423 - #49 obj
-INFO  16:05:52,423 - #43 [
-INFO  16:05:52,423 - #47 0
-INFO  16:05:52,423 - #44 ]
-INFO  16:05:52,424 - #40 .
-INFO  16:05:52,424 - #49 x
-INFO  16:05:52,424 - #34 =
-INFO  16:05:52,424 - #10 new
-INFO  16:05:52,424 - #49 int
-INFO  16:05:52,424 - #43 [
-INFO  16:05:52,424 - #47 1
-INFO  16:05:52,424 - #44 ]
-INFO  16:05:52,424 - #37 ;
-INFO  16:05:52,424 - #49 o2
-INFO  16:05:52,424 - #40 .
-INFO  16:05:52,424 - #49 obj
-INFO  16:05:52,424 - #43 [
-INFO  16:05:52,424 - #47 0
-INFO  16:05:52,424 - #44 ]
-INFO  16:05:52,424 - #40 .
-INFO  16:05:52,424 - #49 x
-INFO  16:05:52,424 - #43 [
-INFO  16:05:52,425 - #47 0
-INFO  16:05:52,425 - #44 ]
-INFO  16:05:52,425 - #34 =
-INFO  16:05:52,425 - #47 3
-INFO  16:05:52,425 - #37 ;
-INFO  16:05:52,425 - #49 o3
-INFO  16:05:52,425 - #34 =
-INFO  16:05:52,425 - #10 new
-INFO  16:05:52,425 - #49 r3
-INFO  16:05:52,425 - #37 ;
-INFO  16:05:52,425 - #49 o3
-INFO  16:05:52,425 - #40 .
-INFO  16:05:52,425 - #49 obj
-INFO  16:05:52,425 - #34 =
-INFO  16:05:52,425 - #10 new
-INFO  16:05:52,425 - #49 r2
-INFO  16:05:52,425 - #43 [
-INFO  16:05:52,425 - #47 1
-INFO  16:05:52,426 - #44 ]
-INFO  16:05:52,426 - #37 ;
-INFO  16:05:52,426 - #49 o3
-INFO  16:05:52,426 - #40 .
-INFO  16:05:52,426 - #49 obj
-INFO  16:05:52,426 - #43 [
-INFO  16:05:52,426 - #47 0
-INFO  16:05:52,426 - #44 ]
-INFO  16:05:52,426 - #34 =
-INFO  16:05:52,426 - #10 new
-INFO  16:05:52,426 - #49 r2
-INFO  16:05:52,426 - #37 ;
-INFO  16:05:52,426 - #49 o3
-INFO  16:05:52,426 - #40 .
-INFO  16:05:52,426 - #49 obj
-INFO  16:05:52,426 - #43 [
-INFO  16:05:52,426 - #47 0
-INFO  16:05:52,426 - #44 ]
-INFO  16:05:52,427 - #40 .
-INFO  16:05:52,427 - #49 obj
-INFO  16:05:52,427 - #34 =
-INFO  16:05:52,427 - #10 new
-INFO  16:05:52,427 - #49 r1
-INFO  16:05:52,427 - #43 [
-INFO  16:05:52,427 - #47 1
-INFO  16:05:52,427 - #44 ]
-INFO  16:05:52,427 - #37 ;
-INFO  16:05:52,428 - #49 o3
-INFO  16:05:52,428 - #40 .
-INFO  16:05:52,428 - #49 obj
-INFO  16:05:52,428 - #43 [
-INFO  16:05:52,428 - #47 0
-INFO  16:05:52,428 - #44 ]
-INFO  16:05:52,428 - #40 .
-INFO  16:05:52,428 - #49 obj
-INFO  16:05:52,428 - #43 [
-INFO  16:05:52,429 - #47 0
-INFO  16:05:52,429 - #44 ]
-INFO  16:05:52,429 - #34 =
-INFO  16:05:52,429 - #10 new
-INFO  16:05:52,429 - #49 r1
-INFO  16:05:52,429 - #37 ;
-INFO  16:05:52,429 - #49 o3
-INFO  16:05:52,429 - #40 .
-INFO  16:05:52,429 - #49 obj
-INFO  16:05:52,429 - #43 [
-INFO  16:05:52,429 - #47 0
-INFO  16:05:52,429 - #44 ]
-INFO  16:05:52,429 - #40 .
-INFO  16:05:52,429 - #49 obj
-INFO  16:05:52,429 - #43 [
-INFO  16:05:52,429 - #47 0
-INFO  16:05:52,429 - #44 ]
-INFO  16:05:52,429 - #40 .
-INFO  16:05:52,429 - #49 y
-INFO  16:05:52,429 - #34 =
-INFO  16:05:52,429 - #47 4
-INFO  16:05:52,429 - #37 ;
-INFO  16:05:52,429 - #49 o3
-INFO  16:05:52,429 - #40 .
-INFO  16:05:52,430 - #49 obj
-INFO  16:05:52,430 - #43 [
-INFO  16:05:52,430 - #47 0
-INFO  16:05:52,430 - #44 ]
-INFO  16:05:52,430 - #40 .
-INFO  16:05:52,430 - #49 obj
-INFO  16:05:52,430 - #43 [
-INFO  16:05:52,430 - #47 0
-INFO  16:05:52,430 - #44 ]
-INFO  16:05:52,430 - #40 .
-INFO  16:05:52,430 - #49 y
-INFO  16:05:52,430 - #35 ++
-INFO  16:05:52,430 - #37 ;
-INFO  16:05:52,430 - #11 print
-INFO  16:05:52,430 - #41 (
-INFO  16:05:52,430 - #49 o3
-INFO  16:05:52,430 - #40 .
-INFO  16:05:52,430 - #49 obj
-INFO  16:05:52,430 - #43 [
-INFO  16:05:52,430 - #47 0
-INFO  16:05:52,430 - #44 ]
-INFO  16:05:52,430 - #40 .
-INFO  16:05:52,430 - #49 obj
-INFO  16:05:52,430 - #43 [
-INFO  16:05:52,431 - #47 0
-INFO  16:05:52,431 - #44 ]
-INFO  16:05:52,431 - #40 .
-INFO  16:05:52,431 - #49 y
-INFO  16:05:52,431 - #42 )
-INFO  16:05:52,431 - #37 ;
-INFO  16:05:52,431 - #11 print
-INFO  16:05:52,431 - #41 (
-INFO  16:05:52,431 - #49 eol
-INFO  16:05:52,431 - #42 )
-INFO  16:05:52,431 - #37 ;
-INFO  16:05:52,431 - #49 o3
-INFO  16:05:52,431 - #40 .
-INFO  16:05:52,431 - #49 obj
-INFO  16:05:52,431 - #43 [
-INFO  16:05:52,431 - #47 0
-INFO  16:05:52,431 - #44 ]
-INFO  16:05:52,431 - #40 .
-INFO  16:05:52,431 - #49 obj
-INFO  16:05:52,431 - #43 [
-INFO  16:05:52,431 - #47 0
-INFO  16:05:52,431 - #44 ]
-INFO  16:05:52,431 - #40 .
-INFO  16:05:52,431 - #49 x
-INFO  16:05:52,431 - #34 =
-INFO  16:05:52,431 - #10 new
-INFO  16:05:52,432 - #49 int
-INFO  16:05:52,432 - #43 [
-INFO  16:05:52,432 - #47 1
-INFO  16:05:52,432 - #44 ]
-INFO  16:05:52,432 - #37 ;
-INFO  16:05:52,432 - #49 o3
-INFO  16:05:52,432 - #40 .
-INFO  16:05:52,432 - #49 obj
-INFO  16:05:52,432 - #43 [
-INFO  16:05:52,432 - #47 0
-INFO  16:05:52,432 - #44 ]
-INFO  16:05:52,432 - #40 .
-INFO  16:05:52,432 - #49 obj
-INFO  16:05:52,432 - #43 [
-INFO  16:05:52,432 - #47 0
-INFO  16:05:52,432 - #44 ]
-INFO  16:05:52,432 - #40 .
-INFO  16:05:52,432 - #49 x
-INFO  16:05:52,432 - #43 [
-INFO  16:05:52,432 - #47 0
-INFO  16:05:52,432 - #44 ]
-INFO  16:05:52,432 - #34 =
-INFO  16:05:52,432 - #47 5
-INFO  16:05:52,432 - #37 ;
-INFO  16:05:52,432 - #49 o3
-INFO  16:05:52,432 - #40 .
-INFO  16:05:52,432 - #49 obj
-INFO  16:05:52,432 - #43 [
-INFO  16:05:52,433 - #47 0
-INFO  16:05:52,433 - #44 ]
-INFO  16:05:52,433 - #40 .
-INFO  16:05:52,433 - #49 obj
-INFO  16:05:52,433 - #43 [
-INFO  16:05:52,433 - #47 0
-INFO  16:05:52,433 - #44 ]
-INFO  16:05:52,433 - #40 .
-INFO  16:05:52,433 - #49 x
-INFO  16:05:52,433 - #43 [
-INFO  16:05:52,433 - #47 0
-INFO  16:05:52,433 - #44 ]
-INFO  16:05:52,433 - #35 ++
-INFO  16:05:52,433 - #37 ;
-INFO  16:05:52,433 - #11 print
-INFO  16:05:52,433 - #41 (
-INFO  16:05:52,433 - #49 o3
-INFO  16:05:52,433 - #40 .
-INFO  16:05:52,433 - #49 obj
-INFO  16:05:52,433 - #43 [
-INFO  16:05:52,433 - #47 0
-INFO  16:05:52,433 - #44 ]
-INFO  16:05:52,433 - #40 .
-INFO  16:05:52,433 - #49 obj
-INFO  16:05:52,433 - #43 [
-INFO  16:05:52,433 - #47 0
-INFO  16:05:52,433 - #44 ]
-INFO  16:05:52,433 - #40 .
-INFO  16:05:52,433 - #49 x
-INFO  16:05:52,433 - #43 [
-INFO  16:05:52,434 - #47 0
-INFO  16:05:52,434 - #44 ]
-INFO  16:05:52,434 - #42 )
-INFO  16:05:52,434 - #37 ;
-INFO  16:05:52,434 - #11 print
-INFO  16:05:52,434 - #41 (
-INFO  16:05:52,434 - #49 eol
-INFO  16:05:52,434 - #42 )
-INFO  16:05:52,434 - #37 ;
-INFO  16:05:52,434 - #49 o3arr
-INFO  16:05:52,434 - #34 =
-INFO  16:05:52,434 - #10 new
-INFO  16:05:52,434 - #49 r3
-INFO  16:05:52,434 - #43 [
-INFO  16:05:52,434 - #47 1
-INFO  16:05:52,434 - #44 ]
-INFO  16:05:52,434 - #37 ;
-INFO  16:05:52,434 - #49 o3arr
-INFO  16:05:52,434 - #43 [
-INFO  16:05:52,434 - #47 0
-INFO  16:05:52,434 - #44 ]
-INFO  16:05:52,434 - #34 =
-INFO  16:05:52,434 - #10 new
-INFO  16:05:52,434 - #49 r3
-INFO  16:05:52,434 - #37 ;
-INFO  16:05:52,434 - #49 o3arr
-INFO  16:05:52,434 - #43 [
-INFO  16:05:52,435 - #47 0
-INFO  16:05:52,435 - #44 ]
-INFO  16:05:52,435 - #40 .
-INFO  16:05:52,435 - #49 obj
-INFO  16:05:52,435 - #34 =
-INFO  16:05:52,436 - #10 new
-INFO  16:05:52,436 - #49 r2
-INFO  16:05:52,436 - #43 [
-INFO  16:05:52,436 - #47 1
-INFO  16:05:52,436 - #44 ]
-INFO  16:05:52,436 - #37 ;
-INFO  16:05:52,436 - #49 o3arr
-INFO  16:05:52,436 - #43 [
-INFO  16:05:52,436 - #47 0
-INFO  16:05:52,436 - #44 ]
-INFO  16:05:52,436 - #40 .
-INFO  16:05:52,436 - #49 obj
-INFO  16:05:52,436 - #43 [
-INFO  16:05:52,436 - #47 0
-INFO  16:05:52,436 - #44 ]
-INFO  16:05:52,436 - #34 =
-INFO  16:05:52,436 - #10 new
-INFO  16:05:52,436 - #49 r2
-INFO  16:05:52,436 - #37 ;
-INFO  16:05:52,436 - #49 o3arr
-INFO  16:05:52,436 - #43 [
-INFO  16:05:52,436 - #47 0
-INFO  16:05:52,436 - #44 ]
-INFO  16:05:52,436 - #40 .
-INFO  16:05:52,436 - #49 obj
-INFO  16:05:52,436 - #43 [
-INFO  16:05:52,436 - #47 0
-INFO  16:05:52,437 - #44 ]
-INFO  16:05:52,437 - #40 .
-INFO  16:05:52,437 - #49 obj
-INFO  16:05:52,437 - #34 =
-INFO  16:05:52,437 - #10 new
-INFO  16:05:52,437 - #49 r1
-INFO  16:05:52,437 - #43 [
-INFO  16:05:52,437 - #47 1
-INFO  16:05:52,437 - #44 ]
-INFO  16:05:52,437 - #37 ;
-INFO  16:05:52,437 - #49 o3arr
-INFO  16:05:52,437 - #43 [
-INFO  16:05:52,437 - #47 0
-INFO  16:05:52,437 - #44 ]
-INFO  16:05:52,437 - #40 .
-INFO  16:05:52,437 - #49 obj
-INFO  16:05:52,437 - #43 [
-INFO  16:05:52,437 - #47 0
-INFO  16:05:52,437 - #44 ]
-INFO  16:05:52,437 - #40 .
-INFO  16:05:52,437 - #49 obj
-INFO  16:05:52,437 - #43 [
-INFO  16:05:52,437 - #47 0
-INFO  16:05:52,437 - #44 ]
-INFO  16:05:52,437 - #34 =
-INFO  16:05:52,437 - #10 new
-INFO  16:05:52,437 - #49 r1
-INFO  16:05:52,437 - #37 ;
-INFO  16:05:52,437 - #49 o3arr
-INFO  16:05:52,438 - #43 [
-INFO  16:05:52,438 - #47 0
-INFO  16:05:52,438 - #44 ]
-INFO  16:05:52,438 - #40 .
-INFO  16:05:52,438 - #49 obj
-INFO  16:05:52,438 - #43 [
-INFO  16:05:52,438 - #47 0
-INFO  16:05:52,438 - #44 ]
-INFO  16:05:52,438 - #40 .
-INFO  16:05:52,438 - #49 obj
-INFO  16:05:52,438 - #43 [
-INFO  16:05:52,438 - #47 0
-INFO  16:05:52,438 - #44 ]
-INFO  16:05:52,438 - #40 .
-INFO  16:05:52,438 - #49 y
-INFO  16:05:52,438 - #34 =
-INFO  16:05:52,438 - #47 6
-INFO  16:05:52,438 - #37 ;
-INFO  16:05:52,438 - #49 o3arr
-INFO  16:05:52,439 - #43 [
-INFO  16:05:52,439 - #47 0
-INFO  16:05:52,439 - #44 ]
-INFO  16:05:52,439 - #40 .
-INFO  16:05:52,439 - #49 obj
-INFO  16:05:52,439 - #43 [
-INFO  16:05:52,439 - #47 0
-INFO  16:05:52,439 - #44 ]
-INFO  16:05:52,439 - #40 .
-INFO  16:05:52,439 - #49 obj
-INFO  16:05:52,439 - #43 [
-INFO  16:05:52,439 - #47 0
-INFO  16:05:52,439 - #44 ]
-INFO  16:05:52,440 - #40 .
-INFO  16:05:52,440 - #49 y
-INFO  16:05:52,440 - #35 ++
-INFO  16:05:52,440 - #37 ;
-INFO  16:05:52,440 - #11 print
-INFO  16:05:52,440 - #41 (
-INFO  16:05:52,440 - #49 o3arr
-INFO  16:05:52,440 - #43 [
-INFO  16:05:52,440 - #47 0
-INFO  16:05:52,440 - #44 ]
-INFO  16:05:52,440 - #40 .
-INFO  16:05:52,440 - #49 obj
-INFO  16:05:52,440 - #43 [
-INFO  16:05:52,441 - #47 0
-INFO  16:05:52,441 - #44 ]
-INFO  16:05:52,441 - #40 .
-INFO  16:05:52,441 - #49 obj
-INFO  16:05:52,441 - #43 [
-INFO  16:05:52,441 - #47 0
-INFO  16:05:52,441 - #44 ]
-INFO  16:05:52,441 - #40 .
-INFO  16:05:52,441 - #49 y
-INFO  16:05:52,441 - #42 )
-INFO  16:05:52,441 - #37 ;
-INFO  16:05:52,441 - #11 print
-INFO  16:05:52,441 - #41 (
-INFO  16:05:52,441 - #49 eol
-INFO  16:05:52,441 - #42 )
-INFO  16:05:52,441 - #37 ;
-INFO  16:05:52,442 - #49 o3arr
-INFO  16:05:52,442 - #43 [
-INFO  16:05:52,442 - #47 0
-INFO  16:05:52,442 - #44 ]
-INFO  16:05:52,442 - #40 .
-INFO  16:05:52,442 - #49 obj
-INFO  16:05:52,442 - #43 [
-INFO  16:05:52,442 - #47 0
-INFO  16:05:52,442 - #44 ]
-INFO  16:05:52,442 - #40 .
-INFO  16:05:52,442 - #49 obj
-INFO  16:05:52,442 - #43 [
-INFO  16:05:52,442 - #47 0
-INFO  16:05:52,442 - #44 ]
-INFO  16:05:52,442 - #40 .
-INFO  16:05:52,442 - #49 x
-INFO  16:05:52,442 - #34 =
-INFO  16:05:52,442 - #10 new
-INFO  16:05:52,442 - #49 int
-INFO  16:05:52,442 - #43 [
-INFO  16:05:52,442 - #47 1
-INFO  16:05:52,442 - #44 ]
-INFO  16:05:52,442 - #37 ;
-INFO  16:05:52,442 - #49 o3arr
-INFO  16:05:52,442 - #43 [
-INFO  16:05:52,442 - #47 0
-INFO  16:05:52,442 - #44 ]
-INFO  16:05:52,443 - #40 .
-INFO  16:05:52,443 - #49 obj
-INFO  16:05:52,443 - #43 [
-INFO  16:05:52,443 - #47 0
-INFO  16:05:52,443 - #44 ]
-INFO  16:05:52,443 - #40 .
-INFO  16:05:52,443 - #49 obj
-INFO  16:05:52,443 - #43 [
-INFO  16:05:52,443 - #47 0
-INFO  16:05:52,443 - #44 ]
-INFO  16:05:52,443 - #40 .
-INFO  16:05:52,443 - #49 x
-INFO  16:05:52,443 - #43 [
-INFO  16:05:52,443 - #47 0
-INFO  16:05:52,443 - #44 ]
-INFO  16:05:52,443 - #34 =
-INFO  16:05:52,443 - #47 7
-INFO  16:05:52,443 - #37 ;
-INFO  16:05:52,443 - #49 o3arr
-INFO  16:05:52,443 - #43 [
-INFO  16:05:52,443 - #47 0
-INFO  16:05:52,443 - #44 ]
-INFO  16:05:52,443 - #40 .
-INFO  16:05:52,443 - #49 obj
-INFO  16:05:52,443 - #43 [
-INFO  16:05:52,443 - #47 0
-INFO  16:05:52,443 - #44 ]
-INFO  16:05:52,443 - #40 .
-INFO  16:05:52,443 - #49 obj
-INFO  16:05:52,444 - #43 [
-INFO  16:05:52,444 - #47 0
-INFO  16:05:52,444 - #44 ]
-INFO  16:05:52,444 - #40 .
-INFO  16:05:52,444 - #49 x
-INFO  16:05:52,444 - #43 [
-INFO  16:05:52,444 - #47 0
-INFO  16:05:52,444 - #44 ]
-INFO  16:05:52,444 - #35 ++
-INFO  16:05:52,444 - #37 ;
-INFO  16:05:52,444 - #11 print
-INFO  16:05:52,444 - #41 (
-INFO  16:05:52,444 - #49 o3arr
-INFO  16:05:52,444 - #43 [
-INFO  16:05:52,445 - #47 0
-INFO  16:05:52,445 - #44 ]
-INFO  16:05:52,445 - #40 .
-INFO  16:05:52,445 - #49 obj
-INFO  16:05:52,445 - #43 [
-INFO  16:05:52,445 - #47 0
-INFO  16:05:52,445 - #44 ]
-INFO  16:05:52,445 - #40 .
-INFO  16:05:52,445 - #49 obj
-INFO  16:05:52,445 - #43 [
-INFO  16:05:52,445 - #47 0
-INFO  16:05:52,445 - #44 ]
-INFO  16:05:52,445 - #40 .
-INFO  16:05:52,445 - #49 x
-INFO  16:05:52,445 - #43 [
-INFO  16:05:52,445 - #47 3
-INFO  16:05:52,445 - #44 ]
-INFO  16:05:52,445 - #42 )
-INFO  16:05:52,445 - #37 ;
-INFO  16:05:52,445 - #11 print
-INFO  16:05:52,445 - #41 (
-INFO  16:05:52,445 - #49 eol
-INFO  16:05:52,445 - #42 )
-INFO  16:05:52,445 - #37 ;
-INFO  16:05:52,445 - #46 }
-INFO  16:05:52,445 - #46 }
-INFO  16:05:52,472 - Program(
+INFO  14:50:46,911 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  14:50:46,950 - #2 program
+INFO  14:50:46,950 - #49 Test
+INFO  14:50:46,951 - #20 record
+INFO  14:50:46,952 - #49 r1
+INFO  14:50:46,952 - #45 {
+INFO  14:50:46,952 - #49 int
+INFO  14:50:46,953 - #49 x
+INFO  14:50:46,954 - #43 [
+INFO  14:50:46,954 - #44 ]
+INFO  14:50:46,954 - #37 ;
+INFO  14:50:46,954 - #49 int
+INFO  14:50:46,955 - #49 y
+INFO  14:50:46,955 - #37 ;
+INFO  14:50:46,955 - #46 }
+INFO  14:50:46,955 - #20 record
+INFO  14:50:46,956 - #49 r2
+INFO  14:50:46,956 - #45 {
+INFO  14:50:46,956 - #49 r1
+INFO  14:50:46,956 - #49 obj
+INFO  14:50:46,956 - #43 [
+INFO  14:50:46,956 - #44 ]
+INFO  14:50:46,956 - #37 ;
+INFO  14:50:46,958 - #46 }
+INFO  14:50:46,958 - #20 record
+INFO  14:50:46,958 - #49 r3
+INFO  14:50:46,958 - #45 {
+INFO  14:50:46,958 - #49 r2
+INFO  14:50:46,958 - #49 obj
+INFO  14:50:46,958 - #43 [
+INFO  14:50:46,958 - #44 ]
+INFO  14:50:46,958 - #37 ;
+INFO  14:50:46,958 - #46 }
+INFO  14:50:46,959 - #49 int
+INFO  14:50:46,959 - #49 a
+INFO  14:50:46,959 - #37 ;
+INFO  14:50:46,959 - #49 char
+INFO  14:50:46,960 - #49 b
+INFO  14:50:46,960 - #37 ;
+INFO  14:50:46,960 - #49 int
+INFO  14:50:46,960 - #49 c
+INFO  14:50:46,960 - #37 ;
+INFO  14:50:46,960 - #45 {
+INFO  14:50:46,960 - #14 void
+INFO  14:50:46,961 - #49 main
+INFO  14:50:46,961 - #41 (
+INFO  14:50:46,962 - #42 )
+INFO  14:50:46,962 - #49 r1
+INFO  14:50:46,962 - #49 o1
+INFO  14:50:46,962 - #37 ;
+INFO  14:50:46,962 - #49 r2
+INFO  14:50:46,962 - #49 o2
+INFO  14:50:46,962 - #37 ;
+INFO  14:50:46,962 - #49 r3
+INFO  14:50:46,962 - #49 o3
+INFO  14:50:46,962 - #37 ;
+INFO  14:50:46,962 - #49 r3
+INFO  14:50:46,962 - #49 o3arr
+INFO  14:50:46,962 - #43 [
+INFO  14:50:46,962 - #44 ]
+INFO  14:50:46,963 - #37 ;
+INFO  14:50:46,963 - #45 {
+INFO  14:50:46,963 - #49 o1
+INFO  14:50:46,963 - #34 =
+INFO  14:50:46,964 - #10 new
+INFO  14:50:46,966 - #49 r1
+INFO  14:50:46,966 - #37 ;
+INFO  14:50:46,968 - #49 o1
+INFO  14:50:46,968 - #40 .
+INFO  14:50:46,971 - #49 x
+INFO  14:50:46,971 - #34 =
+INFO  14:50:46,971 - #10 new
+INFO  14:50:46,971 - #49 int
+INFO  14:50:46,971 - #43 [
+INFO  14:50:46,971 - #47 1
+INFO  14:50:46,971 - #44 ]
+INFO  14:50:46,971 - #37 ;
+INFO  14:50:46,971 - #49 o1
+INFO  14:50:46,971 - #40 .
+INFO  14:50:46,971 - #49 x
+INFO  14:50:46,972 - #43 [
+INFO  14:50:46,972 - #47 0
+INFO  14:50:46,972 - #44 ]
+INFO  14:50:46,972 - #34 =
+INFO  14:50:46,972 - #47 0
+INFO  14:50:46,972 - #37 ;
+INFO  14:50:46,972 - #49 o1
+INFO  14:50:46,973 - #40 .
+INFO  14:50:46,973 - #49 x
+INFO  14:50:46,973 - #43 [
+INFO  14:50:46,973 - #47 0
+INFO  14:50:46,973 - #44 ]
+INFO  14:50:46,973 - #35 ++
+INFO  14:50:46,973 - #37 ;
+INFO  14:50:46,973 - #11 print
+INFO  14:50:46,973 - #41 (
+INFO  14:50:46,973 - #49 o1
+INFO  14:50:46,973 - #40 .
+INFO  14:50:46,973 - #49 x
+INFO  14:50:46,973 - #43 [
+INFO  14:50:46,973 - #47 0
+INFO  14:50:46,973 - #44 ]
+INFO  14:50:46,973 - #42 )
+INFO  14:50:46,973 - #37 ;
+INFO  14:50:46,974 - #11 print
+INFO  14:50:46,974 - #41 (
+INFO  14:50:46,974 - #49 eol
+INFO  14:50:46,974 - #42 )
+INFO  14:50:46,974 - #37 ;
+INFO  14:50:46,974 - #49 o1
+INFO  14:50:46,974 - #40 .
+INFO  14:50:46,974 - #49 y
+INFO  14:50:46,974 - #34 =
+INFO  14:50:46,974 - #47 1
+INFO  14:50:46,974 - #37 ;
+INFO  14:50:46,974 - #49 o1
+INFO  14:50:46,974 - #40 .
+INFO  14:50:46,974 - #49 y
+INFO  14:50:46,974 - #35 ++
+INFO  14:50:46,974 - #37 ;
+INFO  14:50:46,975 - #11 print
+INFO  14:50:46,975 - #41 (
+INFO  14:50:46,975 - #49 o1
+INFO  14:50:46,975 - #40 .
+INFO  14:50:46,975 - #49 y
+INFO  14:50:46,975 - #42 )
+INFO  14:50:46,975 - #37 ;
+INFO  14:50:46,975 - #11 print
+INFO  14:50:46,975 - #41 (
+INFO  14:50:46,975 - #49 eol
+INFO  14:50:46,975 - #42 )
+INFO  14:50:46,975 - #37 ;
+INFO  14:50:46,975 - #49 o2
+INFO  14:50:46,975 - #34 =
+INFO  14:50:46,975 - #10 new
+INFO  14:50:46,975 - #49 r2
+INFO  14:50:46,975 - #37 ;
+INFO  14:50:46,976 - #49 o2
+INFO  14:50:46,976 - #40 .
+INFO  14:50:46,976 - #49 obj
+INFO  14:50:46,976 - #34 =
+INFO  14:50:46,976 - #10 new
+INFO  14:50:46,976 - #49 r1
+INFO  14:50:46,976 - #43 [
+INFO  14:50:46,976 - #47 1
+INFO  14:50:46,976 - #44 ]
+INFO  14:50:46,976 - #37 ;
+INFO  14:50:46,977 - #49 o2
+INFO  14:50:46,977 - #40 .
+INFO  14:50:46,977 - #49 obj
+INFO  14:50:46,977 - #43 [
+INFO  14:50:46,977 - #47 0
+INFO  14:50:46,977 - #44 ]
+INFO  14:50:46,977 - #34 =
+INFO  14:50:46,977 - #10 new
+INFO  14:50:46,977 - #49 r1
+INFO  14:50:46,977 - #37 ;
+INFO  14:50:46,977 - #49 o2
+INFO  14:50:46,977 - #40 .
+INFO  14:50:46,977 - #49 obj
+INFO  14:50:46,977 - #43 [
+INFO  14:50:46,977 - #47 0
+INFO  14:50:46,977 - #44 ]
+INFO  14:50:46,977 - #40 .
+INFO  14:50:46,978 - #49 y
+INFO  14:50:46,978 - #34 =
+INFO  14:50:46,978 - #47 2
+INFO  14:50:46,978 - #37 ;
+INFO  14:50:46,978 - #49 o2
+INFO  14:50:46,978 - #40 .
+INFO  14:50:46,978 - #49 obj
+INFO  14:50:46,978 - #43 [
+INFO  14:50:46,978 - #47 0
+INFO  14:50:46,978 - #44 ]
+INFO  14:50:46,978 - #40 .
+INFO  14:50:46,978 - #49 y
+INFO  14:50:46,978 - #35 ++
+INFO  14:50:46,979 - #37 ;
+INFO  14:50:46,979 - #11 print
+INFO  14:50:46,979 - #41 (
+INFO  14:50:46,979 - #49 o2
+INFO  14:50:46,979 - #40 .
+INFO  14:50:46,979 - #49 obj
+INFO  14:50:46,979 - #43 [
+INFO  14:50:46,979 - #47 0
+INFO  14:50:46,979 - #44 ]
+INFO  14:50:46,979 - #40 .
+INFO  14:50:46,979 - #49 y
+INFO  14:50:46,979 - #42 )
+INFO  14:50:46,979 - #37 ;
+INFO  14:50:46,979 - #11 print
+INFO  14:50:46,979 - #41 (
+INFO  14:50:46,979 - #49 eol
+INFO  14:50:46,979 - #42 )
+INFO  14:50:46,979 - #37 ;
+INFO  14:50:46,979 - #49 o2
+INFO  14:50:46,979 - #40 .
+INFO  14:50:46,979 - #49 obj
+INFO  14:50:46,979 - #43 [
+INFO  14:50:46,979 - #47 0
+INFO  14:50:46,979 - #44 ]
+INFO  14:50:46,979 - #40 .
+INFO  14:50:46,979 - #49 x
+INFO  14:50:46,979 - #34 =
+INFO  14:50:46,980 - #10 new
+INFO  14:50:46,980 - #49 int
+INFO  14:50:46,980 - #43 [
+INFO  14:50:46,980 - #47 1
+INFO  14:50:46,980 - #44 ]
+INFO  14:50:46,980 - #37 ;
+INFO  14:50:46,980 - #49 o2
+INFO  14:50:46,980 - #40 .
+INFO  14:50:46,980 - #49 obj
+INFO  14:50:46,980 - #43 [
+INFO  14:50:46,980 - #47 0
+INFO  14:50:46,980 - #44 ]
+INFO  14:50:46,980 - #40 .
+INFO  14:50:46,980 - #49 x
+INFO  14:50:46,980 - #43 [
+INFO  14:50:46,980 - #47 0
+INFO  14:50:46,980 - #44 ]
+INFO  14:50:46,980 - #34 =
+INFO  14:50:46,980 - #47 3
+INFO  14:50:46,980 - #37 ;
+INFO  14:50:46,980 - #49 o3
+INFO  14:50:46,980 - #34 =
+INFO  14:50:46,980 - #10 new
+INFO  14:50:46,981 - #49 r3
+INFO  14:50:46,981 - #37 ;
+INFO  14:50:46,981 - #49 o3
+INFO  14:50:46,981 - #40 .
+INFO  14:50:46,981 - #49 obj
+INFO  14:50:46,981 - #34 =
+INFO  14:50:46,981 - #10 new
+INFO  14:50:46,981 - #49 r2
+INFO  14:50:46,981 - #43 [
+INFO  14:50:46,981 - #47 1
+INFO  14:50:46,981 - #44 ]
+INFO  14:50:46,981 - #37 ;
+INFO  14:50:46,981 - #49 o3
+INFO  14:50:46,981 - #40 .
+INFO  14:50:46,981 - #49 obj
+INFO  14:50:46,981 - #43 [
+INFO  14:50:46,981 - #47 0
+INFO  14:50:46,981 - #44 ]
+INFO  14:50:46,981 - #34 =
+INFO  14:50:46,981 - #10 new
+INFO  14:50:46,981 - #49 r2
+INFO  14:50:46,981 - #37 ;
+INFO  14:50:46,981 - #49 o3
+INFO  14:50:46,981 - #40 .
+INFO  14:50:46,981 - #49 obj
+INFO  14:50:46,981 - #43 [
+INFO  14:50:46,981 - #47 0
+INFO  14:50:46,981 - #44 ]
+INFO  14:50:46,982 - #40 .
+INFO  14:50:46,983 - #49 obj
+INFO  14:50:46,983 - #34 =
+INFO  14:50:46,983 - #10 new
+INFO  14:50:46,983 - #49 r1
+INFO  14:50:46,983 - #43 [
+INFO  14:50:46,983 - #47 1
+INFO  14:50:46,983 - #44 ]
+INFO  14:50:46,983 - #37 ;
+INFO  14:50:46,983 - #49 o3
+INFO  14:50:46,983 - #40 .
+INFO  14:50:46,983 - #49 obj
+INFO  14:50:46,983 - #43 [
+INFO  14:50:46,983 - #47 0
+INFO  14:50:46,983 - #44 ]
+INFO  14:50:46,983 - #40 .
+INFO  14:50:46,983 - #49 obj
+INFO  14:50:46,983 - #43 [
+INFO  14:50:46,983 - #47 0
+INFO  14:50:46,983 - #44 ]
+INFO  14:50:46,983 - #34 =
+INFO  14:50:46,984 - #10 new
+INFO  14:50:46,984 - #49 r1
+INFO  14:50:46,984 - #37 ;
+INFO  14:50:46,984 - #49 o3
+INFO  14:50:46,984 - #40 .
+INFO  14:50:46,984 - #49 obj
+INFO  14:50:46,984 - #43 [
+INFO  14:50:46,984 - #47 0
+INFO  14:50:46,984 - #44 ]
+INFO  14:50:46,984 - #40 .
+INFO  14:50:46,984 - #49 obj
+INFO  14:50:46,984 - #43 [
+INFO  14:50:46,984 - #47 0
+INFO  14:50:46,984 - #44 ]
+INFO  14:50:46,984 - #40 .
+INFO  14:50:46,984 - #49 y
+INFO  14:50:46,984 - #34 =
+INFO  14:50:46,984 - #47 4
+INFO  14:50:46,984 - #37 ;
+INFO  14:50:46,984 - #49 o3
+INFO  14:50:46,984 - #40 .
+INFO  14:50:46,984 - #49 obj
+INFO  14:50:46,984 - #43 [
+INFO  14:50:46,985 - #47 0
+INFO  14:50:46,985 - #44 ]
+INFO  14:50:46,985 - #40 .
+INFO  14:50:46,985 - #49 obj
+INFO  14:50:46,985 - #43 [
+INFO  14:50:46,985 - #47 0
+INFO  14:50:46,985 - #44 ]
+INFO  14:50:46,985 - #40 .
+INFO  14:50:46,985 - #49 y
+INFO  14:50:46,985 - #35 ++
+INFO  14:50:46,985 - #37 ;
+INFO  14:50:46,985 - #11 print
+INFO  14:50:46,985 - #41 (
+INFO  14:50:46,985 - #49 o3
+INFO  14:50:46,985 - #40 .
+INFO  14:50:46,985 - #49 obj
+INFO  14:50:46,985 - #43 [
+INFO  14:50:46,985 - #47 0
+INFO  14:50:46,985 - #44 ]
+INFO  14:50:46,985 - #40 .
+INFO  14:50:46,985 - #49 obj
+INFO  14:50:46,985 - #43 [
+INFO  14:50:46,985 - #47 0
+INFO  14:50:46,985 - #44 ]
+INFO  14:50:46,985 - #40 .
+INFO  14:50:46,985 - #49 y
+INFO  14:50:46,985 - #42 )
+INFO  14:50:46,985 - #37 ;
+INFO  14:50:46,986 - #11 print
+INFO  14:50:46,986 - #41 (
+INFO  14:50:46,986 - #49 eol
+INFO  14:50:46,986 - #42 )
+INFO  14:50:46,986 - #37 ;
+INFO  14:50:46,986 - #49 o3
+INFO  14:50:46,986 - #40 .
+INFO  14:50:46,986 - #49 obj
+INFO  14:50:46,986 - #43 [
+INFO  14:50:46,986 - #47 0
+INFO  14:50:46,986 - #44 ]
+INFO  14:50:46,986 - #40 .
+INFO  14:50:46,986 - #49 obj
+INFO  14:50:46,986 - #43 [
+INFO  14:50:46,986 - #47 0
+INFO  14:50:46,986 - #44 ]
+INFO  14:50:46,986 - #40 .
+INFO  14:50:46,986 - #49 x
+INFO  14:50:46,986 - #34 =
+INFO  14:50:46,986 - #10 new
+INFO  14:50:46,986 - #49 int
+INFO  14:50:46,986 - #43 [
+INFO  14:50:46,986 - #47 1
+INFO  14:50:46,986 - #44 ]
+INFO  14:50:46,986 - #37 ;
+INFO  14:50:46,986 - #49 o3
+INFO  14:50:46,987 - #40 .
+INFO  14:50:46,987 - #49 obj
+INFO  14:50:46,987 - #43 [
+INFO  14:50:46,987 - #47 0
+INFO  14:50:46,987 - #44 ]
+INFO  14:50:46,987 - #40 .
+INFO  14:50:46,987 - #49 obj
+INFO  14:50:46,987 - #43 [
+INFO  14:50:46,987 - #47 0
+INFO  14:50:46,987 - #44 ]
+INFO  14:50:46,987 - #40 .
+INFO  14:50:46,987 - #49 x
+INFO  14:50:46,987 - #43 [
+INFO  14:50:46,987 - #47 0
+INFO  14:50:46,987 - #44 ]
+INFO  14:50:46,987 - #34 =
+INFO  14:50:46,987 - #47 5
+INFO  14:50:46,987 - #37 ;
+INFO  14:50:46,987 - #49 o3
+INFO  14:50:46,987 - #40 .
+INFO  14:50:46,987 - #49 obj
+INFO  14:50:46,987 - #43 [
+INFO  14:50:46,987 - #47 0
+INFO  14:50:46,987 - #44 ]
+INFO  14:50:46,987 - #40 .
+INFO  14:50:46,987 - #49 obj
+INFO  14:50:46,987 - #43 [
+INFO  14:50:46,987 - #47 0
+INFO  14:50:46,987 - #44 ]
+INFO  14:50:46,987 - #40 .
+INFO  14:50:46,987 - #49 x
+INFO  14:50:46,988 - #43 [
+INFO  14:50:46,988 - #47 0
+INFO  14:50:46,988 - #44 ]
+INFO  14:50:46,988 - #35 ++
+INFO  14:50:46,988 - #37 ;
+INFO  14:50:46,988 - #11 print
+INFO  14:50:46,988 - #41 (
+INFO  14:50:46,988 - #49 o3
+INFO  14:50:46,988 - #40 .
+INFO  14:50:46,989 - #49 obj
+INFO  14:50:46,989 - #43 [
+INFO  14:50:46,989 - #47 0
+INFO  14:50:46,989 - #44 ]
+INFO  14:50:46,989 - #40 .
+INFO  14:50:46,989 - #49 obj
+INFO  14:50:46,989 - #43 [
+INFO  14:50:46,989 - #47 0
+INFO  14:50:46,989 - #44 ]
+INFO  14:50:46,989 - #40 .
+INFO  14:50:46,989 - #49 x
+INFO  14:50:46,989 - #43 [
+INFO  14:50:46,989 - #47 0
+INFO  14:50:46,989 - #44 ]
+INFO  14:50:46,989 - #42 )
+INFO  14:50:46,989 - #37 ;
+INFO  14:50:46,989 - #11 print
+INFO  14:50:46,989 - #41 (
+INFO  14:50:46,989 - #49 eol
+INFO  14:50:46,989 - #42 )
+INFO  14:50:46,989 - #37 ;
+INFO  14:50:46,989 - #49 o3arr
+INFO  14:50:46,989 - #34 =
+INFO  14:50:46,989 - #10 new
+INFO  14:50:46,989 - #49 r3
+INFO  14:50:46,989 - #43 [
+INFO  14:50:46,989 - #47 1
+INFO  14:50:46,989 - #44 ]
+INFO  14:50:46,989 - #37 ;
+INFO  14:50:46,989 - #49 o3arr
+INFO  14:50:46,989 - #43 [
+INFO  14:50:46,989 - #47 0
+INFO  14:50:46,989 - #44 ]
+INFO  14:50:46,989 - #34 =
+INFO  14:50:46,990 - #10 new
+INFO  14:50:46,990 - #49 r3
+INFO  14:50:46,990 - #37 ;
+INFO  14:50:46,990 - #49 o3arr
+INFO  14:50:46,990 - #43 [
+INFO  14:50:46,990 - #47 0
+INFO  14:50:46,990 - #44 ]
+INFO  14:50:46,990 - #40 .
+INFO  14:50:46,991 - #49 obj
+INFO  14:50:46,991 - #34 =
+INFO  14:50:46,991 - #10 new
+INFO  14:50:46,991 - #49 r2
+INFO  14:50:46,991 - #43 [
+INFO  14:50:46,991 - #47 1
+INFO  14:50:46,991 - #44 ]
+INFO  14:50:46,991 - #37 ;
+INFO  14:50:46,991 - #49 o3arr
+INFO  14:50:46,991 - #43 [
+INFO  14:50:46,991 - #47 0
+INFO  14:50:46,991 - #44 ]
+INFO  14:50:46,991 - #40 .
+INFO  14:50:46,991 - #49 obj
+INFO  14:50:46,991 - #43 [
+INFO  14:50:46,991 - #47 0
+INFO  14:50:46,991 - #44 ]
+INFO  14:50:46,991 - #34 =
+INFO  14:50:46,991 - #10 new
+INFO  14:50:46,991 - #49 r2
+INFO  14:50:46,991 - #37 ;
+INFO  14:50:46,991 - #49 o3arr
+INFO  14:50:46,991 - #43 [
+INFO  14:50:46,991 - #47 0
+INFO  14:50:46,991 - #44 ]
+INFO  14:50:46,991 - #40 .
+INFO  14:50:46,991 - #49 obj
+INFO  14:50:46,991 - #43 [
+INFO  14:50:46,991 - #47 0
+INFO  14:50:46,991 - #44 ]
+INFO  14:50:46,991 - #40 .
+INFO  14:50:46,991 - #49 obj
+INFO  14:50:46,992 - #34 =
+INFO  14:50:46,992 - #10 new
+INFO  14:50:46,992 - #49 r1
+INFO  14:50:46,992 - #43 [
+INFO  14:50:46,992 - #47 1
+INFO  14:50:46,992 - #44 ]
+INFO  14:50:46,992 - #37 ;
+INFO  14:50:46,992 - #49 o3arr
+INFO  14:50:46,992 - #43 [
+INFO  14:50:46,992 - #47 0
+INFO  14:50:46,992 - #44 ]
+INFO  14:50:46,992 - #40 .
+INFO  14:50:46,992 - #49 obj
+INFO  14:50:46,992 - #43 [
+INFO  14:50:46,992 - #47 0
+INFO  14:50:46,992 - #44 ]
+INFO  14:50:46,992 - #40 .
+INFO  14:50:46,992 - #49 obj
+INFO  14:50:46,992 - #43 [
+INFO  14:50:46,992 - #47 0
+INFO  14:50:46,992 - #44 ]
+INFO  14:50:46,992 - #34 =
+INFO  14:50:46,992 - #10 new
+INFO  14:50:46,992 - #49 r1
+INFO  14:50:46,992 - #37 ;
+INFO  14:50:46,992 - #49 o3arr
+INFO  14:50:46,992 - #43 [
+INFO  14:50:46,992 - #47 0
+INFO  14:50:46,992 - #44 ]
+INFO  14:50:46,993 - #40 .
+INFO  14:50:46,993 - #49 obj
+INFO  14:50:46,993 - #43 [
+INFO  14:50:46,993 - #47 0
+INFO  14:50:46,993 - #44 ]
+INFO  14:50:46,993 - #40 .
+INFO  14:50:46,993 - #49 obj
+INFO  14:50:46,993 - #43 [
+INFO  14:50:46,993 - #47 0
+INFO  14:50:46,993 - #44 ]
+INFO  14:50:46,993 - #40 .
+INFO  14:50:46,993 - #49 y
+INFO  14:50:46,993 - #34 =
+INFO  14:50:46,993 - #47 6
+INFO  14:50:46,993 - #37 ;
+INFO  14:50:46,993 - #49 o3arr
+INFO  14:50:46,994 - #43 [
+INFO  14:50:46,994 - #47 0
+INFO  14:50:46,994 - #44 ]
+INFO  14:50:46,994 - #40 .
+INFO  14:50:46,994 - #49 obj
+INFO  14:50:46,994 - #43 [
+INFO  14:50:46,994 - #47 0
+INFO  14:50:46,994 - #44 ]
+INFO  14:50:46,994 - #40 .
+INFO  14:50:46,994 - #49 obj
+INFO  14:50:46,994 - #43 [
+INFO  14:50:46,995 - #47 0
+INFO  14:50:46,995 - #44 ]
+INFO  14:50:46,995 - #40 .
+INFO  14:50:46,995 - #49 y
+INFO  14:50:46,995 - #35 ++
+INFO  14:50:46,995 - #37 ;
+INFO  14:50:46,995 - #11 print
+INFO  14:50:46,995 - #41 (
+INFO  14:50:46,995 - #49 o3arr
+INFO  14:50:46,995 - #43 [
+INFO  14:50:46,995 - #47 0
+INFO  14:50:46,995 - #44 ]
+INFO  14:50:46,995 - #40 .
+INFO  14:50:46,995 - #49 obj
+INFO  14:50:46,995 - #43 [
+INFO  14:50:46,995 - #47 0
+INFO  14:50:46,995 - #44 ]
+INFO  14:50:46,995 - #40 .
+INFO  14:50:46,995 - #49 obj
+INFO  14:50:46,996 - #43 [
+INFO  14:50:46,996 - #47 0
+INFO  14:50:46,996 - #44 ]
+INFO  14:50:46,996 - #40 .
+INFO  14:50:46,996 - #49 y
+INFO  14:50:46,996 - #42 )
+INFO  14:50:46,996 - #37 ;
+INFO  14:50:46,996 - #11 print
+INFO  14:50:46,996 - #41 (
+INFO  14:50:46,996 - #49 eol
+INFO  14:50:46,996 - #42 )
+INFO  14:50:46,996 - #37 ;
+INFO  14:50:46,996 - #49 o3arr
+INFO  14:50:46,996 - #43 [
+INFO  14:50:46,996 - #47 0
+INFO  14:50:46,996 - #44 ]
+INFO  14:50:46,996 - #40 .
+INFO  14:50:46,996 - #49 obj
+INFO  14:50:46,996 - #43 [
+INFO  14:50:46,996 - #47 0
+INFO  14:50:46,996 - #44 ]
+INFO  14:50:46,996 - #40 .
+INFO  14:50:46,996 - #49 obj
+INFO  14:50:46,996 - #43 [
+INFO  14:50:46,996 - #47 0
+INFO  14:50:46,996 - #44 ]
+INFO  14:50:46,996 - #40 .
+INFO  14:50:46,996 - #49 x
+INFO  14:50:46,997 - #34 =
+INFO  14:50:46,997 - #10 new
+INFO  14:50:46,997 - #49 int
+INFO  14:50:46,997 - #43 [
+INFO  14:50:46,997 - #47 1
+INFO  14:50:46,997 - #44 ]
+INFO  14:50:46,997 - #37 ;
+INFO  14:50:46,997 - #49 o3arr
+INFO  14:50:46,997 - #43 [
+INFO  14:50:46,997 - #47 0
+INFO  14:50:46,997 - #44 ]
+INFO  14:50:46,997 - #40 .
+INFO  14:50:46,997 - #49 obj
+INFO  14:50:46,997 - #43 [
+INFO  14:50:46,997 - #47 0
+INFO  14:50:46,997 - #44 ]
+INFO  14:50:46,997 - #40 .
+INFO  14:50:46,997 - #49 obj
+INFO  14:50:46,997 - #43 [
+INFO  14:50:46,997 - #47 0
+INFO  14:50:46,997 - #44 ]
+INFO  14:50:46,997 - #40 .
+INFO  14:50:46,997 - #49 x
+INFO  14:50:46,997 - #43 [
+INFO  14:50:46,997 - #47 0
+INFO  14:50:46,997 - #44 ]
+INFO  14:50:46,997 - #34 =
+INFO  14:50:46,997 - #47 7
+INFO  14:50:46,997 - #37 ;
+INFO  14:50:46,997 - #49 o3arr
+INFO  14:50:46,997 - #43 [
+INFO  14:50:46,997 - #47 0
+INFO  14:50:46,997 - #44 ]
+INFO  14:50:46,997 - #40 .
+INFO  14:50:46,997 - #49 obj
+INFO  14:50:46,998 - #43 [
+INFO  14:50:46,998 - #47 0
+INFO  14:50:46,998 - #44 ]
+INFO  14:50:46,998 - #40 .
+INFO  14:50:46,998 - #49 obj
+INFO  14:50:46,998 - #43 [
+INFO  14:50:46,998 - #47 0
+INFO  14:50:46,998 - #44 ]
+INFO  14:50:46,998 - #40 .
+INFO  14:50:46,998 - #49 x
+INFO  14:50:46,998 - #43 [
+INFO  14:50:46,998 - #47 0
+INFO  14:50:46,998 - #44 ]
+INFO  14:50:46,998 - #35 ++
+INFO  14:50:46,998 - #37 ;
+INFO  14:50:46,998 - #11 print
+INFO  14:50:46,998 - #41 (
+INFO  14:50:46,998 - #49 o3arr
+INFO  14:50:46,998 - #43 [
+INFO  14:50:46,998 - #47 0
+INFO  14:50:46,998 - #44 ]
+INFO  14:50:46,998 - #40 .
+INFO  14:50:46,998 - #49 obj
+INFO  14:50:46,998 - #43 [
+INFO  14:50:46,998 - #47 0
+INFO  14:50:46,998 - #44 ]
+INFO  14:50:46,998 - #40 .
+INFO  14:50:46,998 - #49 obj
+INFO  14:50:46,998 - #43 [
+INFO  14:50:46,998 - #47 0
+INFO  14:50:46,998 - #44 ]
+INFO  14:50:46,998 - #40 .
+INFO  14:50:46,999 - #49 x
+INFO  14:50:46,999 - #42 )
+INFO  14:50:46,999 - #37 ;
+INFO  14:50:46,999 - #11 print
+INFO  14:50:46,999 - #41 (
+INFO  14:50:46,999 - #49 eol
+INFO  14:50:46,999 - #42 )
+INFO  14:50:46,999 - #37 ;
+INFO  14:50:46,999 - #46 }
+INFO  14:50:46,999 - #46 }
+INFO  14:50:47,024 - Program(
   ProgramName(
    Test
   ) [ProgramName]
@@ -4049,7 +3285,7 @@ INFO  16:05:52,472 - Program(
                             ) [NoMoreExpr]
                           ) [Expr]
                         ) [DesignatorMoreElem]
-                        DesigMoreDotArrList(
+                        DesigMoreDotList(
                           DesigMoreDotArrList(
                             DesigMoreDotArr(
                               DesignatorArrName(
@@ -4086,23 +3322,8 @@ INFO  16:05:52,472 - Program(
                               ) [NoMoreExpr]
                             ) [Expr]
                           ) [DesigMoreDotArrList]
-                          DesignatorArrName(
-                           x
-                          ) [DesignatorArrName]
-                          Expr(
-                            SingleTerm(
-                              FactorWrapper(
-                                NoUnary(
-                                ) [NoUnary]
-                                Num(
-                                 3
-                                ) [Num]
-                              ) [FactorWrapper]
-                            ) [SingleTerm]
-                            NoMoreExpr(
-                            ) [NoMoreExpr]
-                          ) [Expr]
-                        ) [DesigMoreDotArrList]
+                         x
+                        ) [DesigMoreDotList]
                       ) [DesignatorArrWithMore]
                     ) [NormalFactor]
                   ) [FactorWrapper]
@@ -4136,7 +3357,105 @@ INFO  16:05:52,472 - Program(
     ) [MethDeclNoParams]
   ) [MethodDeclarations]
 ) [Program]
-INFO  16:05:52,480 - ===================================
-INFO  16:05:52,482 -  Program count calls = 1
-INFO  16:05:52,495 - ===================================
-INFO  16:05:52,496 - Parsiranje uspesno zavrseno!
+INFO  14:50:47,032 - ===================================
+INFO  14:50:47,034 -  Program count calls = 1
+ERROR 14:50:47,051 - (DesigMoreDotList) Variable 'y' not found in the record in line 28.
+ERROR 14:50:47,051 - (DesStmAssign) Error with assignement to variable 'noObj' in line 28.
+ERROR 14:50:47,051 - (DesigMoreDotList) Variable 'y' not found in the record in line 29.
+ERROR 14:50:47,051 - (DesStmInc) Left hand variable, 'noObj', of increment is of wrong type in line 29.
+ERROR 14:50:47,051 - (DesigMoreDotList) Variable 'y' not found in the record in line 30.
+ERROR 14:50:47,051 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+ERROR 14:50:47,051 - (DesigMoreDotList) Variable 'x' not found in the record in line 32.
+ERROR 14:50:47,051 - (DesStmAssign) Error with assignement to variable 'noObj' in line 32.
+INFO  14:50:47,051 - noObj in line 33.
+ERROR 14:50:47,051 - (DesignatorArrName) Array 'x' not defined, in line 33.
+ERROR 14:50:47,051 - (DesigMoreDotList) Variable 'x' not found in the record in line 33.
+ERROR 14:50:47,052 - (DesStmAssign) Error with assignement to variable 'noObj' in line 33.
+ERROR 14:50:47,052 - (DesStmAssign) Error with assignement to variable 'obj' in line 38.
+INFO  14:50:47,052 - noObj in line 39.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'obj' not defined, in line 39.
+ERROR 14:50:47,052 - (DesStmAssign) Error with assignement to variable 'obj[$]' in line 39.
+INFO  14:50:47,052 - noObj in line 40.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'obj' not defined, in line 40.
+ERROR 14:50:47,052 - (DesigMoreDotList) Variable 'y' not found in the record in line 40.
+ERROR 14:50:47,052 - (DesStmAssign) Error with assignement to variable 'noObj' in line 40.
+INFO  14:50:47,052 - noObj in line 41.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'obj' not defined, in line 41.
+ERROR 14:50:47,052 - (DesigMoreDotList) Variable 'y' not found in the record in line 41.
+ERROR 14:50:47,052 - (DesStmInc) Left hand variable, 'noObj', of increment is of wrong type in line 41.
+INFO  14:50:47,052 - noObj in line 42.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'obj' not defined, in line 42.
+ERROR 14:50:47,052 - (DesigMoreDotList) Variable 'y' not found in the record in line 42.
+ERROR 14:50:47,052 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+INFO  14:50:47,052 - noObj in line 44.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'obj' not defined, in line 44.
+ERROR 14:50:47,052 - (DesigMoreDotList) Variable 'x' not found in the record in line 44.
+ERROR 14:50:47,052 - (DesStmAssign) Error with assignement to variable 'noObj' in line 44.
+INFO  14:50:47,052 - noObj in line 45.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'obj' not defined, in line 45.
+INFO  14:50:47,052 - noObj in line 45.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'x' not defined, in line 45.
+ERROR 14:50:47,052 - (DesigMoreDotList) Variable 'x' not found in the record in line 45.
+ERROR 14:50:47,052 - (DesStmAssign) Error with assignement to variable 'noObj' in line 45.
+INFO  14:50:47,052 - noObj in line 46.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'obj' not defined, in line 46.
+INFO  14:50:47,052 - noObj in line 46.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'x' not defined, in line 46.
+ERROR 14:50:47,052 - (DesigMoreDotList) Variable 'x' not found in the record in line 46.
+ERROR 14:50:47,052 - (DesStmInc) Left hand variable, 'noObj', of increment is of wrong type in line 46.
+INFO  14:50:47,052 - noObj in line 47.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'obj' not defined, in line 47.
+INFO  14:50:47,052 - noObj in line 47.
+ERROR 14:50:47,052 - (DesignatorArrName) Array 'x' not defined, in line 47.
+ERROR 14:50:47,052 - (DesigMoreDotList) Variable 'x' not found in the record in line 47.
+ERROR 14:50:47,052 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+INFO  14:50:47,052 - o3arr in line 53.
+INFO  14:50:47,053 - o3arr in line 54.
+INFO  14:50:47,053 - o3arr in line 55.
+INFO  14:50:47,053 - o3arr in line 56.
+ERROR 14:50:47,053 - (DesStmAssign) Error with assignement to variable 'obj' in line 56.
+INFO  14:50:47,053 - o3arr in line 57.
+INFO  14:50:47,053 - noObj in line 57.
+ERROR 14:50:47,053 - (DesignatorArrName) Array 'obj' not defined, in line 57.
+ERROR 14:50:47,053 - (DesStmAssign) Error with assignement to variable 'obj[$]' in line 57.
+INFO  14:50:47,053 - o3arr in line 58.
+INFO  14:50:47,053 - noObj in line 58.
+ERROR 14:50:47,053 - (DesignatorArrName) Array 'obj' not defined, in line 58.
+ERROR 14:50:47,053 - (DesigMoreDotList) Variable 'y' not found in the record in line 58.
+ERROR 14:50:47,053 - (DesStmAssign) Error with assignement to variable 'noObj' in line 58.
+INFO  14:50:47,053 - o3arr in line 59.
+INFO  14:50:47,053 - noObj in line 59.
+ERROR 14:50:47,053 - (DesignatorArrName) Array 'obj' not defined, in line 59.
+ERROR 14:50:47,053 - (DesigMoreDotList) Variable 'y' not found in the record in line 59.
+ERROR 14:50:47,053 - (DesStmInc) Left hand variable, 'noObj', of increment is of wrong type in line 59.
+INFO  14:50:47,053 - o3arr in line 60.
+INFO  14:50:47,053 - noObj in line 60.
+ERROR 14:50:47,053 - (DesignatorArrName) Array 'obj' not defined, in line 60.
+ERROR 14:50:47,053 - (DesigMoreDotList) Variable 'y' not found in the record in line 60.
+ERROR 14:50:47,054 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+INFO  14:50:47,054 - o3arr in line 62.
+INFO  14:50:47,054 - noObj in line 62.
+ERROR 14:50:47,054 - (DesignatorArrName) Array 'obj' not defined, in line 62.
+ERROR 14:50:47,054 - (DesigMoreDotList) Variable 'x' not found in the record in line 62.
+ERROR 14:50:47,054 - (DesStmAssign) Error with assignement to variable 'noObj' in line 62.
+INFO  14:50:47,054 - o3arr in line 63.
+INFO  14:50:47,054 - noObj in line 63.
+ERROR 14:50:47,054 - (DesignatorArrName) Array 'obj' not defined, in line 63.
+INFO  14:50:47,054 - noObj in line 63.
+ERROR 14:50:47,054 - (DesignatorArrName) Array 'x' not defined, in line 63.
+ERROR 14:50:47,054 - (DesigMoreDotList) Variable 'x' not found in the record in line 63.
+ERROR 14:50:47,054 - (DesStmAssign) Error with assignement to variable 'noObj' in line 63.
+INFO  14:50:47,054 - o3arr in line 64.
+INFO  14:50:47,054 - noObj in line 64.
+ERROR 14:50:47,054 - (DesignatorArrName) Array 'obj' not defined, in line 64.
+INFO  14:50:47,054 - noObj in line 64.
+ERROR 14:50:47,054 - (DesignatorArrName) Array 'x' not defined, in line 64.
+ERROR 14:50:47,054 - (DesigMoreDotList) Variable 'x' not found in the record in line 64.
+ERROR 14:50:47,054 - (DesStmInc) Left hand variable, 'noObj', of increment is of wrong type in line 64.
+INFO  14:50:47,054 - o3arr in line 65.
+INFO  14:50:47,054 - noObj in line 65.
+ERROR 14:50:47,054 - (DesignatorArrName) Array 'obj' not defined, in line 65.
+ERROR 14:50:47,054 - (DesigMoreDotList) Variable 'x' not found in the record in line 65.
+ERROR 14:50:47,054 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+INFO  14:50:47,054 - ===================================
+ERROR 14:50:47,055 - Parsiranje NIJE uspesno zavrseno!

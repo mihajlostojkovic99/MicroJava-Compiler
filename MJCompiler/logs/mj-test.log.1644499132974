@@ -1,0 +1,633 @@
+INFO  00:16:09,060 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  00:16:09,099 - #2 program
+INFO  00:16:09,099 - #49 Test
+INFO  00:16:09,099 - #20 record
+INFO  00:16:09,100 - #49 r1
+INFO  00:16:09,100 - #45 {
+INFO  00:16:09,101 - #49 int
+INFO  00:16:09,101 - #49 x
+INFO  00:16:09,102 - #43 [
+INFO  00:16:09,102 - #44 ]
+INFO  00:16:09,102 - #37 ;
+INFO  00:16:09,102 - #49 int
+INFO  00:16:09,103 - #49 y
+INFO  00:16:09,103 - #37 ;
+INFO  00:16:09,103 - #46 }
+INFO  00:16:09,103 - #20 record
+INFO  00:16:09,104 - #49 r2
+INFO  00:16:09,104 - #45 {
+INFO  00:16:09,104 - #49 r1
+INFO  00:16:09,104 - #49 obj
+INFO  00:16:09,104 - #43 [
+INFO  00:16:09,104 - #44 ]
+INFO  00:16:09,104 - #37 ;
+INFO  00:16:09,105 - #46 }
+INFO  00:16:09,105 - #20 record
+INFO  00:16:09,105 - #49 r3
+INFO  00:16:09,106 - #45 {
+INFO  00:16:09,106 - #49 r2
+INFO  00:16:09,106 - #49 obj
+INFO  00:16:09,106 - #43 [
+INFO  00:16:09,106 - #44 ]
+INFO  00:16:09,106 - #37 ;
+INFO  00:16:09,106 - #46 }
+INFO  00:16:09,106 - #20 record
+INFO  00:16:09,106 - #49 r4
+INFO  00:16:09,106 - #45 {
+INFO  00:16:09,106 - #49 int
+INFO  00:16:09,106 - #49 a
+INFO  00:16:09,106 - #43 [
+INFO  00:16:09,106 - #44 ]
+INFO  00:16:09,106 - #37 ;
+INFO  00:16:09,106 - #49 int
+INFO  00:16:09,107 - #49 y
+INFO  00:16:09,107 - #37 ;
+INFO  00:16:09,107 - #46 }
+INFO  00:16:09,107 - #49 int
+INFO  00:16:09,107 - #49 a
+INFO  00:16:09,107 - #43 [
+INFO  00:16:09,107 - #44 ]
+INFO  00:16:09,107 - #37 ;
+INFO  00:16:09,107 - #49 char
+INFO  00:16:09,107 - #49 b
+INFO  00:16:09,107 - #37 ;
+INFO  00:16:09,107 - #49 int
+INFO  00:16:09,107 - #49 c
+INFO  00:16:09,107 - #37 ;
+INFO  00:16:09,108 - #45 {
+INFO  00:16:09,108 - #14 void
+INFO  00:16:09,108 - #49 main
+INFO  00:16:09,109 - #41 (
+INFO  00:16:09,109 - #42 )
+INFO  00:16:09,109 - #49 r1
+INFO  00:16:09,109 - #49 o1
+INFO  00:16:09,109 - #37 ;
+INFO  00:16:09,109 - #49 r2
+INFO  00:16:09,109 - #49 o2
+INFO  00:16:09,109 - #37 ;
+INFO  00:16:09,109 - #49 r3
+INFO  00:16:09,110 - #49 o3
+INFO  00:16:09,110 - #37 ;
+INFO  00:16:09,110 - #49 r3
+INFO  00:16:09,110 - #49 o3arr
+INFO  00:16:09,110 - #43 [
+INFO  00:16:09,110 - #44 ]
+INFO  00:16:09,110 - #37 ;
+INFO  00:16:09,110 - #45 {
+INFO  00:16:09,110 - #49 o1
+INFO  00:16:09,110 - #34 =
+INFO  00:16:09,111 - #10 new
+INFO  00:16:09,112 - #49 r1
+INFO  00:16:09,112 - #37 ;
+INFO  00:16:09,113 - #49 o1
+INFO  00:16:09,114 - #40 .
+INFO  00:16:09,114 - #49 x
+INFO  00:16:09,114 - #34 =
+INFO  00:16:09,114 - #10 new
+INFO  00:16:09,115 - #49 int
+INFO  00:16:09,115 - #43 [
+INFO  00:16:09,115 - #47 1
+INFO  00:16:09,115 - #44 ]
+INFO  00:16:09,115 - #37 ;
+INFO  00:16:09,115 - #49 o1
+INFO  00:16:09,115 - #40 .
+INFO  00:16:09,115 - #49 x
+INFO  00:16:09,115 - #43 [
+INFO  00:16:09,116 - #47 0
+INFO  00:16:09,116 - #44 ]
+INFO  00:16:09,116 - #34 =
+INFO  00:16:09,116 - #47 2
+INFO  00:16:09,116 - #37 ;
+INFO  00:16:09,116 - #46 }
+INFO  00:16:09,116 - #14 void
+INFO  00:16:09,116 - #49 proba
+INFO  00:16:09,116 - #41 (
+INFO  00:16:09,117 - #42 )
+INFO  00:16:09,117 - #49 r4
+INFO  00:16:09,117 - #49 y
+INFO  00:16:09,117 - #37 ;
+INFO  00:16:09,117 - #45 {
+INFO  00:16:09,117 - #49 y
+INFO  00:16:09,117 - #34 =
+INFO  00:16:09,117 - #10 new
+INFO  00:16:09,117 - #49 r4
+INFO  00:16:09,117 - #37 ;
+INFO  00:16:09,117 - #49 y
+INFO  00:16:09,117 - #40 .
+INFO  00:16:09,117 - #49 a
+INFO  00:16:09,117 - #34 =
+INFO  00:16:09,117 - #10 new
+INFO  00:16:09,117 - #49 int
+INFO  00:16:09,117 - #43 [
+INFO  00:16:09,117 - #47 3
+INFO  00:16:09,117 - #44 ]
+INFO  00:16:09,117 - #37 ;
+INFO  00:16:09,117 - #49 y
+INFO  00:16:09,117 - #40 .
+INFO  00:16:09,118 - #49 a
+INFO  00:16:09,118 - #43 [
+INFO  00:16:09,118 - #47 0
+INFO  00:16:09,118 - #44 ]
+INFO  00:16:09,118 - #34 =
+INFO  00:16:09,118 - #47 2
+INFO  00:16:09,118 - #37 ;
+INFO  00:16:09,120 - #46 }
+INFO  00:16:09,120 - #46 }
+INFO  00:16:09,122 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListVar(
+      ListVar(
+        ListRecord(
+          ListRecord(
+            ListRecord(
+              ListRecord(
+                NoList(
+                ) [NoList]
+                RecordDecl(
+                  RecordDeclName(
+                   r1
+                  ) [RecordDeclName]
+                  IsListVarDeclWrapper(
+                    IsListVarDeclWrapper(
+                      NoListVarDeclWrapper(
+                      ) [NoListVarDeclWrapper]
+                      VarDeclWrapper(
+                        Type(
+                         int
+                        ) [Type]
+                        SingleVarDecl(
+                          ArrayVarDecl(
+                           x
+                          ) [ArrayVarDecl]
+                        ) [SingleVarDecl]
+                      ) [VarDeclWrapper]
+                    ) [IsListVarDeclWrapper]
+                    VarDeclWrapper(
+                      Type(
+                       int
+                      ) [Type]
+                      SingleVarDecl(
+                        NormalVarDecl(
+                         y
+                        ) [NormalVarDecl]
+                      ) [SingleVarDecl]
+                    ) [VarDeclWrapper]
+                  ) [IsListVarDeclWrapper]
+                ) [RecordDecl]
+              ) [ListRecord]
+              RecordDecl(
+                RecordDeclName(
+                 r2
+                ) [RecordDeclName]
+                IsListVarDeclWrapper(
+                  NoListVarDeclWrapper(
+                  ) [NoListVarDeclWrapper]
+                  VarDeclWrapper(
+                    Type(
+                     r1
+                    ) [Type]
+                    SingleVarDecl(
+                      ArrayVarDecl(
+                       obj
+                      ) [ArrayVarDecl]
+                    ) [SingleVarDecl]
+                  ) [VarDeclWrapper]
+                ) [IsListVarDeclWrapper]
+              ) [RecordDecl]
+            ) [ListRecord]
+            RecordDecl(
+              RecordDeclName(
+               r3
+              ) [RecordDeclName]
+              IsListVarDeclWrapper(
+                NoListVarDeclWrapper(
+                ) [NoListVarDeclWrapper]
+                VarDeclWrapper(
+                  Type(
+                   r2
+                  ) [Type]
+                  SingleVarDecl(
+                    ArrayVarDecl(
+                     obj
+                    ) [ArrayVarDecl]
+                  ) [SingleVarDecl]
+                ) [VarDeclWrapper]
+              ) [IsListVarDeclWrapper]
+            ) [RecordDecl]
+          ) [ListRecord]
+          RecordDecl(
+            RecordDeclName(
+             r4
+            ) [RecordDeclName]
+            IsListVarDeclWrapper(
+              IsListVarDeclWrapper(
+                NoListVarDeclWrapper(
+                ) [NoListVarDeclWrapper]
+                VarDeclWrapper(
+                  Type(
+                   int
+                  ) [Type]
+                  SingleVarDecl(
+                    ArrayVarDecl(
+                     a
+                    ) [ArrayVarDecl]
+                  ) [SingleVarDecl]
+                ) [VarDeclWrapper]
+              ) [IsListVarDeclWrapper]
+              VarDeclWrapper(
+                Type(
+                 int
+                ) [Type]
+                SingleVarDecl(
+                  NormalVarDecl(
+                   y
+                  ) [NormalVarDecl]
+                ) [SingleVarDecl]
+              ) [VarDeclWrapper]
+            ) [IsListVarDeclWrapper]
+          ) [RecordDecl]
+        ) [ListRecord]
+        VarDeclWrapper(
+          Type(
+           int
+          ) [Type]
+          SingleVarDecl(
+            ArrayVarDecl(
+             a
+            ) [ArrayVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [ListVar]
+      VarDeclWrapper(
+        Type(
+         char
+        ) [Type]
+        SingleVarDecl(
+          NormalVarDecl(
+           b
+          ) [NormalVarDecl]
+        ) [SingleVarDecl]
+      ) [VarDeclWrapper]
+    ) [ListVar]
+    VarDeclWrapper(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         c
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapper]
+  ) [ListVar]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethDeclNoParams(
+        MethodRetVoid(
+        ) [MethodRetVoid]
+        MethodName(
+         main
+        ) [MethodName]
+        IsListVarDeclWrapper(
+          IsListVarDeclWrapper(
+            IsListVarDeclWrapper(
+              IsListVarDeclWrapper(
+                NoListVarDeclWrapper(
+                ) [NoListVarDeclWrapper]
+                VarDeclWrapper(
+                  Type(
+                   r1
+                  ) [Type]
+                  SingleVarDecl(
+                    NormalVarDecl(
+                     o1
+                    ) [NormalVarDecl]
+                  ) [SingleVarDecl]
+                ) [VarDeclWrapper]
+              ) [IsListVarDeclWrapper]
+              VarDeclWrapper(
+                Type(
+                 r2
+                ) [Type]
+                SingleVarDecl(
+                  NormalVarDecl(
+                   o2
+                  ) [NormalVarDecl]
+                ) [SingleVarDecl]
+              ) [VarDeclWrapper]
+            ) [IsListVarDeclWrapper]
+            VarDeclWrapper(
+              Type(
+               r3
+              ) [Type]
+              SingleVarDecl(
+                NormalVarDecl(
+                 o3
+                ) [NormalVarDecl]
+              ) [SingleVarDecl]
+            ) [VarDeclWrapper]
+          ) [IsListVarDeclWrapper]
+          VarDeclWrapper(
+            Type(
+             r3
+            ) [Type]
+            SingleVarDecl(
+              ArrayVarDecl(
+               o3arr
+              ) [ArrayVarDecl]
+            ) [SingleVarDecl]
+          ) [VarDeclWrapper]
+        ) [IsListVarDeclWrapper]
+        StatementListExists(
+          StatementListExists(
+            StatementListExists(
+              NoStatementList(
+              ) [NoStatementList]
+              StatementWithSingleStatement(
+                DesignatorSingleStatement(
+                  DesStmAssign(
+                    DesignatorSimple(
+                     o1
+                    ) [DesignatorSimple]
+                    AssignWrap(
+                      Assignop(
+                      ) [Assignop]
+                      Expr(
+                        SingleTerm(
+                          FactorWrapper(
+                            NoUnary(
+                            ) [NoUnary]
+                            NewFactor(
+                              Type(
+                               r1
+                              ) [Type]
+                            ) [NewFactor]
+                          ) [FactorWrapper]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [Expr]
+                    ) [AssignWrap]
+                  ) [DesStmAssign]
+                ) [DesignatorSingleStatement]
+              ) [StatementWithSingleStatement]
+            ) [StatementListExists]
+            StatementWithSingleStatement(
+              DesignatorSingleStatement(
+                DesStmAssign(
+                  DesignatorWithMore(
+                    DesignatorWithMoreName(
+                     o1
+                    ) [DesignatorWithMoreName]
+                    DesigMoreDot(
+                     x
+                    ) [DesigMoreDot]
+                  ) [DesignatorWithMore]
+                  AssignWrap(
+                    Assignop(
+                    ) [Assignop]
+                    Expr(
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          NewFactorWithPars(
+                            Type(
+                             int
+                            ) [Type]
+                            Expr(
+                              SingleTerm(
+                                FactorWrapper(
+                                  NoUnary(
+                                  ) [NoUnary]
+                                  Num(
+                                   1
+                                  ) [Num]
+                                ) [FactorWrapper]
+                              ) [SingleTerm]
+                              NoMoreExpr(
+                              ) [NoMoreExpr]
+                            ) [Expr]
+                          ) [NewFactorWithPars]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [Expr]
+                  ) [AssignWrap]
+                ) [DesStmAssign]
+              ) [DesignatorSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            DesignatorSingleStatement(
+              DesStmAssign(
+                DesignatorWithMore(
+                  DesignatorWithMoreName(
+                   o1
+                  ) [DesignatorWithMoreName]
+                  DesigMoreDotArr(
+                    DesignatorArrName(
+                     x
+                    ) [DesignatorArrName]
+                    Expr(
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          Num(
+                           0
+                          ) [Num]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [Expr]
+                  ) [DesigMoreDotArr]
+                ) [DesignatorWithMore]
+                AssignWrap(
+                  Assignop(
+                  ) [Assignop]
+                  Expr(
+                    SingleTerm(
+                      FactorWrapper(
+                        NoUnary(
+                        ) [NoUnary]
+                        Num(
+                         2
+                        ) [Num]
+                      ) [FactorWrapper]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [Expr]
+                ) [AssignWrap]
+              ) [DesStmAssign]
+            ) [DesignatorSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+      ) [MethDeclNoParams]
+    ) [MethodDeclarations]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       proba
+      ) [MethodName]
+      IsListVarDeclWrapper(
+        NoListVarDeclWrapper(
+        ) [NoListVarDeclWrapper]
+        VarDeclWrapper(
+          Type(
+           r4
+          ) [Type]
+          SingleVarDecl(
+            NormalVarDecl(
+             y
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [IsListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          StatementListExists(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementWithSingleStatement(
+              DesignatorSingleStatement(
+                DesStmAssign(
+                  DesignatorSimple(
+                   y
+                  ) [DesignatorSimple]
+                  AssignWrap(
+                    Assignop(
+                    ) [Assignop]
+                    Expr(
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          NewFactor(
+                            Type(
+                             r4
+                            ) [Type]
+                          ) [NewFactor]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [Expr]
+                  ) [AssignWrap]
+                ) [DesStmAssign]
+              ) [DesignatorSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            DesignatorSingleStatement(
+              DesStmAssign(
+                DesignatorWithMore(
+                  DesignatorWithMoreName(
+                   y
+                  ) [DesignatorWithMoreName]
+                  DesigMoreDot(
+                   a
+                  ) [DesigMoreDot]
+                ) [DesignatorWithMore]
+                AssignWrap(
+                  Assignop(
+                  ) [Assignop]
+                  Expr(
+                    SingleTerm(
+                      FactorWrapper(
+                        NoUnary(
+                        ) [NoUnary]
+                        NewFactorWithPars(
+                          Type(
+                           int
+                          ) [Type]
+                          Expr(
+                            SingleTerm(
+                              FactorWrapper(
+                                NoUnary(
+                                ) [NoUnary]
+                                Num(
+                                 3
+                                ) [Num]
+                              ) [FactorWrapper]
+                            ) [SingleTerm]
+                            NoMoreExpr(
+                            ) [NoMoreExpr]
+                          ) [Expr]
+                        ) [NewFactorWithPars]
+                      ) [FactorWrapper]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [Expr]
+                ) [AssignWrap]
+              ) [DesStmAssign]
+            ) [DesignatorSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          DesignatorSingleStatement(
+            DesStmAssign(
+              DesignatorWithMore(
+                DesignatorWithMoreName(
+                 y
+                ) [DesignatorWithMoreName]
+                DesigMoreDotArr(
+                  DesignatorArrName(
+                   a
+                  ) [DesignatorArrName]
+                  Expr(
+                    SingleTerm(
+                      FactorWrapper(
+                        NoUnary(
+                        ) [NoUnary]
+                        Num(
+                         0
+                        ) [Num]
+                      ) [FactorWrapper]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [Expr]
+                ) [DesigMoreDotArr]
+              ) [DesignatorWithMore]
+              AssignWrap(
+                Assignop(
+                ) [Assignop]
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Num(
+                       2
+                      ) [Num]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [AssignWrap]
+            ) [DesStmAssign]
+          ) [DesignatorSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  00:16:09,123 - ===================================
+INFO  00:16:09,125 -  Program count calls = 1
+INFO  00:16:09,135 - noObj in line 17.
+ERROR 00:16:09,136 - (DesignatorArrName) Array 'x' not defined, in line 17.
+INFO  00:16:09,136 - a in line 24.
+INFO  00:16:09,136 - ===================================
+ERROR 00:16:09,136 - Parsiranje NIJE uspesno zavrseno!

@@ -3,9 +3,8 @@ program Test
 record r1 { int x[]; int y;} 
 record r2 { r1 obj[];} 
 record r3 { r2 obj[];} 
-record r4 { int a[]; int y;} 
 
-int a[];
+int a;
 char b;
 int c;
 { 
@@ -14,16 +13,57 @@ int c;
 		
 		o1 = new r1; 
 		o1.x = new int[1];
-		o1.x[0] = 2;
+		o1.x[0] = 0; 
+		o1.x[0]++; 
+		print(o1.x[0]); 
+		print(eol);
+		o1.y = 1;
+		o1.y++; 
+		print(o1.y);
+		print(eol);
+		 
+		o2 = new r2; 
+		o2.obj = new r1[1]; 
+		o2.obj[0] = new r1; 
+		o2.obj[0].y = 2; 
+		o2.obj[0].y++; 
+		print(o2.obj[0].y); 
+		print(eol); 
+		o2.obj[0].x = new int[1]; 
+		o2.obj[0].x[0] = 3;
+		 
+		o3 = new r3; 
+		o3.obj = new r2[1]; 
+		o3.obj[0] = new r2; 
+		o3.obj[0].obj = new r1[1]; 
+		o3.obj[0].obj[0] = new r1; 
+		o3.obj[0].obj[0].y = 4; 
+		o3.obj[0].obj[0].y++; 
+		print(o3.obj[0].obj[0].y); 
+		print(eol); 
+		o3.obj[0].obj[0].x = new int[1]; 
+		o3.obj[0].obj[0].x[0] = 5; 
+		o3.obj[0].obj[0].x[0]++; 
+		print(o3.obj[0].obj[0].x[0]); 
+		print(eol); 
+		
+		
+		o3arr = new r3 [1]; 
+		
+		o3arr[0] = new r3; 
+		o3arr[0].obj = new r2[1]; 
+		o3arr[0].obj[0] = new r2; 
+		o3arr[0].obj[0].obj = new r1[1]; 
+		o3arr[0].obj[0].obj[0] = new r1; 
+		o3arr[0].obj[0].obj[0].y = 6; 
+		o3arr[0].obj[0].obj[0].y++; 
+		print(o3arr[0].obj[0].obj[0].y); 
+		print(eol);
+		o3arr[0].obj[0].obj[0].x = new int[1];
+		o3arr[0].obj[0].obj[0].x[0] = 7;
+		o3arr[0].obj[0].obj[0].x[0]++;
+		print(o3arr[0].obj[0].obj[0].x[3]); 
+		print(eol);
 
-	}
-	
-	void proba() r4 y; {
-		y = new r4;
-		y.a = new int[3];
-		y.a[0] = 2;
 	}
 }
-
-// GRESKA JE STO TRAZIM LOSE ARRAY OD RECORDA, GLEDAM GLOBAL UMESTO UNUTAR NJEGA
-//NESTO NE VALJA SA DesignatorArrName i visitima vezanim za designatore sa recordima

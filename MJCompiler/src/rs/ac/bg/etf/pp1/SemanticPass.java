@@ -369,8 +369,9 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(DesignatorArrName designatorArrName) {
+		if (designatorArrName.getParent() instanceof DesigMoreDotArr || designatorArrName.getParent() instanceof DesigMoreDotArrList) return;
 		designatorArrName.obj = Tab.find(designatorArrName.getI1());
-		report_info(designatorArrName.obj.getName(), designatorArrName);
+//		report_info(designatorArrName.obj.getName(), designatorArrName);
 		if (designatorArrName.obj == Tab.noObj) report_error("(DesignatorArrName) Array '" + designatorArrName.getI1() + "' not defined,", designatorArrName);
 		else if (designatorArrName.obj.getType().getKind() != Obj.Var && designatorArrName.obj.getType().getKind() != Struct.Array) {
 			report_error("(DesignatorArrName) Variable '" + designatorArrName.getI1() + "' is probably not an array", designatorArrName);
@@ -395,6 +396,13 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorWithMore designatorWithMore) {
 		designatorWithMore.obj = designatorWithMore.getDesignatorMore().obj;
+//		currRecord = null;
+	}
+	
+	@Override
+	public void visit(DesignatorArrWithMore designatorArrWithMore) {
+		designatorArrWithMore.obj = designatorArrWithMore.getDesignatorMore().obj;
+//		currRecord = null;
 	}
 	
 	@Override
@@ -447,7 +455,7 @@ public class SemanticPass extends VisitorAdaptor {
 				report_error("(DesigMoreDot) Variable '" + desigMoreDot.getI1() + "' not found in the record", desigMoreDot);
 			}
 		}
-		currRecord = null;
+//		currRecord = null;
 	}
 	
 	@Override
@@ -462,6 +470,8 @@ public class SemanticPass extends VisitorAdaptor {
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDotArr.getDesignatorArrName().getI1()) && tmp.getType().getKind() == Struct.Array) {
 					desigMoreDotArr.obj = new Obj(Obj.Elem, tmp.getName() + "[$]", tmp.getType().getElemType());
+					if (tmp.getType().getElemType().getKind() == Struct.Class) 
+						currRecord = tmp.getType().getElemType(); // ????
 					found = true;
 					break;
 				}
@@ -471,7 +481,7 @@ public class SemanticPass extends VisitorAdaptor {
 				report_error("(DesigMoreDot) Variable '" + desigMoreDotArr.getDesignatorArrName().getI1() + "' not found in the record", desigMoreDotArr);
 			}
 		}
-		currRecord = null;
+//		currRecord = null;
 	}
 	
 	@Override
@@ -481,6 +491,13 @@ public class SemanticPass extends VisitorAdaptor {
 			boolean found = false;
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDotList.getI2())) {
+					if (tmp.getType().getKind() == Struct.Array) {
+						if (tmp.getType().getElemType().getKind() == Struct.Class)
+							currRecord = tmp.getType().getElemType();
+					} 
+					else if (tmp.getType().getKind() == Struct.Class) 
+						currRecord = tmp.getType();
+//					currRecord = (desigMoreDotList.obj = tmp).getType();
 					desigMoreDotList.obj = tmp;
 					found = true;
 					break;
@@ -505,6 +522,8 @@ public class SemanticPass extends VisitorAdaptor {
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDotArrList.getDesignatorArrName().getI1()) && tmp.getType().getKind() == Struct.Array) {
 					desigMoreDotArrList.obj = new Obj(Obj.Elem, tmp.getName() + "[$]", tmp.getType().getElemType());;
+					if (tmp.getType().getElemType().getKind() == Struct.Class)
+						currRecord = tmp.getType().getElemType();
 					found = true;
 					break;
 				}

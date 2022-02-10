@@ -1,0 +1,2199 @@
+INFO  15:40:05,920 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  15:40:05,962 - #2 program
+INFO  15:40:05,963 - #49 Test
+INFO  15:40:05,963 - #20 record
+INFO  15:40:05,964 - #49 r1
+INFO  15:40:05,964 - #45 {
+INFO  15:40:05,964 - #49 int
+INFO  15:40:05,965 - #49 x
+INFO  15:40:05,965 - #43 [
+INFO  15:40:05,965 - #44 ]
+INFO  15:40:05,965 - #37 ;
+INFO  15:40:05,965 - #49 int
+INFO  15:40:05,966 - #49 y
+INFO  15:40:05,966 - #37 ;
+INFO  15:40:05,966 - #46 }
+INFO  15:40:05,966 - #20 record
+INFO  15:40:05,967 - #49 r2
+INFO  15:40:05,967 - #45 {
+INFO  15:40:05,967 - #49 r1
+INFO  15:40:05,968 - #49 obj
+INFO  15:40:05,968 - #43 [
+INFO  15:40:05,968 - #44 ]
+INFO  15:40:05,968 - #37 ;
+INFO  15:40:05,970 - #46 }
+INFO  15:40:05,970 - #20 record
+INFO  15:40:05,970 - #49 r3
+INFO  15:40:05,970 - #45 {
+INFO  15:40:05,970 - #49 r2
+INFO  15:40:05,970 - #49 obj
+INFO  15:40:05,970 - #43 [
+INFO  15:40:05,970 - #44 ]
+INFO  15:40:05,970 - #37 ;
+INFO  15:40:05,970 - #46 }
+INFO  15:40:05,970 - #49 int
+INFO  15:40:05,970 - #49 a
+INFO  15:40:05,970 - #37 ;
+INFO  15:40:05,970 - #49 char
+INFO  15:40:05,971 - #49 b
+INFO  15:40:05,971 - #37 ;
+INFO  15:40:05,971 - #49 int
+INFO  15:40:05,971 - #49 c
+INFO  15:40:05,972 - #37 ;
+INFO  15:40:05,972 - #45 {
+INFO  15:40:05,972 - #14 void
+INFO  15:40:05,973 - #49 main
+INFO  15:40:05,973 - #41 (
+INFO  15:40:05,973 - #42 )
+INFO  15:40:05,974 - #49 r1
+INFO  15:40:05,974 - #49 o1
+INFO  15:40:05,974 - #37 ;
+INFO  15:40:05,974 - #49 r2
+INFO  15:40:05,974 - #49 o2
+INFO  15:40:05,974 - #37 ;
+INFO  15:40:05,974 - #49 r3
+INFO  15:40:05,974 - #49 o3
+INFO  15:40:05,974 - #37 ;
+INFO  15:40:05,974 - #49 r3
+INFO  15:40:05,974 - #49 o3arr
+INFO  15:40:05,974 - #43 [
+INFO  15:40:05,974 - #44 ]
+INFO  15:40:05,974 - #37 ;
+INFO  15:40:05,974 - #45 {
+INFO  15:40:05,975 - #49 o3
+INFO  15:40:05,975 - #40 .
+INFO  15:40:05,976 - #49 obj
+INFO  15:40:05,976 - #43 [
+INFO  15:40:05,977 - #47 0
+INFO  15:40:05,978 - #44 ]
+INFO  15:40:05,980 - #40 .
+INFO  15:40:05,983 - #49 obj
+INFO  15:40:05,983 - #43 [
+INFO  15:40:05,983 - #47 0
+INFO  15:40:05,983 - #44 ]
+INFO  15:40:05,983 - #40 .
+INFO  15:40:05,983 - #49 y
+INFO  15:40:05,983 - #34 =
+INFO  15:40:05,983 - #47 4
+INFO  15:40:05,984 - #37 ;
+INFO  15:40:05,984 - #49 o3
+INFO  15:40:05,984 - #40 .
+INFO  15:40:05,984 - #49 obj
+INFO  15:40:05,984 - #43 [
+INFO  15:40:05,984 - #47 0
+INFO  15:40:05,984 - #44 ]
+INFO  15:40:05,985 - #40 .
+INFO  15:40:05,985 - #49 obj
+INFO  15:40:05,985 - #43 [
+INFO  15:40:05,985 - #47 0
+INFO  15:40:05,985 - #44 ]
+INFO  15:40:05,985 - #40 .
+INFO  15:40:05,985 - #49 y
+INFO  15:40:05,985 - #35 ++
+INFO  15:40:05,985 - #37 ;
+INFO  15:40:05,985 - #11 print
+INFO  15:40:05,985 - #41 (
+INFO  15:40:05,985 - #49 o3
+INFO  15:40:05,986 - #40 .
+INFO  15:40:05,986 - #49 obj
+INFO  15:40:05,986 - #43 [
+INFO  15:40:05,986 - #47 0
+INFO  15:40:05,986 - #44 ]
+INFO  15:40:05,986 - #40 .
+INFO  15:40:05,986 - #49 obj
+INFO  15:40:05,986 - #43 [
+INFO  15:40:05,986 - #47 0
+INFO  15:40:05,986 - #44 ]
+INFO  15:40:05,986 - #40 .
+INFO  15:40:05,986 - #49 y
+INFO  15:40:05,986 - #42 )
+INFO  15:40:05,986 - #37 ;
+INFO  15:40:05,986 - #11 print
+INFO  15:40:05,987 - #41 (
+INFO  15:40:05,987 - #49 eol
+INFO  15:40:05,987 - #42 )
+INFO  15:40:05,987 - #37 ;
+INFO  15:40:05,987 - #49 o3
+INFO  15:40:05,987 - #40 .
+INFO  15:40:05,987 - #49 obj
+INFO  15:40:05,987 - #43 [
+INFO  15:40:05,987 - #47 0
+INFO  15:40:05,987 - #44 ]
+INFO  15:40:05,987 - #40 .
+INFO  15:40:05,987 - #49 obj
+INFO  15:40:05,987 - #43 [
+INFO  15:40:05,987 - #47 0
+INFO  15:40:05,987 - #44 ]
+INFO  15:40:05,987 - #40 .
+INFO  15:40:05,988 - #49 x
+INFO  15:40:05,988 - #34 =
+INFO  15:40:05,988 - #10 new
+INFO  15:40:05,988 - #49 int
+INFO  15:40:05,988 - #43 [
+INFO  15:40:05,988 - #47 1
+INFO  15:40:05,988 - #44 ]
+INFO  15:40:05,988 - #37 ;
+INFO  15:40:05,988 - #49 o3
+INFO  15:40:05,988 - #40 .
+INFO  15:40:05,989 - #49 obj
+INFO  15:40:05,989 - #43 [
+INFO  15:40:05,989 - #47 0
+INFO  15:40:05,989 - #44 ]
+INFO  15:40:05,989 - #40 .
+INFO  15:40:05,989 - #49 obj
+INFO  15:40:05,989 - #43 [
+INFO  15:40:05,989 - #47 0
+INFO  15:40:05,989 - #44 ]
+INFO  15:40:05,989 - #40 .
+INFO  15:40:05,989 - #49 x
+INFO  15:40:05,989 - #43 [
+INFO  15:40:05,989 - #47 0
+INFO  15:40:05,989 - #44 ]
+INFO  15:40:05,989 - #34 =
+INFO  15:40:05,989 - #47 5
+INFO  15:40:05,989 - #37 ;
+INFO  15:40:05,989 - #49 o3
+INFO  15:40:05,989 - #40 .
+INFO  15:40:05,989 - #49 obj
+INFO  15:40:05,989 - #43 [
+INFO  15:40:05,989 - #47 0
+INFO  15:40:05,990 - #44 ]
+INFO  15:40:05,990 - #40 .
+INFO  15:40:05,990 - #49 obj
+INFO  15:40:05,990 - #43 [
+INFO  15:40:05,990 - #47 0
+INFO  15:40:05,990 - #44 ]
+INFO  15:40:05,990 - #40 .
+INFO  15:40:05,990 - #49 x
+INFO  15:40:05,990 - #43 [
+INFO  15:40:05,990 - #47 0
+INFO  15:40:05,990 - #44 ]
+INFO  15:40:05,990 - #35 ++
+INFO  15:40:05,990 - #37 ;
+INFO  15:40:05,990 - #11 print
+INFO  15:40:05,990 - #41 (
+INFO  15:40:05,990 - #49 o3
+INFO  15:40:05,990 - #40 .
+INFO  15:40:05,991 - #49 obj
+INFO  15:40:05,991 - #43 [
+INFO  15:40:05,991 - #47 0
+INFO  15:40:05,991 - #44 ]
+INFO  15:40:05,991 - #40 .
+INFO  15:40:05,991 - #49 obj
+INFO  15:40:05,991 - #43 [
+INFO  15:40:05,991 - #47 0
+INFO  15:40:05,991 - #44 ]
+INFO  15:40:05,991 - #40 .
+INFO  15:40:05,991 - #49 x
+INFO  15:40:05,991 - #43 [
+INFO  15:40:05,991 - #47 0
+INFO  15:40:05,992 - #44 ]
+INFO  15:40:05,992 - #42 )
+INFO  15:40:05,992 - #37 ;
+INFO  15:40:05,992 - #11 print
+INFO  15:40:05,992 - #41 (
+INFO  15:40:05,992 - #49 eol
+INFO  15:40:05,992 - #42 )
+INFO  15:40:05,992 - #37 ;
+INFO  15:40:05,992 - #49 o3arr
+INFO  15:40:05,992 - #34 =
+INFO  15:40:05,992 - #10 new
+INFO  15:40:05,992 - #49 r3
+INFO  15:40:05,992 - #43 [
+INFO  15:40:05,992 - #47 1
+INFO  15:40:05,992 - #44 ]
+INFO  15:40:05,992 - #37 ;
+INFO  15:40:05,992 - #49 o3arr
+INFO  15:40:05,992 - #43 [
+INFO  15:40:05,992 - #47 0
+INFO  15:40:05,992 - #44 ]
+INFO  15:40:05,992 - #34 =
+INFO  15:40:05,992 - #10 new
+INFO  15:40:05,993 - #49 r3
+INFO  15:40:05,993 - #37 ;
+INFO  15:40:05,993 - #49 o3arr
+INFO  15:40:05,993 - #43 [
+INFO  15:40:05,993 - #47 0
+INFO  15:40:05,993 - #44 ]
+INFO  15:40:05,993 - #40 .
+INFO  15:40:05,994 - #49 obj
+INFO  15:40:05,994 - #34 =
+INFO  15:40:05,994 - #10 new
+INFO  15:40:05,994 - #49 r2
+INFO  15:40:05,994 - #43 [
+INFO  15:40:05,994 - #47 1
+INFO  15:40:05,994 - #44 ]
+INFO  15:40:05,994 - #37 ;
+INFO  15:40:05,994 - #49 o3arr
+INFO  15:40:05,994 - #43 [
+INFO  15:40:05,995 - #47 0
+INFO  15:40:05,995 - #44 ]
+INFO  15:40:05,995 - #40 .
+INFO  15:40:05,995 - #49 obj
+INFO  15:40:05,995 - #43 [
+INFO  15:40:05,995 - #47 0
+INFO  15:40:05,995 - #44 ]
+INFO  15:40:05,995 - #34 =
+INFO  15:40:05,995 - #10 new
+INFO  15:40:05,995 - #49 r2
+INFO  15:40:05,995 - #37 ;
+INFO  15:40:05,995 - #49 o3arr
+INFO  15:40:05,995 - #43 [
+INFO  15:40:05,995 - #47 0
+INFO  15:40:05,995 - #44 ]
+INFO  15:40:05,995 - #40 .
+INFO  15:40:05,995 - #49 obj
+INFO  15:40:05,995 - #43 [
+INFO  15:40:05,995 - #47 0
+INFO  15:40:05,995 - #44 ]
+INFO  15:40:05,995 - #40 .
+INFO  15:40:05,995 - #49 obj
+INFO  15:40:05,995 - #34 =
+INFO  15:40:05,995 - #10 new
+INFO  15:40:05,996 - #49 r1
+INFO  15:40:05,996 - #43 [
+INFO  15:40:05,996 - #47 1
+INFO  15:40:05,996 - #44 ]
+INFO  15:40:05,996 - #37 ;
+INFO  15:40:05,996 - #49 o3arr
+INFO  15:40:05,996 - #43 [
+INFO  15:40:05,996 - #47 0
+INFO  15:40:05,996 - #44 ]
+INFO  15:40:05,996 - #40 .
+INFO  15:40:05,996 - #49 obj
+INFO  15:40:05,996 - #43 [
+INFO  15:40:05,996 - #47 0
+INFO  15:40:05,996 - #44 ]
+INFO  15:40:05,996 - #40 .
+INFO  15:40:05,996 - #49 obj
+INFO  15:40:05,997 - #43 [
+INFO  15:40:05,997 - #47 0
+INFO  15:40:05,997 - #44 ]
+INFO  15:40:05,997 - #34 =
+INFO  15:40:05,997 - #10 new
+INFO  15:40:05,997 - #49 r1
+INFO  15:40:05,997 - #37 ;
+INFO  15:40:05,997 - #49 o3arr
+INFO  15:40:05,997 - #43 [
+INFO  15:40:05,997 - #47 0
+INFO  15:40:05,997 - #44 ]
+INFO  15:40:05,997 - #40 .
+INFO  15:40:05,997 - #49 obj
+INFO  15:40:05,997 - #43 [
+INFO  15:40:05,997 - #47 0
+INFO  15:40:05,997 - #44 ]
+INFO  15:40:05,997 - #40 .
+INFO  15:40:05,997 - #49 obj
+INFO  15:40:05,997 - #43 [
+INFO  15:40:05,997 - #47 0
+INFO  15:40:05,997 - #44 ]
+INFO  15:40:05,997 - #40 .
+INFO  15:40:05,997 - #49 y
+INFO  15:40:05,997 - #34 =
+INFO  15:40:05,998 - #47 6
+INFO  15:40:05,998 - #37 ;
+INFO  15:40:05,998 - #49 o3arr
+INFO  15:40:05,998 - #43 [
+INFO  15:40:05,998 - #47 0
+INFO  15:40:05,998 - #44 ]
+INFO  15:40:05,998 - #40 .
+INFO  15:40:05,998 - #49 obj
+INFO  15:40:05,998 - #43 [
+INFO  15:40:05,998 - #47 0
+INFO  15:40:05,998 - #44 ]
+INFO  15:40:05,998 - #40 .
+INFO  15:40:05,998 - #49 obj
+INFO  15:40:05,998 - #43 [
+INFO  15:40:05,998 - #47 0
+INFO  15:40:05,998 - #44 ]
+INFO  15:40:05,998 - #40 .
+INFO  15:40:05,998 - #49 y
+INFO  15:40:05,999 - #35 ++
+INFO  15:40:05,999 - #37 ;
+INFO  15:40:05,999 - #11 print
+INFO  15:40:05,999 - #41 (
+INFO  15:40:05,999 - #49 o3arr
+INFO  15:40:05,999 - #43 [
+INFO  15:40:05,999 - #47 0
+INFO  15:40:05,999 - #44 ]
+INFO  15:40:05,999 - #40 .
+INFO  15:40:05,999 - #49 obj
+INFO  15:40:05,999 - #43 [
+INFO  15:40:05,999 - #47 0
+INFO  15:40:05,999 - #44 ]
+INFO  15:40:05,999 - #40 .
+INFO  15:40:05,999 - #49 obj
+INFO  15:40:05,999 - #43 [
+INFO  15:40:05,999 - #47 0
+INFO  15:40:05,999 - #44 ]
+INFO  15:40:05,999 - #40 .
+INFO  15:40:05,999 - #49 y
+INFO  15:40:05,999 - #42 )
+INFO  15:40:05,999 - #37 ;
+INFO  15:40:05,999 - #11 print
+INFO  15:40:05,999 - #41 (
+INFO  15:40:05,999 - #49 eol
+INFO  15:40:05,999 - #42 )
+INFO  15:40:05,999 - #37 ;
+INFO  15:40:06,000 - #49 o3arr
+INFO  15:40:06,000 - #43 [
+INFO  15:40:06,000 - #47 0
+INFO  15:40:06,000 - #44 ]
+INFO  15:40:06,000 - #40 .
+INFO  15:40:06,000 - #49 obj
+INFO  15:40:06,000 - #43 [
+INFO  15:40:06,000 - #47 0
+INFO  15:40:06,000 - #44 ]
+INFO  15:40:06,000 - #40 .
+INFO  15:40:06,000 - #49 obj
+INFO  15:40:06,000 - #43 [
+INFO  15:40:06,000 - #47 0
+INFO  15:40:06,000 - #44 ]
+INFO  15:40:06,000 - #40 .
+INFO  15:40:06,000 - #49 x
+INFO  15:40:06,000 - #34 =
+INFO  15:40:06,000 - #10 new
+INFO  15:40:06,000 - #49 int
+INFO  15:40:06,000 - #43 [
+INFO  15:40:06,001 - #47 1
+INFO  15:40:06,001 - #44 ]
+INFO  15:40:06,001 - #37 ;
+INFO  15:40:06,001 - #49 o3arr
+INFO  15:40:06,001 - #43 [
+INFO  15:40:06,001 - #47 0
+INFO  15:40:06,001 - #44 ]
+INFO  15:40:06,001 - #40 .
+INFO  15:40:06,001 - #49 obj
+INFO  15:40:06,001 - #43 [
+INFO  15:40:06,001 - #47 0
+INFO  15:40:06,001 - #44 ]
+INFO  15:40:06,001 - #40 .
+INFO  15:40:06,001 - #49 obj
+INFO  15:40:06,001 - #43 [
+INFO  15:40:06,001 - #47 0
+INFO  15:40:06,001 - #44 ]
+INFO  15:40:06,001 - #40 .
+INFO  15:40:06,001 - #49 x
+INFO  15:40:06,001 - #43 [
+INFO  15:40:06,001 - #47 0
+INFO  15:40:06,001 - #44 ]
+INFO  15:40:06,001 - #34 =
+INFO  15:40:06,002 - #47 7
+INFO  15:40:06,002 - #37 ;
+INFO  15:40:06,002 - #49 o3arr
+INFO  15:40:06,002 - #43 [
+INFO  15:40:06,002 - #47 0
+INFO  15:40:06,002 - #44 ]
+INFO  15:40:06,002 - #40 .
+INFO  15:40:06,002 - #49 obj
+INFO  15:40:06,002 - #43 [
+INFO  15:40:06,002 - #47 0
+INFO  15:40:06,002 - #44 ]
+INFO  15:40:06,002 - #40 .
+INFO  15:40:06,002 - #49 obj
+INFO  15:40:06,002 - #43 [
+INFO  15:40:06,002 - #47 0
+INFO  15:40:06,002 - #44 ]
+INFO  15:40:06,002 - #40 .
+INFO  15:40:06,002 - #49 x
+INFO  15:40:06,002 - #43 [
+INFO  15:40:06,002 - #47 0
+INFO  15:40:06,003 - #44 ]
+INFO  15:40:06,003 - #35 ++
+INFO  15:40:06,003 - #37 ;
+INFO  15:40:06,003 - #11 print
+INFO  15:40:06,003 - #41 (
+INFO  15:40:06,003 - #49 o3arr
+INFO  15:40:06,003 - #43 [
+INFO  15:40:06,003 - #47 0
+INFO  15:40:06,003 - #44 ]
+INFO  15:40:06,003 - #40 .
+INFO  15:40:06,003 - #49 obj
+INFO  15:40:06,003 - #43 [
+INFO  15:40:06,003 - #47 0
+INFO  15:40:06,003 - #44 ]
+INFO  15:40:06,003 - #40 .
+INFO  15:40:06,003 - #49 obj
+INFO  15:40:06,003 - #43 [
+INFO  15:40:06,003 - #47 0
+INFO  15:40:06,003 - #44 ]
+INFO  15:40:06,003 - #40 .
+INFO  15:40:06,003 - #49 x
+INFO  15:40:06,003 - #42 )
+INFO  15:40:06,003 - #37 ;
+INFO  15:40:06,003 - #11 print
+INFO  15:40:06,003 - #41 (
+INFO  15:40:06,003 - #49 eol
+INFO  15:40:06,003 - #42 )
+INFO  15:40:06,003 - #37 ;
+INFO  15:40:06,004 - #46 }
+INFO  15:40:06,004 - #46 }
+INFO  15:40:06,015 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListVar(
+      ListVar(
+        ListRecord(
+          ListRecord(
+            ListRecord(
+              NoList(
+              ) [NoList]
+              RecordDecl(
+                RecordDeclName(
+                 r1
+                ) [RecordDeclName]
+                IsListVarDeclWrapper(
+                  IsListVarDeclWrapper(
+                    NoListVarDeclWrapper(
+                    ) [NoListVarDeclWrapper]
+                    VarDeclWrapper(
+                      Type(
+                       int
+                      ) [Type]
+                      SingleVarDecl(
+                        ArrayVarDecl(
+                         x
+                        ) [ArrayVarDecl]
+                      ) [SingleVarDecl]
+                    ) [VarDeclWrapper]
+                  ) [IsListVarDeclWrapper]
+                  VarDeclWrapper(
+                    Type(
+                     int
+                    ) [Type]
+                    SingleVarDecl(
+                      NormalVarDecl(
+                       y
+                      ) [NormalVarDecl]
+                    ) [SingleVarDecl]
+                  ) [VarDeclWrapper]
+                ) [IsListVarDeclWrapper]
+              ) [RecordDecl]
+            ) [ListRecord]
+            RecordDecl(
+              RecordDeclName(
+               r2
+              ) [RecordDeclName]
+              IsListVarDeclWrapper(
+                NoListVarDeclWrapper(
+                ) [NoListVarDeclWrapper]
+                VarDeclWrapper(
+                  Type(
+                   r1
+                  ) [Type]
+                  SingleVarDecl(
+                    ArrayVarDecl(
+                     obj
+                    ) [ArrayVarDecl]
+                  ) [SingleVarDecl]
+                ) [VarDeclWrapper]
+              ) [IsListVarDeclWrapper]
+            ) [RecordDecl]
+          ) [ListRecord]
+          RecordDecl(
+            RecordDeclName(
+             r3
+            ) [RecordDeclName]
+            IsListVarDeclWrapper(
+              NoListVarDeclWrapper(
+              ) [NoListVarDeclWrapper]
+              VarDeclWrapper(
+                Type(
+                 r2
+                ) [Type]
+                SingleVarDecl(
+                  ArrayVarDecl(
+                   obj
+                  ) [ArrayVarDecl]
+                ) [SingleVarDecl]
+              ) [VarDeclWrapper]
+            ) [IsListVarDeclWrapper]
+          ) [RecordDecl]
+        ) [ListRecord]
+        VarDeclWrapper(
+          Type(
+           int
+          ) [Type]
+          SingleVarDecl(
+            NormalVarDecl(
+             a
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [ListVar]
+      VarDeclWrapper(
+        Type(
+         char
+        ) [Type]
+        SingleVarDecl(
+          NormalVarDecl(
+           b
+          ) [NormalVarDecl]
+        ) [SingleVarDecl]
+      ) [VarDeclWrapper]
+    ) [ListVar]
+    VarDeclWrapper(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         c
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapper]
+  ) [ListVar]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      IsListVarDeclWrapper(
+        IsListVarDeclWrapper(
+          IsListVarDeclWrapper(
+            IsListVarDeclWrapper(
+              NoListVarDeclWrapper(
+              ) [NoListVarDeclWrapper]
+              VarDeclWrapper(
+                Type(
+                 r1
+                ) [Type]
+                SingleVarDecl(
+                  NormalVarDecl(
+                   o1
+                  ) [NormalVarDecl]
+                ) [SingleVarDecl]
+              ) [VarDeclWrapper]
+            ) [IsListVarDeclWrapper]
+            VarDeclWrapper(
+              Type(
+               r2
+              ) [Type]
+              SingleVarDecl(
+                NormalVarDecl(
+                 o2
+                ) [NormalVarDecl]
+              ) [SingleVarDecl]
+            ) [VarDeclWrapper]
+          ) [IsListVarDeclWrapper]
+          VarDeclWrapper(
+            Type(
+             r3
+            ) [Type]
+            SingleVarDecl(
+              NormalVarDecl(
+               o3
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+          ) [VarDeclWrapper]
+        ) [IsListVarDeclWrapper]
+        VarDeclWrapper(
+          Type(
+           r3
+          ) [Type]
+          SingleVarDecl(
+            ArrayVarDecl(
+             o3arr
+            ) [ArrayVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [IsListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          StatementListExists(
+            StatementListExists(
+              StatementListExists(
+                StatementListExists(
+                  StatementListExists(
+                    StatementListExists(
+                      StatementListExists(
+                        StatementListExists(
+                          StatementListExists(
+                            StatementListExists(
+                              StatementListExists(
+                                StatementListExists(
+                                  StatementListExists(
+                                    StatementListExists(
+                                      StatementListExists(
+                                        StatementListExists(
+                                          StatementListExists(
+                                            StatementListExists(
+                                              StatementListExists(
+                                                StatementListExists(
+                                                  StatementListExists(
+                                                    StatementListExists(
+                                                      NoStatementList(
+                                                      ) [NoStatementList]
+                                                      StatementWithSingleStatement(
+                                                        DesignatorSingleStatement(
+                                                          DesStmAssign(
+                                                            DesignatorWithMore(
+                                                              DesignatorWithMoreName(
+                                                               o3
+                                                              ) [DesignatorWithMoreName]
+                                                              DesigMoreDotList(
+                                                                DesigMoreDotArrList(
+                                                                  DesigMoreDotArr(
+                                                                    DesignatorArrName(
+                                                                     obj
+                                                                    ) [DesignatorArrName]
+                                                                    Expr(
+                                                                      SingleTerm(
+                                                                        FactorWrapper(
+                                                                          NoUnary(
+                                                                          ) [NoUnary]
+                                                                          Num(
+                                                                           0
+                                                                          ) [Num]
+                                                                        ) [FactorWrapper]
+                                                                      ) [SingleTerm]
+                                                                      NoMoreExpr(
+                                                                      ) [NoMoreExpr]
+                                                                    ) [Expr]
+                                                                  ) [DesigMoreDotArr]
+                                                                  DesignatorArrName(
+                                                                   obj
+                                                                  ) [DesignatorArrName]
+                                                                  Expr(
+                                                                    SingleTerm(
+                                                                      FactorWrapper(
+                                                                        NoUnary(
+                                                                        ) [NoUnary]
+                                                                        Num(
+                                                                         0
+                                                                        ) [Num]
+                                                                      ) [FactorWrapper]
+                                                                    ) [SingleTerm]
+                                                                    NoMoreExpr(
+                                                                    ) [NoMoreExpr]
+                                                                  ) [Expr]
+                                                                ) [DesigMoreDotArrList]
+                                                               y
+                                                              ) [DesigMoreDotList]
+                                                            ) [DesignatorWithMore]
+                                                            AssignWrap(
+                                                              Assignop(
+                                                              ) [Assignop]
+                                                              Expr(
+                                                                SingleTerm(
+                                                                  FactorWrapper(
+                                                                    NoUnary(
+                                                                    ) [NoUnary]
+                                                                    Num(
+                                                                     4
+                                                                    ) [Num]
+                                                                  ) [FactorWrapper]
+                                                                ) [SingleTerm]
+                                                                NoMoreExpr(
+                                                                ) [NoMoreExpr]
+                                                              ) [Expr]
+                                                            ) [AssignWrap]
+                                                          ) [DesStmAssign]
+                                                        ) [DesignatorSingleStatement]
+                                                      ) [StatementWithSingleStatement]
+                                                    ) [StatementListExists]
+                                                    StatementWithSingleStatement(
+                                                      DesignatorSingleStatement(
+                                                        DesStmInc(
+                                                          DesignatorWithMore(
+                                                            DesignatorWithMoreName(
+                                                             o3
+                                                            ) [DesignatorWithMoreName]
+                                                            DesigMoreDotList(
+                                                              DesigMoreDotArrList(
+                                                                DesigMoreDotArr(
+                                                                  DesignatorArrName(
+                                                                   obj
+                                                                  ) [DesignatorArrName]
+                                                                  Expr(
+                                                                    SingleTerm(
+                                                                      FactorWrapper(
+                                                                        NoUnary(
+                                                                        ) [NoUnary]
+                                                                        Num(
+                                                                         0
+                                                                        ) [Num]
+                                                                      ) [FactorWrapper]
+                                                                    ) [SingleTerm]
+                                                                    NoMoreExpr(
+                                                                    ) [NoMoreExpr]
+                                                                  ) [Expr]
+                                                                ) [DesigMoreDotArr]
+                                                                DesignatorArrName(
+                                                                 obj
+                                                                ) [DesignatorArrName]
+                                                                Expr(
+                                                                  SingleTerm(
+                                                                    FactorWrapper(
+                                                                      NoUnary(
+                                                                      ) [NoUnary]
+                                                                      Num(
+                                                                       0
+                                                                      ) [Num]
+                                                                    ) [FactorWrapper]
+                                                                  ) [SingleTerm]
+                                                                  NoMoreExpr(
+                                                                  ) [NoMoreExpr]
+                                                                ) [Expr]
+                                                              ) [DesigMoreDotArrList]
+                                                             y
+                                                            ) [DesigMoreDotList]
+                                                          ) [DesignatorWithMore]
+                                                        ) [DesStmInc]
+                                                      ) [DesignatorSingleStatement]
+                                                    ) [StatementWithSingleStatement]
+                                                  ) [StatementListExists]
+                                                  StatementWithSingleStatement(
+                                                    PrintSingleStatement(
+                                                      Expr(
+                                                        SingleTerm(
+                                                          FactorWrapper(
+                                                            NoUnary(
+                                                            ) [NoUnary]
+                                                            NormalFactor(
+                                                              DesignatorWithMore(
+                                                                DesignatorWithMoreName(
+                                                                 o3
+                                                                ) [DesignatorWithMoreName]
+                                                                DesigMoreDotList(
+                                                                  DesigMoreDotArrList(
+                                                                    DesigMoreDotArr(
+                                                                      DesignatorArrName(
+                                                                       obj
+                                                                      ) [DesignatorArrName]
+                                                                      Expr(
+                                                                        SingleTerm(
+                                                                          FactorWrapper(
+                                                                            NoUnary(
+                                                                            ) [NoUnary]
+                                                                            Num(
+                                                                             0
+                                                                            ) [Num]
+                                                                          ) [FactorWrapper]
+                                                                        ) [SingleTerm]
+                                                                        NoMoreExpr(
+                                                                        ) [NoMoreExpr]
+                                                                      ) [Expr]
+                                                                    ) [DesigMoreDotArr]
+                                                                    DesignatorArrName(
+                                                                     obj
+                                                                    ) [DesignatorArrName]
+                                                                    Expr(
+                                                                      SingleTerm(
+                                                                        FactorWrapper(
+                                                                          NoUnary(
+                                                                          ) [NoUnary]
+                                                                          Num(
+                                                                           0
+                                                                          ) [Num]
+                                                                        ) [FactorWrapper]
+                                                                      ) [SingleTerm]
+                                                                      NoMoreExpr(
+                                                                      ) [NoMoreExpr]
+                                                                    ) [Expr]
+                                                                  ) [DesigMoreDotArrList]
+                                                                 y
+                                                                ) [DesigMoreDotList]
+                                                              ) [DesignatorWithMore]
+                                                            ) [NormalFactor]
+                                                          ) [FactorWrapper]
+                                                        ) [SingleTerm]
+                                                        NoMoreExpr(
+                                                        ) [NoMoreExpr]
+                                                      ) [Expr]
+                                                    ) [PrintSingleStatement]
+                                                  ) [StatementWithSingleStatement]
+                                                ) [StatementListExists]
+                                                StatementWithSingleStatement(
+                                                  PrintSingleStatement(
+                                                    Expr(
+                                                      SingleTerm(
+                                                        FactorWrapper(
+                                                          NoUnary(
+                                                          ) [NoUnary]
+                                                          NormalFactor(
+                                                            DesignatorSimple(
+                                                             eol
+                                                            ) [DesignatorSimple]
+                                                          ) [NormalFactor]
+                                                        ) [FactorWrapper]
+                                                      ) [SingleTerm]
+                                                      NoMoreExpr(
+                                                      ) [NoMoreExpr]
+                                                    ) [Expr]
+                                                  ) [PrintSingleStatement]
+                                                ) [StatementWithSingleStatement]
+                                              ) [StatementListExists]
+                                              StatementWithSingleStatement(
+                                                DesignatorSingleStatement(
+                                                  DesStmAssign(
+                                                    DesignatorWithMore(
+                                                      DesignatorWithMoreName(
+                                                       o3
+                                                      ) [DesignatorWithMoreName]
+                                                      DesigMoreDotList(
+                                                        DesigMoreDotArrList(
+                                                          DesigMoreDotArr(
+                                                            DesignatorArrName(
+                                                             obj
+                                                            ) [DesignatorArrName]
+                                                            Expr(
+                                                              SingleTerm(
+                                                                FactorWrapper(
+                                                                  NoUnary(
+                                                                  ) [NoUnary]
+                                                                  Num(
+                                                                   0
+                                                                  ) [Num]
+                                                                ) [FactorWrapper]
+                                                              ) [SingleTerm]
+                                                              NoMoreExpr(
+                                                              ) [NoMoreExpr]
+                                                            ) [Expr]
+                                                          ) [DesigMoreDotArr]
+                                                          DesignatorArrName(
+                                                           obj
+                                                          ) [DesignatorArrName]
+                                                          Expr(
+                                                            SingleTerm(
+                                                              FactorWrapper(
+                                                                NoUnary(
+                                                                ) [NoUnary]
+                                                                Num(
+                                                                 0
+                                                                ) [Num]
+                                                              ) [FactorWrapper]
+                                                            ) [SingleTerm]
+                                                            NoMoreExpr(
+                                                            ) [NoMoreExpr]
+                                                          ) [Expr]
+                                                        ) [DesigMoreDotArrList]
+                                                       x
+                                                      ) [DesigMoreDotList]
+                                                    ) [DesignatorWithMore]
+                                                    AssignWrap(
+                                                      Assignop(
+                                                      ) [Assignop]
+                                                      Expr(
+                                                        SingleTerm(
+                                                          FactorWrapper(
+                                                            NoUnary(
+                                                            ) [NoUnary]
+                                                            NewFactorWithPars(
+                                                              Type(
+                                                               int
+                                                              ) [Type]
+                                                              Expr(
+                                                                SingleTerm(
+                                                                  FactorWrapper(
+                                                                    NoUnary(
+                                                                    ) [NoUnary]
+                                                                    Num(
+                                                                     1
+                                                                    ) [Num]
+                                                                  ) [FactorWrapper]
+                                                                ) [SingleTerm]
+                                                                NoMoreExpr(
+                                                                ) [NoMoreExpr]
+                                                              ) [Expr]
+                                                            ) [NewFactorWithPars]
+                                                          ) [FactorWrapper]
+                                                        ) [SingleTerm]
+                                                        NoMoreExpr(
+                                                        ) [NoMoreExpr]
+                                                      ) [Expr]
+                                                    ) [AssignWrap]
+                                                  ) [DesStmAssign]
+                                                ) [DesignatorSingleStatement]
+                                              ) [StatementWithSingleStatement]
+                                            ) [StatementListExists]
+                                            StatementWithSingleStatement(
+                                              DesignatorSingleStatement(
+                                                DesStmAssign(
+                                                  DesignatorWithMore(
+                                                    DesignatorWithMoreName(
+                                                     o3
+                                                    ) [DesignatorWithMoreName]
+                                                    DesigMoreDotArrList(
+                                                      DesigMoreDotArrList(
+                                                        DesigMoreDotArr(
+                                                          DesignatorArrName(
+                                                           obj
+                                                          ) [DesignatorArrName]
+                                                          Expr(
+                                                            SingleTerm(
+                                                              FactorWrapper(
+                                                                NoUnary(
+                                                                ) [NoUnary]
+                                                                Num(
+                                                                 0
+                                                                ) [Num]
+                                                              ) [FactorWrapper]
+                                                            ) [SingleTerm]
+                                                            NoMoreExpr(
+                                                            ) [NoMoreExpr]
+                                                          ) [Expr]
+                                                        ) [DesigMoreDotArr]
+                                                        DesignatorArrName(
+                                                         obj
+                                                        ) [DesignatorArrName]
+                                                        Expr(
+                                                          SingleTerm(
+                                                            FactorWrapper(
+                                                              NoUnary(
+                                                              ) [NoUnary]
+                                                              Num(
+                                                               0
+                                                              ) [Num]
+                                                            ) [FactorWrapper]
+                                                          ) [SingleTerm]
+                                                          NoMoreExpr(
+                                                          ) [NoMoreExpr]
+                                                        ) [Expr]
+                                                      ) [DesigMoreDotArrList]
+                                                      DesignatorArrName(
+                                                       x
+                                                      ) [DesignatorArrName]
+                                                      Expr(
+                                                        SingleTerm(
+                                                          FactorWrapper(
+                                                            NoUnary(
+                                                            ) [NoUnary]
+                                                            Num(
+                                                             0
+                                                            ) [Num]
+                                                          ) [FactorWrapper]
+                                                        ) [SingleTerm]
+                                                        NoMoreExpr(
+                                                        ) [NoMoreExpr]
+                                                      ) [Expr]
+                                                    ) [DesigMoreDotArrList]
+                                                  ) [DesignatorWithMore]
+                                                  AssignWrap(
+                                                    Assignop(
+                                                    ) [Assignop]
+                                                    Expr(
+                                                      SingleTerm(
+                                                        FactorWrapper(
+                                                          NoUnary(
+                                                          ) [NoUnary]
+                                                          Num(
+                                                           5
+                                                          ) [Num]
+                                                        ) [FactorWrapper]
+                                                      ) [SingleTerm]
+                                                      NoMoreExpr(
+                                                      ) [NoMoreExpr]
+                                                    ) [Expr]
+                                                  ) [AssignWrap]
+                                                ) [DesStmAssign]
+                                              ) [DesignatorSingleStatement]
+                                            ) [StatementWithSingleStatement]
+                                          ) [StatementListExists]
+                                          StatementWithSingleStatement(
+                                            DesignatorSingleStatement(
+                                              DesStmInc(
+                                                DesignatorWithMore(
+                                                  DesignatorWithMoreName(
+                                                   o3
+                                                  ) [DesignatorWithMoreName]
+                                                  DesigMoreDotArrList(
+                                                    DesigMoreDotArrList(
+                                                      DesigMoreDotArr(
+                                                        DesignatorArrName(
+                                                         obj
+                                                        ) [DesignatorArrName]
+                                                        Expr(
+                                                          SingleTerm(
+                                                            FactorWrapper(
+                                                              NoUnary(
+                                                              ) [NoUnary]
+                                                              Num(
+                                                               0
+                                                              ) [Num]
+                                                            ) [FactorWrapper]
+                                                          ) [SingleTerm]
+                                                          NoMoreExpr(
+                                                          ) [NoMoreExpr]
+                                                        ) [Expr]
+                                                      ) [DesigMoreDotArr]
+                                                      DesignatorArrName(
+                                                       obj
+                                                      ) [DesignatorArrName]
+                                                      Expr(
+                                                        SingleTerm(
+                                                          FactorWrapper(
+                                                            NoUnary(
+                                                            ) [NoUnary]
+                                                            Num(
+                                                             0
+                                                            ) [Num]
+                                                          ) [FactorWrapper]
+                                                        ) [SingleTerm]
+                                                        NoMoreExpr(
+                                                        ) [NoMoreExpr]
+                                                      ) [Expr]
+                                                    ) [DesigMoreDotArrList]
+                                                    DesignatorArrName(
+                                                     x
+                                                    ) [DesignatorArrName]
+                                                    Expr(
+                                                      SingleTerm(
+                                                        FactorWrapper(
+                                                          NoUnary(
+                                                          ) [NoUnary]
+                                                          Num(
+                                                           0
+                                                          ) [Num]
+                                                        ) [FactorWrapper]
+                                                      ) [SingleTerm]
+                                                      NoMoreExpr(
+                                                      ) [NoMoreExpr]
+                                                    ) [Expr]
+                                                  ) [DesigMoreDotArrList]
+                                                ) [DesignatorWithMore]
+                                              ) [DesStmInc]
+                                            ) [DesignatorSingleStatement]
+                                          ) [StatementWithSingleStatement]
+                                        ) [StatementListExists]
+                                        StatementWithSingleStatement(
+                                          PrintSingleStatement(
+                                            Expr(
+                                              SingleTerm(
+                                                FactorWrapper(
+                                                  NoUnary(
+                                                  ) [NoUnary]
+                                                  NormalFactor(
+                                                    DesignatorWithMore(
+                                                      DesignatorWithMoreName(
+                                                       o3
+                                                      ) [DesignatorWithMoreName]
+                                                      DesigMoreDotArrList(
+                                                        DesigMoreDotArrList(
+                                                          DesigMoreDotArr(
+                                                            DesignatorArrName(
+                                                             obj
+                                                            ) [DesignatorArrName]
+                                                            Expr(
+                                                              SingleTerm(
+                                                                FactorWrapper(
+                                                                  NoUnary(
+                                                                  ) [NoUnary]
+                                                                  Num(
+                                                                   0
+                                                                  ) [Num]
+                                                                ) [FactorWrapper]
+                                                              ) [SingleTerm]
+                                                              NoMoreExpr(
+                                                              ) [NoMoreExpr]
+                                                            ) [Expr]
+                                                          ) [DesigMoreDotArr]
+                                                          DesignatorArrName(
+                                                           obj
+                                                          ) [DesignatorArrName]
+                                                          Expr(
+                                                            SingleTerm(
+                                                              FactorWrapper(
+                                                                NoUnary(
+                                                                ) [NoUnary]
+                                                                Num(
+                                                                 0
+                                                                ) [Num]
+                                                              ) [FactorWrapper]
+                                                            ) [SingleTerm]
+                                                            NoMoreExpr(
+                                                            ) [NoMoreExpr]
+                                                          ) [Expr]
+                                                        ) [DesigMoreDotArrList]
+                                                        DesignatorArrName(
+                                                         x
+                                                        ) [DesignatorArrName]
+                                                        Expr(
+                                                          SingleTerm(
+                                                            FactorWrapper(
+                                                              NoUnary(
+                                                              ) [NoUnary]
+                                                              Num(
+                                                               0
+                                                              ) [Num]
+                                                            ) [FactorWrapper]
+                                                          ) [SingleTerm]
+                                                          NoMoreExpr(
+                                                          ) [NoMoreExpr]
+                                                        ) [Expr]
+                                                      ) [DesigMoreDotArrList]
+                                                    ) [DesignatorWithMore]
+                                                  ) [NormalFactor]
+                                                ) [FactorWrapper]
+                                              ) [SingleTerm]
+                                              NoMoreExpr(
+                                              ) [NoMoreExpr]
+                                            ) [Expr]
+                                          ) [PrintSingleStatement]
+                                        ) [StatementWithSingleStatement]
+                                      ) [StatementListExists]
+                                      StatementWithSingleStatement(
+                                        PrintSingleStatement(
+                                          Expr(
+                                            SingleTerm(
+                                              FactorWrapper(
+                                                NoUnary(
+                                                ) [NoUnary]
+                                                NormalFactor(
+                                                  DesignatorSimple(
+                                                   eol
+                                                  ) [DesignatorSimple]
+                                                ) [NormalFactor]
+                                              ) [FactorWrapper]
+                                            ) [SingleTerm]
+                                            NoMoreExpr(
+                                            ) [NoMoreExpr]
+                                          ) [Expr]
+                                        ) [PrintSingleStatement]
+                                      ) [StatementWithSingleStatement]
+                                    ) [StatementListExists]
+                                    StatementWithSingleStatement(
+                                      DesignatorSingleStatement(
+                                        DesStmAssign(
+                                          DesignatorSimple(
+                                           o3arr
+                                          ) [DesignatorSimple]
+                                          AssignWrap(
+                                            Assignop(
+                                            ) [Assignop]
+                                            Expr(
+                                              SingleTerm(
+                                                FactorWrapper(
+                                                  NoUnary(
+                                                  ) [NoUnary]
+                                                  NewFactorWithPars(
+                                                    Type(
+                                                     r3
+                                                    ) [Type]
+                                                    Expr(
+                                                      SingleTerm(
+                                                        FactorWrapper(
+                                                          NoUnary(
+                                                          ) [NoUnary]
+                                                          Num(
+                                                           1
+                                                          ) [Num]
+                                                        ) [FactorWrapper]
+                                                      ) [SingleTerm]
+                                                      NoMoreExpr(
+                                                      ) [NoMoreExpr]
+                                                    ) [Expr]
+                                                  ) [NewFactorWithPars]
+                                                ) [FactorWrapper]
+                                              ) [SingleTerm]
+                                              NoMoreExpr(
+                                              ) [NoMoreExpr]
+                                            ) [Expr]
+                                          ) [AssignWrap]
+                                        ) [DesStmAssign]
+                                      ) [DesignatorSingleStatement]
+                                    ) [StatementWithSingleStatement]
+                                  ) [StatementListExists]
+                                  StatementWithSingleStatement(
+                                    DesignatorSingleStatement(
+                                      DesStmAssign(
+                                        DesignatorArr(
+                                          DesignatorArrName(
+                                           o3arr
+                                          ) [DesignatorArrName]
+                                          Expr(
+                                            SingleTerm(
+                                              FactorWrapper(
+                                                NoUnary(
+                                                ) [NoUnary]
+                                                Num(
+                                                 0
+                                                ) [Num]
+                                              ) [FactorWrapper]
+                                            ) [SingleTerm]
+                                            NoMoreExpr(
+                                            ) [NoMoreExpr]
+                                          ) [Expr]
+                                        ) [DesignatorArr]
+                                        AssignWrap(
+                                          Assignop(
+                                          ) [Assignop]
+                                          Expr(
+                                            SingleTerm(
+                                              FactorWrapper(
+                                                NoUnary(
+                                                ) [NoUnary]
+                                                NewFactor(
+                                                  Type(
+                                                   r3
+                                                  ) [Type]
+                                                ) [NewFactor]
+                                              ) [FactorWrapper]
+                                            ) [SingleTerm]
+                                            NoMoreExpr(
+                                            ) [NoMoreExpr]
+                                          ) [Expr]
+                                        ) [AssignWrap]
+                                      ) [DesStmAssign]
+                                    ) [DesignatorSingleStatement]
+                                  ) [StatementWithSingleStatement]
+                                ) [StatementListExists]
+                                StatementWithSingleStatement(
+                                  DesignatorSingleStatement(
+                                    DesStmAssign(
+                                      DesignatorArrWithMore(
+                                        DesignatorMoreElem(
+                                          DesignatorArrName(
+                                           o3arr
+                                          ) [DesignatorArrName]
+                                          Expr(
+                                            SingleTerm(
+                                              FactorWrapper(
+                                                NoUnary(
+                                                ) [NoUnary]
+                                                Num(
+                                                 0
+                                                ) [Num]
+                                              ) [FactorWrapper]
+                                            ) [SingleTerm]
+                                            NoMoreExpr(
+                                            ) [NoMoreExpr]
+                                          ) [Expr]
+                                        ) [DesignatorMoreElem]
+                                        DesigMoreDot(
+                                         obj
+                                        ) [DesigMoreDot]
+                                      ) [DesignatorArrWithMore]
+                                      AssignWrap(
+                                        Assignop(
+                                        ) [Assignop]
+                                        Expr(
+                                          SingleTerm(
+                                            FactorWrapper(
+                                              NoUnary(
+                                              ) [NoUnary]
+                                              NewFactorWithPars(
+                                                Type(
+                                                 r2
+                                                ) [Type]
+                                                Expr(
+                                                  SingleTerm(
+                                                    FactorWrapper(
+                                                      NoUnary(
+                                                      ) [NoUnary]
+                                                      Num(
+                                                       1
+                                                      ) [Num]
+                                                    ) [FactorWrapper]
+                                                  ) [SingleTerm]
+                                                  NoMoreExpr(
+                                                  ) [NoMoreExpr]
+                                                ) [Expr]
+                                              ) [NewFactorWithPars]
+                                            ) [FactorWrapper]
+                                          ) [SingleTerm]
+                                          NoMoreExpr(
+                                          ) [NoMoreExpr]
+                                        ) [Expr]
+                                      ) [AssignWrap]
+                                    ) [DesStmAssign]
+                                  ) [DesignatorSingleStatement]
+                                ) [StatementWithSingleStatement]
+                              ) [StatementListExists]
+                              StatementWithSingleStatement(
+                                DesignatorSingleStatement(
+                                  DesStmAssign(
+                                    DesignatorArrWithMore(
+                                      DesignatorMoreElem(
+                                        DesignatorArrName(
+                                         o3arr
+                                        ) [DesignatorArrName]
+                                        Expr(
+                                          SingleTerm(
+                                            FactorWrapper(
+                                              NoUnary(
+                                              ) [NoUnary]
+                                              Num(
+                                               0
+                                              ) [Num]
+                                            ) [FactorWrapper]
+                                          ) [SingleTerm]
+                                          NoMoreExpr(
+                                          ) [NoMoreExpr]
+                                        ) [Expr]
+                                      ) [DesignatorMoreElem]
+                                      DesigMoreDotArr(
+                                        DesignatorArrName(
+                                         obj
+                                        ) [DesignatorArrName]
+                                        Expr(
+                                          SingleTerm(
+                                            FactorWrapper(
+                                              NoUnary(
+                                              ) [NoUnary]
+                                              Num(
+                                               0
+                                              ) [Num]
+                                            ) [FactorWrapper]
+                                          ) [SingleTerm]
+                                          NoMoreExpr(
+                                          ) [NoMoreExpr]
+                                        ) [Expr]
+                                      ) [DesigMoreDotArr]
+                                    ) [DesignatorArrWithMore]
+                                    AssignWrap(
+                                      Assignop(
+                                      ) [Assignop]
+                                      Expr(
+                                        SingleTerm(
+                                          FactorWrapper(
+                                            NoUnary(
+                                            ) [NoUnary]
+                                            NewFactor(
+                                              Type(
+                                               r2
+                                              ) [Type]
+                                            ) [NewFactor]
+                                          ) [FactorWrapper]
+                                        ) [SingleTerm]
+                                        NoMoreExpr(
+                                        ) [NoMoreExpr]
+                                      ) [Expr]
+                                    ) [AssignWrap]
+                                  ) [DesStmAssign]
+                                ) [DesignatorSingleStatement]
+                              ) [StatementWithSingleStatement]
+                            ) [StatementListExists]
+                            StatementWithSingleStatement(
+                              DesignatorSingleStatement(
+                                DesStmAssign(
+                                  DesignatorArrWithMore(
+                                    DesignatorMoreElem(
+                                      DesignatorArrName(
+                                       o3arr
+                                      ) [DesignatorArrName]
+                                      Expr(
+                                        SingleTerm(
+                                          FactorWrapper(
+                                            NoUnary(
+                                            ) [NoUnary]
+                                            Num(
+                                             0
+                                            ) [Num]
+                                          ) [FactorWrapper]
+                                        ) [SingleTerm]
+                                        NoMoreExpr(
+                                        ) [NoMoreExpr]
+                                      ) [Expr]
+                                    ) [DesignatorMoreElem]
+                                    DesigMoreDotList(
+                                      DesigMoreDotArr(
+                                        DesignatorArrName(
+                                         obj
+                                        ) [DesignatorArrName]
+                                        Expr(
+                                          SingleTerm(
+                                            FactorWrapper(
+                                              NoUnary(
+                                              ) [NoUnary]
+                                              Num(
+                                               0
+                                              ) [Num]
+                                            ) [FactorWrapper]
+                                          ) [SingleTerm]
+                                          NoMoreExpr(
+                                          ) [NoMoreExpr]
+                                        ) [Expr]
+                                      ) [DesigMoreDotArr]
+                                     obj
+                                    ) [DesigMoreDotList]
+                                  ) [DesignatorArrWithMore]
+                                  AssignWrap(
+                                    Assignop(
+                                    ) [Assignop]
+                                    Expr(
+                                      SingleTerm(
+                                        FactorWrapper(
+                                          NoUnary(
+                                          ) [NoUnary]
+                                          NewFactorWithPars(
+                                            Type(
+                                             r1
+                                            ) [Type]
+                                            Expr(
+                                              SingleTerm(
+                                                FactorWrapper(
+                                                  NoUnary(
+                                                  ) [NoUnary]
+                                                  Num(
+                                                   1
+                                                  ) [Num]
+                                                ) [FactorWrapper]
+                                              ) [SingleTerm]
+                                              NoMoreExpr(
+                                              ) [NoMoreExpr]
+                                            ) [Expr]
+                                          ) [NewFactorWithPars]
+                                        ) [FactorWrapper]
+                                      ) [SingleTerm]
+                                      NoMoreExpr(
+                                      ) [NoMoreExpr]
+                                    ) [Expr]
+                                  ) [AssignWrap]
+                                ) [DesStmAssign]
+                              ) [DesignatorSingleStatement]
+                            ) [StatementWithSingleStatement]
+                          ) [StatementListExists]
+                          StatementWithSingleStatement(
+                            DesignatorSingleStatement(
+                              DesStmAssign(
+                                DesignatorArrWithMore(
+                                  DesignatorMoreElem(
+                                    DesignatorArrName(
+                                     o3arr
+                                    ) [DesignatorArrName]
+                                    Expr(
+                                      SingleTerm(
+                                        FactorWrapper(
+                                          NoUnary(
+                                          ) [NoUnary]
+                                          Num(
+                                           0
+                                          ) [Num]
+                                        ) [FactorWrapper]
+                                      ) [SingleTerm]
+                                      NoMoreExpr(
+                                      ) [NoMoreExpr]
+                                    ) [Expr]
+                                  ) [DesignatorMoreElem]
+                                  DesigMoreDotArrList(
+                                    DesigMoreDotArr(
+                                      DesignatorArrName(
+                                       obj
+                                      ) [DesignatorArrName]
+                                      Expr(
+                                        SingleTerm(
+                                          FactorWrapper(
+                                            NoUnary(
+                                            ) [NoUnary]
+                                            Num(
+                                             0
+                                            ) [Num]
+                                          ) [FactorWrapper]
+                                        ) [SingleTerm]
+                                        NoMoreExpr(
+                                        ) [NoMoreExpr]
+                                      ) [Expr]
+                                    ) [DesigMoreDotArr]
+                                    DesignatorArrName(
+                                     obj
+                                    ) [DesignatorArrName]
+                                    Expr(
+                                      SingleTerm(
+                                        FactorWrapper(
+                                          NoUnary(
+                                          ) [NoUnary]
+                                          Num(
+                                           0
+                                          ) [Num]
+                                        ) [FactorWrapper]
+                                      ) [SingleTerm]
+                                      NoMoreExpr(
+                                      ) [NoMoreExpr]
+                                    ) [Expr]
+                                  ) [DesigMoreDotArrList]
+                                ) [DesignatorArrWithMore]
+                                AssignWrap(
+                                  Assignop(
+                                  ) [Assignop]
+                                  Expr(
+                                    SingleTerm(
+                                      FactorWrapper(
+                                        NoUnary(
+                                        ) [NoUnary]
+                                        NewFactor(
+                                          Type(
+                                           r1
+                                          ) [Type]
+                                        ) [NewFactor]
+                                      ) [FactorWrapper]
+                                    ) [SingleTerm]
+                                    NoMoreExpr(
+                                    ) [NoMoreExpr]
+                                  ) [Expr]
+                                ) [AssignWrap]
+                              ) [DesStmAssign]
+                            ) [DesignatorSingleStatement]
+                          ) [StatementWithSingleStatement]
+                        ) [StatementListExists]
+                        StatementWithSingleStatement(
+                          DesignatorSingleStatement(
+                            DesStmAssign(
+                              DesignatorArrWithMore(
+                                DesignatorMoreElem(
+                                  DesignatorArrName(
+                                   o3arr
+                                  ) [DesignatorArrName]
+                                  Expr(
+                                    SingleTerm(
+                                      FactorWrapper(
+                                        NoUnary(
+                                        ) [NoUnary]
+                                        Num(
+                                         0
+                                        ) [Num]
+                                      ) [FactorWrapper]
+                                    ) [SingleTerm]
+                                    NoMoreExpr(
+                                    ) [NoMoreExpr]
+                                  ) [Expr]
+                                ) [DesignatorMoreElem]
+                                DesigMoreDotList(
+                                  DesigMoreDotArrList(
+                                    DesigMoreDotArr(
+                                      DesignatorArrName(
+                                       obj
+                                      ) [DesignatorArrName]
+                                      Expr(
+                                        SingleTerm(
+                                          FactorWrapper(
+                                            NoUnary(
+                                            ) [NoUnary]
+                                            Num(
+                                             0
+                                            ) [Num]
+                                          ) [FactorWrapper]
+                                        ) [SingleTerm]
+                                        NoMoreExpr(
+                                        ) [NoMoreExpr]
+                                      ) [Expr]
+                                    ) [DesigMoreDotArr]
+                                    DesignatorArrName(
+                                     obj
+                                    ) [DesignatorArrName]
+                                    Expr(
+                                      SingleTerm(
+                                        FactorWrapper(
+                                          NoUnary(
+                                          ) [NoUnary]
+                                          Num(
+                                           0
+                                          ) [Num]
+                                        ) [FactorWrapper]
+                                      ) [SingleTerm]
+                                      NoMoreExpr(
+                                      ) [NoMoreExpr]
+                                    ) [Expr]
+                                  ) [DesigMoreDotArrList]
+                                 y
+                                ) [DesigMoreDotList]
+                              ) [DesignatorArrWithMore]
+                              AssignWrap(
+                                Assignop(
+                                ) [Assignop]
+                                Expr(
+                                  SingleTerm(
+                                    FactorWrapper(
+                                      NoUnary(
+                                      ) [NoUnary]
+                                      Num(
+                                       6
+                                      ) [Num]
+                                    ) [FactorWrapper]
+                                  ) [SingleTerm]
+                                  NoMoreExpr(
+                                  ) [NoMoreExpr]
+                                ) [Expr]
+                              ) [AssignWrap]
+                            ) [DesStmAssign]
+                          ) [DesignatorSingleStatement]
+                        ) [StatementWithSingleStatement]
+                      ) [StatementListExists]
+                      StatementWithSingleStatement(
+                        DesignatorSingleStatement(
+                          DesStmInc(
+                            DesignatorArrWithMore(
+                              DesignatorMoreElem(
+                                DesignatorArrName(
+                                 o3arr
+                                ) [DesignatorArrName]
+                                Expr(
+                                  SingleTerm(
+                                    FactorWrapper(
+                                      NoUnary(
+                                      ) [NoUnary]
+                                      Num(
+                                       0
+                                      ) [Num]
+                                    ) [FactorWrapper]
+                                  ) [SingleTerm]
+                                  NoMoreExpr(
+                                  ) [NoMoreExpr]
+                                ) [Expr]
+                              ) [DesignatorMoreElem]
+                              DesigMoreDotList(
+                                DesigMoreDotArrList(
+                                  DesigMoreDotArr(
+                                    DesignatorArrName(
+                                     obj
+                                    ) [DesignatorArrName]
+                                    Expr(
+                                      SingleTerm(
+                                        FactorWrapper(
+                                          NoUnary(
+                                          ) [NoUnary]
+                                          Num(
+                                           0
+                                          ) [Num]
+                                        ) [FactorWrapper]
+                                      ) [SingleTerm]
+                                      NoMoreExpr(
+                                      ) [NoMoreExpr]
+                                    ) [Expr]
+                                  ) [DesigMoreDotArr]
+                                  DesignatorArrName(
+                                   obj
+                                  ) [DesignatorArrName]
+                                  Expr(
+                                    SingleTerm(
+                                      FactorWrapper(
+                                        NoUnary(
+                                        ) [NoUnary]
+                                        Num(
+                                         0
+                                        ) [Num]
+                                      ) [FactorWrapper]
+                                    ) [SingleTerm]
+                                    NoMoreExpr(
+                                    ) [NoMoreExpr]
+                                  ) [Expr]
+                                ) [DesigMoreDotArrList]
+                               y
+                              ) [DesigMoreDotList]
+                            ) [DesignatorArrWithMore]
+                          ) [DesStmInc]
+                        ) [DesignatorSingleStatement]
+                      ) [StatementWithSingleStatement]
+                    ) [StatementListExists]
+                    StatementWithSingleStatement(
+                      PrintSingleStatement(
+                        Expr(
+                          SingleTerm(
+                            FactorWrapper(
+                              NoUnary(
+                              ) [NoUnary]
+                              NormalFactor(
+                                DesignatorArrWithMore(
+                                  DesignatorMoreElem(
+                                    DesignatorArrName(
+                                     o3arr
+                                    ) [DesignatorArrName]
+                                    Expr(
+                                      SingleTerm(
+                                        FactorWrapper(
+                                          NoUnary(
+                                          ) [NoUnary]
+                                          Num(
+                                           0
+                                          ) [Num]
+                                        ) [FactorWrapper]
+                                      ) [SingleTerm]
+                                      NoMoreExpr(
+                                      ) [NoMoreExpr]
+                                    ) [Expr]
+                                  ) [DesignatorMoreElem]
+                                  DesigMoreDotList(
+                                    DesigMoreDotArrList(
+                                      DesigMoreDotArr(
+                                        DesignatorArrName(
+                                         obj
+                                        ) [DesignatorArrName]
+                                        Expr(
+                                          SingleTerm(
+                                            FactorWrapper(
+                                              NoUnary(
+                                              ) [NoUnary]
+                                              Num(
+                                               0
+                                              ) [Num]
+                                            ) [FactorWrapper]
+                                          ) [SingleTerm]
+                                          NoMoreExpr(
+                                          ) [NoMoreExpr]
+                                        ) [Expr]
+                                      ) [DesigMoreDotArr]
+                                      DesignatorArrName(
+                                       obj
+                                      ) [DesignatorArrName]
+                                      Expr(
+                                        SingleTerm(
+                                          FactorWrapper(
+                                            NoUnary(
+                                            ) [NoUnary]
+                                            Num(
+                                             0
+                                            ) [Num]
+                                          ) [FactorWrapper]
+                                        ) [SingleTerm]
+                                        NoMoreExpr(
+                                        ) [NoMoreExpr]
+                                      ) [Expr]
+                                    ) [DesigMoreDotArrList]
+                                   y
+                                  ) [DesigMoreDotList]
+                                ) [DesignatorArrWithMore]
+                              ) [NormalFactor]
+                            ) [FactorWrapper]
+                          ) [SingleTerm]
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                        ) [Expr]
+                      ) [PrintSingleStatement]
+                    ) [StatementWithSingleStatement]
+                  ) [StatementListExists]
+                  StatementWithSingleStatement(
+                    PrintSingleStatement(
+                      Expr(
+                        SingleTerm(
+                          FactorWrapper(
+                            NoUnary(
+                            ) [NoUnary]
+                            NormalFactor(
+                              DesignatorSimple(
+                               eol
+                              ) [DesignatorSimple]
+                            ) [NormalFactor]
+                          ) [FactorWrapper]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [Expr]
+                    ) [PrintSingleStatement]
+                  ) [StatementWithSingleStatement]
+                ) [StatementListExists]
+                StatementWithSingleStatement(
+                  DesignatorSingleStatement(
+                    DesStmAssign(
+                      DesignatorArrWithMore(
+                        DesignatorMoreElem(
+                          DesignatorArrName(
+                           o3arr
+                          ) [DesignatorArrName]
+                          Expr(
+                            SingleTerm(
+                              FactorWrapper(
+                                NoUnary(
+                                ) [NoUnary]
+                                Num(
+                                 0
+                                ) [Num]
+                              ) [FactorWrapper]
+                            ) [SingleTerm]
+                            NoMoreExpr(
+                            ) [NoMoreExpr]
+                          ) [Expr]
+                        ) [DesignatorMoreElem]
+                        DesigMoreDotList(
+                          DesigMoreDotArrList(
+                            DesigMoreDotArr(
+                              DesignatorArrName(
+                               obj
+                              ) [DesignatorArrName]
+                              Expr(
+                                SingleTerm(
+                                  FactorWrapper(
+                                    NoUnary(
+                                    ) [NoUnary]
+                                    Num(
+                                     0
+                                    ) [Num]
+                                  ) [FactorWrapper]
+                                ) [SingleTerm]
+                                NoMoreExpr(
+                                ) [NoMoreExpr]
+                              ) [Expr]
+                            ) [DesigMoreDotArr]
+                            DesignatorArrName(
+                             obj
+                            ) [DesignatorArrName]
+                            Expr(
+                              SingleTerm(
+                                FactorWrapper(
+                                  NoUnary(
+                                  ) [NoUnary]
+                                  Num(
+                                   0
+                                  ) [Num]
+                                ) [FactorWrapper]
+                              ) [SingleTerm]
+                              NoMoreExpr(
+                              ) [NoMoreExpr]
+                            ) [Expr]
+                          ) [DesigMoreDotArrList]
+                         x
+                        ) [DesigMoreDotList]
+                      ) [DesignatorArrWithMore]
+                      AssignWrap(
+                        Assignop(
+                        ) [Assignop]
+                        Expr(
+                          SingleTerm(
+                            FactorWrapper(
+                              NoUnary(
+                              ) [NoUnary]
+                              NewFactorWithPars(
+                                Type(
+                                 int
+                                ) [Type]
+                                Expr(
+                                  SingleTerm(
+                                    FactorWrapper(
+                                      NoUnary(
+                                      ) [NoUnary]
+                                      Num(
+                                       1
+                                      ) [Num]
+                                    ) [FactorWrapper]
+                                  ) [SingleTerm]
+                                  NoMoreExpr(
+                                  ) [NoMoreExpr]
+                                ) [Expr]
+                              ) [NewFactorWithPars]
+                            ) [FactorWrapper]
+                          ) [SingleTerm]
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                        ) [Expr]
+                      ) [AssignWrap]
+                    ) [DesStmAssign]
+                  ) [DesignatorSingleStatement]
+                ) [StatementWithSingleStatement]
+              ) [StatementListExists]
+              StatementWithSingleStatement(
+                DesignatorSingleStatement(
+                  DesStmAssign(
+                    DesignatorArrWithMore(
+                      DesignatorMoreElem(
+                        DesignatorArrName(
+                         o3arr
+                        ) [DesignatorArrName]
+                        Expr(
+                          SingleTerm(
+                            FactorWrapper(
+                              NoUnary(
+                              ) [NoUnary]
+                              Num(
+                               0
+                              ) [Num]
+                            ) [FactorWrapper]
+                          ) [SingleTerm]
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                        ) [Expr]
+                      ) [DesignatorMoreElem]
+                      DesigMoreDotArrList(
+                        DesigMoreDotArrList(
+                          DesigMoreDotArr(
+                            DesignatorArrName(
+                             obj
+                            ) [DesignatorArrName]
+                            Expr(
+                              SingleTerm(
+                                FactorWrapper(
+                                  NoUnary(
+                                  ) [NoUnary]
+                                  Num(
+                                   0
+                                  ) [Num]
+                                ) [FactorWrapper]
+                              ) [SingleTerm]
+                              NoMoreExpr(
+                              ) [NoMoreExpr]
+                            ) [Expr]
+                          ) [DesigMoreDotArr]
+                          DesignatorArrName(
+                           obj
+                          ) [DesignatorArrName]
+                          Expr(
+                            SingleTerm(
+                              FactorWrapper(
+                                NoUnary(
+                                ) [NoUnary]
+                                Num(
+                                 0
+                                ) [Num]
+                              ) [FactorWrapper]
+                            ) [SingleTerm]
+                            NoMoreExpr(
+                            ) [NoMoreExpr]
+                          ) [Expr]
+                        ) [DesigMoreDotArrList]
+                        DesignatorArrName(
+                         x
+                        ) [DesignatorArrName]
+                        Expr(
+                          SingleTerm(
+                            FactorWrapper(
+                              NoUnary(
+                              ) [NoUnary]
+                              Num(
+                               0
+                              ) [Num]
+                            ) [FactorWrapper]
+                          ) [SingleTerm]
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                        ) [Expr]
+                      ) [DesigMoreDotArrList]
+                    ) [DesignatorArrWithMore]
+                    AssignWrap(
+                      Assignop(
+                      ) [Assignop]
+                      Expr(
+                        SingleTerm(
+                          FactorWrapper(
+                            NoUnary(
+                            ) [NoUnary]
+                            Num(
+                             7
+                            ) [Num]
+                          ) [FactorWrapper]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [Expr]
+                    ) [AssignWrap]
+                  ) [DesStmAssign]
+                ) [DesignatorSingleStatement]
+              ) [StatementWithSingleStatement]
+            ) [StatementListExists]
+            StatementWithSingleStatement(
+              DesignatorSingleStatement(
+                DesStmInc(
+                  DesignatorArrWithMore(
+                    DesignatorMoreElem(
+                      DesignatorArrName(
+                       o3arr
+                      ) [DesignatorArrName]
+                      Expr(
+                        SingleTerm(
+                          FactorWrapper(
+                            NoUnary(
+                            ) [NoUnary]
+                            Num(
+                             0
+                            ) [Num]
+                          ) [FactorWrapper]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [Expr]
+                    ) [DesignatorMoreElem]
+                    DesigMoreDotArrList(
+                      DesigMoreDotArrList(
+                        DesigMoreDotArr(
+                          DesignatorArrName(
+                           obj
+                          ) [DesignatorArrName]
+                          Expr(
+                            SingleTerm(
+                              FactorWrapper(
+                                NoUnary(
+                                ) [NoUnary]
+                                Num(
+                                 0
+                                ) [Num]
+                              ) [FactorWrapper]
+                            ) [SingleTerm]
+                            NoMoreExpr(
+                            ) [NoMoreExpr]
+                          ) [Expr]
+                        ) [DesigMoreDotArr]
+                        DesignatorArrName(
+                         obj
+                        ) [DesignatorArrName]
+                        Expr(
+                          SingleTerm(
+                            FactorWrapper(
+                              NoUnary(
+                              ) [NoUnary]
+                              Num(
+                               0
+                              ) [Num]
+                            ) [FactorWrapper]
+                          ) [SingleTerm]
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                        ) [Expr]
+                      ) [DesigMoreDotArrList]
+                      DesignatorArrName(
+                       x
+                      ) [DesignatorArrName]
+                      Expr(
+                        SingleTerm(
+                          FactorWrapper(
+                            NoUnary(
+                            ) [NoUnary]
+                            Num(
+                             0
+                            ) [Num]
+                          ) [FactorWrapper]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [Expr]
+                    ) [DesigMoreDotArrList]
+                  ) [DesignatorArrWithMore]
+                ) [DesStmInc]
+              ) [DesignatorSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            PrintSingleStatement(
+              Expr(
+                SingleTerm(
+                  FactorWrapper(
+                    NoUnary(
+                    ) [NoUnary]
+                    NormalFactor(
+                      DesignatorArrWithMore(
+                        DesignatorMoreElem(
+                          DesignatorArrName(
+                           o3arr
+                          ) [DesignatorArrName]
+                          Expr(
+                            SingleTerm(
+                              FactorWrapper(
+                                NoUnary(
+                                ) [NoUnary]
+                                Num(
+                                 0
+                                ) [Num]
+                              ) [FactorWrapper]
+                            ) [SingleTerm]
+                            NoMoreExpr(
+                            ) [NoMoreExpr]
+                          ) [Expr]
+                        ) [DesignatorMoreElem]
+                        DesigMoreDotList(
+                          DesigMoreDotArrList(
+                            DesigMoreDotArr(
+                              DesignatorArrName(
+                               obj
+                              ) [DesignatorArrName]
+                              Expr(
+                                SingleTerm(
+                                  FactorWrapper(
+                                    NoUnary(
+                                    ) [NoUnary]
+                                    Num(
+                                     0
+                                    ) [Num]
+                                  ) [FactorWrapper]
+                                ) [SingleTerm]
+                                NoMoreExpr(
+                                ) [NoMoreExpr]
+                              ) [Expr]
+                            ) [DesigMoreDotArr]
+                            DesignatorArrName(
+                             obj
+                            ) [DesignatorArrName]
+                            Expr(
+                              SingleTerm(
+                                FactorWrapper(
+                                  NoUnary(
+                                  ) [NoUnary]
+                                  Num(
+                                   0
+                                  ) [Num]
+                                ) [FactorWrapper]
+                              ) [SingleTerm]
+                              NoMoreExpr(
+                              ) [NoMoreExpr]
+                            ) [Expr]
+                          ) [DesigMoreDotArrList]
+                         x
+                        ) [DesigMoreDotList]
+                      ) [DesignatorArrWithMore]
+                    ) [NormalFactor]
+                  ) [FactorWrapper]
+                ) [SingleTerm]
+                NoMoreExpr(
+                ) [NoMoreExpr]
+              ) [Expr]
+            ) [PrintSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          PrintSingleStatement(
+            Expr(
+              SingleTerm(
+                FactorWrapper(
+                  NoUnary(
+                  ) [NoUnary]
+                  NormalFactor(
+                    DesignatorSimple(
+                     eol
+                    ) [DesignatorSimple]
+                  ) [NormalFactor]
+                ) [FactorWrapper]
+              ) [SingleTerm]
+              NoMoreExpr(
+              ) [NoMoreExpr]
+            ) [Expr]
+          ) [PrintSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  15:40:06,018 - ===================================
+INFO  15:40:06,020 -  Program count calls = 1
+ERROR 15:40:06,031 - (DesigMoreDotList) Variable 'y' not found in the record in line 14.
+ERROR 15:40:06,032 - (DesStmAssign) Error with assignement to variable 'noObj' in line 14.
+ERROR 15:40:06,032 - (DesigMoreDotList) Variable 'y' not found in the record in line 15.
+ERROR 15:40:06,032 - (DesStmInc) Left hand variable, 'noObj', of increment is of wrong type in line 15.
+ERROR 15:40:06,032 - (DesigMoreDotList) Variable 'y' not found in the record in line 16.
+ERROR 15:40:06,032 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+ERROR 15:40:06,032 - (DesigMoreDotList) Variable 'x' not found in the record in line 18.
+ERROR 15:40:06,032 - (DesStmAssign) Error with assignement to variable 'noObj' in line 18.
+ERROR 15:40:06,032 - (DesigMoreDotList) Variable 'x' not found in the record in line 19.
+ERROR 15:40:06,032 - (DesStmAssign) Error with assignement to variable 'noObj' in line 19.
+ERROR 15:40:06,032 - (DesigMoreDotList) Variable 'x' not found in the record in line 20.
+ERROR 15:40:06,032 - (DesStmInc) Left hand variable, 'noObj', of increment is of wrong type in line 20.
+ERROR 15:40:06,032 - (DesigMoreDotList) Variable 'x' not found in the record in line 21.
+ERROR 15:40:06,032 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+INFO  15:40:06,032 - o3arr in line 27.
+INFO  15:40:06,032 - o3arr in line 28.
+INFO  15:40:06,032 - o3arr in line 29.
+INFO  15:40:06,032 - o3arr in line 30.
+INFO  15:40:06,033 - o3arr in line 31.
+INFO  15:40:06,033 - o3arr in line 32.
+ERROR 15:40:06,033 - (DesigMoreDotList) Variable 'y' not found in the record in line 32.
+ERROR 15:40:06,033 - (DesStmAssign) Error with assignement to variable 'noObj' in line 32.
+INFO  15:40:06,033 - o3arr in line 33.
+ERROR 15:40:06,033 - (DesigMoreDotList) Variable 'y' not found in the record in line 33.
+ERROR 15:40:06,033 - (DesStmInc) Left hand variable, 'noObj', of increment is of wrong type in line 33.
+INFO  15:40:06,033 - o3arr in line 34.
+ERROR 15:40:06,033 - (DesigMoreDotList) Variable 'y' not found in the record in line 34.
+ERROR 15:40:06,033 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+INFO  15:40:06,033 - o3arr in line 36.
+ERROR 15:40:06,033 - (DesigMoreDotList) Variable 'x' not found in the record in line 36.
+ERROR 15:40:06,033 - (DesStmAssign) Error with assignement to variable 'noObj' in line 36.
+INFO  15:40:06,033 - o3arr in line 37.
+ERROR 15:40:06,033 - (DesigMoreDotList) Variable 'x' not found in the record in line 37.
+ERROR 15:40:06,033 - (DesStmAssign) Error with assignement to variable 'noObj' in line 37.
+INFO  15:40:06,033 - o3arr in line 38.
+ERROR 15:40:06,033 - (DesigMoreDotList) Variable 'x' not found in the record in line 38.
+ERROR 15:40:06,033 - (DesStmInc) Left hand variable, 'noObj', of increment is of wrong type in line 38.
+INFO  15:40:06,033 - o3arr in line 39.
+ERROR 15:40:06,033 - (DesigMoreDotList) Variable 'x' not found in the record in line 39.
+ERROR 15:40:06,033 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+INFO  15:40:06,033 - ===================================
+ERROR 15:40:06,034 - Parsiranje NIJE uspesno zavrseno!
