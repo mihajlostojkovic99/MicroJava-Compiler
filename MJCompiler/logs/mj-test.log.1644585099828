@@ -1,0 +1,201 @@
+INFO  14:10:29,432 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  14:10:29,470 - #2 program
+INFO  14:10:29,470 - #49 Test
+INFO  14:10:29,470 - #49 int
+INFO  14:10:29,472 - #49 a
+INFO  14:10:29,472 - #37 ;
+INFO  14:10:29,472 - #49 char
+INFO  14:10:29,473 - #49 b
+INFO  14:10:29,473 - #37 ;
+INFO  14:10:29,473 - #49 int
+INFO  14:10:29,473 - #49 c
+INFO  14:10:29,473 - #37 ;
+INFO  14:10:29,474 - #45 {
+INFO  14:10:29,474 - #14 void
+INFO  14:10:29,474 - #49 main
+INFO  14:10:29,475 - #41 (
+INFO  14:10:29,475 - #42 )
+INFO  14:10:29,475 - #45 {
+INFO  14:10:29,476 - #11 print
+INFO  14:10:29,476 - #41 (
+INFO  14:10:29,476 - #50 H
+INFO  14:10:29,477 - #42 )
+INFO  14:10:29,478 - #37 ;
+INFO  14:10:29,479 - #11 print
+INFO  14:10:29,479 - #41 (
+INFO  14:10:29,479 - #50 E
+INFO  14:10:29,479 - #42 )
+INFO  14:10:29,479 - #37 ;
+INFO  14:10:29,479 - #11 print
+INFO  14:10:29,479 - #41 (
+INFO  14:10:29,480 - #50 L
+INFO  14:10:29,480 - #42 )
+INFO  14:10:29,480 - #37 ;
+INFO  14:10:29,480 - #11 print
+INFO  14:10:29,480 - #41 (
+INFO  14:10:29,480 - #50 L
+INFO  14:10:29,480 - #42 )
+INFO  14:10:29,480 - #37 ;
+INFO  14:10:29,480 - #11 print
+INFO  14:10:29,480 - #41 (
+INFO  14:10:29,480 - #50 O
+INFO  14:10:29,480 - #42 )
+INFO  14:10:29,480 - #37 ;
+INFO  14:10:29,480 - #46 }
+INFO  14:10:29,481 - #46 }
+INFO  14:10:29,483 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListVar(
+      ListVar(
+        NoList(
+        ) [NoList]
+        VarDeclWrapper(
+          Type(
+           int
+          ) [Type]
+          SingleVarDecl(
+            NormalVarDecl(
+             a
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [ListVar]
+      VarDeclWrapper(
+        Type(
+         char
+        ) [Type]
+        SingleVarDecl(
+          NormalVarDecl(
+           b
+          ) [NormalVarDecl]
+        ) [SingleVarDecl]
+      ) [VarDeclWrapper]
+    ) [ListVar]
+    VarDeclWrapper(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         c
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapper]
+  ) [ListVar]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          StatementListExists(
+            StatementListExists(
+              StatementListExists(
+                NoStatementList(
+                ) [NoStatementList]
+                StatementWithSingleStatement(
+                  PrintSingleStatement(
+                    Expr(
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          Char(
+                           H
+                          ) [Char]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [Expr]
+                  ) [PrintSingleStatement]
+                ) [StatementWithSingleStatement]
+              ) [StatementListExists]
+              StatementWithSingleStatement(
+                PrintSingleStatement(
+                  Expr(
+                    SingleTerm(
+                      FactorWrapper(
+                        NoUnary(
+                        ) [NoUnary]
+                        Char(
+                         E
+                        ) [Char]
+                      ) [FactorWrapper]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [Expr]
+                ) [PrintSingleStatement]
+              ) [StatementWithSingleStatement]
+            ) [StatementListExists]
+            StatementWithSingleStatement(
+              PrintSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Char(
+                       L
+                      ) [Char]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [PrintSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            PrintSingleStatement(
+              Expr(
+                SingleTerm(
+                  FactorWrapper(
+                    NoUnary(
+                    ) [NoUnary]
+                    Char(
+                     L
+                    ) [Char]
+                  ) [FactorWrapper]
+                ) [SingleTerm]
+                NoMoreExpr(
+                ) [NoMoreExpr]
+              ) [Expr]
+            ) [PrintSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          PrintSingleStatement(
+            Expr(
+              SingleTerm(
+                FactorWrapper(
+                  NoUnary(
+                  ) [NoUnary]
+                  Char(
+                   O
+                  ) [Char]
+                ) [FactorWrapper]
+              ) [SingleTerm]
+              NoMoreExpr(
+              ) [NoMoreExpr]
+            ) [Expr]
+          ) [PrintSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  14:10:29,485 - ===================================
+INFO  14:10:29,487 -  Program count calls = 1
+INFO  14:10:29,496 - ===================================

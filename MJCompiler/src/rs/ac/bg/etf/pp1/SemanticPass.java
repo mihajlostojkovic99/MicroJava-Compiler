@@ -16,6 +16,8 @@ public class SemanticPass extends VisitorAdaptor {
 	boolean errorDetected = false;
 
 	Logger log = Logger.getLogger(getClass());
+	
+	int nVars;
 
 	private Obj thisProgram;
 
@@ -65,7 +67,8 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
-	public void visit(Program program) {		
+	public void visit(Program program) {	
+		nVars = Tab.currentScope().getnVars();
 		Tab.chainLocalSymbols(thisProgram);
 		Tab.closeScope();
 		
@@ -178,6 +181,12 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(MethodRetVoid methodRetVoid) {
 		currentType = Tab.noType;
+		methodRetVoid.obj = currMethod;
+	}
+	
+	@Override
+	public void visit(MethodRetType methodRetType) {
+		methodRetType.obj = currMethod;
 	}
 	
 	@Override

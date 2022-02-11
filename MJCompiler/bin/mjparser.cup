@@ -78,10 +78,10 @@ nonterminal Mulop, Unary;
 nonterminal Relop;
 nonterminal ListVarDeclWrapper;
 
-nonterminal ProgramName, MethodName, MethodRet, RecordDeclName, DoWhileHelp, ActParsHelp;
+nonterminal ProgramName, MethodName, RecordDeclName, DoWhileHelp, ActParsHelp;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName, MethodRet;
 
 precedence left ELSE;
 

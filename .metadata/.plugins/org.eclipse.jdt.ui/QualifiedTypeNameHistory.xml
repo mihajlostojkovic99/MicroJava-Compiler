@@ -19,9 +19,9 @@
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Char"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.UnaryNegative"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.DesignatorArrName"/>
-    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
 </qualifiedTypeNameHistroy>
