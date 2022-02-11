@@ -1,42 +1,42 @@
-INFO  21:58:25,397 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  21:58:25,433 - #2 program
-INFO  21:58:25,433 - #49 Test
-INFO  21:58:25,433 - #45 {
-INFO  21:58:25,434 - #49 int
-INFO  21:58:25,435 - #49 m1
-INFO  21:58:25,435 - #41 (
-INFO  21:58:25,436 - #49 char
-INFO  21:58:25,436 - #49 c
-INFO  21:58:25,436 - #42 )
-INFO  21:58:25,436 - #45 {
-INFO  21:58:25,437 - #13 return
-INFO  21:58:25,437 - #47 1
-INFO  21:58:25,438 - #37 ;
-INFO  21:58:25,439 - #46 }
-INFO  21:58:25,440 - #14 void
-INFO  21:58:25,440 - #49 main
-INFO  21:58:25,440 - #41 (
-INFO  21:58:25,440 - #42 )
-INFO  21:58:25,441 - #45 {
-INFO  21:58:25,441 - #11 print
-INFO  21:58:25,441 - #41 (
-INFO  21:58:25,441 - #49 m1
-INFO  21:58:25,441 - #41 (
-INFO  21:58:25,442 - #50 a
-INFO  21:58:25,442 - #42 )
-INFO  21:58:25,443 - #42 )
-INFO  21:58:25,443 - #37 ;
-INFO  21:58:25,443 - #11 print
-INFO  21:58:25,443 - #41 (
-INFO  21:58:25,443 - #49 ord
-INFO  21:58:25,443 - #41 (
-INFO  21:58:25,443 - #50 a
-INFO  21:58:25,443 - #42 )
-INFO  21:58:25,443 - #42 )
-INFO  21:58:25,443 - #37 ;
-INFO  21:58:25,443 - #46 }
-INFO  21:58:25,443 - #46 }
-INFO  21:58:25,445 - Program(
+INFO  21:52:24,013 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  21:52:24,050 - #2 program
+INFO  21:52:24,050 - #49 Test
+INFO  21:52:24,050 - #45 {
+INFO  21:52:24,051 - #49 int
+INFO  21:52:24,052 - #49 m1
+INFO  21:52:24,052 - #41 (
+INFO  21:52:24,053 - #49 char
+INFO  21:52:24,053 - #49 c
+INFO  21:52:24,053 - #42 )
+INFO  21:52:24,053 - #45 {
+INFO  21:52:24,053 - #13 return
+INFO  21:52:24,054 - #47 1
+INFO  21:52:24,054 - #37 ;
+INFO  21:52:24,056 - #46 }
+INFO  21:52:24,056 - #14 void
+INFO  21:52:24,056 - #49 main
+INFO  21:52:24,057 - #41 (
+INFO  21:52:24,057 - #42 )
+INFO  21:52:24,057 - #45 {
+INFO  21:52:24,057 - #11 print
+INFO  21:52:24,057 - #41 (
+INFO  21:52:24,057 - #49 m1
+INFO  21:52:24,058 - #41 (
+INFO  21:52:24,059 - #50 a
+INFO  21:52:24,060 - #42 )
+INFO  21:52:24,060 - #42 )
+INFO  21:52:24,060 - #37 ;
+INFO  21:52:24,060 - #11 print
+INFO  21:52:24,060 - #41 (
+INFO  21:52:24,060 - #49 ord
+INFO  21:52:24,060 - #41 (
+INFO  21:52:24,060 - #50 a
+INFO  21:52:24,060 - #42 )
+INFO  21:52:24,060 - #42 )
+INFO  21:52:24,060 - #37 ;
+INFO  21:52:24,060 - #46 }
+INFO  21:52:24,060 - #46 }
+INFO  21:52:24,062 - Program(
   ProgramName(
    Test
   ) [ProgramName]
@@ -177,12 +177,9 @@ INFO  21:58:25,445 - Program(
     ) [MethDeclNoParams]
   ) [MethodDeclarations]
 ) [Program]
-INFO  21:58:25,445 - ===================================
-INFO  21:58:25,447 -  Program count calls = 1
-INFO  21:58:25,456 - currActPars: 1 in line 11.
-INFO  21:58:25,456 - paramsList: 1 in line 11.
-INFO  21:58:25,456 - currActPars: 1 in line 12.
-INFO  21:58:25,456 - paramsList: 1 in line 12.
-INFO  21:58:25,456 - ===================================
-INFO  21:58:25,457 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
-INFO  21:58:25,459 - Parsiranje uspesno zavrseno!
+INFO  21:52:24,063 - ===================================
+INFO  21:52:24,065 -  Program count calls = 1
+ERROR 21:52:24,074 - (DesStmFuncParams) Method 'ord' has more arguments than expected in line 12.
+ERROR 21:52:24,074 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+INFO  21:52:24,074 - ===================================
+ERROR 21:52:24,074 - Parsiranje NIJE uspesno zavrseno!

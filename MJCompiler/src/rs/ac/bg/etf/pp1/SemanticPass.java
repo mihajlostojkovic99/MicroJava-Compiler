@@ -307,14 +307,16 @@ public class SemanticPass extends VisitorAdaptor {
 			currActPars = stackActPars.pop();
 			List<Struct> paramsList = new ArrayList<>();
 			for (Obj tmp : factorWithActPars.getDesignator().obj.getLocalSymbols()) {
-				if (tmp.getFpPos() == 1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
+				if (/*tmp.getFpPos() == 1 &&*/ tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
 			}
-			if (paramsList.size() < currActPars.size()) report_error("(DesStmFuncParams) Method '" + factorWithActPars.getDesignator().obj.getName() + "' has more arguments than expected", factorWithActPars);
-			else if (paramsList.size() > currActPars.size()) report_error("(DesStmFuncParams) Method '" + factorWithActPars.getDesignator().obj.getName() + "' has missing arguments", factorWithActPars);
+			report_info("currActPars: " + currActPars.size() , factorWithActPars);
+			report_info("paramsList: " + paramsList.size() , factorWithActPars);
+			if (paramsList.size() < currActPars.size()) report_error("(FactorWithActPars) Method '" + factorWithActPars.getDesignator().obj.getName() + "' has more arguments than expected", factorWithActPars);
+			else if (paramsList.size() > currActPars.size()) report_error("(FactorWithActPars) Method '" + factorWithActPars.getDesignator().obj.getName() + "' has missing arguments", factorWithActPars);
 			else {
 				for (int i = 0; i < paramsList.size(); i++) {
 					if (!currActPars.get(i).assignableTo(paramsList.get(i))) {
-						report_error("(DesStmFuncParams) Method '" + factorWithActPars.getDesignator().obj.getName() + "' arguments are incompatible", factorWithActPars);
+						report_error("(FactorWithActPars) Method '" + factorWithActPars.getDesignator().obj.getName() + "' arguments are incompatible", factorWithActPars);
 						break;
 					}
 				}
@@ -630,6 +632,7 @@ public class SemanticPass extends VisitorAdaptor {
 			for (Obj tmp : desStmFuncParams.getDesignator().obj.getLocalSymbols()) {
 				if (tmp.getFpPos() == 1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
 			}
+			
 			if (paramsList.size() < currActPars.size()) report_error("(DesStmFuncParams) Method '" + desStmFuncParams.getDesignator().obj.getName() + "' has more arguments than expected", desStmFuncParams);
 			else if (paramsList.size() > currActPars.size()) report_error("(DesStmFuncParams) Method '" + desStmFuncParams.getDesignator().obj.getName() + "' has missing arguments", desStmFuncParams);
 			else {

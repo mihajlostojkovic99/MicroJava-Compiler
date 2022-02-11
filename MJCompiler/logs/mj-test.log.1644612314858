@@ -1,0 +1,85 @@
+INFO  21:43:47,038 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  21:43:47,078 - #2 program
+INFO  21:43:47,079 - #49 Test
+INFO  21:43:47,079 - #45 {
+INFO  21:43:47,080 - #14 void
+INFO  21:43:47,081 - #49 main
+INFO  21:43:47,081 - #41 (
+INFO  21:43:47,082 - #42 )
+INFO  21:43:47,082 - #45 {
+INFO  21:43:47,082 - #11 print
+INFO  21:43:47,083 - #41 (
+INFO  21:43:47,083 - #49 ord
+INFO  21:43:47,084 - #41 (
+INFO  21:43:47,084 - #50 a
+INFO  21:43:47,084 - #42 )
+INFO  21:43:47,086 - #42 )
+INFO  21:43:47,086 - #37 ;
+INFO  21:43:47,086 - #46 }
+INFO  21:43:47,086 - #46 }
+INFO  21:43:47,087 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  NoList(
+  ) [NoList]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
+          PrintSingleStatement(
+            Expr(
+              SingleTerm(
+                FactorWrapper(
+                  NoUnary(
+                  ) [NoUnary]
+                  FactorWithActPars(
+                    DesignatorSimple(
+                     ord
+                    ) [DesignatorSimple]
+                    ActParsHelp(
+                    ) [ActParsHelp]
+                    SingleActPar(
+                      Expr(
+                        SingleTerm(
+                          FactorWrapper(
+                            NoUnary(
+                            ) [NoUnary]
+                            Char(
+                             a
+                            ) [Char]
+                          ) [FactorWrapper]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [Expr]
+                    ) [SingleActPar]
+                  ) [FactorWithActPars]
+                ) [FactorWrapper]
+              ) [SingleTerm]
+              NoMoreExpr(
+              ) [NoMoreExpr]
+            ) [Expr]
+          ) [PrintSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  21:43:47,089 - ===================================
+INFO  21:43:47,091 -  Program count calls = 1
+ERROR 21:43:47,101 - (DesStmFuncParams) Method 'ord' has more arguments than expected in line 7.
+ERROR 21:43:47,101 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+INFO  21:43:47,101 - ===================================
+ERROR 21:43:47,102 - Parsiranje NIJE uspesno zavrseno!

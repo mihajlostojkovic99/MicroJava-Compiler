@@ -1,0 +1,129 @@
+INFO  21:46:49,846 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  21:46:49,883 - #2 program
+INFO  21:46:49,884 - #49 Test
+INFO  21:46:49,884 - #45 {
+INFO  21:46:49,885 - #49 int
+INFO  21:46:49,885 - #49 m1
+INFO  21:46:49,886 - #41 (
+INFO  21:46:49,886 - #42 )
+INFO  21:46:49,886 - #45 {
+INFO  21:46:49,887 - #13 return
+INFO  21:46:49,888 - #47 1
+INFO  21:46:49,888 - #37 ;
+INFO  21:46:49,890 - #46 }
+INFO  21:46:49,890 - #14 void
+INFO  21:46:49,891 - #49 main
+INFO  21:46:49,891 - #41 (
+INFO  21:46:49,891 - #42 )
+INFO  21:46:49,891 - #45 {
+INFO  21:46:49,891 - #11 print
+INFO  21:46:49,891 - #41 (
+INFO  21:46:49,892 - #49 ord
+INFO  21:46:49,892 - #41 (
+INFO  21:46:49,892 - #50 a
+INFO  21:46:49,893 - #42 )
+INFO  21:46:49,893 - #42 )
+INFO  21:46:49,893 - #37 ;
+INFO  21:46:49,893 - #46 }
+INFO  21:46:49,893 - #46 }
+INFO  21:46:49,894 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  NoList(
+  ) [NoList]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethDeclNoParams(
+        MethodRetType(
+          Type(
+           int
+          ) [Type]
+        ) [MethodRetType]
+        MethodName(
+         m1
+        ) [MethodName]
+        NoListVarDeclWrapper(
+        ) [NoListVarDeclWrapper]
+        StatementListExists(
+          NoStatementList(
+          ) [NoStatementList]
+          StatementWithSingleStatement(
+            ReturnExprSingleStatement(
+              Expr(
+                SingleTerm(
+                  FactorWrapper(
+                    NoUnary(
+                    ) [NoUnary]
+                    Num(
+                     1
+                    ) [Num]
+                  ) [FactorWrapper]
+                ) [SingleTerm]
+                NoMoreExpr(
+                ) [NoMoreExpr]
+              ) [Expr]
+            ) [ReturnExprSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+      ) [MethDeclNoParams]
+    ) [MethodDeclarations]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
+          PrintSingleStatement(
+            Expr(
+              SingleTerm(
+                FactorWrapper(
+                  NoUnary(
+                  ) [NoUnary]
+                  FactorWithActPars(
+                    DesignatorSimple(
+                     ord
+                    ) [DesignatorSimple]
+                    ActParsHelp(
+                    ) [ActParsHelp]
+                    SingleActPar(
+                      Expr(
+                        SingleTerm(
+                          FactorWrapper(
+                            NoUnary(
+                            ) [NoUnary]
+                            Char(
+                             a
+                            ) [Char]
+                          ) [FactorWrapper]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [Expr]
+                    ) [SingleActPar]
+                  ) [FactorWithActPars]
+                ) [FactorWrapper]
+              ) [SingleTerm]
+              NoMoreExpr(
+              ) [NoMoreExpr]
+            ) [Expr]
+          ) [PrintSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  21:46:49,895 - ===================================
+INFO  21:46:49,897 -  Program count calls = 1
+ERROR 21:46:49,906 - (DesStmFuncParams) Method 'ord' has more arguments than expected in line 11.
+ERROR 21:46:49,906 - (PrintSingleStatement) Incorrect expr in print in method 'main' in line 7.
+INFO  21:46:49,906 - ===================================
+ERROR 21:46:49,907 - Parsiranje NIJE uspesno zavrseno!
