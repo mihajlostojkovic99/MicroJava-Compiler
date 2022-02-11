@@ -455,6 +455,12 @@ public class SemanticPass extends VisitorAdaptor {
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDot.getI1())) {
 					desigMoreDot.obj = tmp;
+					if (tmp.getType().getKind() == Struct.Array) {
+						if (tmp.getType().getElemType().getKind() == Struct.Class)
+							currRecord = tmp.getType().getElemType();
+					} 
+					else if (tmp.getType().getKind() == Struct.Class) 
+						currRecord = tmp.getType();
 					found = true;
 					break;
 				}
