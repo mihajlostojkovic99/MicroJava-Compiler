@@ -1,98 +1,86 @@
-INFO  18:37:50,355 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  18:37:50,392 - #2 program
-INFO  18:37:50,392 - #49 Test
-INFO  18:37:50,392 - #20 record
-INFO  18:37:50,393 - #49 r1
-INFO  18:37:50,393 - #45 {
-INFO  18:37:50,393 - #49 int
-INFO  18:37:50,394 - #49 x
-INFO  18:37:50,394 - #43 [
-INFO  18:37:50,394 - #44 ]
-INFO  18:37:50,395 - #37 ;
-INFO  18:37:50,395 - #49 int
-INFO  18:37:50,395 - #49 y
-INFO  18:37:50,396 - #37 ;
-INFO  18:37:50,396 - #46 }
-INFO  18:37:50,396 - #20 record
-INFO  18:37:50,396 - #49 r2
-INFO  18:37:50,396 - #45 {
-INFO  18:37:50,396 - #49 r1
-INFO  18:37:50,397 - #49 obj
-INFO  18:37:50,397 - #37 ;
-INFO  18:37:50,397 - #46 }
-INFO  18:37:50,397 - #20 record
-INFO  18:37:50,399 - #49 r3
-INFO  18:37:50,399 - #45 {
-INFO  18:37:50,399 - #49 r2
-INFO  18:37:50,399 - #49 obj
-INFO  18:37:50,399 - #43 [
-INFO  18:37:50,399 - #44 ]
-INFO  18:37:50,399 - #37 ;
-INFO  18:37:50,399 - #46 }
-INFO  18:37:50,399 - #49 int
-INFO  18:37:50,399 - #49 a
-INFO  18:37:50,399 - #37 ;
-INFO  18:37:50,399 - #49 char
-INFO  18:37:50,400 - #49 b
-INFO  18:37:50,400 - #37 ;
-INFO  18:37:50,400 - #49 int
-INFO  18:37:50,400 - #49 c
-INFO  18:37:50,400 - #37 ;
-INFO  18:37:50,400 - #45 {
-INFO  18:37:50,400 - #14 void
-INFO  18:37:50,401 - #49 main
-INFO  18:37:50,401 - #41 (
-INFO  18:37:50,402 - #42 )
-INFO  18:37:50,402 - #49 r1
-INFO  18:37:50,402 - #49 o1
-INFO  18:37:50,402 - #37 ;
-INFO  18:37:50,402 - #49 r2
-INFO  18:37:50,402 - #49 o2
-INFO  18:37:50,402 - #37 ;
-INFO  18:37:50,402 - #49 r3
-INFO  18:37:50,402 - #49 o3
-INFO  18:37:50,402 - #37 ;
-INFO  18:37:50,402 - #49 r3
-INFO  18:37:50,403 - #49 o3arr
-INFO  18:37:50,403 - #43 [
-INFO  18:37:50,403 - #44 ]
-INFO  18:37:50,403 - #37 ;
-INFO  18:37:50,403 - #49 int
-INFO  18:37:50,403 - #49 i
-INFO  18:37:50,403 - #37 ;
-INFO  18:37:50,403 - #45 {
-INFO  18:37:50,403 - #49 o2
-INFO  18:37:50,404 - #34 =
-INFO  18:37:50,404 - #10 new
-INFO  18:37:50,405 - #49 r2
-INFO  18:37:50,405 - #37 ;
-INFO  18:37:50,410 - #49 o2
-INFO  18:37:50,411 - #40 .
-INFO  18:37:50,411 - #49 obj
-INFO  18:37:50,411 - #34 =
-INFO  18:37:50,412 - #10 new
-INFO  18:37:50,412 - #49 r1
-INFO  18:37:50,412 - #37 ;
-INFO  18:37:50,412 - #49 o2
-INFO  18:37:50,412 - #40 .
-INFO  18:37:50,412 - #49 obj
-INFO  18:37:50,412 - #40 .
-INFO  18:37:50,412 - #49 x
-INFO  18:37:50,412 - #34 =
-INFO  18:37:50,412 - #10 new
-INFO  18:37:50,412 - #49 int
-INFO  18:37:50,412 - #43 [
-INFO  18:37:50,412 - #47 2
-INFO  18:37:50,412 - #44 ]
-INFO  18:37:50,412 - #37 ;
-INFO  18:37:50,413 - #11 print
-INFO  18:37:50,413 - #41 (
-INFO  18:37:50,413 - #49 i
-INFO  18:37:50,413 - #42 )
-INFO  18:37:50,413 - #37 ;
-INFO  18:37:50,413 - #46 }
-INFO  18:37:50,414 - #46 }
-INFO  18:37:50,416 - Program(
+INFO  18:37:44,875 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  18:37:44,916 - #2 program
+INFO  18:37:44,916 - #49 Test
+INFO  18:37:44,916 - #20 record
+INFO  18:37:44,917 - #49 r1
+INFO  18:37:44,917 - #45 {
+INFO  18:37:44,917 - #49 int
+INFO  18:37:44,918 - #49 x
+INFO  18:37:44,918 - #43 [
+INFO  18:37:44,919 - #44 ]
+INFO  18:37:44,919 - #37 ;
+INFO  18:37:44,919 - #49 int
+INFO  18:37:44,920 - #49 y
+INFO  18:37:44,920 - #37 ;
+INFO  18:37:44,920 - #46 }
+INFO  18:37:44,920 - #20 record
+INFO  18:37:44,921 - #49 r2
+INFO  18:37:44,921 - #45 {
+INFO  18:37:44,921 - #49 r1
+INFO  18:37:44,921 - #49 obj
+INFO  18:37:44,921 - #37 ;
+INFO  18:37:44,921 - #46 }
+INFO  18:37:44,921 - #20 record
+INFO  18:37:44,923 - #49 r3
+INFO  18:37:44,923 - #45 {
+INFO  18:37:44,923 - #49 r2
+INFO  18:37:44,923 - #49 obj
+INFO  18:37:44,923 - #43 [
+INFO  18:37:44,923 - #44 ]
+INFO  18:37:44,923 - #37 ;
+INFO  18:37:44,923 - #46 }
+INFO  18:37:44,923 - #49 int
+INFO  18:37:44,923 - #49 a
+INFO  18:37:44,923 - #37 ;
+INFO  18:37:44,924 - #49 char
+INFO  18:37:44,924 - #49 b
+INFO  18:37:44,924 - #37 ;
+INFO  18:37:44,924 - #49 int
+INFO  18:37:44,924 - #49 c
+INFO  18:37:44,924 - #37 ;
+INFO  18:37:44,924 - #45 {
+INFO  18:37:44,925 - #14 void
+INFO  18:37:44,925 - #49 main
+INFO  18:37:44,926 - #41 (
+INFO  18:37:44,926 - #42 )
+INFO  18:37:44,926 - #49 r1
+INFO  18:37:44,926 - #49 o1
+INFO  18:37:44,926 - #37 ;
+INFO  18:37:44,926 - #49 r2
+INFO  18:37:44,926 - #49 o2
+INFO  18:37:44,926 - #37 ;
+INFO  18:37:44,926 - #49 r3
+INFO  18:37:44,927 - #49 o3
+INFO  18:37:44,927 - #37 ;
+INFO  18:37:44,927 - #49 r3
+INFO  18:37:44,927 - #49 o3arr
+INFO  18:37:44,927 - #43 [
+INFO  18:37:44,927 - #44 ]
+INFO  18:37:44,927 - #37 ;
+INFO  18:37:44,927 - #49 int
+INFO  18:37:44,927 - #49 i
+INFO  18:37:44,927 - #37 ;
+INFO  18:37:44,927 - #45 {
+INFO  18:37:44,927 - #49 o2
+INFO  18:37:44,928 - #34 =
+INFO  18:37:44,928 - #10 new
+INFO  18:37:44,929 - #49 r2
+INFO  18:37:44,929 - #37 ;
+INFO  18:37:44,932 - #49 o2
+INFO  18:37:44,933 - #40 .
+INFO  18:37:44,933 - #49 obj
+INFO  18:37:44,933 - #34 =
+INFO  18:37:44,934 - #10 new
+INFO  18:37:44,934 - #49 r1
+INFO  18:37:44,934 - #37 ;
+INFO  18:37:44,934 - #11 print
+INFO  18:37:44,934 - #41 (
+INFO  18:37:44,934 - #49 i
+INFO  18:37:44,934 - #42 )
+INFO  18:37:44,934 - #37 ;
+INFO  18:37:44,934 - #46 }
+INFO  18:37:44,934 - #46 }
+INFO  18:37:44,936 - Program(
   ProgramName(
    Test
   ) [ProgramName]
@@ -283,49 +271,14 @@ INFO  18:37:50,416 - Program(
       StatementListExists(
         StatementListExists(
           StatementListExists(
-            StatementListExists(
-              NoStatementList(
-              ) [NoStatementList]
-              StatementWithSingleStatement(
-                DesignatorSingleStatement(
-                  DesStmAssign(
-                    DesignatorSimple(
-                     o2
-                    ) [DesignatorSimple]
-                    AssignWrap(
-                      Assignop(
-                      ) [Assignop]
-                      Expr(
-                        SingleTerm(
-                          FactorWrapper(
-                            NoUnary(
-                            ) [NoUnary]
-                            NewFactor(
-                              Type(
-                               r2
-                              ) [Type]
-                            ) [NewFactor]
-                          ) [FactorWrapper]
-                        ) [SingleTerm]
-                        NoMoreExpr(
-                        ) [NoMoreExpr]
-                      ) [Expr]
-                    ) [AssignWrap]
-                  ) [DesStmAssign]
-                ) [DesignatorSingleStatement]
-              ) [StatementWithSingleStatement]
-            ) [StatementListExists]
+            NoStatementList(
+            ) [NoStatementList]
             StatementWithSingleStatement(
               DesignatorSingleStatement(
                 DesStmAssign(
-                  DesignatorWithMore(
-                    DesignatorWithMoreName(
-                     o2
-                    ) [DesignatorWithMoreName]
-                    DesigMoreDot(
-                     obj
-                    ) [DesigMoreDot]
-                  ) [DesignatorWithMore]
+                  DesignatorSimple(
+                   o2
+                  ) [DesignatorSimple]
                   AssignWrap(
                     Assignop(
                     ) [Assignop]
@@ -336,7 +289,7 @@ INFO  18:37:50,416 - Program(
                           ) [NoUnary]
                           NewFactor(
                             Type(
-                             r1
+                             r2
                             ) [Type]
                           ) [NewFactor]
                         ) [FactorWrapper]
@@ -356,12 +309,9 @@ INFO  18:37:50,416 - Program(
                   DesignatorWithMoreName(
                    o2
                   ) [DesignatorWithMoreName]
-                  DesigMoreDotList(
-                    DesigMoreDot(
-                     obj
-                    ) [DesigMoreDot]
-                   x
-                  ) [DesigMoreDotList]
+                  DesigMoreDot(
+                   obj
+                  ) [DesigMoreDot]
                 ) [DesignatorWithMore]
                 AssignWrap(
                   Assignop(
@@ -371,24 +321,11 @@ INFO  18:37:50,416 - Program(
                       FactorWrapper(
                         NoUnary(
                         ) [NoUnary]
-                        NewFactorWithPars(
+                        NewFactor(
                           Type(
-                           int
+                           r1
                           ) [Type]
-                          Expr(
-                            SingleTerm(
-                              FactorWrapper(
-                                NoUnary(
-                                ) [NoUnary]
-                                Num(
-                                 2
-                                ) [Num]
-                              ) [FactorWrapper]
-                            ) [SingleTerm]
-                            NoMoreExpr(
-                            ) [NoMoreExpr]
-                          ) [Expr]
-                        ) [NewFactorWithPars]
+                        ) [NewFactor]
                       ) [FactorWrapper]
                     ) [SingleTerm]
                     NoMoreExpr(
@@ -422,9 +359,8 @@ INFO  18:37:50,416 - Program(
     ) [MethDeclNoParams]
   ) [MethodDeclarations]
 ) [Program]
-INFO  18:37:50,416 - ===================================
-INFO  18:37:50,418 -  Program count calls = 1
-ERROR 18:37:50,427 - (DesigMoreDotList) Variable 'x' not found in the record in line 16.
-ERROR 18:37:50,428 - (DesStmAssign) Error with assignement to variable 'noObj' in line 16.
-INFO  18:37:50,428 - ===================================
-ERROR 18:37:50,429 - Parsiranje NIJE uspesno zavrseno!
+INFO  18:37:44,936 - ===================================
+INFO  18:37:44,938 -  Program count calls = 1
+INFO  18:37:44,946 - ===================================
+INFO  18:37:44,947 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
+INFO  18:37:44,950 - Parsiranje uspesno zavrseno!

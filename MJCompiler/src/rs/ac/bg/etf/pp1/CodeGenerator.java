@@ -25,6 +25,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(MethodName methodName) {
 		// enter b1, b2
+		methodName.obj.setAdr(Code.pc);
+		if (methodName.getI1().equalsIgnoreCase("main")) mainPC = Code.pc;
+		
 		Code.put(Code.enter);
 		Code.put(methodName.obj.getLevel());
 		Code.put(methodName.obj.getLocalSymbols().size());
@@ -44,27 +47,12 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.put(Code.return_);
 	}
 	
-	@Override
-	public void visit(PrintSingleStatement printSingleStatement) {
-		// print
-		Code.loadConst(0);
-		if (!printSingleStatement.getExpr().struct.equals(Tab.charType)) Code.put(Code.print);
-		else Code.put(Code.bprint);
-	}
+	/* ---------------------------------------------------------------------- VISIT_FACTOR ------------------------------------------------------------------------ */
 	
 	@Override
-	public void visit(ThereIsMoreExpr thereIsMoreExpr) {
-		// exit
-		if (thereIsMoreExpr.getAddop() instanceof Plus) Code.put(Code.add);
-		else Code.put(Code.sub);
-	}
-	
-	@Override
-	public void visit(MulTerms mulTerms) {
-		// exit
-		if (mulTerms.getMulop() instanceof Multiply) Code.put(Code.mul);
-		else if (mulTerms.getMulop() instanceof Divide) Code.put(Code.div);
-		else Code.put(Code.rem);
+	public void visit(FactorWrapper factorWrapper) {
+		// neg
+		if (factorWrapper.getUnary() instanceof UnaryNegative) Code.put(Code.neg);
 	}
 	
 	@Override
@@ -92,21 +80,10 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	@Override
-	public void visit(DesignatorArrName designatorArrName) {
-		// load
-		if (designatorArrName.getParent() instanceof DesignatorArr) Code.load(designatorArrName.obj);
-	}
-	
-	@Override
-	public void visit(DesStmAssign desStmAssign) {
-		// store
-		Code.store(desStmAssign.getDesignator().obj);
-	}
-	
-	@Override
-	public void visit(FactorWrapper factorWrapper) {
-		// neg
-		if (factorWrapper.getUnary() instanceof UnaryNegative) Code.put(Code.neg);
+	public void visit(NewFactor newFactor) {
+		// new
+		Code.put(Code.new_);
+		Code.put2(newFactor.getType().struct.getNumberOfFields() * 4);
 	}
 	
 	@Override
@@ -116,4 +93,132 @@ public class CodeGenerator extends VisitorAdaptor {
 		if (newFactorWithPars.getType().struct.equals(Tab.charType)) Code.put(0);
 		else Code.put(1);
 	}
+	
+	/* -------------------------------------------------------------------- VISIT_DESIGNATOR ---------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(DesignatorArrName designatorArrName) {
+		// load
+		if (designatorArrName.getParent() instanceof DesignatorArr) Code.load(designatorArrName.obj);
+		else if ((designatorArrName.getParent() instanceof DesigMoreDotArrList) || (designatorArrName.getParent() instanceof DesigMoreDotArr))
+			Code.load(designatorArrName.obj);
+	}
+	
+	@Override
+	public void visit(DesignatorWithMoreName designatorWithMoreName) {
+		// load
+		Code.load(designatorWithMoreName.obj);
+	}
+	
+	@Override
+	public void visit(DesigMoreDot desigMoreDot) {
+		// load
+		if (desigMoreDot.getParent() instanceof DesigMoreDotList || desigMoreDot.getParent() instanceof DesigMoreDotArrList)
+			Code.load(desigMoreDot.obj);
+	}
+	
+	@Override
+	public void visit(DesigMoreDotArr desigMoreDotArr) {
+		// load
+		if (desigMoreDotArr.getParent() instanceof DesigMoreDotList || desigMoreDotArr.getParent() instanceof DesigMoreDotArrList)
+			Code.load(desigMoreDotArr.obj);
+	}
+	
+	@Override
+	public void visit(DesigMoreDotList desigMoreDotList) {
+		// load
+		if (desigMoreDotList.getParent() instanceof DesigMoreDotList || desigMoreDotList.getParent() instanceof DesigMoreDotArrList)
+			Code.load(desigMoreDotList.obj);
+	}
+	
+	@Override
+	public void visit(DesigMoreDotArrList desigMoreDotArrList) {
+		// load
+		if (desigMoreDotArrList.getParent() instanceof DesigMoreDotList || desigMoreDotArrList.getParent() instanceof DesigMoreDotArrList)
+			Code.load(desigMoreDotArrList.obj);
+	}
+	
+	/* -------------------------------------------------------------------- VISIT_TERM ---------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(MulTerms mulTerms) {
+		// exit
+		if (mulTerms.getMulop() instanceof Multiply) Code.put(Code.mul);
+		else if (mulTerms.getMulop() instanceof Divide) Code.put(Code.div);
+		else Code.put(Code.rem);
+	}
+	
+	/* -------------------------------------------------------------------- VISIT_EXPR ---------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(ThereIsMoreExpr thereIsMoreExpr) {
+		// exit
+		if (thereIsMoreExpr.getAddop() instanceof Plus) Code.put(Code.add);
+		else Code.put(Code.sub);
+	}
+	
+	/* ------------------------------------------------------------------- VISIT_DESIG_STM --------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(DesStmAssign desStmAssign) {
+		// store
+		Code.store(desStmAssign.getDesignator().obj);
+	}
+	
+	@Override
+	public void visit(DesStmInc desStmInc) {
+		// inc
+		if (desStmInc.getDesignator().obj.getKind() == Obj.Elem) Code.put(Code.dup2);
+		Code.load(desStmInc.getDesignator().obj);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		Code.store(desStmInc.getDesignator().obj);
+	}
+	
+	@Override
+	public void visit(DesStmDec desStmDec) {
+		// dec
+		if (desStmDec.getDesignator().obj.getKind() == Obj.Elem) Code.put(Code.dup2);
+		Code.load(desStmDec.getDesignator().obj);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.store(desStmDec.getDesignator().obj);
+	}
+	
+	/* ----------------------------------------------------------------- VISIT_SING_STATEMENT ------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(ReturnSingleStatement returnSingleStatement) {
+		// exit
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+	}
+	
+	@Override
+	public void visit(ReadSingleStatement readSingleStatement) {
+		// exit
+		if (readSingleStatement.getDesignator().obj.getType().equals(Tab.charType)) Code.put(Code.bread);
+		else Code.put(Code.read);
+		
+		Code.store(readSingleStatement.getDesignator().obj);
+	}
+	
+	@Override
+	public void visit(PrintSingleStatement printSingleStatement) {
+		// print
+		Code.loadConst(0);
+		if (!printSingleStatement.getExpr().struct.equals(Tab.charType)) Code.put(Code.print);
+		else Code.put(Code.bprint);
+	}
+	
+	@Override
+	public void visit(PrintNumberSingleStatement printNumberSingleStatement) {
+		// print
+		Code.loadConst(printNumberSingleStatement.getN2());
+		if (!printNumberSingleStatement.getExpr().struct.equals(Tab.charType)) Code.put(Code.print);
+		else Code.put(Code.bprint);
+	}
+	
+	/* ----------------------------------------------------------------- VISIT_CONDITIONALS -------------------------------------------------------------------- */
+	
 }

@@ -68,7 +68,7 @@
 	</target>
 
 	<target name="runObj" depends="debugObj" >
-		<java classname="rs.etf.pp1.mj.runtime.Run">
+		<java classname="rs.etf.pp1.mj.runtime.Run" input="test/input.txt">
 			<arg value="test/program.obj"/>
 			<classpath>
 				<pathelement location="lib/mj-runtime-1.1.jar"/>
@@ -77,7 +77,7 @@
 	</target>
 	
 	<target name="debugObj" depends="disasm">
-				<java classname="rs.etf.pp1.mj.runtime.Run">
+				<java classname="rs.etf.pp1.mj.runtime.Run" input="test/input.txt">
 					<arg value="test/program.obj"/>
 					<arg value="-debug"/>
 					<classpath>

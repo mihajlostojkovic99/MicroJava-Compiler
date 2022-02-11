@@ -479,6 +479,7 @@ public class SemanticPass extends VisitorAdaptor {
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDotArr.getDesignatorArrName().getI1()) && tmp.getType().getKind() == Struct.Array) {
 					desigMoreDotArr.obj = new Obj(Obj.Elem, tmp.getName() + "[$]", tmp.getType().getElemType());
+					desigMoreDotArr.getDesignatorArrName().obj = tmp;
 					if (tmp.getType().getElemType().getKind() == Struct.Class) 
 						currRecord = tmp.getType().getElemType(); // ????
 					found = true;
@@ -530,7 +531,8 @@ public class SemanticPass extends VisitorAdaptor {
 			boolean found = false;
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDotArrList.getDesignatorArrName().getI1()) && tmp.getType().getKind() == Struct.Array) {
-					desigMoreDotArrList.obj = new Obj(Obj.Elem, tmp.getName() + "[$]", tmp.getType().getElemType());;
+					desigMoreDotArrList.obj = new Obj(Obj.Elem, tmp.getName() + "[$]", tmp.getType().getElemType());
+					desigMoreDotArrList.getDesignatorArrName().obj = tmp;
 					if (tmp.getType().getElemType().getKind() == Struct.Class)
 						currRecord = tmp.getType().getElemType();
 					found = true;
