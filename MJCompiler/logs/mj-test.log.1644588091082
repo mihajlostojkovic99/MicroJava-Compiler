@@ -1,0 +1,203 @@
+INFO  15:00:14,676 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  15:00:14,711 - #2 program
+INFO  15:00:14,711 - #49 Test
+INFO  15:00:14,711 - #49 int
+INFO  15:00:14,713 - #49 a
+INFO  15:00:14,713 - #37 ;
+INFO  15:00:14,713 - #49 char
+INFO  15:00:14,714 - #49 b
+INFO  15:00:14,714 - #37 ;
+INFO  15:00:14,714 - #49 int
+INFO  15:00:14,714 - #49 c
+INFO  15:00:14,714 - #37 ;
+INFO  15:00:14,714 - #45 {
+INFO  15:00:14,715 - #14 void
+INFO  15:00:14,715 - #49 main
+INFO  15:00:14,716 - #41 (
+INFO  15:00:14,716 - #42 )
+INFO  15:00:14,716 - #45 {
+INFO  15:00:14,717 - #11 print
+INFO  15:00:14,717 - #41 (
+INFO  15:00:14,717 - #50 H
+INFO  15:00:14,718 - #42 )
+INFO  15:00:14,720 - #37 ;
+INFO  15:00:14,721 - #11 print
+INFO  15:00:14,721 - #41 (
+INFO  15:00:14,721 - #50 E
+INFO  15:00:14,721 - #42 )
+INFO  15:00:14,722 - #37 ;
+INFO  15:00:14,722 - #11 print
+INFO  15:00:14,722 - #41 (
+INFO  15:00:14,722 - #50 L
+INFO  15:00:14,722 - #42 )
+INFO  15:00:14,722 - #37 ;
+INFO  15:00:14,722 - #11 print
+INFO  15:00:14,722 - #41 (
+INFO  15:00:14,722 - #50 L
+INFO  15:00:14,722 - #42 )
+INFO  15:00:14,722 - #37 ;
+INFO  15:00:14,722 - #11 print
+INFO  15:00:14,722 - #41 (
+INFO  15:00:14,722 - #50 O
+INFO  15:00:14,722 - #42 )
+INFO  15:00:14,723 - #37 ;
+INFO  15:00:14,723 - #46 }
+INFO  15:00:14,723 - #46 }
+INFO  15:00:14,724 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListVar(
+      ListVar(
+        NoList(
+        ) [NoList]
+        VarDeclWrapper(
+          Type(
+           int
+          ) [Type]
+          SingleVarDecl(
+            NormalVarDecl(
+             a
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [ListVar]
+      VarDeclWrapper(
+        Type(
+         char
+        ) [Type]
+        SingleVarDecl(
+          NormalVarDecl(
+           b
+          ) [NormalVarDecl]
+        ) [SingleVarDecl]
+      ) [VarDeclWrapper]
+    ) [ListVar]
+    VarDeclWrapper(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         c
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapper]
+  ) [ListVar]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          StatementListExists(
+            StatementListExists(
+              StatementListExists(
+                NoStatementList(
+                ) [NoStatementList]
+                StatementWithSingleStatement(
+                  PrintSingleStatement(
+                    Expr(
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          Char(
+                           H
+                          ) [Char]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [Expr]
+                  ) [PrintSingleStatement]
+                ) [StatementWithSingleStatement]
+              ) [StatementListExists]
+              StatementWithSingleStatement(
+                PrintSingleStatement(
+                  Expr(
+                    SingleTerm(
+                      FactorWrapper(
+                        NoUnary(
+                        ) [NoUnary]
+                        Char(
+                         E
+                        ) [Char]
+                      ) [FactorWrapper]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [Expr]
+                ) [PrintSingleStatement]
+              ) [StatementWithSingleStatement]
+            ) [StatementListExists]
+            StatementWithSingleStatement(
+              PrintSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Char(
+                       L
+                      ) [Char]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [PrintSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            PrintSingleStatement(
+              Expr(
+                SingleTerm(
+                  FactorWrapper(
+                    NoUnary(
+                    ) [NoUnary]
+                    Char(
+                     L
+                    ) [Char]
+                  ) [FactorWrapper]
+                ) [SingleTerm]
+                NoMoreExpr(
+                ) [NoMoreExpr]
+              ) [Expr]
+            ) [PrintSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          PrintSingleStatement(
+            Expr(
+              SingleTerm(
+                FactorWrapper(
+                  NoUnary(
+                  ) [NoUnary]
+                  Char(
+                   O
+                  ) [Char]
+                ) [FactorWrapper]
+              ) [SingleTerm]
+              NoMoreExpr(
+              ) [NoMoreExpr]
+            ) [Expr]
+          ) [PrintSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  15:00:14,725 - ===================================
+INFO  15:00:14,727 -  Program count calls = 1
+INFO  15:00:14,736 - ===================================
+INFO  15:00:14,737 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
+INFO  15:00:14,738 - Parsiranje uspesno zavrseno!

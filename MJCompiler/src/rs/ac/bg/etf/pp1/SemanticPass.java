@@ -173,6 +173,7 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(MethodName methodName) {
 		if (methodName.getI1().equalsIgnoreCase("main") && currentType == Tab.noType) mainHappened  = true;
 		currMethod = Tab.insert(Obj.Meth, methodName.getI1(), currentType);
+		methodName.obj = currMethod;
 		Tab.openScope();
 		methodLabels = new HashSet<String>();
 		methodCalledLabels = new HashSet<String>();
@@ -181,12 +182,11 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(MethodRetVoid methodRetVoid) {
 		currentType = Tab.noType;
-		methodRetVoid.obj = currMethod;
 	}
 	
 	@Override
 	public void visit(MethodRetType methodRetType) {
-		methodRetType.obj = currMethod;
+//		methodRetType.obj = currMethod;
 	}
 	
 	@Override
@@ -776,6 +776,7 @@ public class SemanticPass extends VisitorAdaptor {
 		if (typeObj == Tab.noObj) {
 			report_error("Type '" + type.getI1() + "' is not defined", type);
 			currentType = Tab.noType;
+			type.struct = currentType;
 			return;
 		}
 		
@@ -785,6 +786,7 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 		
 		currentType = typeObj.getType();
+		type.struct = currentType;
 	}
 	
 	public boolean passed() {

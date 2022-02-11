@@ -69,7 +69,6 @@ nonterminal ConstDeclWrapper ConstDeclWrapper;
 nonterminal VarDeclWrapper VarDeclWrapper;
 nonterminal RecordDeclList RecordDeclList;
 nonterminal MethodDecl MethodDecl;
-nonterminal Type Type;
 nonterminal ConstDeclList ConstDeclList;
 nonterminal ConstDecl ConstDecl;
 nonterminal VarDeclList VarDeclList;
@@ -92,13 +91,12 @@ nonterminal Relop Relop;
 nonterminal ListVarDeclWrapper ListVarDeclWrapper;
 
 nonterminal ProgramName ProgramName;
-nonterminal MethodName MethodName;
 nonterminal RecordDeclName RecordDeclName;
 nonterminal DoWhileHelp DoWhileHelp;
 nonterminal ActParsHelp ActParsHelp;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName, MethodRet;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact, Type;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName, MethodRet, MethodName;
 
 precedence left ELSE;
 

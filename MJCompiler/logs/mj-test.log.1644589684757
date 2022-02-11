@@ -1,0 +1,152 @@
+INFO  15:26:04,719 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  15:26:04,766 - #2 program
+INFO  15:26:04,766 - #49 Test
+INFO  15:26:04,766 - #49 int
+INFO  15:26:04,767 - #49 a
+INFO  15:26:04,768 - #37 ;
+INFO  15:26:04,768 - #49 char
+INFO  15:26:04,768 - #49 b
+INFO  15:26:04,768 - #37 ;
+INFO  15:26:04,769 - #49 int
+INFO  15:26:04,769 - #49 c
+INFO  15:26:04,769 - #37 ;
+INFO  15:26:04,769 - #45 {
+INFO  15:26:04,769 - #14 void
+INFO  15:26:04,769 - #49 main
+INFO  15:26:04,770 - #41 (
+INFO  15:26:04,770 - #42 )
+INFO  15:26:04,770 - #49 int
+INFO  15:26:04,771 - #49 d
+INFO  15:26:04,771 - #37 ;
+INFO  15:26:04,771 - #49 char
+INFO  15:26:04,771 - #49 e
+INFO  15:26:04,771 - #37 ;
+INFO  15:26:04,772 - #49 bool
+INFO  15:26:04,772 - #49 f
+INFO  15:26:04,772 - #37 ;
+INFO  15:26:04,772 - #45 {
+INFO  15:26:04,772 - #11 print
+INFO  15:26:04,773 - #41 (
+INFO  15:26:04,773 - #47 22
+INFO  15:26:04,774 - #42 )
+INFO  15:26:04,775 - #37 ;
+INFO  15:26:04,775 - #46 }
+INFO  15:26:04,775 - #46 }
+INFO  15:26:04,777 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListVar(
+      ListVar(
+        NoList(
+        ) [NoList]
+        VarDeclWrapper(
+          Type(
+           int
+          ) [Type]
+          SingleVarDecl(
+            NormalVarDecl(
+             a
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [ListVar]
+      VarDeclWrapper(
+        Type(
+         char
+        ) [Type]
+        SingleVarDecl(
+          NormalVarDecl(
+           b
+          ) [NormalVarDecl]
+        ) [SingleVarDecl]
+      ) [VarDeclWrapper]
+    ) [ListVar]
+    VarDeclWrapper(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         c
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapper]
+  ) [ListVar]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      IsListVarDeclWrapper(
+        IsListVarDeclWrapper(
+          IsListVarDeclWrapper(
+            NoListVarDeclWrapper(
+            ) [NoListVarDeclWrapper]
+            VarDeclWrapper(
+              Type(
+               int
+              ) [Type]
+              SingleVarDecl(
+                NormalVarDecl(
+                 d
+                ) [NormalVarDecl]
+              ) [SingleVarDecl]
+            ) [VarDeclWrapper]
+          ) [IsListVarDeclWrapper]
+          VarDeclWrapper(
+            Type(
+             char
+            ) [Type]
+            SingleVarDecl(
+              NormalVarDecl(
+               e
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+          ) [VarDeclWrapper]
+        ) [IsListVarDeclWrapper]
+        VarDeclWrapper(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDecl(
+            NormalVarDecl(
+             f
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [IsListVarDeclWrapper]
+      StatementListExists(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
+          PrintSingleStatement(
+            Expr(
+              SingleTerm(
+                FactorWrapper(
+                  NoUnary(
+                  ) [NoUnary]
+                  Num(
+                   22
+                  ) [Num]
+                ) [FactorWrapper]
+              ) [SingleTerm]
+              NoMoreExpr(
+              ) [NoMoreExpr]
+            ) [Expr]
+          ) [PrintSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  15:26:04,777 - ===================================
+INFO  15:26:04,786 -  Program count calls = 1
+INFO  15:26:04,803 - ===================================
+INFO  15:26:04,804 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
+INFO  15:26:04,807 - Parsiranje uspesno zavrseno!

@@ -1,14 +1,17 @@
 program Test 
+
+const int x = 5;
 int a;
 char b;
 int c;
 { 
 
-	void main() { 
-		print('H');
-		print('E');
-		print('L');
-		print('L');
-		print('O');	
+	void main() int d, arr[]; char e; bool f; { 
+		
+		arr = new int[10];
+		
+		arr[3] = 18 + 4;
+		
+		print(arr[3]);
 	}
 }
