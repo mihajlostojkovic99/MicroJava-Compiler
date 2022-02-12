@@ -1,92 +1,78 @@
-INFO  00:49:39,542 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  00:49:39,596 - #2 program
-INFO  00:49:39,596 - #49 Test
-INFO  00:49:39,596 - #20 record
-INFO  00:49:39,598 - #49 r1
-INFO  00:49:39,598 - #45 {
-INFO  00:49:39,599 - #49 int
-INFO  00:49:39,600 - #49 x
-INFO  00:49:39,601 - #43 [
-INFO  00:49:39,601 - #44 ]
-INFO  00:49:39,601 - #37 ;
-INFO  00:49:39,601 - #49 int
-INFO  00:49:39,602 - #49 y
-INFO  00:49:39,602 - #37 ;
-INFO  00:49:39,602 - #46 }
-INFO  00:49:39,602 - #20 record
-INFO  00:49:39,603 - #49 r2
-INFO  00:49:39,603 - #45 {
-INFO  00:49:39,603 - #49 r1
-INFO  00:49:39,604 - #49 obj
-INFO  00:49:39,604 - #43 [
-INFO  00:49:39,604 - #44 ]
-INFO  00:49:39,604 - #37 ;
-INFO  00:49:39,605 - #46 }
-INFO  00:49:39,606 - #20 record
-INFO  00:49:39,606 - #49 r3
-INFO  00:49:39,606 - #45 {
-INFO  00:49:39,606 - #49 r2
-INFO  00:49:39,606 - #49 obj
-INFO  00:49:39,607 - #43 [
-INFO  00:49:39,607 - #44 ]
-INFO  00:49:39,607 - #37 ;
-INFO  00:49:39,607 - #46 }
-INFO  00:49:39,607 - #45 {
-INFO  00:49:39,607 - #49 int
-INFO  00:49:39,608 - #49 test
-INFO  00:49:39,608 - #41 (
-INFO  00:49:39,609 - #49 int
-INFO  00:49:39,609 - #49 x
-INFO  00:49:39,609 - #42 )
-INFO  00:49:39,610 - #45 {
-INFO  00:49:39,610 - #13 return
-INFO  00:49:39,610 - #49 x
-INFO  00:49:39,611 - #37 ;
-INFO  00:49:39,614 - #46 }
-INFO  00:49:39,614 - #14 void
-INFO  00:49:39,614 - #49 main
-INFO  00:49:39,615 - #41 (
-INFO  00:49:39,615 - #42 )
-INFO  00:49:39,615 - #49 r1
-INFO  00:49:39,615 - #49 o1
-INFO  00:49:39,615 - #37 ;
-INFO  00:49:39,615 - #49 r2
-INFO  00:49:39,615 - #49 o2
-INFO  00:49:39,615 - #37 ;
-INFO  00:49:39,615 - #49 r3
-INFO  00:49:39,615 - #49 o3
-INFO  00:49:39,616 - #37 ;
-INFO  00:49:39,616 - #49 r3
-INFO  00:49:39,616 - #49 o3arr
-INFO  00:49:39,616 - #43 [
-INFO  00:49:39,616 - #44 ]
-INFO  00:49:39,616 - #37 ;
-INFO  00:49:39,616 - #45 {
-INFO  00:49:39,616 - #49 l1
-INFO  00:49:39,617 - #38 :
-INFO  00:49:39,618 - #11 print
-INFO  00:49:39,618 - #41 (
-INFO  00:49:39,621 - #47 1
-INFO  00:49:39,621 - #42 )
-INFO  00:49:39,621 - #37 ;
-INFO  00:49:39,621 - #19 goto
-INFO  00:49:39,621 - #49 l4
-INFO  00:49:39,621 - #37 ;
-INFO  00:49:39,621 - #11 print
-INFO  00:49:39,621 - #41 (
-INFO  00:49:39,622 - #47 3
-INFO  00:49:39,622 - #42 )
-INFO  00:49:39,622 - #37 ;
-INFO  00:49:39,622 - #49 l4
-INFO  00:49:39,622 - #38 :
-INFO  00:49:39,622 - #11 print
-INFO  00:49:39,622 - #41 (
-INFO  00:49:39,622 - #47 4
-INFO  00:49:39,622 - #42 )
-INFO  00:49:39,622 - #37 ;
-INFO  00:49:39,622 - #46 }
-INFO  00:49:39,622 - #46 }
-INFO  00:49:39,624 - Program(
+INFO  22:43:47,015 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  22:43:47,056 - #2 program
+INFO  22:43:47,056 - #49 Test
+INFO  22:43:47,056 - #20 record
+INFO  22:43:47,058 - #49 r1
+INFO  22:43:47,058 - #45 {
+INFO  22:43:47,059 - #49 int
+INFO  22:43:47,059 - #49 x
+INFO  22:43:47,060 - #43 [
+INFO  22:43:47,060 - #44 ]
+INFO  22:43:47,060 - #37 ;
+INFO  22:43:47,060 - #49 int
+INFO  22:43:47,061 - #49 y
+INFO  22:43:47,061 - #37 ;
+INFO  22:43:47,061 - #46 }
+INFO  22:43:47,061 - #20 record
+INFO  22:43:47,062 - #49 r2
+INFO  22:43:47,062 - #45 {
+INFO  22:43:47,062 - #49 r1
+INFO  22:43:47,062 - #49 obj
+INFO  22:43:47,062 - #43 [
+INFO  22:43:47,062 - #44 ]
+INFO  22:43:47,062 - #37 ;
+INFO  22:43:47,063 - #46 }
+INFO  22:43:47,063 - #20 record
+INFO  22:43:47,063 - #49 r3
+INFO  22:43:47,064 - #45 {
+INFO  22:43:47,064 - #49 r2
+INFO  22:43:47,064 - #49 obj
+INFO  22:43:47,064 - #43 [
+INFO  22:43:47,064 - #44 ]
+INFO  22:43:47,064 - #37 ;
+INFO  22:43:47,064 - #46 }
+INFO  22:43:47,064 - #45 {
+INFO  22:43:47,064 - #49 int
+INFO  22:43:47,065 - #49 test
+INFO  22:43:47,065 - #41 (
+INFO  22:43:47,066 - #49 int
+INFO  22:43:47,066 - #49 x
+INFO  22:43:47,066 - #42 )
+INFO  22:43:47,066 - #45 {
+INFO  22:43:47,066 - #13 return
+INFO  22:43:47,067 - #49 x
+INFO  22:43:47,068 - #37 ;
+INFO  22:43:47,069 - #46 }
+INFO  22:43:47,070 - #14 void
+INFO  22:43:47,070 - #49 main
+INFO  22:43:47,071 - #41 (
+INFO  22:43:47,071 - #42 )
+INFO  22:43:47,071 - #49 r1
+INFO  22:43:47,071 - #49 o1
+INFO  22:43:47,071 - #37 ;
+INFO  22:43:47,071 - #49 r2
+INFO  22:43:47,072 - #49 o2
+INFO  22:43:47,072 - #37 ;
+INFO  22:43:47,072 - #49 r3
+INFO  22:43:47,072 - #49 o3
+INFO  22:43:47,072 - #37 ;
+INFO  22:43:47,072 - #49 r3
+INFO  22:43:47,072 - #49 o3arr
+INFO  22:43:47,072 - #43 [
+INFO  22:43:47,073 - #44 ]
+INFO  22:43:47,073 - #37 ;
+INFO  22:43:47,073 - #45 {
+INFO  22:43:47,073 - #11 print
+INFO  22:43:47,073 - #41 (
+INFO  22:43:47,073 - #49 test
+INFO  22:43:47,073 - #41 (
+INFO  22:43:47,075 - #47 5
+INFO  22:43:47,076 - #42 )
+INFO  22:43:47,076 - #42 )
+INFO  22:43:47,077 - #37 ;
+INFO  22:43:47,077 - #46 }
+INFO  22:43:47,077 - #46 }
+INFO  22:43:47,078 - Program(
   ProgramName(
    Test
   ) [ProgramName]
@@ -272,82 +258,52 @@ INFO  00:49:39,624 - Program(
         ) [VarDeclWrapper]
       ) [IsListVarDeclWrapper]
       StatementListExists(
-        StatementListExists(
-          StatementListExists(
-            StatementListExists(
-              NoStatementList(
-              ) [NoStatementList]
-              StatementWithLabel(
-                Label(
-                 l1
-                ) [Label]
-                PrintSingleStatement(
-                  Expr(
-                    SingleTerm(
-                      FactorWrapper(
-                        NoUnary(
-                        ) [NoUnary]
-                        Num(
-                         1
-                        ) [Num]
-                      ) [FactorWrapper]
-                    ) [SingleTerm]
-                    NoMoreExpr(
-                    ) [NoMoreExpr]
-                  ) [Expr]
-                ) [PrintSingleStatement]
-              ) [StatementWithLabel]
-            ) [StatementListExists]
-            StatementWithSingleStatement(
-              GotoSingleStatement(
-               l4
-              ) [GotoSingleStatement]
-            ) [StatementWithSingleStatement]
-          ) [StatementListExists]
-          StatementWithSingleStatement(
-            PrintSingleStatement(
-              Expr(
-                SingleTerm(
-                  FactorWrapper(
-                    NoUnary(
-                    ) [NoUnary]
-                    Num(
-                     3
-                    ) [Num]
-                  ) [FactorWrapper]
-                ) [SingleTerm]
-                NoMoreExpr(
-                ) [NoMoreExpr]
-              ) [Expr]
-            ) [PrintSingleStatement]
-          ) [StatementWithSingleStatement]
-        ) [StatementListExists]
-        StatementWithLabel(
-          Label(
-           l4
-          ) [Label]
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
           PrintSingleStatement(
             Expr(
               SingleTerm(
                 FactorWrapper(
                   NoUnary(
                   ) [NoUnary]
-                  Num(
-                   4
-                  ) [Num]
+                  FactorWithActPars(
+                    DesignatorSimple(
+                     test
+                    ) [DesignatorSimple]
+                    ActParsHelp(
+                    ) [ActParsHelp]
+                    SingleActPar(
+                      Expr(
+                        SingleTerm(
+                          FactorWrapper(
+                            NoUnary(
+                            ) [NoUnary]
+                            Num(
+                             5
+                            ) [Num]
+                          ) [FactorWrapper]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [Expr]
+                    ) [SingleActPar]
+                  ) [FactorWithActPars]
                 ) [FactorWrapper]
               ) [SingleTerm]
               NoMoreExpr(
               ) [NoMoreExpr]
             ) [Expr]
           ) [PrintSingleStatement]
-        ) [StatementWithLabel]
+        ) [StatementWithSingleStatement]
       ) [StatementListExists]
     ) [MethDeclNoParams]
   ) [MethodDeclarations]
 ) [Program]
-INFO  00:49:39,625 - ===================================
-INFO  00:49:39,627 -  Program count calls = 1
-INFO  00:49:39,638 - ===================================
-INFO  00:49:39,639 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
-INFO  00:49:39,649 - Parsiranje uspesno zavrseno!
+INFO  22:43:47,078 - ===================================
+INFO  22:43:47,080 -  Program count calls = 1
+INFO  22:43:47,089 - currActPars: 1 in line 14.
+INFO  22:43:47,089 - paramsList: 1 in line 14.
+INFO  22:43:47,089 - ===================================
+INFO  22:43:47,089 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
+INFO  22:43:47,093 - Parsiranje uspesno zavrseno!

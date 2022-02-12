@@ -2,7 +2,9 @@ package rs.ac.bg.etf.pp1;
 
 import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Stack;
 import java.util.HashSet;
 
@@ -17,6 +19,9 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 public class CodeGenerator extends VisitorAdaptor {
 
 	private int mainPC;
+	
+	private Map<String, Integer> labelAdrs = new HashMap<>();
+	private Map<String, List<Integer>> patchAdrs = new HashMap<>();
 	
 	int getMainPc() {
 		return mainPC;
@@ -59,6 +64,22 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(NormalFactor normalFactor) {
 		// load
 		Code.load(normalFactor.getDesignator().obj);
+	}
+	
+	@Override
+	public void visit(FactorWithActPars factorWithActPars) {
+		// call
+		int adr = factorWithActPars.getDesignator().obj.getAdr() - Code.pc;
+		Code.put(Code.call);
+		Code.put2(adr);
+	}
+	
+	@Override
+	public void visit(FactorWithoutActPars factorWithoutActPars) {
+		// call
+		int adr = factorWithoutActPars.getDesignator().obj.getAdr() - Code.pc;
+		Code.put(Code.call);
+		Code.put2(adr);
 	}
 	
 	@Override
@@ -174,9 +195,29 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(DesStmFuncParams desStmFuncParams) {
+		// call
+		int adr = desStmFuncParams.getDesignator().obj.getAdr() - Code.pc;
+		Code.put(Code.call);
+		Code.put2(adr);
+		if (!desStmFuncParams.getDesignator().obj.getType().equals(Tab.noType)) Code.put(Code.pop);
+		
+	}
+	
+	@Override
+	public void visit(DesStmFunc desStmFunc) {
+		// call
+		int adr = desStmFunc.getDesignator().obj.getAdr() - Code.pc;
+		Code.put(Code.call);
+		Code.put2(adr);
+		if (!desStmFunc.getDesignator().obj.getType().equals(Tab.noType)) Code.put(Code.pop);
+	}
+	
+	@Override
 	public void visit(DesStmInc desStmInc) {
 		// inc
 		if (desStmInc.getDesignator().obj.getKind() == Obj.Elem) Code.put(Code.dup2);
+		if (desStmInc.getDesignator().obj.getKind() == Obj.Fld) Code.put(Code.dup);
 		Code.load(desStmInc.getDesignator().obj);
 		Code.loadConst(1);
 		Code.put(Code.add);
@@ -187,6 +228,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(DesStmDec desStmDec) {
 		// dec
 		if (desStmDec.getDesignator().obj.getKind() == Obj.Elem) Code.put(Code.dup2);
+		if (desStmDec.getDesignator().obj.getKind() == Obj.Fld) Code.put(Code.dup);
 		Code.load(desStmDec.getDesignator().obj);
 		Code.loadConst(1);
 		Code.put(Code.sub);
@@ -225,6 +267,38 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.loadConst(printNumberSingleStatement.getN2());
 		if (!printNumberSingleStatement.getExpr().struct.equals(Tab.charType)) Code.put(Code.print);
 		else Code.put(Code.bprint);
+	}
+	
+	@Override
+	public void visit(Label label) {
+		// print
+		if (label.getParent() instanceof StatementWithLabel) {
+			labelAdrs.put(label.getI1(), Code.pc);
+			if (patchAdrs.containsKey(label.getI1())) {
+				for (int i : patchAdrs.get(label.getI1())) {
+					Code.fixup(i);
+				}
+				patchAdrs.get(label.getI1()).clear();
+			}
+		}
+	}
+	
+	@Override
+	public void visit(GotoSingleStatement gotoSingleStatement) {
+		// jmp
+		if (labelAdrs.containsKey(gotoSingleStatement.getI1())) Code.putJump(labelAdrs.get(gotoSingleStatement.getI1()));
+		else {
+			Code.putJump(0);
+			
+			int patchAdr = Code.pc - 2;
+			
+			if (!patchAdrs.containsKey(gotoSingleStatement.getI1())) {
+				List<Integer> tmp = new ArrayList<>();
+				tmp.add(patchAdr);
+				patchAdrs.put(gotoSingleStatement.getI1(), tmp);
+			}
+			else patchAdrs.get(gotoSingleStatement.getI1()).add(patchAdr);
+		}
 	}
 	
 	/* ----------------------------------------------------------------- VISIT_CONDITIONALS -------------------------------------------------------------------- */
