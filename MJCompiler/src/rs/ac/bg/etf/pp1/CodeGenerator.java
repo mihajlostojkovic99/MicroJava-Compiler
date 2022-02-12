@@ -99,15 +99,23 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorArrName designatorArrName) {
 		// load
-		if (designatorArrName.getParent() instanceof DesignatorArr) Code.load(designatorArrName.obj);
-		else if ((designatorArrName.getParent() instanceof DesigMoreDotArrList) || (designatorArrName.getParent() instanceof DesigMoreDotArr))
-			Code.load(designatorArrName.obj);
+//		if (designatorArrName.getParent() instanceof DesignatorArr) Code.load(designatorArrName.obj);
+//		else if ((designatorArrName.getParent() instanceof DesigMoreDotArrList) || (designatorArrName.getParent() instanceof DesigMoreDotArr))
+//			Code.load(designatorArrName.obj);
+		Code.load(designatorArrName.obj);
 	}
 	
 	@Override
 	public void visit(DesignatorWithMoreName designatorWithMoreName) {
 		// load
 		Code.load(designatorWithMoreName.obj);
+	}
+	
+	@Override
+	public void visit(DesignatorMoreElem designatorMoreElem) {
+		// load
+		Code.load(designatorMoreElem.obj);
+		
 	}
 	
 	@Override

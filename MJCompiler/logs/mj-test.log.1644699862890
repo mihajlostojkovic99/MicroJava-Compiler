@@ -1,0 +1,188 @@
+INFO  21:59:07,566 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  21:59:07,982 - #2 program
+INFO  21:59:07,982 - #49 Test
+INFO  21:59:07,982 - #45 {
+INFO  21:59:07,991 - #49 int
+INFO  21:59:07,996 - #49 m1
+INFO  21:59:08,001 - #41 (
+INFO  21:59:08,005 - #49 char
+INFO  21:59:08,005 - #49 c
+INFO  21:59:08,005 - #42 )
+INFO  21:59:08,006 - #45 {
+INFO  21:59:08,010 - #13 return
+INFO  21:59:08,014 - #47 1
+INFO  21:59:08,023 - #37 ;
+INFO  21:59:08,037 - #46 }
+INFO  21:59:08,038 - #14 void
+INFO  21:59:08,039 - #49 main
+INFO  21:59:08,043 - #41 (
+INFO  21:59:08,044 - #42 )
+INFO  21:59:08,044 - #45 {
+INFO  21:59:08,044 - #11 print
+INFO  21:59:08,044 - #41 (
+INFO  21:59:08,044 - #49 m1
+INFO  21:59:08,044 - #41 (
+INFO  21:59:08,045 - #50 a
+INFO  21:59:08,049 - #42 )
+INFO  21:59:08,049 - #42 )
+INFO  21:59:08,049 - #37 ;
+INFO  21:59:08,049 - #11 print
+INFO  21:59:08,050 - #41 (
+INFO  21:59:08,050 - #49 ord
+INFO  21:59:08,050 - #41 (
+INFO  21:59:08,050 - #50 a
+INFO  21:59:08,050 - #42 )
+INFO  21:59:08,050 - #42 )
+INFO  21:59:08,050 - #37 ;
+INFO  21:59:08,050 - #46 }
+INFO  21:59:08,050 - #46 }
+INFO  21:59:08,056 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  NoList(
+  ) [NoList]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethDeclParams(
+        MethodRetType(
+          Type(
+           int
+          ) [Type]
+        ) [MethodRetType]
+        MethodName(
+         m1
+        ) [MethodName]
+        SingleFormPars(
+          FormalParameter(
+            Type(
+             char
+            ) [Type]
+           c
+          ) [FormalParameter]
+        ) [SingleFormPars]
+        NoListVarDeclWrapper(
+        ) [NoListVarDeclWrapper]
+        StatementListExists(
+          NoStatementList(
+          ) [NoStatementList]
+          StatementWithSingleStatement(
+            ReturnExprSingleStatement(
+              Expr(
+                SingleTerm(
+                  FactorWrapper(
+                    NoUnary(
+                    ) [NoUnary]
+                    Num(
+                     1
+                    ) [Num]
+                  ) [FactorWrapper]
+                ) [SingleTerm]
+                NoMoreExpr(
+                ) [NoMoreExpr]
+              ) [Expr]
+            ) [ReturnExprSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+      ) [MethDeclParams]
+    ) [MethodDeclarations]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          NoStatementList(
+          ) [NoStatementList]
+          StatementWithSingleStatement(
+            PrintSingleStatement(
+              Expr(
+                SingleTerm(
+                  FactorWrapper(
+                    NoUnary(
+                    ) [NoUnary]
+                    FactorWithActPars(
+                      DesignatorSimple(
+                       m1
+                      ) [DesignatorSimple]
+                      ActParsHelp(
+                      ) [ActParsHelp]
+                      SingleActPar(
+                        Expr(
+                          SingleTerm(
+                            FactorWrapper(
+                              NoUnary(
+                              ) [NoUnary]
+                              Char(
+                               a
+                              ) [Char]
+                            ) [FactorWrapper]
+                          ) [SingleTerm]
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                        ) [Expr]
+                      ) [SingleActPar]
+                    ) [FactorWithActPars]
+                  ) [FactorWrapper]
+                ) [SingleTerm]
+                NoMoreExpr(
+                ) [NoMoreExpr]
+              ) [Expr]
+            ) [PrintSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          PrintSingleStatement(
+            Expr(
+              SingleTerm(
+                FactorWrapper(
+                  NoUnary(
+                  ) [NoUnary]
+                  FactorWithActPars(
+                    DesignatorSimple(
+                     ord
+                    ) [DesignatorSimple]
+                    ActParsHelp(
+                    ) [ActParsHelp]
+                    SingleActPar(
+                      Expr(
+                        SingleTerm(
+                          FactorWrapper(
+                            NoUnary(
+                            ) [NoUnary]
+                            Char(
+                             a
+                            ) [Char]
+                          ) [FactorWrapper]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [Expr]
+                    ) [SingleActPar]
+                  ) [FactorWithActPars]
+                ) [FactorWrapper]
+              ) [SingleTerm]
+              NoMoreExpr(
+              ) [NoMoreExpr]
+            ) [Expr]
+          ) [PrintSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  21:59:08,057 - ===================================
+INFO  21:59:08,068 -  Program count calls = 1
+INFO  21:59:08,087 - currActPars: 1 in line 11.
+INFO  21:59:08,087 - paramsList: 1 in line 11.
+INFO  21:59:08,087 - currActPars: 1 in line 12.
+INFO  21:59:08,087 - paramsList: 1 in line 12.
+INFO  21:59:08,087 - ===================================
+INFO  21:59:08,088 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
+INFO  21:59:08,095 - Parsiranje uspesno zavrseno!

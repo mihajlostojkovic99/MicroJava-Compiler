@@ -19,9 +19,15 @@
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Char"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.UnaryNegative"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.DesignatorArrName"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.mj.runtime.Code"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Plus"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.NoMoreExpr"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Multiply"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Divide"/>
 </qualifiedTypeNameHistroy>
