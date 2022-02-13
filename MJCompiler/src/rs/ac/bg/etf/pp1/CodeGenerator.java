@@ -18,6 +18,40 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor {
 
+	public CodeGenerator() {
+		
+		/********** len **********/
+		Obj obj = Tab.find("len");
+		obj.setAdr(Code.pc);
+		Code.put(Code.enter);
+		Code.put(obj.getLevel());
+		Code.put(obj.getLocalSymbols().size());
+		Code.put(Code.load_n);
+		Code.put(Code.arraylength);
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+		
+		/********** chr **********/
+		obj = Tab.find("chr");
+		obj.setAdr(Code.pc);
+		Code.put(Code.enter);
+		Code.put(obj.getLevel());
+		Code.put(obj.getLocalSymbols().size());
+		Code.put(Code.load_n);
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+		
+		/********** ord **********/
+		obj = Tab.find("ord");
+		obj.setAdr(Code.pc);
+		Code.put(Code.enter);
+		Code.put(obj.getLevel());
+		Code.put(obj.getLocalSymbols().size());
+		Code.put(Code.load_n);
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+	}
+	
 	private int mainPC;
 	
 	private Map<String, Integer> labelAdrs = new HashMap<>();
@@ -278,6 +312,13 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ReturnSingleStatement returnSingleStatement) {
+		// exit
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+	}
+	
+	@Override
+	public void visit(ReturnExprSingleStatement returnExprSingleStatement) {
 		// exit
 		Code.put(Code.exit);
 		Code.put(Code.return_);

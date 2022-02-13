@@ -143,6 +143,7 @@ public class SemanticPass extends VisitorAdaptor {
 		
 		if (tmp == Tab.noObj || tmp == null) {
 			tmp = Tab.insert(currRecord == null ? Obj.Var : Obj.Fld, normalVarDecl.getI1(), currentType);
+			tmp.setFpPos(-1);
 			if (currRecord != null) tmp.setLevel(2);
 		}
 		else {
@@ -158,6 +159,7 @@ public class SemanticPass extends VisitorAdaptor {
 		
 		if (tmp == Tab.noObj || tmp == null) {
 			tmp = Tab.insert(currRecord == null ? Obj.Var : Obj.Fld, arrayVarDecl.getI1(), new Struct(Struct.Array, currentType));
+			tmp.setFpPos(-1);
 			if (currRecord != null) tmp.setLevel(2);
 		}
 		else {
@@ -224,8 +226,8 @@ public class SemanticPass extends VisitorAdaptor {
 		
 		if (tmp == Tab.noObj || tmp == null) {
 			tmp = Tab.insert(Obj.Var, formalParameter.getI2(), currentType);
+			tmp.setFpPos(currMethod.getLevel());
 			currMethod.setLevel(currMethod.getLevel() + 1);
-			tmp.setFpPos(1);
 		}
 		else {
 			report_error("Multiple definitions of formal parameter '" + formalParameter.getI2() + "'", formalParameter);
@@ -242,8 +244,8 @@ public class SemanticPass extends VisitorAdaptor {
 		
 		if (tmp == Tab.noObj || tmp == null) {
 			tmp = Tab.insert(Obj.Var, formalParameterArray.getI2(), new Struct(Struct.Array, currentType));
+			tmp.setFpPos(currMethod.getLevel());
 			currMethod.setLevel(currMethod.getLevel() + 1);
-			tmp.setFpPos(1);
 		}
 		else {
 			report_error("Multiple definitions of variable '" + formalParameterArray.getI2() + "'", formalParameterArray);
@@ -307,7 +309,7 @@ public class SemanticPass extends VisitorAdaptor {
 			currActPars = stackActPars.pop();
 			List<Struct> paramsList = new ArrayList<>();
 			for (Obj tmp : factorWithActPars.getDesignator().obj.getLocalSymbols()) {
-				if (/*tmp.getFpPos() == 1 &&*/ tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
+				if (tmp.getFpPos() != -1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
 			}
 			report_info("currActPars: " + currActPars.size() , factorWithActPars);
 			report_info("paramsList: " + paramsList.size() , factorWithActPars);
@@ -332,7 +334,7 @@ public class SemanticPass extends VisitorAdaptor {
 		else {
 			List<Struct> paramsList = new ArrayList<>();
 			for (Obj tmp : factorWithoutActPars.getDesignator().obj.getLocalSymbols()) {
-				if (tmp.getFpPos() == 1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
+				if (tmp.getFpPos() != -1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
 			}
 			if (paramsList.size() > 0) report_error("(DesStmFunc) Method '" + factorWithoutActPars.getDesignator().obj.getName() + "' is missing arguments", factorWithoutActPars);
 			else factorWithoutActPars.struct = factorWithoutActPars.getDesignator().obj.getType(); //PROSLO SVE PROVERE
@@ -630,7 +632,7 @@ public class SemanticPass extends VisitorAdaptor {
 		else {
 			List<Struct> paramsList = new ArrayList<>();
 			for (Obj tmp : desStmFuncParams.getDesignator().obj.getLocalSymbols()) {
-				if (tmp.getFpPos() == 1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
+				if (tmp.getFpPos() != -1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
 			}
 			
 			if (paramsList.size() < currActPars.size()) report_error("(DesStmFuncParams) Method '" + desStmFuncParams.getDesignator().obj.getName() + "' has more arguments than expected", desStmFuncParams);
@@ -652,7 +654,7 @@ public class SemanticPass extends VisitorAdaptor {
 		else {
 			List<Struct> paramsList = new ArrayList<>();
 			for (Obj tmp : desStmFunc.getDesignator().obj.getLocalSymbols()) {
-				if (tmp.getFpPos() == 1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
+				if (tmp.getFpPos() != -1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
 			}
 			if (paramsList.size() > 0) report_error("(DesStmFunc) Method '" + desStmFunc.getDesignator().obj.getName() + "' is missing arguments", desStmFunc);
 		}
