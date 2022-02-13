@@ -23,6 +23,8 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Map<String, Integer> labelAdrs = new HashMap<>();
 	private Map<String, List<Integer>> patchAdrs = new HashMap<>();
 	private List<Integer> skipCondFact = new ArrayList<>();
+	private List<Integer> skipCondition = new ArrayList<>();
+	private int skipThen;
 	
 	int getMainPc() {
 		return mainPC;
@@ -315,7 +317,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(CondFactRelop condFactRelop) {
 		// 
-		switch (condFactRelop.getRelop().getClass().getSimpleName()) {
+		switch (condFactRelop.getRelop().getClass().getSimpleName()) { //CODE SMELL :/
 		case "Equals":
 			Code.putFalseJump(Code.eq, 0);
 			break;
@@ -337,6 +339,27 @@ public class CodeGenerator extends VisitorAdaptor {
 		default:
 			skipCondFact.add(Code.pc - 2);
 			break;
+		}
+	}
+	
+	@Override
+	public void visit(SingleCondTerm singleCondTerm) {
+		// 
+		Code.putJump(0);
+		skipCondition.add(Code.pc - 2);
+		while (!skipCondFact.isEmpty()) {
+			Code.fixup(skipCondFact.remove(0));
+		}
+	}
+	
+	@Override
+	public void visit(SingleCondition singleCondition) {
+		// 
+		Code.putJump(0);
+		skipThen = Code.pc - 2;
+		
+		while (!skipCondition.isEmpty()) {
+			Code.fixup(skipCondition.remove(0));
 		}
 	}
 	
