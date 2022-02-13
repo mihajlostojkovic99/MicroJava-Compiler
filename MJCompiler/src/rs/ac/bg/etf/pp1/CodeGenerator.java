@@ -22,6 +22,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	private Map<String, Integer> labelAdrs = new HashMap<>();
 	private Map<String, List<Integer>> patchAdrs = new HashMap<>();
+	private List<Integer> skipCondFact = new ArrayList<>();
 	
 	int getMainPc() {
 		return mainPC;
@@ -271,7 +272,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(Label label) {
-		// print
+		// label
 		if (label.getParent() instanceof StatementWithLabel) {
 			labelAdrs.put(label.getI1(), Code.pc);
 			if (patchAdrs.containsKey(label.getI1())) {
@@ -302,5 +303,41 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	/* ----------------------------------------------------------------- VISIT_CONDITIONALS -------------------------------------------------------------------- */
+	
+	@Override
+	public void visit(CondFactExpr condFactExpr) {
+		// 
+		Code.loadConst(0);
+		Code.putFalseJump(Code.ne, 0);
+		skipCondFact.add(Code.pc - 2);
+	}
+	
+	@Override
+	public void visit(CondFactRelop condFactRelop) {
+		// 
+		switch (condFactRelop.getRelop().getClass().getSimpleName()) {
+		case "Equals":
+			Code.putFalseJump(Code.eq, 0);
+			break;
+		case "NotEqual":
+			Code.putFalseJump(Code.ne, 0);
+			break;
+		case "GreaterThan":
+			Code.putFalseJump(Code.gt, 0);
+			break;
+		case "GreaterOrEqual":
+			Code.putFalseJump(Code.ge, 0);
+			break;
+		case "LessThan":
+			Code.putFalseJump(Code.lt, 0);
+			break;
+		case "LessOrEqual":
+			Code.putFalseJump(Code.le, 0);
+			break;			
+		default:
+			skipCondFact.add(Code.pc - 2);
+			break;
+		}
+	}
 	
 }
