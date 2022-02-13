@@ -1,0 +1,258 @@
+INFO  15:11:19,440 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  15:11:19,494 - #2 program
+INFO  15:11:19,494 - #49 Test
+INFO  15:11:19,494 - #45 {
+INFO  15:11:19,496 - #14 void
+INFO  15:11:19,496 - #49 main
+INFO  15:11:19,497 - #41 (
+INFO  15:11:19,498 - #42 )
+INFO  15:11:19,498 - #49 int
+INFO  15:11:19,499 - #49 i
+INFO  15:11:19,500 - #37 ;
+INFO  15:11:19,500 - #45 {
+INFO  15:11:19,501 - #49 i
+INFO  15:11:19,502 - #34 =
+INFO  15:11:19,502 - #47 3
+INFO  15:11:19,504 - #37 ;
+INFO  15:11:19,506 - #7 if
+INFO  15:11:19,507 - #41 (
+INFO  15:11:19,507 - #49 i
+INFO  15:11:19,507 - #26 ==
+INFO  15:11:19,508 - #47 2
+INFO  15:11:19,509 - #33 ||
+INFO  15:11:19,509 - #49 i
+INFO  15:11:19,511 - #31 <=
+INFO  15:11:19,511 - #47 3
+INFO  15:11:19,512 - #32 &&
+INFO  15:11:19,512 - #49 i
+INFO  15:11:19,512 - #26 ==
+INFO  15:11:19,512 - #47 3
+INFO  15:11:19,512 - #42 )
+INFO  15:11:19,512 - #11 print
+INFO  15:11:19,512 - #41 (
+INFO  15:11:19,513 - #47 1
+INFO  15:11:19,513 - #42 )
+INFO  15:11:19,513 - #37 ;
+INFO  15:11:19,513 - #5 else
+INFO  15:11:19,513 - #11 print
+INFO  15:11:19,513 - #41 (
+INFO  15:11:19,514 - #47 2
+INFO  15:11:19,514 - #42 )
+INFO  15:11:19,514 - #37 ;
+INFO  15:11:19,514 - #46 }
+INFO  15:11:19,514 - #46 }
+INFO  15:11:19,517 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  NoList(
+  ) [NoList]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      IsListVarDeclWrapper(
+        NoListVarDeclWrapper(
+        ) [NoListVarDeclWrapper]
+        VarDeclWrapper(
+          Type(
+           int
+          ) [Type]
+          SingleVarDecl(
+            NormalVarDecl(
+             i
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapper]
+      ) [IsListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          NoStatementList(
+          ) [NoStatementList]
+          StatementWithSingleStatement(
+            DesignatorSingleStatement(
+              DesStmAssign(
+                DesignatorSimple(
+                 i
+                ) [DesignatorSimple]
+                AssignWrap(
+                  Assignop(
+                  ) [Assignop]
+                  Expr(
+                    SingleTerm(
+                      FactorWrapper(
+                        NoUnary(
+                        ) [NoUnary]
+                        Num(
+                         3
+                        ) [Num]
+                      ) [FactorWrapper]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [Expr]
+                ) [AssignWrap]
+              ) [DesStmAssign]
+            ) [DesignatorSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          IfElseSingleStatement(
+            MultipleCondition(
+              SingleCondition(
+                SingleCondTerm(
+                  CondFactRelop(
+                    Expr(
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          NormalFactor(
+                            DesignatorSimple(
+                             i
+                            ) [DesignatorSimple]
+                          ) [NormalFactor]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [Expr]
+                    Equals(
+                    ) [Equals]
+                    Expr(
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          Num(
+                           2
+                          ) [Num]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [Expr]
+                  ) [CondFactRelop]
+                ) [SingleCondTerm]
+              ) [SingleCondition]
+              MulCondTerm(
+                SingleCondTerm(
+                  CondFactRelop(
+                    Expr(
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          NormalFactor(
+                            DesignatorSimple(
+                             i
+                            ) [DesignatorSimple]
+                          ) [NormalFactor]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [Expr]
+                    LessOrEqual(
+                    ) [LessOrEqual]
+                    Expr(
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          Num(
+                           3
+                          ) [Num]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                    ) [Expr]
+                  ) [CondFactRelop]
+                ) [SingleCondTerm]
+                CondFactRelop(
+                  Expr(
+                    SingleTerm(
+                      FactorWrapper(
+                        NoUnary(
+                        ) [NoUnary]
+                        NormalFactor(
+                          DesignatorSimple(
+                           i
+                          ) [DesignatorSimple]
+                        ) [NormalFactor]
+                      ) [FactorWrapper]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [Expr]
+                  Equals(
+                  ) [Equals]
+                  Expr(
+                    SingleTerm(
+                      FactorWrapper(
+                        NoUnary(
+                        ) [NoUnary]
+                        Num(
+                         3
+                        ) [Num]
+                      ) [FactorWrapper]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [Expr]
+                ) [CondFactRelop]
+              ) [MulCondTerm]
+            ) [MultipleCondition]
+            StatementWithSingleStatement(
+              PrintSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Num(
+                       1
+                      ) [Num]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [PrintSingleStatement]
+            ) [StatementWithSingleStatement]
+            ElseHelp(
+            ) [ElseHelp]
+            StatementWithSingleStatement(
+              PrintSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Num(
+                       2
+                      ) [Num]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [PrintSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [IfElseSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  15:11:19,519 - ===================================
+INFO  15:11:19,521 -  Program count calls = 1
+INFO  15:11:19,533 - ===================================
+INFO  15:11:19,534 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
+INFO  15:11:19,539 - Parsiranje uspesno zavrseno!

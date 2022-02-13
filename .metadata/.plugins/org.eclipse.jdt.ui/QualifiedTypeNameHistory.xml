@@ -20,7 +20,6 @@
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.UnaryNegative"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.DesignatorArrName"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
@@ -30,4 +29,8 @@
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.NoMoreExpr"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Multiply"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Divide"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

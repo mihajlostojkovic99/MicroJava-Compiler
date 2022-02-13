@@ -94,6 +94,7 @@ nonterminal ProgramName ProgramName;
 nonterminal RecordDeclName RecordDeclName;
 nonterminal DoWhileHelp DoWhileHelp;
 nonterminal ActParsHelp ActParsHelp;
+nonterminal ElseHelp ElseHelp;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact, Type;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName, MethodRet, MethodName;
@@ -220,7 +221,7 @@ DoWhileHelp		::= (DoWhileHelp) DO {: RESULT=new DoWhileHelp(); :};
 
 SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement:D1 {: RESULT=new DesignatorSingleStatement(D1); RESULT.setLine(D1left); :}
 				|
-				(IfElseSingleStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 ELSE Statement:S3 {: RESULT=new IfElseSingleStatement(C1, S2, S3); RESULT.setLine(C1left); :}
+				(IfElseSingleStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 ElseHelp:E3 Statement:S4 {: RESULT=new IfElseSingleStatement(C1, S2, E3, S4); RESULT.setLine(C1left); :}
 				|
 				(IfSingleStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new IfSingleStatement(C1, S2); RESULT.setLine(C1left); :}
 				|
@@ -242,6 +243,8 @@ SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement:D1 {: RESULT=
 				|
 				(GotoSingleStatement) GOTO IDENT:I1 SEMI {: RESULT=new GotoSingleStatement(I1); RESULT.setLine(I1left); :}
 				;
+				
+ElseHelp		::= (ElseHelp) ELSE {: RESULT=new ElseHelp(); :};
 				
 Statements		::= (Statements) LBRACE StatementList:S1 RBRACE {: RESULT=new Statements(S1); RESULT.setLine(S1left); :};
 

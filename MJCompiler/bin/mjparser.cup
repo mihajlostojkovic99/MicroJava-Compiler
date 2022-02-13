@@ -78,7 +78,7 @@ nonterminal Mulop, Unary;
 nonterminal Relop;
 nonterminal ListVarDeclWrapper;
 
-nonterminal ProgramName, RecordDeclName, DoWhileHelp, ActParsHelp;
+nonterminal ProgramName, RecordDeclName, DoWhileHelp, ActParsHelp, ElseHelp;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact, Type;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName, MethodRet, MethodName;
@@ -205,7 +205,7 @@ DoWhileHelp		::= (DoWhileHelp) DO;
 
 SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement
 				|
-				(IfElseSingleStatement) IF LPAREN Condition RPAREN Statement ELSE Statement
+				(IfElseSingleStatement) IF LPAREN Condition RPAREN Statement ElseHelp Statement
 				|
 				(IfSingleStatement) IF LPAREN Condition RPAREN Statement
 				|
@@ -227,6 +227,8 @@ SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement
 				|
 				(GotoSingleStatement) GOTO IDENT SEMI
 				;
+				
+ElseHelp		::= (ElseHelp) ELSE;
 				
 Statements		::= (Statements) LBRACE StatementList RBRACE;
 

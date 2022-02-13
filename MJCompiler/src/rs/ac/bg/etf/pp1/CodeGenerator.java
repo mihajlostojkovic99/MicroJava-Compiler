@@ -24,7 +24,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Map<String, List<Integer>> patchAdrs = new HashMap<>();
 	private List<Integer> skipCondFact = new ArrayList<>();
 	private List<Integer> skipCondition = new ArrayList<>();
-	private int skipThen;
+	private Stack<Integer> skipThen = new Stack<>();
+	private Stack<Integer> skipElse = new Stack<>();
+	private Stack<Integer> doWhileStart = new Stack<>();
 	
 	int getMainPc() {
 		return mainPC;
@@ -241,6 +243,40 @@ public class CodeGenerator extends VisitorAdaptor {
 	/* ----------------------------------------------------------------- VISIT_SING_STATEMENT ------------------------------------------------------------------- */
 	
 	@Override
+	public void visit(IfSingleStatement ifSingleStatement) {
+		// 
+		Code.fixup(skipThen.pop());
+	}
+	
+	@Override
+	public void visit(IfElseSingleStatement ifElseSingleStatement) {
+		// 
+		Code.fixup(skipElse.pop());
+	}
+	
+	@Override
+	public void visit(ElseHelp elseHelp) {
+		// 
+		Code.putJump(0);
+		skipElse.push(Code.pc - 2);
+		
+		Code.fixup(skipThen.pop());
+	}
+	
+	@Override
+	public void visit(DoWhileHelp doWhileHelp) {
+		// 
+		doWhileStart.push(Code.pc);
+	}
+	
+	@Override
+	public void visit(DoWhileSingleStatement doWhileSingleStatement) {
+		// 
+		Code.putJump(doWhileStart.pop());
+		Code.fixup(skipThen.pop());
+	}
+	
+	@Override
 	public void visit(ReturnSingleStatement returnSingleStatement) {
 		// exit
 		Code.put(Code.exit);
@@ -317,7 +353,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(CondFactRelop condFactRelop) {
 		// 
-		switch (condFactRelop.getRelop().getClass().getSimpleName()) { //CODE SMELL :/
+		switch (condFactRelop.getRelop().getClass().getSimpleName()) { //CODE SMELL :(
 		case "Equals":
 			Code.putFalseJump(Code.eq, 0);
 			break;
@@ -337,14 +373,26 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.putFalseJump(Code.le, 0);
 			break;			
 		default:
-			skipCondFact.add(Code.pc - 2);
 			break;
 		}
+		skipCondFact.add(Code.pc - 2);
 	}
 	
 	@Override
 	public void visit(SingleCondTerm singleCondTerm) {
 		// 
+		if (singleCondTerm.getParent() instanceof MulCondTerm) return;
+		Code.putJump(0);
+		skipCondition.add(Code.pc - 2);
+		while (!skipCondFact.isEmpty()) {
+			Code.fixup(skipCondFact.remove(0));
+		}
+	}
+	
+	@Override
+	public void visit(MulCondTerm mulCondTerm) {
+		// 
+		if (mulCondTerm.getParent() instanceof MulCondTerm) return;
 		Code.putJump(0);
 		skipCondition.add(Code.pc - 2);
 		while (!skipCondFact.isEmpty()) {
@@ -355,12 +403,27 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(SingleCondition singleCondition) {
 		// 
+		if (singleCondition.getParent() instanceof MultipleCondition) return;
 		Code.putJump(0);
-		skipThen = Code.pc - 2;
+		skipThen.push(Code.pc - 2);
 		
 		while (!skipCondition.isEmpty()) {
 			Code.fixup(skipCondition.remove(0));
 		}
 	}
+	
+	@Override
+	public void visit(MultipleCondition multipleCondition) {
+		// 
+		if (multipleCondition.getParent() instanceof MultipleCondition) return;
+		Code.putJump(0);
+		skipThen.push(Code.pc - 2);
+		
+		while (!skipCondition.isEmpty()) {
+			Code.fixup(skipCondition.remove(0));
+		}
+	}
+	
+	
 	
 }

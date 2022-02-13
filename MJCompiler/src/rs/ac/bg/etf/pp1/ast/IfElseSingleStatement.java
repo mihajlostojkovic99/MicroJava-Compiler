@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/1/2022 16:24:27
+// 13/1/2022 14:36:14
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,13 +9,16 @@ public class IfElseSingleStatement extends SingleStatement {
 
     private Condition Condition;
     private Statement Statement;
+    private ElseHelp ElseHelp;
     private Statement Statement1;
 
-    public IfElseSingleStatement (Condition Condition, Statement Statement, Statement Statement1) {
+    public IfElseSingleStatement (Condition Condition, Statement Statement, ElseHelp ElseHelp, Statement Statement1) {
         this.Condition=Condition;
         if(Condition!=null) Condition.setParent(this);
         this.Statement=Statement;
         if(Statement!=null) Statement.setParent(this);
+        this.ElseHelp=ElseHelp;
+        if(ElseHelp!=null) ElseHelp.setParent(this);
         this.Statement1=Statement1;
         if(Statement1!=null) Statement1.setParent(this);
     }
@@ -36,6 +39,14 @@ public class IfElseSingleStatement extends SingleStatement {
         this.Statement=Statement;
     }
 
+    public ElseHelp getElseHelp() {
+        return ElseHelp;
+    }
+
+    public void setElseHelp(ElseHelp ElseHelp) {
+        this.ElseHelp=ElseHelp;
+    }
+
     public Statement getStatement1() {
         return Statement1;
     }
@@ -51,6 +62,7 @@ public class IfElseSingleStatement extends SingleStatement {
     public void childrenAccept(Visitor visitor) {
         if(Condition!=null) Condition.accept(visitor);
         if(Statement!=null) Statement.accept(visitor);
+        if(ElseHelp!=null) ElseHelp.accept(visitor);
         if(Statement1!=null) Statement1.accept(visitor);
     }
 
@@ -58,12 +70,14 @@ public class IfElseSingleStatement extends SingleStatement {
         accept(visitor);
         if(Condition!=null) Condition.traverseTopDown(visitor);
         if(Statement!=null) Statement.traverseTopDown(visitor);
+        if(ElseHelp!=null) ElseHelp.traverseTopDown(visitor);
         if(Statement1!=null) Statement1.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Condition!=null) Condition.traverseBottomUp(visitor);
         if(Statement!=null) Statement.traverseBottomUp(visitor);
+        if(ElseHelp!=null) ElseHelp.traverseBottomUp(visitor);
         if(Statement1!=null) Statement1.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -81,6 +95,12 @@ public class IfElseSingleStatement extends SingleStatement {
 
         if(Statement!=null)
             buffer.append(Statement.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(ElseHelp!=null)
+            buffer.append(ElseHelp.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
