@@ -346,7 +346,7 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(FactorWithActPars factorWithActPars) {
-		report_info("Global function '" + factorWithActPars.getDesignator().obj.getName() + "' call detected" + ObjToString(factorWithActPars.getDesignator().obj), factorWithActPars);
+		report_info("Global function '" + factorWithActPars.getDesignator().obj.getName() + "' call detected. " + ObjToString(factorWithActPars.getDesignator().obj), factorWithActPars);
 		factorWithActPars.struct = Tab.noType;
 		if (factorWithActPars.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + factorWithActPars.getDesignator().obj.getName() + "' not found", factorWithActPars);
 		else {
@@ -371,7 +371,7 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(FactorWithoutActPars factorWithoutActPars) {
-		report_info("Global function '" + factorWithoutActPars.getDesignator().obj.getName() + "' call" + ObjToString(factorWithoutActPars.getDesignator().obj), factorWithoutActPars);
+		report_info("Global function '" + factorWithoutActPars.getDesignator().obj.getName() + "' call detected. " + ObjToString(factorWithoutActPars.getDesignator().obj), factorWithoutActPars);
 		factorWithoutActPars.struct = Tab.noType;
 		if (factorWithoutActPars.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + factorWithoutActPars.getDesignator().obj.getName() + "' not found", factorWithoutActPars);
 		else {
@@ -543,12 +543,11 @@ public class SemanticPass extends VisitorAdaptor {
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDot.getI1())) {
 					desigMoreDot.obj = tmp;
-					if (tmp.getType().getKind() == Struct.Array) {
-						if (tmp.getType().getElemType().getKind() == Struct.Class)
-							currRecord = tmp.getType().getElemType();
-					} 
+					if (tmp.getType().getKind() == Struct.Array && tmp.getType().getElemType().getKind() == Struct.Class)
+						currRecord = tmp.getType().getElemType();
 					else if (tmp.getType().getKind() == Struct.Class) 
 						currRecord = tmp.getType();
+					else currRecord = null; 
 					found = true;
 					break;
 				}
@@ -579,6 +578,7 @@ public class SemanticPass extends VisitorAdaptor {
 					desigMoreDotArr.getDesignatorArrName().obj = tmp;
 					if (tmp.getType().getElemType().getKind() == Struct.Class) 
 						currRecord = tmp.getType().getElemType(); // ????
+					else currRecord = null;
 					if (tmp.getType().getKind() == Struct.Array) report_info("Access to array '" + tmp.getName() + "' element detected. " + ObjToString(tmp), desigMoreDotArr);
 					found = true;
 					break;
@@ -600,13 +600,11 @@ public class SemanticPass extends VisitorAdaptor {
 			boolean found = false;
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDotList.getI2())) {
-					if (tmp.getType().getKind() == Struct.Array) {
-						if (tmp.getType().getElemType().getKind() == Struct.Class)
-							currRecord = tmp.getType().getElemType();
-					} 
+					if (tmp.getType().getKind() == Struct.Array && tmp.getType().getElemType().getKind() == Struct.Class)
+						currRecord = tmp.getType().getElemType();
 					else if (tmp.getType().getKind() == Struct.Class) 
 						currRecord = tmp.getType();
-//					currRecord = (desigMoreDotList.obj = tmp).getType();
+					else currRecord = null;
 					desigMoreDotList.obj = tmp;
 					found = true;
 					break;
@@ -637,6 +635,7 @@ public class SemanticPass extends VisitorAdaptor {
 					desigMoreDotArrList.getDesignatorArrName().obj = tmp;
 					if (tmp.getType().getElemType().getKind() == Struct.Class)
 						currRecord = tmp.getType().getElemType();
+					else currRecord = null;
 					report_info("Access to array '" + tmp.getName() + "' element detected. " + ObjToString(tmp), desigMoreDotArrList);
 					found = true;
 					break;
@@ -720,7 +719,7 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(DesStmFuncParams desStmFuncParams) {
-		report_info("Global function '" + desStmFuncParams.getDesignator().obj.getName() + "' call detected" + ObjToString(desStmFuncParams.getDesignator().obj), desStmFuncParams);
+		report_info("Global function '" + desStmFuncParams.getDesignator().obj.getName() + "' call detected. " + ObjToString(desStmFuncParams.getDesignator().obj), desStmFuncParams);
 		currActPars = stackActPars.pop();
 		if (desStmFuncParams.getDesignator().obj.getKind() != Obj.Meth) report_error("(DesStmFuncParams) Method '" + desStmFuncParams.getDesignator().obj.getName() + "' not found", desStmFuncParams);
 		else {
@@ -745,7 +744,7 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(DesStmFunc desStmFunc) {
-		report_info("Global function '" + desStmFunc.getDesignator().obj.getName() + "' call detected" + ObjToString(desStmFunc.getDesignator().obj), desStmFunc);
+		report_info("Global function '" + desStmFunc.getDesignator().obj.getName() + "' call detected. " + ObjToString(desStmFunc.getDesignator().obj), desStmFunc);
 		if (desStmFunc.getDesignator().obj.getKind() != Obj.Meth) report_error("(DesStmFunc) Method '" + desStmFunc.getDesignator().obj.getName() + "' not found", desStmFunc);
 		else {
 			List<Struct> paramsList = new ArrayList<>();
