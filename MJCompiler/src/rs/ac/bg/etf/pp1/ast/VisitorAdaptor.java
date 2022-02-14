@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 13/1/2022 14:36:14
+// 14/1/2022 13:8:18
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -29,6 +29,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ActPars ActPars) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
     public void visit(ExprMore ExprMore) { }
+    public void visit(VarDeclWrapper VarDeclWrapper) { }
     public void visit(Statement Statement) { }
     public void visit(VarDecl VarDecl) { }
     public void visit(ConstDecl ConstDecl) { }
@@ -131,11 +132,13 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MethDeclParams MethDeclParams) { visit(); }
     public void visit(ArrayVarDecl ArrayVarDecl) { visit(); }
     public void visit(NormalVarDecl NormalVarDecl) { visit(); }
+    public void visit(VarDeclError VarDeclError) { visit(); }
     public void visit(SingleVarDecl SingleVarDecl) { visit(); }
     public void visit(VarDeclarations VarDeclarations) { visit(); }
     public void visit(NoListVarDeclWrapper NoListVarDeclWrapper) { visit(); }
     public void visit(IsListVarDeclWrapper IsListVarDeclWrapper) { visit(); }
-    public void visit(VarDeclWrapper VarDeclWrapper) { visit(); }
+    public void visit(VarDeclWrapperError VarDeclWrapperError) { visit(); }
+    public void visit(VarDeclWrapperOk VarDeclWrapperOk) { visit(); }
     public void visit(ConstDeclError ConstDeclError) { visit(); }
     public void visit(ConstDeclChar ConstDeclChar) { visit(); }
     public void visit(ConstDeclBool ConstDeclBool) { visit(); }

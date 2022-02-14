@@ -48,10 +48,10 @@ public class MJParserTest {
 			log.info("===================================");
 
 			// ispis prepoznatih programskih konstrukcija
-			RuleVisitor v = new RuleVisitor();
-			prog.traverseBottomUp(v); 
-	      
-			log.info(" Program count calls = " + v.ProgramCount);
+//			RuleVisitor v = new RuleVisitor();
+//			prog.traverseBottomUp(v); 
+//	      
+//			log.info(" Program count calls = " + v.ProgramCount);
 			
 			// SymTable inicijalizacija
 			Tab.init();
@@ -59,6 +59,23 @@ public class MJParserTest {
 			boolObj.setLevel(-1);
 			boolObj.setAdr(-1);
 			SemanticPass semanticCheck = new SemanticPass();
+			SemanticPass.ObjKindToString.put(0, "Con");
+			SemanticPass.ObjKindToString.put(1, "Var");
+			SemanticPass.ObjKindToString.put(2, "Type");
+			SemanticPass.ObjKindToString.put(3, "Meth");
+			SemanticPass.ObjKindToString.put(4, "Fld");
+			SemanticPass.ObjKindToString.put(5, "Elem");
+			SemanticPass.ObjKindToString.put(6, "Prog");
+			
+			SemanticPass.TypeKindToString.put(0, "None");
+			SemanticPass.TypeKindToString.put(1, "Int");
+			SemanticPass.TypeKindToString.put(2, "Char");
+			SemanticPass.TypeKindToString.put(3, "Array");
+			SemanticPass.TypeKindToString.put(4, "Class");
+			SemanticPass.TypeKindToString.put(5, "Bool");
+			SemanticPass.TypeKindToString.put(6, "Enum");
+			SemanticPass.TypeKindToString.put(7, "Interface");
+			
 			prog.traverseBottomUp(semanticCheck);
 			//SymTable dump
 			log.info("===================================");

@@ -1,0 +1,84 @@
+INFO  13:09:21,776 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  13:09:21,830 - #2 program
+INFO  13:09:21,830 - #49 Test
+INFO  13:09:21,830 - #6 const
+INFO  13:09:21,831 - #49 int
+INFO  13:09:21,831 - #49 a
+INFO  13:09:21,832 - #34 =
+INFO  13:09:21,832 - #37 ;
+ERROR 13:09:21,832 - 
+Sintaksna greska na liniji 3
+INFO  13:09:21,832 - #49 int
+INFO  13:09:21,832 - #49 a
+INFO  13:09:21,832 - #39 ,
+ERROR 13:09:21,833 - Recovering from error in constant declaration. 3
+INFO  13:09:21,834 - #49 b
+INFO  13:09:21,834 - #39 ,
+INFO  13:09:21,834 - #49 c
+INFO  13:09:21,834 - #37 ;
+INFO  13:09:21,834 - #45 {
+INFO  13:09:21,835 - #14 void
+INFO  13:09:21,836 - #49 main
+INFO  13:09:21,837 - #41 (
+INFO  13:09:21,837 - #42 )
+INFO  13:09:21,837 - #45 {
+INFO  13:09:21,838 - #46 }
+INFO  13:09:21,839 - #46 }
+INFO  13:09:21,840 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListConst(
+      NoList(
+      ) [NoList]
+      ConstDeclWrapperClass(
+        Type(
+         int
+        ) [Type]
+        SingleConstDeclaration(
+          ConstDeclError(
+          ) [ConstDeclError]
+        ) [SingleConstDeclaration]
+      ) [ConstDeclWrapperClass]
+    ) [ListConst]
+    VarDeclWrapperOk(
+      Type(
+       int
+      ) [Type]
+      VarDeclarations(
+        VarDeclarations(
+          SingleVarDecl(
+            NormalVarDecl(
+             a
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+          NormalVarDecl(
+           b
+          ) [NormalVarDecl]
+        ) [VarDeclarations]
+        NormalVarDecl(
+         c
+        ) [NormalVarDecl]
+      ) [VarDeclarations]
+    ) [VarDeclWrapperOk]
+  ) [ListVar]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      NoStatementList(
+      ) [NoStatementList]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  13:09:21,840 - ===================================
+INFO  13:09:21,851 - ===================================
+ERROR 13:09:21,852 - Parsiranje NIJE uspesno zavrseno!

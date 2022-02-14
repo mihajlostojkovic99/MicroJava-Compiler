@@ -1,0 +1,59 @@
+INFO  13:01:17,870 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  13:01:17,918 - #2 program
+INFO  13:01:17,918 - #49 Test
+INFO  13:01:17,918 - #49 int
+INFO  13:01:17,919 - #49 a
+INFO  13:01:17,920 - #39 ,
+INFO  13:01:17,920 - #49 b
+INFO  13:01:17,920 - #37 ;
+INFO  13:01:17,920 - #45 {
+INFO  13:01:17,920 - #14 void
+INFO  13:01:17,921 - #49 main
+INFO  13:01:17,921 - #41 (
+INFO  13:01:17,922 - #42 )
+INFO  13:01:17,922 - #45 {
+INFO  13:01:17,923 - #46 }
+INFO  13:01:17,923 - #46 }
+INFO  13:01:17,924 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    NoList(
+    ) [NoList]
+    VarDeclWrapperOk(
+      Type(
+       int
+      ) [Type]
+      VarDeclarations(
+        SingleVarDecl(
+          NormalVarDecl(
+           a
+          ) [NormalVarDecl]
+        ) [SingleVarDecl]
+        NormalVarDecl(
+         b
+        ) [NormalVarDecl]
+      ) [VarDeclarations]
+    ) [VarDeclWrapperOk]
+  ) [ListVar]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      NoStatementList(
+      ) [NoStatementList]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  13:01:17,926 - ===================================
+INFO  13:01:17,936 - ===================================
+INFO  13:01:17,937 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
+INFO  13:01:17,940 - Parsiranje uspesno zavrseno!

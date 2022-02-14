@@ -122,7 +122,7 @@ MethodDeclList	::= (MethodDeclarations) MethodDeclList:M1 MethodDecl:M2 {: RESUL
 ConstDeclWrapper ::= (ConstDeclWrapperClass) CONST Type:T1 ConstDeclList:C2 SEMI {: RESULT=new ConstDeclWrapperClass(T1, C2); RESULT.setLine(T1left); :}
 				 |
 				 (ConstDeclWrapperError) CONST error SEMI:l /* npr const ; ili const int ; */
-				 {: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :} {: RESULT=new ConstDeclWrapperError(); :}
+				 {: parser.report_error("Recovering from error in constant declaration." + lleft, null); :} {: RESULT=new ConstDeclWrapperError(); :}
 				 ;
 
 ConstDeclList	::= (ConstDeclarations) ConstDeclList:C1 COMMA ConstDecl:C2 {: RESULT=new ConstDeclarations(C1, C2); RESULT.setLine(C1left); :}
@@ -137,10 +137,14 @@ ConstDecl		::= (ConstDeclNumber) IDENT:I1 EQUAL NUMBER:N2 {: RESULT=new ConstDec
 				(ConstDeclChar) IDENT:I1 EQUAL CHAR:C2 {: RESULT=new ConstDeclChar(I1, C2); RESULT.setLine(I1left); :}
 				|
 				(ConstDeclError) error:l /* npr const int x y, z;*/
-				 {: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :} {: RESULT=new ConstDeclError(); :}
+				 {: parser.report_error("Recovering from error in constant declaration. " + lleft, null); :} {: RESULT=new ConstDeclError(); :}
 				;
 
-VarDeclWrapper	::= (VarDeclWrapper) Type:T1 VarDeclList:V2 SEMI {: RESULT=new VarDeclWrapper(T1, V2); RESULT.setLine(T1left); :};
+VarDeclWrapper	::= (VarDeclWrapperOk) Type:T1 VarDeclList:V2 SEMI {: RESULT=new VarDeclWrapperOk(T1, V2); RESULT.setLine(T1left); :}
+				|					
+				(VarDeclWrapperError) error:l /* npr int ; */
+				{: parser.report_error("Recovering from error in var declaration." + lleft, null); :} {: RESULT=new VarDeclWrapperError(); :}
+				;
 
 ListVarDeclWrapper ::= (IsListVarDeclWrapper) ListVarDeclWrapper:L1 VarDeclWrapper:V2 {: RESULT=new IsListVarDeclWrapper(L1, V2); RESULT.setLine(L1left); :}
 				   |
@@ -150,7 +154,11 @@ ListVarDeclWrapper ::= (IsListVarDeclWrapper) ListVarDeclWrapper:L1 VarDeclWrapp
 VarDeclList		::= (VarDeclarations) VarDeclList:V1 COMMA VarDecl:V2 {: RESULT=new VarDeclarations(V1, V2); RESULT.setLine(V1left); :}
 				|
 				(SingleVarDecl) VarDecl:V1 {: RESULT=new SingleVarDecl(V1); RESULT.setLine(V1left); :}
+				|					
+				(VarDeclError) error:l
+				{: parser.report_error("Recovering from error in var declaration." + lleft, null); :} {: RESULT=new VarDeclError(); :}
 				;
+				
 				
 VarDecl			::= (NormalVarDecl) IDENT:I1 {: RESULT=new NormalVarDecl(I1); RESULT.setLine(I1left); :}
 				|
@@ -170,10 +178,10 @@ MethodDecl		::= (MethDeclParams) MethodRet:M1 MethodName:M2 LPAREN FormPars:F3 R
 				/*
 				|
 				(MethDeclParamsError) Type MethodName LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
-				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				{: parser.report_error("Recovering from error in method formal parameters declaration. " + lleft, null); :}
 				|
 				(MethDeclVoidParamsError) VOID MethodName LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
-				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				{: parser.report_error("Recovering from error in method formal parameters declaration. " + lleft, null); :}
 				*/
 				;
 				
@@ -200,7 +208,7 @@ FormPar			::= (FormalParameter) Type:T1 IDENT:I2 {: RESULT=new FormalParameter(T
 				(FormalParameterArray) Type:T1 IDENT:I2 LSQBR RSQBR {: RESULT=new FormalParameterArray(T1, I2); RESULT.setLine(T1left); :}
 				|
 				(FormalParameterError) error:l
-				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :} {: RESULT=new FormalParameterError(); :}
+				{: parser.report_error("Recovering from error in method formal parameters declaration. " + lleft, null); :} {: RESULT=new FormalParameterError(); :}
 				;
 				
 StatementList	::= (StatementListExists) StatementList:S1 Statement:S2 {: RESULT=new StatementListExists(S1, S2); RESULT.setLine(S1left); :}
@@ -224,6 +232,11 @@ SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement:D1 {: RESULT=
 				(IfElseSingleStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 ElseHelp:E3 Statement:S4 {: RESULT=new IfElseSingleStatement(C1, S2, E3, S4); RESULT.setLine(C1left); :}
 				|
 				(IfSingleStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new IfSingleStatement(C1, S2); RESULT.setLine(C1left); :}
+				/*
+				|
+				(IfSingleStatementError) IF LPAREN error RPAREN:l
+				{: parser.report_error("Recovering from error in if condition. " + lleft, null); :}
+				*/
 				|
 				(DoWhileSingleStatement) DoWhileHelp:D1 Statement:S2 WHILE LPAREN Condition:C3 RPAREN SEMI {: RESULT=new DoWhileSingleStatement(D1, S2, C3); RESULT.setLine(D1left); :}
 				|
@@ -266,9 +279,11 @@ ActParsHelp			::= (ActParsHelp) LPAREN {: RESULT=new ActParsHelp(); :};
 Condition		::= (MultipleCondition) Condition:C1 OR CondTerm:C2 {: RESULT=new MultipleCondition(C1, C2); RESULT.setLine(C1left); :}
 				|
 				(SingleCondition) CondTerm:C1 {: RESULT=new SingleCondition(C1); RESULT.setLine(C1left); :}
+				
 				|
 				(ConditionError) error:l
-				{: parser.report_error("Oporavak od greske! Too easy! Greska u if uslovu! " + lleft, null); :} {: RESULT=new ConditionError(); :}
+				{: parser.report_error("Recovering from error in if condition. " + lleft, null); :} {: RESULT=new ConditionError(); :}
+				
 				;
 								
 ExprMore		::= (ThereIsMoreExpr) ExprMore:E1 Addop:A2 Term:T3 {: RESULT=new ThereIsMoreExpr(E1, A2, T3); RESULT.setLine(E1left); :}
@@ -317,7 +332,7 @@ Assignop		::= (Assignop) EQUAL {: RESULT=new Assignop(); :};
 AssignWrapper	::= (AssignWrap) Assignop:A1 Expr:E2 SEMI {: RESULT=new AssignWrap(A1, E2); RESULT.setLine(A1left); :}
 				|
 				(AssignWrapperError) error SEMI:l
-				{: parser.report_error("Oporavak od greske! Too easy! Greska pri dodeli vrednosti! " + lleft, null); :} {: RESULT=new AssignWrapperError(); :}
+				{: parser.report_error("Recovering from error in assignement. " + lleft, null); :} {: RESULT=new AssignWrapperError(); :}
 				;
 
 ActPars			::= (MulActPars) ActPars:A1 COMMA Expr:E2 {: RESULT=new MulActPars(A1, E2); RESULT.setLine(A1left); :}

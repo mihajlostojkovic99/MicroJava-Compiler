@@ -1,0 +1,206 @@
+INFO  13:11:56,110 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  13:11:56,159 - #2 program
+INFO  13:11:56,159 - #49 Test
+INFO  13:11:56,159 - #6 const
+INFO  13:11:56,160 - #49 int
+INFO  13:11:56,160 - #49 a
+INFO  13:11:56,161 - #34 =
+INFO  13:11:56,161 - #37 ;
+ERROR 13:11:56,161 - 
+Sintaksna greska na liniji 3
+INFO  13:11:56,161 - #49 int
+INFO  13:11:56,161 - #49 a
+INFO  13:11:56,161 - #39 ,
+ERROR 13:11:56,162 - Recovering from error in constant declaration. 3
+INFO  13:11:56,163 - #49 b
+INFO  13:11:56,163 - #39 ,
+INFO  13:11:56,164 - #37 ;
+ERROR 13:11:56,164 - 
+Sintaksna greska na liniji 4
+INFO  13:11:56,164 - #49 bool
+INFO  13:11:56,164 - #49 x
+INFO  13:11:56,164 - #37 ;
+ERROR 13:11:56,165 - Recovering from error in var declaration.4
+INFO  13:11:56,166 - #45 {
+INFO  13:11:56,166 - #14 void
+INFO  13:11:56,167 - #49 mistake
+INFO  13:11:56,167 - #41 (
+INFO  13:11:56,168 - #49 int
+INFO  13:11:56,168 - #39 ,
+ERROR 13:11:56,168 - 
+Sintaksna greska na liniji 9
+INFO  13:11:56,169 - #49 bool
+INFO  13:11:56,169 - #49 x
+INFO  13:11:56,169 - #42 )
+ERROR 13:11:56,169 - Recovering from error in method formal parameters declaration. 9
+INFO  13:11:56,170 - #45 {
+INFO  13:11:56,171 - #46 }
+INFO  13:11:56,171 - #14 void
+INFO  13:11:56,172 - #49 main
+INFO  13:11:56,172 - #41 (
+INFO  13:11:56,172 - #42 )
+INFO  13:11:56,172 - #45 {
+INFO  13:11:56,172 - #7 if
+INFO  13:11:56,172 - #41 (
+INFO  13:11:56,172 - #26 ==
+ERROR 13:11:56,172 - 
+Sintaksna greska na liniji 15
+INFO  13:11:56,172 - #47 1
+INFO  13:11:56,172 - #42 )
+INFO  13:11:56,172 - #11 print
+INFO  13:11:56,172 - #41 (
+INFO  13:11:56,172 - #47 1
+ERROR 13:11:56,173 - Recovering from error in if condition. 15
+INFO  13:11:56,174 - #42 )
+INFO  13:11:56,176 - #37 ;
+INFO  13:11:56,176 - #5 else
+INFO  13:11:56,176 - #11 print
+INFO  13:11:56,176 - #41 (
+INFO  13:11:56,177 - #47 2
+INFO  13:11:56,177 - #42 )
+INFO  13:11:56,177 - #37 ;
+INFO  13:11:56,177 - #49 x
+INFO  13:11:56,177 - #34 =
+INFO  13:11:56,177 - #37 ;
+ERROR 13:11:56,177 - 
+Sintaksna greska na liniji 18
+INFO  13:11:56,177 - #46 }
+INFO  13:11:56,178 - #46 }
+ERROR 13:11:56,178 - Recovering from error in assignement. 18
+INFO  13:11:56,180 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListVar(
+      ListConst(
+        NoList(
+        ) [NoList]
+        ConstDeclWrapperClass(
+          Type(
+           int
+          ) [Type]
+          SingleConstDeclaration(
+            ConstDeclError(
+            ) [ConstDeclError]
+          ) [SingleConstDeclaration]
+        ) [ConstDeclWrapperClass]
+      ) [ListConst]
+      VarDeclWrapperOk(
+        Type(
+         int
+        ) [Type]
+        VarDeclError(
+        ) [VarDeclError]
+      ) [VarDeclWrapperOk]
+    ) [ListVar]
+    VarDeclWrapperOk(
+      Type(
+       bool
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         x
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapperOk]
+  ) [ListVar]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethDeclParams(
+        MethodRetVoid(
+        ) [MethodRetVoid]
+        MethodName(
+         mistake
+        ) [MethodName]
+        FormParameters(
+          SingleFormPars(
+            FormalParameterError(
+            ) [FormalParameterError]
+          ) [SingleFormPars]
+          FormalParameter(
+            Type(
+             bool
+            ) [Type]
+           x
+          ) [FormalParameter]
+        ) [FormParameters]
+        NoListVarDeclWrapper(
+        ) [NoListVarDeclWrapper]
+        NoStatementList(
+        ) [NoStatementList]
+      ) [MethDeclParams]
+    ) [MethodDeclarations]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        StatementListExists(
+          NoStatementList(
+          ) [NoStatementList]
+          StatementWithSingleStatement(
+            IfElseSingleStatement(
+              ConditionError(
+              ) [ConditionError]
+              StatementWithSingleStatement(
+                PrintSingleStatement(
+                  Expr(
+                    SingleTerm(
+                      FactorWrapper(
+                        NoUnary(
+                        ) [NoUnary]
+                        Num(
+                         1
+                        ) [Num]
+                      ) [FactorWrapper]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [Expr]
+                ) [PrintSingleStatement]
+              ) [StatementWithSingleStatement]
+              ElseHelp(
+              ) [ElseHelp]
+              StatementWithSingleStatement(
+                PrintSingleStatement(
+                  Expr(
+                    SingleTerm(
+                      FactorWrapper(
+                        NoUnary(
+                        ) [NoUnary]
+                        Num(
+                         2
+                        ) [Num]
+                      ) [FactorWrapper]
+                    ) [SingleTerm]
+                    NoMoreExpr(
+                    ) [NoMoreExpr]
+                  ) [Expr]
+                ) [PrintSingleStatement]
+              ) [StatementWithSingleStatement]
+            ) [IfElseSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+        StatementWithSingleStatement(
+          DesignatorSingleStatement(
+            DesStmAssign(
+              DesignatorSimple(
+               x
+              ) [DesignatorSimple]
+              AssignWrapperError(
+              ) [AssignWrapperError]
+            ) [DesStmAssign]
+          ) [DesignatorSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  13:11:56,180 - ===================================

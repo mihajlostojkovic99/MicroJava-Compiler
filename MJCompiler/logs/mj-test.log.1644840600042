@@ -1,0 +1,136 @@
+INFO  13:09:35,203 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  13:09:35,244 - #2 program
+INFO  13:09:35,244 - #49 Test
+INFO  13:09:35,244 - #6 const
+INFO  13:09:35,245 - #49 int
+INFO  13:09:35,245 - #49 a
+INFO  13:09:35,246 - #34 =
+INFO  13:09:35,246 - #37 ;
+ERROR 13:09:35,246 - 
+Sintaksna greska na liniji 3
+INFO  13:09:35,246 - #49 int
+INFO  13:09:35,246 - #49 a
+INFO  13:09:35,246 - #39 ,
+ERROR 13:09:35,247 - Recovering from error in constant declaration. 3
+INFO  13:09:35,248 - #49 b
+INFO  13:09:35,248 - #39 ,
+INFO  13:09:35,248 - #37 ;
+ERROR 13:09:35,248 - 
+Sintaksna greska na liniji 4
+INFO  13:09:35,248 - #45 {
+INFO  13:09:35,248 - #14 void
+INFO  13:09:35,248 - #49 main
+ERROR 13:09:35,248 - Recovering from error in var declaration.4
+INFO  13:09:35,250 - #41 (
+INFO  13:09:35,250 - #42 )
+INFO  13:09:35,250 - #45 {
+INFO  13:09:35,251 - #7 if
+INFO  13:09:35,252 - #41 (
+INFO  13:09:35,252 - #26 ==
+ERROR 13:09:35,252 - 
+Sintaksna greska na liniji 9
+INFO  13:09:35,252 - #47 1
+INFO  13:09:35,252 - #42 )
+INFO  13:09:35,252 - #11 print
+INFO  13:09:35,252 - #41 (
+INFO  13:09:35,252 - #47 1
+ERROR 13:09:35,252 - Recovering from error in if condition. 9
+INFO  13:09:35,253 - #42 )
+INFO  13:09:35,255 - #37 ;
+INFO  13:09:35,255 - #5 else
+INFO  13:09:35,255 - #11 print
+INFO  13:09:35,256 - #41 (
+INFO  13:09:35,256 - #47 2
+INFO  13:09:35,256 - #42 )
+INFO  13:09:35,256 - #37 ;
+INFO  13:09:35,256 - #46 }
+INFO  13:09:35,256 - #46 }
+INFO  13:09:35,258 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListConst(
+      NoList(
+      ) [NoList]
+      ConstDeclWrapperClass(
+        Type(
+         int
+        ) [Type]
+        SingleConstDeclaration(
+          ConstDeclError(
+          ) [ConstDeclError]
+        ) [SingleConstDeclaration]
+      ) [ConstDeclWrapperClass]
+    ) [ListConst]
+    VarDeclWrapperOk(
+      Type(
+       int
+      ) [Type]
+      VarDeclError(
+      ) [VarDeclError]
+    ) [VarDeclWrapperOk]
+  ) [ListVar]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
+          IfElseSingleStatement(
+            ConditionError(
+            ) [ConditionError]
+            StatementWithSingleStatement(
+              PrintSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Num(
+                       1
+                      ) [Num]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [PrintSingleStatement]
+            ) [StatementWithSingleStatement]
+            ElseHelp(
+            ) [ElseHelp]
+            StatementWithSingleStatement(
+              PrintSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Num(
+                       2
+                      ) [Num]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [PrintSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [IfElseSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  13:09:35,259 - ===================================
+INFO  13:09:35,269 - ===================================
+ERROR 13:09:35,270 - Parsiranje NIJE uspesno zavrseno!

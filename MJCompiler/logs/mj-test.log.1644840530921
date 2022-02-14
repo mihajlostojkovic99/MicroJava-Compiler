@@ -1,0 +1,14 @@
+INFO  13:01:33,143 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  13:01:33,184 - #2 program
+INFO  13:01:33,184 - #49 Test
+INFO  13:01:33,184 - #49 int
+INFO  13:01:33,185 - #49 a
+INFO  13:01:33,186 - #39 ,
+INFO  13:01:33,186 - #49 b
+INFO  13:01:33,186 - #39 ,
+INFO  13:01:33,186 - #37 ;
+ERROR 13:01:33,186 - 
+Sintaksna greska na liniji 4
+INFO  13:01:33,186 - #45 {
+INFO  13:01:33,186 - #14 void
+INFO  13:01:33,186 - #49 main

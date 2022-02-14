@@ -106,7 +106,7 @@ MethodDeclList	::= (MethodDeclarations) MethodDeclList MethodDecl
 ConstDeclWrapper ::= (ConstDeclWrapperClass) CONST Type ConstDeclList SEMI
 				 |
 				 (ConstDeclWrapperError) CONST error SEMI:l /* npr const ; ili const int ; */
-				 {: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				 {: parser.report_error("Recovering from error in constant declaration." + lleft, null); :}
 				 ;
 
 ConstDeclList	::= (ConstDeclarations) ConstDeclList COMMA ConstDecl
@@ -121,10 +121,14 @@ ConstDecl		::= (ConstDeclNumber) IDENT EQUAL NUMBER
 				(ConstDeclChar) IDENT EQUAL CHAR
 				|
 				(ConstDeclError) error:l /* npr const int x y, z;*/
-				 {: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				 {: parser.report_error("Recovering from error in constant declaration. " + lleft, null); :}
 				;
 
-VarDeclWrapper	::= (VarDeclWrapper) Type VarDeclList SEMI;
+VarDeclWrapper	::= (VarDeclWrapperOk) Type VarDeclList SEMI
+				|					
+				(VarDeclWrapperError) error:l /* npr int ; */
+				{: parser.report_error("Recovering from error in var declaration." + lleft, null); :}
+				;
 
 ListVarDeclWrapper ::= (IsListVarDeclWrapper) ListVarDeclWrapper VarDeclWrapper
 				   |
@@ -134,7 +138,11 @@ ListVarDeclWrapper ::= (IsListVarDeclWrapper) ListVarDeclWrapper VarDeclWrapper
 VarDeclList		::= (VarDeclarations) VarDeclList COMMA VarDecl
 				|
 				(SingleVarDecl) VarDecl
+				|					
+				(VarDeclError) error:l
+				{: parser.report_error("Recovering from error in var declaration." + lleft, null); :}
 				;
+				
 				
 VarDecl			::= (NormalVarDecl) IDENT
 				|
@@ -154,10 +162,10 @@ MethodDecl		::= (MethDeclParams) MethodRet MethodName LPAREN FormPars RPAREN Lis
 				/*
 				|
 				(MethDeclParamsError) Type MethodName LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
-				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				{: parser.report_error("Recovering from error in method formal parameters declaration. " + lleft, null); :}
 				|
 				(MethDeclVoidParamsError) VOID MethodName LPAREN error RPAREN:l ListVarDeclWrapper LBRACE StatementList RBRACE
-				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				{: parser.report_error("Recovering from error in method formal parameters declaration. " + lleft, null); :}
 				*/
 				;
 				
@@ -184,7 +192,7 @@ FormPar			::= (FormalParameter) Type IDENT
 				(FormalParameterArray) Type IDENT LSQBR RSQBR
 				|
 				(FormalParameterError) error:l
-				{: parser.report_error("Oporavak od greske! Too easy! " + lleft, null); :}
+				{: parser.report_error("Recovering from error in method formal parameters declaration. " + lleft, null); :}
 				;
 				
 StatementList	::= (StatementListExists) StatementList Statement
@@ -208,6 +216,11 @@ SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement
 				(IfElseSingleStatement) IF LPAREN Condition RPAREN Statement ElseHelp Statement
 				|
 				(IfSingleStatement) IF LPAREN Condition RPAREN Statement
+				/*
+				|
+				(IfSingleStatementError) IF LPAREN error RPAREN:l
+				{: parser.report_error("Recovering from error in if condition. " + lleft, null); :}
+				*/
 				|
 				(DoWhileSingleStatement) DoWhileHelp Statement WHILE LPAREN Condition RPAREN SEMI
 				|
@@ -250,9 +263,11 @@ ActParsHelp			::= (ActParsHelp) LPAREN;
 Condition		::= (MultipleCondition) Condition OR CondTerm
 				|
 				(SingleCondition) CondTerm
+				
 				|
 				(ConditionError) error:l
-				{: parser.report_error("Oporavak od greske! Too easy! Greska u if uslovu! " + lleft, null); :}
+				{: parser.report_error("Recovering from error in if condition. " + lleft, null); :}
+				
 				;
 								
 ExprMore		::= (ThereIsMoreExpr) ExprMore Addop Term
@@ -301,7 +316,7 @@ Assignop		::= (Assignop) EQUAL;
 AssignWrapper	::= (AssignWrap) Assignop Expr SEMI
 				|
 				(AssignWrapperError) error SEMI:l
-				{: parser.report_error("Oporavak od greske! Too easy! Greska pri dodeli vrednosti! " + lleft, null); :}
+				{: parser.report_error("Recovering from error in assignement. " + lleft, null); :}
 				;
 
 ActPars			::= (MulActPars) ActPars COMMA Expr

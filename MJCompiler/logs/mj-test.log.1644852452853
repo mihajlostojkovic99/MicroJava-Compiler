@@ -1,0 +1,285 @@
+INFO  16:27:07,506 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  16:27:07,550 - #2 program
+INFO  16:27:07,551 - #49 Test
+INFO  16:27:07,551 - #20 record
+INFO  16:27:07,552 - #49 r1
+INFO  16:27:07,552 - #45 {
+INFO  16:27:07,552 - #49 int
+INFO  16:27:07,553 - #49 x
+INFO  16:27:07,553 - #43 [
+INFO  16:27:07,553 - #44 ]
+INFO  16:27:07,553 - #37 ;
+INFO  16:27:07,554 - #49 int
+INFO  16:27:07,554 - #49 y
+INFO  16:27:07,554 - #37 ;
+INFO  16:27:07,554 - #46 }
+INFO  16:27:07,554 - #20 record
+INFO  16:27:07,555 - #49 r2
+INFO  16:27:07,555 - #45 {
+INFO  16:27:07,555 - #49 r1
+INFO  16:27:07,555 - #49 obj
+INFO  16:27:07,555 - #43 [
+INFO  16:27:07,555 - #44 ]
+INFO  16:27:07,556 - #37 ;
+INFO  16:27:07,556 - #46 }
+INFO  16:27:07,556 - #20 record
+INFO  16:27:07,556 - #49 r3
+INFO  16:27:07,556 - #45 {
+INFO  16:27:07,556 - #49 r2
+INFO  16:27:07,556 - #49 obj
+INFO  16:27:07,556 - #43 [
+INFO  16:27:07,556 - #44 ]
+INFO  16:27:07,556 - #37 ;
+INFO  16:27:07,557 - #46 }
+INFO  16:27:07,557 - #49 int
+INFO  16:27:07,557 - #49 a
+INFO  16:27:07,557 - #37 ;
+INFO  16:27:07,557 - #49 char
+INFO  16:27:07,557 - #49 b
+INFO  16:27:07,557 - #37 ;
+INFO  16:27:07,557 - #49 int
+INFO  16:27:07,557 - #49 c
+INFO  16:27:07,557 - #37 ;
+INFO  16:27:07,557 - #45 {
+INFO  16:27:07,557 - #14 void
+INFO  16:27:07,558 - #49 main
+INFO  16:27:07,559 - #41 (
+INFO  16:27:07,559 - #42 )
+INFO  16:27:07,559 - #49 r1
+INFO  16:27:07,559 - #49 o1
+INFO  16:27:07,559 - #37 ;
+INFO  16:27:07,559 - #49 r2
+INFO  16:27:07,559 - #49 o2
+INFO  16:27:07,559 - #37 ;
+INFO  16:27:07,560 - #49 r3
+INFO  16:27:07,560 - #49 o3
+INFO  16:27:07,560 - #37 ;
+INFO  16:27:07,560 - #49 r3
+INFO  16:27:07,560 - #49 o3arr
+INFO  16:27:07,560 - #43 [
+INFO  16:27:07,560 - #44 ]
+INFO  16:27:07,560 - #37 ;
+INFO  16:27:07,560 - #45 {
+INFO  16:27:07,560 - #49 o1
+INFO  16:27:07,562 - #34 =
+INFO  16:27:07,562 - #10 new
+INFO  16:27:07,563 - #49 r1
+INFO  16:27:07,563 - #37 ;
+INFO  16:27:07,565 - #46 }
+INFO  16:27:07,567 - #46 }
+INFO  16:27:07,569 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListVar(
+    ListVar(
+      ListVar(
+        ListRecord(
+          ListRecord(
+            ListRecord(
+              NoList(
+              ) [NoList]
+              RecordDecl(
+                RecordDeclName(
+                 r1
+                ) [RecordDeclName]
+                IsListVarDeclWrapper(
+                  IsListVarDeclWrapper(
+                    NoListVarDeclWrapper(
+                    ) [NoListVarDeclWrapper]
+                    VarDeclWrapperOk(
+                      Type(
+                       int
+                      ) [Type]
+                      SingleVarDecl(
+                        ArrayVarDecl(
+                         x
+                        ) [ArrayVarDecl]
+                      ) [SingleVarDecl]
+                    ) [VarDeclWrapperOk]
+                  ) [IsListVarDeclWrapper]
+                  VarDeclWrapperOk(
+                    Type(
+                     int
+                    ) [Type]
+                    SingleVarDecl(
+                      NormalVarDecl(
+                       y
+                      ) [NormalVarDecl]
+                    ) [SingleVarDecl]
+                  ) [VarDeclWrapperOk]
+                ) [IsListVarDeclWrapper]
+              ) [RecordDecl]
+            ) [ListRecord]
+            RecordDecl(
+              RecordDeclName(
+               r2
+              ) [RecordDeclName]
+              IsListVarDeclWrapper(
+                NoListVarDeclWrapper(
+                ) [NoListVarDeclWrapper]
+                VarDeclWrapperOk(
+                  Type(
+                   r1
+                  ) [Type]
+                  SingleVarDecl(
+                    ArrayVarDecl(
+                     obj
+                    ) [ArrayVarDecl]
+                  ) [SingleVarDecl]
+                ) [VarDeclWrapperOk]
+              ) [IsListVarDeclWrapper]
+            ) [RecordDecl]
+          ) [ListRecord]
+          RecordDecl(
+            RecordDeclName(
+             r3
+            ) [RecordDeclName]
+            IsListVarDeclWrapper(
+              NoListVarDeclWrapper(
+              ) [NoListVarDeclWrapper]
+              VarDeclWrapperOk(
+                Type(
+                 r2
+                ) [Type]
+                SingleVarDecl(
+                  ArrayVarDecl(
+                   obj
+                  ) [ArrayVarDecl]
+                ) [SingleVarDecl]
+              ) [VarDeclWrapperOk]
+            ) [IsListVarDeclWrapper]
+          ) [RecordDecl]
+        ) [ListRecord]
+        VarDeclWrapperOk(
+          Type(
+           int
+          ) [Type]
+          SingleVarDecl(
+            NormalVarDecl(
+             a
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapperOk]
+      ) [ListVar]
+      VarDeclWrapperOk(
+        Type(
+         char
+        ) [Type]
+        SingleVarDecl(
+          NormalVarDecl(
+           b
+          ) [NormalVarDecl]
+        ) [SingleVarDecl]
+      ) [VarDeclWrapperOk]
+    ) [ListVar]
+    VarDeclWrapperOk(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+        NormalVarDecl(
+         c
+        ) [NormalVarDecl]
+      ) [SingleVarDecl]
+    ) [VarDeclWrapperOk]
+  ) [ListVar]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      IsListVarDeclWrapper(
+        IsListVarDeclWrapper(
+          IsListVarDeclWrapper(
+            IsListVarDeclWrapper(
+              NoListVarDeclWrapper(
+              ) [NoListVarDeclWrapper]
+              VarDeclWrapperOk(
+                Type(
+                 r1
+                ) [Type]
+                SingleVarDecl(
+                  NormalVarDecl(
+                   o1
+                  ) [NormalVarDecl]
+                ) [SingleVarDecl]
+              ) [VarDeclWrapperOk]
+            ) [IsListVarDeclWrapper]
+            VarDeclWrapperOk(
+              Type(
+               r2
+              ) [Type]
+              SingleVarDecl(
+                NormalVarDecl(
+                 o2
+                ) [NormalVarDecl]
+              ) [SingleVarDecl]
+            ) [VarDeclWrapperOk]
+          ) [IsListVarDeclWrapper]
+          VarDeclWrapperOk(
+            Type(
+             r3
+            ) [Type]
+            SingleVarDecl(
+              NormalVarDecl(
+               o3
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+          ) [VarDeclWrapperOk]
+        ) [IsListVarDeclWrapper]
+        VarDeclWrapperOk(
+          Type(
+           r3
+          ) [Type]
+          SingleVarDecl(
+            ArrayVarDecl(
+             o3arr
+            ) [ArrayVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapperOk]
+      ) [IsListVarDeclWrapper]
+      StatementListExists(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
+          DesignatorSingleStatement(
+            DesStmAssign(
+              DesignatorSimple(
+               o1
+              ) [DesignatorSimple]
+              AssignWrap(
+                Assignop(
+                ) [Assignop]
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      NewFactor(
+                        Type(
+                         r1
+                        ) [Type]
+                      ) [NewFactor]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [AssignWrap]
+            ) [DesStmAssign]
+          ) [DesignatorSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  16:27:07,569 - ===================================
+INFO  16:27:07,579 - Access to local variable 'o1' detected. Var: Class [Fld x: Array of Int Fld: Int, 1, 2 ], 0, 1 in line 14.
+INFO  16:27:07,580 - ===================================
+INFO  16:27:07,580 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
+INFO  16:27:07,584 - Parsiranje uspesno zavrseno!

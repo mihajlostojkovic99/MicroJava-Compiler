@@ -33,4 +33,6 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ElseHelp"/>
 </qualifiedTypeNameHistroy>

@@ -1,5 +1,6 @@
 package rs.ac.bg.etf.pp1;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Stack;
 import java.util.HashSet;
@@ -42,6 +43,10 @@ public class SemanticPass extends VisitorAdaptor {
 	private List<Struct> currActPars;
 	
 	private Stack<List<Struct>> stackActPars = new Stack<List<Struct>>();
+	
+	static HashMap<Integer, String> ObjKindToString = new HashMap<>();
+	
+	static HashMap<Integer, String> TypeKindToString = new HashMap<>();
 
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
@@ -58,6 +63,44 @@ public class SemanticPass extends VisitorAdaptor {
 		if (line != 0)
 			msg.append (" in line ").append(line).append(".");
 		log.info(msg.toString());
+	}
+	
+	public String ObjToString(Obj obj) {
+		String ret = "";
+		
+		if (obj.getKind() == Obj.Meth) {
+			ret += ObjKindToString.get(obj.getKind()) + " " + obj.getName() + ": " + TypeKindToString.get(obj.getType().getKind());
+			
+			ret += " [";
+			for (Obj tmp : obj.getLocalSymbols()) {
+				ret += ObjToString(tmp) + " ";
+			}
+			
+			ret += "], " + obj.getAdr() + ", " + obj.getLevel();
+		}
+		else {
+			switch (obj.getType().getKind()) {
+			case Struct.Class:
+				ret += ObjKindToString.get(obj.getKind()) + ": " + TypeKindToString.get(obj.getType().getKind());
+				
+				ret += " [";
+				for (Obj tmp : obj.getType().getMembers()) {
+					ret += ObjToString(tmp) + " ";
+				}
+				
+				ret += "], " + obj.getAdr() + ", " + obj.getLevel();
+				break;
+			case Struct.Array:
+				ret += ObjKindToString.get(obj.getKind()) + " " + obj.getName() + ": " + TypeKindToString.get(obj.getType().getKind()) + " of " + 
+						TypeKindToString.get(obj.getType().getElemType().getKind());
+				break;
+			default:
+				ret += ObjKindToString.get(obj.getKind()) + ": " + TypeKindToString.get(obj.getType().getKind())+ ", " + obj.getAdr() + ", " + obj.getLevel();
+				break;
+			}
+		}
+		
+		return ret;
 	}
 	
 	@Override
@@ -303,6 +346,7 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(FactorWithActPars factorWithActPars) {
+		report_info("Global function '" + factorWithActPars.getDesignator().obj.getName() + "' call detected" + ObjToString(factorWithActPars.getDesignator().obj), factorWithActPars);
 		factorWithActPars.struct = Tab.noType;
 		if (factorWithActPars.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + factorWithActPars.getDesignator().obj.getName() + "' not found", factorWithActPars);
 		else {
@@ -311,8 +355,6 @@ public class SemanticPass extends VisitorAdaptor {
 			for (Obj tmp : factorWithActPars.getDesignator().obj.getLocalSymbols()) {
 				if (tmp.getFpPos() != -1 && tmp.getKind() == Obj.Var && tmp.getLevel() == 1) paramsList.add(tmp.getType());
 			}
-			report_info("currActPars: " + currActPars.size() , factorWithActPars);
-			report_info("paramsList: " + paramsList.size() , factorWithActPars);
 			if (paramsList.size() < currActPars.size()) report_error("(FactorWithActPars) Method '" + factorWithActPars.getDesignator().obj.getName() + "' has more arguments than expected", factorWithActPars);
 			else if (paramsList.size() > currActPars.size()) report_error("(FactorWithActPars) Method '" + factorWithActPars.getDesignator().obj.getName() + "' has missing arguments", factorWithActPars);
 			else {
@@ -329,6 +371,7 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(FactorWithoutActPars factorWithoutActPars) {
+		report_info("Global function '" + factorWithoutActPars.getDesignator().obj.getName() + "' call" + ObjToString(factorWithoutActPars.getDesignator().obj), factorWithoutActPars);
 		factorWithoutActPars.struct = Tab.noType;
 		if (factorWithoutActPars.getDesignator().obj.getKind() != Obj.Meth) report_error("Method '" + factorWithoutActPars.getDesignator().obj.getName() + "' not found", factorWithoutActPars);
 		else {
@@ -378,12 +421,27 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("(designatorSimple) Forbidden use of variable '" + designatorSimple.getI1() + "'", designatorSimple);
 			designatorSimple.obj = Tab.noObj;
 		}
+		else if (designatorSimple.obj.getLevel() == 0 && designatorSimple.obj.getKind() == Obj.Var) {
+			if (designatorSimple.obj.getType().getKind() != Struct.Class) 
+				report_info("Access to global variable '" + designatorSimple.obj.getName() + "' detected. " + ObjToString(designatorSimple.obj), designatorSimple);
+			else report_info("Access to global record '" + designatorSimple.obj.getName() + "' detected. " + ObjToString(designatorSimple.obj), designatorSimple);
+		}
+		else if (designatorSimple.obj.getLevel() == 1 && designatorSimple.obj.getKind() == Obj.Var) {
+			if (designatorSimple.obj.getType().getKind() != Struct.Class)
+				if (designatorSimple.obj.getFpPos() == -1) report_info("Access to local variable '" + designatorSimple.obj.getName() + "' detected. " + ObjToString(designatorSimple.obj), designatorSimple);
+				else report_info("Access to formal parameter '" + designatorSimple.obj.getName() + "' detected. " + ObjToString(designatorSimple.obj), designatorSimple);
+			else {
+				if (designatorSimple.obj.getFpPos() == -1) report_info("Access to local record '" + designatorSimple.obj.getName() + "' detected. " + ObjToString(designatorSimple.obj), designatorSimple);
+				else report_info("Access to formal parameter record '" + designatorSimple.obj.getName() + "' detected. " + ObjToString(designatorSimple.obj), designatorSimple);
+			}
+		}
+			
 	}
 	
 	@Override
 	public void visit(DesignatorArrName designatorArrName) {
-		if (designatorArrName.getParent() instanceof DesigMoreDotArr || designatorArrName.getParent() instanceof DesigMoreDotArrList) return;
 		designatorArrName.obj = Tab.find(designatorArrName.getI1());
+		if (designatorArrName.getParent() instanceof DesigMoreDotArr || designatorArrName.getParent() instanceof DesigMoreDotArrList) return;
 //		report_info(designatorArrName.obj.getName(), designatorArrName);
 		if (designatorArrName.obj == Tab.noObj) report_error("(DesignatorArrName) Array '" + designatorArrName.getI1() + "' not defined,", designatorArrName);
 		else if (designatorArrName.obj.getType().getKind() != Obj.Var && designatorArrName.obj.getType().getKind() != Struct.Array) {
@@ -391,6 +449,7 @@ public class SemanticPass extends VisitorAdaptor {
 			designatorArrName.obj = Tab.noObj;
 			currRecord = Tab.noType;
 		}
+		else report_info("Access to array '" + designatorArrName.obj.getName() + "' element detected. " + ObjToString(designatorArrName.obj), designatorArrName);
 	}
 	
 	@Override
@@ -403,19 +462,24 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 		else if (designatorArr.obj != Tab.noObj) {
 			designatorArr.obj = new Obj(Obj.Elem, designatorArr.getDesignatorArrName().getI1() + "[$]", designatorArr.obj.getType().getElemType());
+			designatorArr.obj.setAdr(designatorArr.getDesignatorArrName().obj.getAdr());
+			designatorArr.obj.setLevel(designatorArr.getDesignatorArrName().obj.getLevel());
+			//report_info("Access to array '" + designatorArr.obj.getName() + "' element detected. " + ObjToString(designatorArr.obj), designatorArr);
 		}
 	}
 	
 	@Override
 	public void visit(DesignatorWithMore designatorWithMore) {
 		designatorWithMore.obj = designatorWithMore.getDesignatorMore().obj;
-//		currRecord = null;
+		//report_info("Access to record '" + designatorWithMore.getDesignatorWithMoreName().getI1() + "' element detected. " + ObjToString(designatorWithMore.getDesignatorWithMoreName().obj), designatorWithMore);;
+		
 	}
 	
 	@Override
 	public void visit(DesignatorArrWithMore designatorArrWithMore) {
 		designatorArrWithMore.obj = designatorArrWithMore.getDesignatorMore().obj;
-//		currRecord = null;
+		//if (designatorArrWithMore.obj.getKind() == Obj.Fld)
+			//report_info("Access to array '" + designatorArrWithMore.obj.getName() + "' element detected. " + ObjToString(designatorArrWithMore.obj), designatorArrWithMore);
 	}
 	
 	@Override
@@ -427,6 +491,24 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("(DesignatorWithMoreName) Variable '" + designatorWithMoreName.getI1() + "' is probably not a record", designatorWithMoreName);
 			designatorWithMoreName.obj = Tab.noObj;
 			currRecord = Tab.noType;
+		}
+		else if (designatorWithMoreName.obj.getLevel() == 0 && designatorWithMoreName.obj.getKind() == Obj.Var) {
+			if (designatorWithMoreName.obj.getType().getKind() != Struct.Class) 
+				report_info("Access to global variable '" + designatorWithMoreName.obj.getName() + "' detected. " + ObjToString(designatorWithMoreName.obj), designatorWithMoreName);
+			else report_info("Access to global record '" + designatorWithMoreName.obj.getName() + "' detected. " + ObjToString(designatorWithMoreName.obj), designatorWithMoreName);
+		}
+		else if (designatorWithMoreName.obj.getLevel() == 1 && designatorWithMoreName.obj.getKind() == Obj.Var) {
+			if (designatorWithMoreName.obj.getType().getKind() != Struct.Class)
+				if (designatorWithMoreName.obj.getFpPos() == -1) 
+					report_info("Access to local variable '" + designatorWithMoreName.obj.getName() + "' detected. " + ObjToString(designatorWithMoreName.obj), designatorWithMoreName);
+				else 
+					report_info("Access to formal parameter '" + designatorWithMoreName.obj.getName() + "' detected. " + ObjToString(designatorWithMoreName.obj), designatorWithMoreName);
+			else {
+				if (designatorWithMoreName.obj.getFpPos() == -1)
+					report_info("Access to local record '" + designatorWithMoreName.obj.getName() + "' detected. " + ObjToString(designatorWithMoreName.obj), designatorWithMoreName);
+				else 
+					report_info("Access to formal parameter record '" + designatorWithMoreName.obj.getName() + "' detected. " + ObjToString(designatorWithMoreName.obj), designatorWithMoreName);
+			}
 		}
 	}
 	
@@ -441,6 +523,8 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 		else if (designatorMoreElem.obj != Tab.noObj) {
 			designatorMoreElem.obj = new Obj(Obj.Elem, designatorMoreElem.getDesignatorArrName().getI1() + "[$]", designatorMoreElem.obj.getType().getElemType());
+			designatorMoreElem.obj.setAdr(designatorMoreElem.getDesignatorArrName().obj.getAdr());
+			designatorMoreElem.obj.setLevel(designatorMoreElem.getDesignatorArrName().obj.getLevel());
 			currRecord = designatorMoreElem.obj.getType();
 			
 			if (designatorMoreElem.obj.getType().getKind() != Struct.Class) {
@@ -479,6 +563,7 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(DesigMoreDotArr desigMoreDotArr) {
+		
 		if (currRecord == Tab.noType) desigMoreDotArr.obj = Tab.noObj;
 		else if (!desigMoreDotArr.getExpr().struct.equals(Tab.intType)) {
 			report_error("(DesigMoreDotArr) Array can only be addresed with int", desigMoreDotArr);
@@ -489,9 +574,12 @@ public class SemanticPass extends VisitorAdaptor {
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDotArr.getDesignatorArrName().getI1()) && tmp.getType().getKind() == Struct.Array) {
 					desigMoreDotArr.obj = new Obj(Obj.Elem, tmp.getName() + "[$]", tmp.getType().getElemType());
+					desigMoreDotArr.obj.setAdr(tmp.getAdr());
+					desigMoreDotArr.obj.setLevel(tmp.getLevel());
 					desigMoreDotArr.getDesignatorArrName().obj = tmp;
 					if (tmp.getType().getElemType().getKind() == Struct.Class) 
 						currRecord = tmp.getType().getElemType(); // ????
+					if (tmp.getType().getKind() == Struct.Array) report_info("Access to array '" + tmp.getName() + "' element detected. " + ObjToString(tmp), desigMoreDotArr);
 					found = true;
 					break;
 				}
@@ -501,6 +589,7 @@ public class SemanticPass extends VisitorAdaptor {
 				report_error("(DesigMoreDot) Variable '" + desigMoreDotArr.getDesignatorArrName().getI1() + "' not found in the record", desigMoreDotArr);
 			}
 		}
+		
 //		currRecord = null;
 	}
 	
@@ -532,6 +621,7 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(DesigMoreDotArrList desigMoreDotArrList) {
+		
 		if (desigMoreDotArrList.getDesignatorMore().obj.getType() == Tab.noType) desigMoreDotArrList.obj = Tab.noObj;
 		else if (!desigMoreDotArrList.getExpr().struct.equals(Tab.intType)) {
 			report_error("(DesigMoreDotList) Array can only be addresed with int", desigMoreDotArrList);
@@ -542,9 +632,12 @@ public class SemanticPass extends VisitorAdaptor {
 			for (Obj tmp : currRecord.getMembers()) {
 				if (tmp.getName().equals(desigMoreDotArrList.getDesignatorArrName().getI1()) && tmp.getType().getKind() == Struct.Array) {
 					desigMoreDotArrList.obj = new Obj(Obj.Elem, tmp.getName() + "[$]", tmp.getType().getElemType());
+					desigMoreDotArrList.obj.setAdr(tmp.getAdr());
+					desigMoreDotArrList.obj.setLevel(tmp.getLevel());
 					desigMoreDotArrList.getDesignatorArrName().obj = tmp;
 					if (tmp.getType().getElemType().getKind() == Struct.Class)
 						currRecord = tmp.getType().getElemType();
+					report_info("Access to array '" + tmp.getName() + "' element detected. " + ObjToString(tmp), desigMoreDotArrList);
 					found = true;
 					break;
 				}
@@ -627,6 +720,7 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(DesStmFuncParams desStmFuncParams) {
+		report_info("Global function '" + desStmFuncParams.getDesignator().obj.getName() + "' call detected" + ObjToString(desStmFuncParams.getDesignator().obj), desStmFuncParams);
 		currActPars = stackActPars.pop();
 		if (desStmFuncParams.getDesignator().obj.getKind() != Obj.Meth) report_error("(DesStmFuncParams) Method '" + desStmFuncParams.getDesignator().obj.getName() + "' not found", desStmFuncParams);
 		else {
@@ -646,10 +740,12 @@ public class SemanticPass extends VisitorAdaptor {
 				}
 			}
 		}
+		
 	}
 	
 	@Override
 	public void visit(DesStmFunc desStmFunc) {
+		report_info("Global function '" + desStmFunc.getDesignator().obj.getName() + "' call detected" + ObjToString(desStmFunc.getDesignator().obj), desStmFunc);
 		if (desStmFunc.getDesignator().obj.getKind() != Obj.Meth) report_error("(DesStmFunc) Method '" + desStmFunc.getDesignator().obj.getName() + "' not found", desStmFunc);
 		else {
 			List<Struct> paramsList = new ArrayList<>();
@@ -658,6 +754,7 @@ public class SemanticPass extends VisitorAdaptor {
 			}
 			if (paramsList.size() > 0) report_error("(DesStmFunc) Method '" + desStmFunc.getDesignator().obj.getName() + "' is missing arguments", desStmFunc);
 		}
+		
 	}
 	
 	@Override

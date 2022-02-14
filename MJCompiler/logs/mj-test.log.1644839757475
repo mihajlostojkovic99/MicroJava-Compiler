@@ -1,0 +1,118 @@
+INFO  12:55:47,474 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  12:55:47,514 - #2 program
+INFO  12:55:47,514 - #49 Test
+INFO  12:55:47,514 - #6 const
+INFO  12:55:47,515 - #49 int
+INFO  12:55:47,515 - #49 a
+INFO  12:55:47,516 - #34 =
+INFO  12:55:47,516 - #37 ;
+ERROR 12:55:47,516 - 
+Sintaksna greska na liniji 3
+INFO  12:55:47,516 - #45 {
+INFO  12:55:47,516 - #14 void
+INFO  12:55:47,516 - #49 main
+ERROR 12:55:47,517 - Recovering from error in constant declaration. 3
+INFO  12:55:47,518 - #41 (
+INFO  12:55:47,519 - #42 )
+INFO  12:55:47,519 - #45 {
+INFO  12:55:47,519 - #7 if
+INFO  12:55:47,520 - #41 (
+INFO  12:55:47,520 - #26 ==
+ERROR 12:55:47,520 - 
+Sintaksna greska na liniji 8
+INFO  12:55:47,522 - #47 1
+INFO  12:55:47,522 - #42 )
+INFO  12:55:47,522 - #11 print
+INFO  12:55:47,522 - #41 (
+INFO  12:55:47,522 - #47 1
+ERROR 12:55:47,522 - Recovering from error in if condition. 8
+INFO  12:55:47,523 - #42 )
+INFO  12:55:47,525 - #37 ;
+INFO  12:55:47,525 - #5 else
+INFO  12:55:47,525 - #11 print
+INFO  12:55:47,526 - #41 (
+INFO  12:55:47,526 - #47 2
+INFO  12:55:47,526 - #42 )
+INFO  12:55:47,526 - #37 ;
+INFO  12:55:47,526 - #46 }
+INFO  12:55:47,526 - #46 }
+INFO  12:55:47,527 - Program(
+  ProgramName(
+   Test
+  ) [ProgramName]
+  ListConst(
+    NoList(
+    ) [NoList]
+    ConstDeclWrapperClass(
+      Type(
+       int
+      ) [Type]
+      SingleConstDeclaration(
+        ConstDeclError(
+        ) [ConstDeclError]
+      ) [SingleConstDeclaration]
+    ) [ConstDeclWrapperClass]
+  ) [ListConst]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
+          IfElseSingleStatement(
+            ConditionError(
+            ) [ConditionError]
+            StatementWithSingleStatement(
+              PrintSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Num(
+                       1
+                      ) [Num]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [PrintSingleStatement]
+            ) [StatementWithSingleStatement]
+            ElseHelp(
+            ) [ElseHelp]
+            StatementWithSingleStatement(
+              PrintSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Num(
+                       2
+                      ) [Num]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [PrintSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [IfElseSingleStatement]
+        ) [StatementWithSingleStatement]
+      ) [StatementListExists]
+    ) [MethDeclNoParams]
+  ) [MethodDeclarations]
+) [Program]
+INFO  12:55:47,527 - ===================================
+INFO  12:55:47,539 - ===================================
+ERROR 12:55:47,539 - Parsiranje NIJE uspesno zavrseno!
