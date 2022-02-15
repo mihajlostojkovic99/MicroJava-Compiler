@@ -30,6 +30,20 @@ bool d;
 		print(eol);
 	}
 	
+	void printArr(int arr[]) int i; {
+		i = 0;
+		if (len(arr) == 0) {
+			print(eol);
+			return;
+		}
+		do {
+			print(arr[i]);
+			print(eol);
+			i++;
+		} while (i < len(arr));
+		
+	}
+	
 	void initializeStrings() {
 		good = new char[4];
 		bad = new char[3];
@@ -50,28 +64,26 @@ bool d;
 		test.arr = new int[5];
 		test.spec = spec;
 		
-		
-		
 		test.spec.arr[0] = 0;
 		test.spec.arr[1] = 1;
 		i = 2;
 		
 		do {
-			test.spec.arr[i] = test.spec.arr[i-1] + test.spec.arr[i-2]; 
+			test.spec.arr[i] = test.spec.arr[i-1] + test.spec.arr[i-2]; // fibonacci seq
 			i++;
-			do {
-				b = test.spec.arr[i];
-				test.arr[y] = b * 2 + 1;
-			} while (y < len(test.arr));
 		} while (i < test.spec.x);
 		
+		printArr(test.spec.arr);
 		
-		d = true; //Boolean d se moze cackati za drugacije rezultate
+		if (i == test.spec.x) d = true; //Boolean d se moze cackati za drugacije rezultate
+		else d = false;
 		
-		if (d && test.x >= 10 || d && test.spec.x >= 10) {
+		i--;
+		
+		if (d && test.spec.arr[i] == 377 || d && test.spec.x >= 10) {
 			printStr(good, len(good));
-			//if (d && test)
 		}
+		else printStr(bad, len(bad));
 		
 	}
 
