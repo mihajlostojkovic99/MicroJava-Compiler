@@ -1,0 +1,22 @@
+program Test
+
+const int a = ;
+int a, b, ;
+bool x;
+
+{
+
+	void mistake(int, bool x) {
+		
+	}
+
+	void main() {
+		if ( == 1) print(1);
+		else print(2);
+		
+		x = ;
+		
+			
+	}
+
+}

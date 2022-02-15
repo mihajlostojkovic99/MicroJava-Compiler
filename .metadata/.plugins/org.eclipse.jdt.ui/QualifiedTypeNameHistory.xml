@@ -6,11 +6,9 @@
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.SemanticAnalyzer"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ProgramName"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.Tab"/>
-    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Type"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ConstDeclChar"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ConstDeclNumber"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ConstDeclBool"/>
-    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Obj"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodName"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodRet"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodRetType"/>
@@ -21,7 +19,6 @@
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.DesignatorArrName"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
-    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.mj.runtime.Code"/>
@@ -29,10 +26,13 @@
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.NoMoreExpr"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Multiply"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Divide"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ElseHelp"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Obj"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Type"/>
 </qualifiedTypeNameHistroy>

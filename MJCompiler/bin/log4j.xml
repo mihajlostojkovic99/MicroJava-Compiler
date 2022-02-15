@@ -10,16 +10,40 @@
 		</layout>
 	</appender>
 
-	<appender name="file" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="file" value="logs/mj.log"></param>
+	<appender name="info" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="logs/info_log.log"></param>
+		<param name="Append" value="false" />
+		
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%-5p %d{ABSOLUTE} - %m%n"></param>
+			<param name="ConversionPattern" value="%-5p %d{ABSOLUTE} - %m%n" />
 		</layout>
+		
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="INFO"/>
+			<param name="levelMax" value="INFO"/>
+		</filter>
+	
+	</appender>
+	
+	<appender name="erroneus" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="logs/erroneus_log.log"></param>
+		<param name="Append" value="false" />
+		
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p %d{ABSOLUTE} - %m%n" />
+		</layout>
+		
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="ERROR"/>
+			<param name="levelMax" value="ERROR"/>
+		</filter>
+		
 	</appender>
 	
 	<root>
-		<priority value="debug" />
-		<appender-ref ref="file" />
+		<priority value="debug"/>
+		<appender-ref ref="info" />
+		<appender-ref ref="erroneus" />
 		<appender-ref ref="console" />
 	</root>
 
