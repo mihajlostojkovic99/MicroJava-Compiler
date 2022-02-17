@@ -5,9 +5,27 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class NoListVarDeclWrapper extends ListVarDeclWrapper {
+public class CondHelp implements SyntaxNode {
 
-    public NoListVarDeclWrapper () {
+    private SyntaxNode parent;
+    private int line;
+    public CondHelp () {
+    }
+
+    public SyntaxNode getParent() {
+        return parent;
+    }
+
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +46,10 @@ public class NoListVarDeclWrapper extends ListVarDeclWrapper {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("NoListVarDeclWrapper(\n");
+        buffer.append("CondHelp(\n");
 
         buffer.append(tab);
-        buffer.append(") [NoListVarDeclWrapper]");
+        buffer.append(") [CondHelp]");
         return buffer.toString();
     }
 }

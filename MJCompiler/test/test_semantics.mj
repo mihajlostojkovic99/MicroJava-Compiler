@@ -1,4 +1,4 @@
-program Semanthics
+program Semantics
 
 record r1 {
 	int x;

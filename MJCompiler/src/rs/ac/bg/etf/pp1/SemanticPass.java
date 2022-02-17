@@ -386,7 +386,8 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(NewFactor newFactor) {
-		newFactor.struct = new Struct(Struct.Class, currentType.getMembersTable());
+		if (currentType.getKind() == Struct.Class)
+			newFactor.struct = new Struct(Struct.Class, currentType.getMembersTable());
 	}
 	
 	@Override

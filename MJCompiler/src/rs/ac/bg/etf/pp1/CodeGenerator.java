@@ -61,6 +61,13 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Stack<Integer> skipThen = new Stack<>();
 	private Stack<Integer> skipElse = new Stack<>();
 	private Stack<Integer> doWhileStart = new Stack<>();
+
+	private Stack<Boolean> breakflagStack = new Stack<>();
+	private Stack<Integer> breakAdrStack = new Stack<>();
+	
+	private Stack<Integer> continueLevelStack = new Stack<>();
+	private Stack<Integer> continueAdrStack = new Stack<>();
+	private int doWhileLevel = 0;
 	
 	int getMainPc() {
 		return mainPC;
@@ -301,13 +308,42 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(DoWhileHelp doWhileHelp) {
 		// 
 		doWhileStart.push(Code.pc);
+		doWhileLevel++;
 	}
 	
 	@Override
 	public void visit(DoWhileSingleStatement doWhileSingleStatement) {
 		// 
+		
 		Code.putJump(doWhileStart.pop());
+		if (!breakflagStack.empty() && breakflagStack.pop() == true) {
+			Code.fixup(breakAdrStack.pop());
+		}
 		Code.fixup(skipThen.pop());
+		doWhileLevel--;
+	}
+	
+	@Override
+	public void visit(ContinueSingleStatement continueSingleStatement) {
+		Code.putJump(0);
+		continueAdrStack.push(Code.pc - 2);
+		continueLevelStack.push(doWhileLevel);
+	}
+	
+	@Override
+	public void visit(CondHelp condHelp) {
+		while (!continueLevelStack.empty() /*&& !continueAdrStack.empty()*/ && continueLevelStack.peek() == doWhileLevel) {
+			continueLevelStack.pop();
+			Code.fixup(continueAdrStack.pop());
+		}
+	}
+	
+	@Override
+	public void visit(BreakSingleStatement breakSingleStatement) {
+		// 
+		Code.putJump(0);
+		breakAdrStack.push(Code.pc - 2);
+		breakflagStack.push(true);
 	}
 	
 	@Override

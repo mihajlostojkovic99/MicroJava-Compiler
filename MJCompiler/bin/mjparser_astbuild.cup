@@ -95,6 +95,7 @@ nonterminal RecordDeclName RecordDeclName;
 nonterminal DoWhileHelp DoWhileHelp;
 nonterminal ActParsHelp ActParsHelp;
 nonterminal ElseHelp ElseHelp;
+nonterminal CondHelp CondHelp;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact, Type;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName, MethodRet, MethodName;
@@ -238,7 +239,7 @@ SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement:D1 {: RESULT=
 				{: parser.report_error("Recovering from error in if condition. " + lleft, null); :}
 				*/
 				|
-				(DoWhileSingleStatement) DoWhileHelp:D1 Statement:S2 WHILE LPAREN Condition:C3 RPAREN SEMI {: RESULT=new DoWhileSingleStatement(D1, S2, C3); RESULT.setLine(D1left); :}
+				(DoWhileSingleStatement) DoWhileHelp:D1 Statement:S2 WHILE LPAREN CondHelp:C3 Condition:C4 RPAREN SEMI {: RESULT=new DoWhileSingleStatement(D1, S2, C3, C4); RESULT.setLine(D1left); :}
 				|
 				(BreakSingleStatement) BREAK SEMI {: RESULT=new BreakSingleStatement(); :}
 				|
@@ -256,6 +257,8 @@ SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement:D1 {: RESULT=
 				|
 				(GotoSingleStatement) GOTO IDENT:I1 SEMI {: RESULT=new GotoSingleStatement(I1); RESULT.setLine(I1left); :}
 				;
+				
+CondHelp		::= (CondHelp) {: RESULT=new CondHelp(); :} /* epsilon */;
 				
 ElseHelp		::= (ElseHelp) ELSE {: RESULT=new ElseHelp(); :};
 				

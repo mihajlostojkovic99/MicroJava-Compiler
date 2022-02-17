@@ -1,0 +1,46 @@
+program Syntax
+
+const char c = 5;
+int i, j;
+int x[];
+bool b;
+
+{
+
+	int m2(char c) int x; {
+		x = ord(c);
+		return c;
+	}
+	
+	bool m3() {
+		if (i > true) return true;
+		else return false;
+	}
+
+	void main() int x; {
+		
+		i = 0;
+		j = 0;
+		x = 5;
+		b = false;
+		
+		if (x == 5) {
+			do {
+				if (i == 3) {
+					print(15);
+					b = true;
+				}
+				i++;
+			} while (i < x);
+			if (b == true) print(1, 5);
+			else print(2);
+			j = 1;
+		}
+		
+		b = m2();
+		j = m3(i);
+		
+		if (j == 0 || b == false) print(c);
+	}
+
+}

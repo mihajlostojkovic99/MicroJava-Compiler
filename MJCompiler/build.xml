@@ -21,7 +21,7 @@
 	</target>
 	
 	<target name="lexerGen" depends="delete">
-		<java jar="lib/jflex-full-1.8.2.jar" fork="true">
+		<java jar="lib/JFlex.jar" fork="true">
 			<arg value="-d"/>
 			<arg value="./src/rs/ac/bg/etf/pp1"/>
 			<arg value="spec/mjlexer.flex"/>

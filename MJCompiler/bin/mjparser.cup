@@ -78,7 +78,7 @@ nonterminal Mulop, Unary;
 nonterminal Relop;
 nonterminal ListVarDeclWrapper;
 
-nonterminal ProgramName, RecordDeclName, DoWhileHelp, ActParsHelp, ElseHelp;
+nonterminal ProgramName, RecordDeclName, DoWhileHelp, ActParsHelp, ElseHelp, CondHelp;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct AssignWrapper, Factor, FactorWrapper, Term, ExprMore, Expr, Condition, CondTerm, CondFact, Type;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorMore, DesignatorMoreElem, DesignatorArrName, DesignatorWithMoreName, MethodRet, MethodName;
@@ -222,7 +222,7 @@ SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement
 				{: parser.report_error("Recovering from error in if condition. " + lleft, null); :}
 				*/
 				|
-				(DoWhileSingleStatement) DoWhileHelp Statement WHILE LPAREN Condition RPAREN SEMI
+				(DoWhileSingleStatement) DoWhileHelp Statement WHILE LPAREN CondHelp Condition RPAREN SEMI
 				|
 				(BreakSingleStatement) BREAK SEMI
 				|
@@ -240,6 +240,8 @@ SingleStatement	::=(DesignatorSingleStatement) DesignatorStatement
 				|
 				(GotoSingleStatement) GOTO IDENT SEMI
 				;
+				
+CondHelp		::= (CondHelp) /* epsilon */;
 				
 ElseHelp		::= (ElseHelp) ELSE;
 				

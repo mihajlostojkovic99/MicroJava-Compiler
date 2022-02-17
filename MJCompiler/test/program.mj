@@ -1,90 +1,22 @@
-program Semanthics
+program Test
 
-record r1 {
-	int x;
-	int arr[];
-}
-
-record r2 {
-	int x;
-	int arr[];
-	r1 spec;
-}
-
-const int a = 5;
-int b;
-char good[], bad[];
-bool d;
 {
-
-	void printStr(char string[], int length) int i; {
+	void main() int i, y; {
 		i = 0;
-		if (length == 0) {
-			print(eol);
-			return;
-		}
+		y = 9;
 		do {
-			print(string[i]);
 			i++;
-		} while (i < length);
-		print(eol);
+			
+			do {
+				y++;
+				if (y > 15) continue;
+				print(y); print(eol);
+			} while (y <= 15);
+			
+			if (i == 1) continue;
+			if (i == 4) break;
+			print(i); print(eol);
+		} while(i <= 5);
 	}
-	
-	void printArr(int arr[]) int i; {
-		i = 0;
-		if (len(arr) == 0) {
-			print(eol);
-			return;
-		}
-		do {
-			print(arr[i]);
-			print(eol);
-			i++;
-		} while (i < len(arr));
-		
-	}
-	
-	void initializeStrings() {
-		good = new char[4];
-		bad = new char[3];
-		good[0] = 'g'; good[1] = 'o'; good[2] = 'o'; good[3] = 'd';
-		bad[0] = 'b'; bad[1] = 'a'; bad[2] = 'd';
-	}
-
-	void main() r1 spec; r2 test; int i, y; {
-		
-		initializeStrings();
-		
-		spec = new r1;
-		spec.x = 15;
-		spec.arr = new int[15];
-		
-		test = new r2;
-		test.x = 5;
-		test.arr = new int[5];
-		test.spec = spec;
-		
-		test.spec.arr[0] = 0;
-		test.spec.arr[1] = 1;
-		i = 2;
-		
-		do {
-			test.spec.arr[i] = test.spec.arr[i-1] + test.spec.arr[i-2]; // fibonacci seq
-			i++;
-		} while (i < test.spec.x);
-		
-		printArr(test.spec.arr);
-		
-		if (i == test.spec.x) d = true; //Boolean d se moze cackati za drugacije rezultate
-		else d = false;
-		
-		i--;
-		
-		if (d && test.spec.arr[i] == 377 || d && test.spec.x >= 10) {
-			printStr(good, len(good));
-		}
-		else printStr(bad, len(bad));
-		
-	}
-
 }
+
