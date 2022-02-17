@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="designatorArr"/>
+		<item key="selection" value="NewFactor"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="DesignatorArr"/>
+			<item value="NewFactor"/>
+			<item value="goto"/>
+			<item value="break"/>
+			<item value="arraylen"/>
+			<item value="newarray"/>
+			<item value="Term"/>
+			<item value="AT"/>
+			<item value="DesignatorSimple"/>
+			<item value="DesStm"/>
 			<item value="NewFactorWithPars"/>
+			<item value="DesignatorStatement"/>
+			<item value="DesignatorArr"/>
 			<item value="new"/>
 			<item value="DesStmAssign"/>
 			<item value="newarr"/>
-			<item value="expr"/>
-			<item value="VarDeclWrapperOk"/>
-			<item value="dup"/>
-			<item value="print"/>
-			<item value="SemanticPass"/>
-			<item value="SemanticPass.java"/>
-			<item value="ActPars"/>
-			<item value="for (Obj tmp : currRecord.getMembers())"/>
-			<item value="designatorSimple"/>
-			<item value="Access to array"/>
 		</list>
 		<list key="replacehistory">
 		</list>

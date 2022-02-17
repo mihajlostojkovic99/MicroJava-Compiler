@@ -1,4 +1,4 @@
-program Syntax
+program Semantic_errors
 
 const char c = 5;
 int i, j;

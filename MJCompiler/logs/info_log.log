@@ -1,501 +1,270 @@
-INFO  01:20:07,438 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
-INFO  01:20:07,625 - #2 program
-INFO  01:20:07,625 - #49 Test
-INFO  01:20:07,625 - #45 {
-INFO  01:20:07,630 - #14 void
-INFO  01:20:07,635 - #49 main
-INFO  01:20:07,640 - #41 (
-INFO  01:20:07,641 - #42 )
-INFO  01:20:07,641 - #49 int
-INFO  01:20:07,645 - #49 i
-INFO  01:20:07,648 - #39 ,
-INFO  01:20:07,649 - #49 y
-INFO  01:20:07,649 - #37 ;
-INFO  01:20:07,649 - #45 {
-INFO  01:20:07,649 - #49 i
-INFO  01:20:07,655 - #34 =
-INFO  01:20:07,655 - #47 0
-INFO  01:20:07,658 - #37 ;
-INFO  01:20:07,662 - #49 y
-INFO  01:20:07,662 - #34 =
-INFO  01:20:07,663 - #47 9
-INFO  01:20:07,663 - #37 ;
-INFO  01:20:07,663 - #8 do
-INFO  01:20:07,663 - #45 {
-INFO  01:20:07,664 - #49 i
-INFO  01:20:07,664 - #35 ++
-INFO  01:20:07,664 - #37 ;
-INFO  01:20:07,664 - #8 do
-INFO  01:20:07,665 - #45 {
-INFO  01:20:07,665 - #49 y
-INFO  01:20:07,665 - #35 ++
-INFO  01:20:07,665 - #37 ;
-INFO  01:20:07,665 - #7 if
-INFO  01:20:07,665 - #41 (
-INFO  01:20:07,665 - #49 y
-INFO  01:20:07,665 - #28 >
-INFO  01:20:07,665 - #47 15
-INFO  01:20:07,668 - #42 )
-INFO  01:20:07,668 - #16 continue
-INFO  01:20:07,669 - #37 ;
-INFO  01:20:07,669 - #11 print
-INFO  01:20:07,673 - #41 (
-INFO  01:20:07,673 - #49 y
-INFO  01:20:07,673 - #42 )
-INFO  01:20:07,673 - #37 ;
-INFO  01:20:07,673 - #11 print
-INFO  01:20:07,673 - #41 (
-INFO  01:20:07,673 - #49 eol
-INFO  01:20:07,673 - #42 )
-INFO  01:20:07,673 - #37 ;
-INFO  01:20:07,673 - #46 }
-INFO  01:20:07,673 - #9 while
-INFO  01:20:07,675 - #41 (
-INFO  01:20:07,675 - #49 y
-INFO  01:20:07,679 - #31 <=
-INFO  01:20:07,679 - #47 15
-INFO  01:20:07,680 - #42 )
-INFO  01:20:07,680 - #37 ;
-INFO  01:20:07,680 - #7 if
-INFO  01:20:07,680 - #41 (
-INFO  01:20:07,680 - #49 i
-INFO  01:20:07,680 - #26 ==
-INFO  01:20:07,680 - #47 1
-INFO  01:20:07,681 - #42 )
-INFO  01:20:07,682 - #16 continue
-INFO  01:20:07,682 - #37 ;
-INFO  01:20:07,682 - #7 if
-INFO  01:20:07,682 - #41 (
-INFO  01:20:07,682 - #49 i
-INFO  01:20:07,682 - #26 ==
-INFO  01:20:07,682 - #47 4
-INFO  01:20:07,682 - #42 )
-INFO  01:20:07,682 - #3 break
-INFO  01:20:07,682 - #37 ;
-INFO  01:20:07,682 - #11 print
-INFO  01:20:07,687 - #41 (
-INFO  01:20:07,687 - #49 i
-INFO  01:20:07,687 - #42 )
-INFO  01:20:07,687 - #37 ;
-INFO  01:20:07,687 - #11 print
-INFO  01:20:07,687 - #41 (
-INFO  01:20:07,687 - #49 eol
-INFO  01:20:07,687 - #42 )
-INFO  01:20:07,687 - #37 ;
-INFO  01:20:07,687 - #46 }
-INFO  01:20:07,687 - #9 while
-INFO  01:20:07,687 - #41 (
-INFO  01:20:07,688 - #49 i
-INFO  01:20:07,688 - #31 <=
-INFO  01:20:07,688 - #47 5
-INFO  01:20:07,688 - #42 )
-INFO  01:20:07,688 - #37 ;
-INFO  01:20:07,688 - #46 }
-INFO  01:20:07,688 - #46 }
-INFO  01:20:07,694 - Program(
+INFO  10:18:38,162 - Compiling source file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.mj
+INFO  10:18:38,214 - #2 program
+INFO  10:18:38,214 - #49 test302
+INFO  10:18:38,214 - #6 const
+INFO  10:18:38,216 - #49 int
+INFO  10:18:38,216 - #49 jedan
+INFO  10:18:38,217 - #34 =
+INFO  10:18:38,217 - #47 1
+INFO  10:18:38,217 - #37 ;
+INFO  10:18:38,218 - #49 int
+INFO  10:18:38,218 - #49 i
+INFO  10:18:38,218 - #37 ;
+INFO  10:18:38,218 - #49 bool
+INFO  10:18:38,219 - #49 ibool
+INFO  10:18:38,219 - #37 ;
+INFO  10:18:38,219 - #49 int
+INFO  10:18:38,219 - #49 niz2
+INFO  10:18:38,219 - #37 ;
+INFO  10:18:38,220 - #20 record
+INFO  10:18:38,220 - #49 Test
+INFO  10:18:38,220 - #45 {
+INFO  10:18:38,220 - #49 int
+INFO  10:18:38,221 - #49 niz
+INFO  10:18:38,221 - #43 [
+INFO  10:18:38,222 - #44 ]
+INFO  10:18:38,222 - #37 ;
+INFO  10:18:38,222 - #49 int
+INFO  10:18:38,223 - #49 a
+INFO  10:18:38,223 - #37 ;
+INFO  10:18:38,223 - #46 }
+INFO  10:18:38,223 - #49 Test
+INFO  10:18:38,225 - #49 t1
+INFO  10:18:38,225 - #39 ,
+INFO  10:18:38,225 - #49 t2
+INFO  10:18:38,225 - #37 ;
+INFO  10:18:38,225 - #45 {
+INFO  10:18:38,226 - #49 int
+INFO  10:18:38,226 - #49 sum
+INFO  10:18:38,226 - #41 (
+INFO  10:18:38,227 - #49 int
+INFO  10:18:38,227 - #49 z
+INFO  10:18:38,227 - #39 ,
+INFO  10:18:38,227 - #49 int
+INFO  10:18:38,228 - #49 d
+INFO  10:18:38,228 - #42 )
+INFO  10:18:38,228 - #45 {
+INFO  10:18:38,228 - #13 return
+INFO  10:18:38,230 - #49 z
+INFO  10:18:38,231 - #21 +
+INFO  10:18:38,232 - #49 d
+INFO  10:18:38,235 - #37 ;
+INFO  10:18:38,236 - #46 }
+INFO  10:18:38,236 - #49 int
+INFO  10:18:38,237 - #49 inkrement
+INFO  10:18:38,237 - #41 (
+INFO  10:18:38,237 - #49 int
+INFO  10:18:38,237 - #49 a
+INFO  10:18:38,237 - #39 ,
+INFO  10:18:38,237 - #49 int
+INFO  10:18:38,237 - #49 inc
+INFO  10:18:38,237 - #42 )
+INFO  10:18:38,237 - #49 int
+INFO  10:18:38,237 - #49 pom
+INFO  10:18:38,237 - #37 ;
+INFO  10:18:38,237 - #45 {
+INFO  10:18:38,238 - #7 if
+INFO  10:18:38,238 - #41 (
+INFO  10:18:38,238 - #49 inc
+INFO  10:18:38,238 - #26 ==
+INFO  10:18:38,238 - #49 jedan
+INFO  10:18:38,239 - #42 )
+INFO  10:18:38,239 - #49 pom
+INFO  10:18:38,239 - #34 =
+INFO  10:18:38,240 - #47 1
+INFO  10:18:38,240 - #37 ;
+INFO  10:18:38,240 - #5 else
+INFO  10:18:38,240 - #7 if
+INFO  10:18:38,241 - #41 (
+INFO  10:18:38,241 - #49 inc
+INFO  10:18:38,241 - #26 ==
+INFO  10:18:38,241 - #47 2
+INFO  10:18:38,241 - #42 )
+INFO  10:18:38,241 - #49 pom
+INFO  10:18:38,241 - #34 =
+INFO  10:18:38,241 - #49 a
+INFO  10:18:38,241 - #37 ;
+INFO  10:18:38,242 - #13 return
+INFO  10:18:38,242 - #49 sum
+INFO  10:18:38,242 - #41 (
+INFO  10:18:38,242 - #49 a
+INFO  10:18:38,242 - #39 ,
+INFO  10:18:38,243 - #49 pom
+INFO  10:18:38,243 - #42 )
+INFO  10:18:38,243 - #37 ;
+INFO  10:18:38,243 - #46 }
+INFO  10:18:38,243 - #49 bool
+INFO  10:18:38,243 - #49 verify
+INFO  10:18:38,243 - #41 (
+INFO  10:18:38,243 - #42 )
+INFO  10:18:38,243 - #45 {
+INFO  10:18:38,244 - #11 print
+INFO  10:18:38,244 - #41 (
+INFO  10:18:38,244 - #50 v
+INFO  10:18:38,244 - #42 )
+INFO  10:18:38,244 - #37 ;
+INFO  10:18:38,244 - #13 return
+INFO  10:18:38,244 - #48 0
+INFO  10:18:38,244 - #37 ;
+INFO  10:18:38,244 - #46 }
+INFO  10:18:38,244 - #14 void
+INFO  10:18:38,244 - #49 main
+INFO  10:18:38,245 - #41 (
+INFO  10:18:38,245 - #42 )
+INFO  10:18:38,245 - #45 {
+INFO  10:18:38,245 - #11 print
+INFO  10:18:38,245 - #41 (
+INFO  10:18:38,245 - #49 ord
+INFO  10:18:38,245 - #41 (
+INFO  10:18:38,245 - #50 a
+INFO  10:18:38,246 - #42 )
+INFO  10:18:38,246 - #42 )
+INFO  10:18:38,246 - #37 ;
+INFO  10:18:38,246 - #46 }
+INFO  10:18:38,246 - #46 }
+INFO  10:18:38,248 - Program(
   ProgramName(
-   Test
+   test302
   ) [ProgramName]
-  NoList(
-  ) [NoList]
-  MethodDeclarations(
-    NoMethodDecl(
-    ) [NoMethodDecl]
-    MethDeclNoParams(
-      MethodRetVoid(
-      ) [MethodRetVoid]
-      MethodName(
-       main
-      ) [MethodName]
-      IsListVarDeclWrapper(
-        NoListVarDeclWrapper(
-        ) [NoListVarDeclWrapper]
+  ListVar(
+    ListRecord(
+      ListVar(
+        ListVar(
+          ListVar(
+            ListConst(
+              NoList(
+              ) [NoList]
+              ConstDeclWrapperClass(
+                Type(
+                 int
+                ) [Type]
+                SingleConstDeclaration(
+                  ConstDeclNumber(
+                   jedan
+                   1
+                  ) [ConstDeclNumber]
+                ) [SingleConstDeclaration]
+              ) [ConstDeclWrapperClass]
+            ) [ListConst]
+            VarDeclWrapperOk(
+              Type(
+               int
+              ) [Type]
+              SingleVarDecl(
+                NormalVarDecl(
+                 i
+                ) [NormalVarDecl]
+              ) [SingleVarDecl]
+            ) [VarDeclWrapperOk]
+          ) [ListVar]
+          VarDeclWrapperOk(
+            Type(
+             bool
+            ) [Type]
+            SingleVarDecl(
+              NormalVarDecl(
+               ibool
+              ) [NormalVarDecl]
+            ) [SingleVarDecl]
+          ) [VarDeclWrapperOk]
+        ) [ListVar]
         VarDeclWrapperOk(
           Type(
            int
           ) [Type]
-          VarDeclarations(
+          SingleVarDecl(
+            NormalVarDecl(
+             niz2
+            ) [NormalVarDecl]
+          ) [SingleVarDecl]
+        ) [VarDeclWrapperOk]
+      ) [ListVar]
+      RecordDecl(
+        RecordDeclName(
+         Test
+        ) [RecordDeclName]
+        IsListVarDeclWrapper(
+          IsListVarDeclWrapper(
+            NoListVarDeclWrapper(
+            ) [NoListVarDeclWrapper]
+            VarDeclWrapperOk(
+              Type(
+               int
+              ) [Type]
+              SingleVarDecl(
+                ArrayVarDecl(
+                 niz
+                ) [ArrayVarDecl]
+              ) [SingleVarDecl]
+            ) [VarDeclWrapperOk]
+          ) [IsListVarDeclWrapper]
+          VarDeclWrapperOk(
+            Type(
+             int
+            ) [Type]
             SingleVarDecl(
               NormalVarDecl(
-               i
+               a
               ) [NormalVarDecl]
             ) [SingleVarDecl]
-            NormalVarDecl(
-             y
-            ) [NormalVarDecl]
-          ) [VarDeclarations]
-        ) [VarDeclWrapperOk]
-      ) [IsListVarDeclWrapper]
-      StatementListExists(
-        StatementListExists(
-          StatementListExists(
-            NoStatementList(
-            ) [NoStatementList]
-            StatementWithSingleStatement(
-              DesignatorSingleStatement(
-                DesStmAssign(
-                  DesignatorSimple(
-                   i
-                  ) [DesignatorSimple]
-                  AssignWrap(
-                    Assignop(
-                    ) [Assignop]
-                    Expr(
-                      SingleTerm(
-                        FactorWrapper(
-                          NoUnary(
-                          ) [NoUnary]
-                          Num(
-                           0
-                          ) [Num]
-                        ) [FactorWrapper]
-                      ) [SingleTerm]
-                      NoMoreExpr(
-                      ) [NoMoreExpr]
-                    ) [Expr]
-                  ) [AssignWrap]
-                ) [DesStmAssign]
-              ) [DesignatorSingleStatement]
-            ) [StatementWithSingleStatement]
-          ) [StatementListExists]
-          StatementWithSingleStatement(
-            DesignatorSingleStatement(
-              DesStmAssign(
-                DesignatorSimple(
-                 y
-                ) [DesignatorSimple]
-                AssignWrap(
-                  Assignop(
-                  ) [Assignop]
-                  Expr(
-                    SingleTerm(
-                      FactorWrapper(
-                        NoUnary(
-                        ) [NoUnary]
-                        Num(
-                         9
-                        ) [Num]
-                      ) [FactorWrapper]
-                    ) [SingleTerm]
-                    NoMoreExpr(
-                    ) [NoMoreExpr]
-                  ) [Expr]
-                ) [AssignWrap]
-              ) [DesStmAssign]
-            ) [DesignatorSingleStatement]
-          ) [StatementWithSingleStatement]
-        ) [StatementListExists]
-        StatementWithSingleStatement(
-          DoWhileSingleStatement(
-            DoWhileHelp(
-            ) [DoWhileHelp]
-            StatementWithStatements(
-              Statements(
-                StatementListExists(
-                  StatementListExists(
-                    StatementListExists(
-                      StatementListExists(
-                        StatementListExists(
-                          StatementListExists(
-                            NoStatementList(
-                            ) [NoStatementList]
-                            StatementWithSingleStatement(
-                              DesignatorSingleStatement(
-                                DesStmInc(
-                                  DesignatorSimple(
-                                   i
-                                  ) [DesignatorSimple]
-                                ) [DesStmInc]
-                              ) [DesignatorSingleStatement]
-                            ) [StatementWithSingleStatement]
-                          ) [StatementListExists]
-                          StatementWithSingleStatement(
-                            DoWhileSingleStatement(
-                              DoWhileHelp(
-                              ) [DoWhileHelp]
-                              StatementWithStatements(
-                                Statements(
-                                  StatementListExists(
-                                    StatementListExists(
-                                      StatementListExists(
-                                        StatementListExists(
-                                          NoStatementList(
-                                          ) [NoStatementList]
-                                          StatementWithSingleStatement(
-                                            DesignatorSingleStatement(
-                                              DesStmInc(
-                                                DesignatorSimple(
-                                                 y
-                                                ) [DesignatorSimple]
-                                              ) [DesStmInc]
-                                            ) [DesignatorSingleStatement]
-                                          ) [StatementWithSingleStatement]
-                                        ) [StatementListExists]
-                                        StatementWithSingleStatement(
-                                          IfSingleStatement(
-                                            SingleCondition(
-                                              SingleCondTerm(
-                                                CondFactRelop(
-                                                  Expr(
-                                                    SingleTerm(
-                                                      FactorWrapper(
-                                                        NoUnary(
-                                                        ) [NoUnary]
-                                                        NormalFactor(
-                                                          DesignatorSimple(
-                                                           y
-                                                          ) [DesignatorSimple]
-                                                        ) [NormalFactor]
-                                                      ) [FactorWrapper]
-                                                    ) [SingleTerm]
-                                                    NoMoreExpr(
-                                                    ) [NoMoreExpr]
-                                                  ) [Expr]
-                                                  GreaterThan(
-                                                  ) [GreaterThan]
-                                                  Expr(
-                                                    SingleTerm(
-                                                      FactorWrapper(
-                                                        NoUnary(
-                                                        ) [NoUnary]
-                                                        Num(
-                                                         15
-                                                        ) [Num]
-                                                      ) [FactorWrapper]
-                                                    ) [SingleTerm]
-                                                    NoMoreExpr(
-                                                    ) [NoMoreExpr]
-                                                  ) [Expr]
-                                                ) [CondFactRelop]
-                                              ) [SingleCondTerm]
-                                            ) [SingleCondition]
-                                            StatementWithSingleStatement(
-                                              ContinueSingleStatement(
-                                              ) [ContinueSingleStatement]
-                                            ) [StatementWithSingleStatement]
-                                          ) [IfSingleStatement]
-                                        ) [StatementWithSingleStatement]
-                                      ) [StatementListExists]
-                                      StatementWithSingleStatement(
-                                        PrintSingleStatement(
-                                          Expr(
-                                            SingleTerm(
-                                              FactorWrapper(
-                                                NoUnary(
-                                                ) [NoUnary]
-                                                NormalFactor(
-                                                  DesignatorSimple(
-                                                   y
-                                                  ) [DesignatorSimple]
-                                                ) [NormalFactor]
-                                              ) [FactorWrapper]
-                                            ) [SingleTerm]
-                                            NoMoreExpr(
-                                            ) [NoMoreExpr]
-                                          ) [Expr]
-                                        ) [PrintSingleStatement]
-                                      ) [StatementWithSingleStatement]
-                                    ) [StatementListExists]
-                                    StatementWithSingleStatement(
-                                      PrintSingleStatement(
-                                        Expr(
-                                          SingleTerm(
-                                            FactorWrapper(
-                                              NoUnary(
-                                              ) [NoUnary]
-                                              NormalFactor(
-                                                DesignatorSimple(
-                                                 eol
-                                                ) [DesignatorSimple]
-                                              ) [NormalFactor]
-                                            ) [FactorWrapper]
-                                          ) [SingleTerm]
-                                          NoMoreExpr(
-                                          ) [NoMoreExpr]
-                                        ) [Expr]
-                                      ) [PrintSingleStatement]
-                                    ) [StatementWithSingleStatement]
-                                  ) [StatementListExists]
-                                ) [Statements]
-                              ) [StatementWithStatements]
-                              CondHelp(
-                              ) [CondHelp]
-                              SingleCondition(
-                                SingleCondTerm(
-                                  CondFactRelop(
-                                    Expr(
-                                      SingleTerm(
-                                        FactorWrapper(
-                                          NoUnary(
-                                          ) [NoUnary]
-                                          NormalFactor(
-                                            DesignatorSimple(
-                                             y
-                                            ) [DesignatorSimple]
-                                          ) [NormalFactor]
-                                        ) [FactorWrapper]
-                                      ) [SingleTerm]
-                                      NoMoreExpr(
-                                      ) [NoMoreExpr]
-                                    ) [Expr]
-                                    LessOrEqual(
-                                    ) [LessOrEqual]
-                                    Expr(
-                                      SingleTerm(
-                                        FactorWrapper(
-                                          NoUnary(
-                                          ) [NoUnary]
-                                          Num(
-                                           15
-                                          ) [Num]
-                                        ) [FactorWrapper]
-                                      ) [SingleTerm]
-                                      NoMoreExpr(
-                                      ) [NoMoreExpr]
-                                    ) [Expr]
-                                  ) [CondFactRelop]
-                                ) [SingleCondTerm]
-                              ) [SingleCondition]
-                            ) [DoWhileSingleStatement]
-                          ) [StatementWithSingleStatement]
-                        ) [StatementListExists]
-                        StatementWithSingleStatement(
-                          IfSingleStatement(
-                            SingleCondition(
-                              SingleCondTerm(
-                                CondFactRelop(
-                                  Expr(
-                                    SingleTerm(
-                                      FactorWrapper(
-                                        NoUnary(
-                                        ) [NoUnary]
-                                        NormalFactor(
-                                          DesignatorSimple(
-                                           i
-                                          ) [DesignatorSimple]
-                                        ) [NormalFactor]
-                                      ) [FactorWrapper]
-                                    ) [SingleTerm]
-                                    NoMoreExpr(
-                                    ) [NoMoreExpr]
-                                  ) [Expr]
-                                  Equals(
-                                  ) [Equals]
-                                  Expr(
-                                    SingleTerm(
-                                      FactorWrapper(
-                                        NoUnary(
-                                        ) [NoUnary]
-                                        Num(
-                                         1
-                                        ) [Num]
-                                      ) [FactorWrapper]
-                                    ) [SingleTerm]
-                                    NoMoreExpr(
-                                    ) [NoMoreExpr]
-                                  ) [Expr]
-                                ) [CondFactRelop]
-                              ) [SingleCondTerm]
-                            ) [SingleCondition]
-                            StatementWithSingleStatement(
-                              ContinueSingleStatement(
-                              ) [ContinueSingleStatement]
-                            ) [StatementWithSingleStatement]
-                          ) [IfSingleStatement]
-                        ) [StatementWithSingleStatement]
-                      ) [StatementListExists]
-                      StatementWithSingleStatement(
-                        IfSingleStatement(
-                          SingleCondition(
-                            SingleCondTerm(
-                              CondFactRelop(
-                                Expr(
-                                  SingleTerm(
-                                    FactorWrapper(
-                                      NoUnary(
-                                      ) [NoUnary]
-                                      NormalFactor(
-                                        DesignatorSimple(
-                                         i
-                                        ) [DesignatorSimple]
-                                      ) [NormalFactor]
-                                    ) [FactorWrapper]
-                                  ) [SingleTerm]
-                                  NoMoreExpr(
-                                  ) [NoMoreExpr]
-                                ) [Expr]
-                                Equals(
-                                ) [Equals]
-                                Expr(
-                                  SingleTerm(
-                                    FactorWrapper(
-                                      NoUnary(
-                                      ) [NoUnary]
-                                      Num(
-                                       4
-                                      ) [Num]
-                                    ) [FactorWrapper]
-                                  ) [SingleTerm]
-                                  NoMoreExpr(
-                                  ) [NoMoreExpr]
-                                ) [Expr]
-                              ) [CondFactRelop]
-                            ) [SingleCondTerm]
-                          ) [SingleCondition]
-                          StatementWithSingleStatement(
-                            BreakSingleStatement(
-                            ) [BreakSingleStatement]
-                          ) [StatementWithSingleStatement]
-                        ) [IfSingleStatement]
-                      ) [StatementWithSingleStatement]
-                    ) [StatementListExists]
-                    StatementWithSingleStatement(
-                      PrintSingleStatement(
-                        Expr(
-                          SingleTerm(
-                            FactorWrapper(
-                              NoUnary(
-                              ) [NoUnary]
-                              NormalFactor(
-                                DesignatorSimple(
-                                 i
-                                ) [DesignatorSimple]
-                              ) [NormalFactor]
-                            ) [FactorWrapper]
-                          ) [SingleTerm]
-                          NoMoreExpr(
-                          ) [NoMoreExpr]
-                        ) [Expr]
-                      ) [PrintSingleStatement]
-                    ) [StatementWithSingleStatement]
-                  ) [StatementListExists]
-                  StatementWithSingleStatement(
-                    PrintSingleStatement(
-                      Expr(
-                        SingleTerm(
-                          FactorWrapper(
-                            NoUnary(
-                            ) [NoUnary]
-                            NormalFactor(
-                              DesignatorSimple(
-                               eol
-                              ) [DesignatorSimple]
-                            ) [NormalFactor]
-                          ) [FactorWrapper]
-                        ) [SingleTerm]
-                        NoMoreExpr(
-                        ) [NoMoreExpr]
-                      ) [Expr]
-                    ) [PrintSingleStatement]
-                  ) [StatementWithSingleStatement]
-                ) [StatementListExists]
-              ) [Statements]
-            ) [StatementWithStatements]
-            CondHelp(
-            ) [CondHelp]
-            SingleCondition(
-              SingleCondTerm(
-                CondFactRelop(
+          ) [VarDeclWrapperOk]
+        ) [IsListVarDeclWrapper]
+      ) [RecordDecl]
+    ) [ListRecord]
+    VarDeclWrapperOk(
+      Type(
+       Test
+      ) [Type]
+      VarDeclarations(
+        SingleVarDecl(
+          NormalVarDecl(
+           t1
+          ) [NormalVarDecl]
+        ) [SingleVarDecl]
+        NormalVarDecl(
+         t2
+        ) [NormalVarDecl]
+      ) [VarDeclarations]
+    ) [VarDeclWrapperOk]
+  ) [ListVar]
+  MethodDeclarations(
+    MethodDeclarations(
+      MethodDeclarations(
+        MethodDeclarations(
+          NoMethodDecl(
+          ) [NoMethodDecl]
+          MethDeclParams(
+            MethodRetType(
+              Type(
+               int
+              ) [Type]
+            ) [MethodRetType]
+            MethodName(
+             sum
+            ) [MethodName]
+            FormParameters(
+              SingleFormPars(
+                FormalParameter(
+                  Type(
+                   int
+                  ) [Type]
+                 z
+                ) [FormalParameter]
+              ) [SingleFormPars]
+              FormalParameter(
+                Type(
+                 int
+                ) [Type]
+               d
+              ) [FormalParameter]
+            ) [FormParameters]
+            NoListVarDeclWrapper(
+            ) [NoListVarDeclWrapper]
+            StatementListExists(
+              NoStatementList(
+              ) [NoStatementList]
+              StatementWithSingleStatement(
+                ReturnExprSingleStatement(
                   Expr(
                     SingleTerm(
                       FactorWrapper(
@@ -503,50 +272,390 @@ INFO  01:20:07,694 - Program(
                         ) [NoUnary]
                         NormalFactor(
                           DesignatorSimple(
-                           i
+                           z
                           ) [DesignatorSimple]
                         ) [NormalFactor]
                       ) [FactorWrapper]
                     ) [SingleTerm]
-                    NoMoreExpr(
-                    ) [NoMoreExpr]
+                    ThereIsMoreExpr(
+                      NoMoreExpr(
+                      ) [NoMoreExpr]
+                      Plus(
+                      ) [Plus]
+                      SingleTerm(
+                        FactorWrapper(
+                          NoUnary(
+                          ) [NoUnary]
+                          NormalFactor(
+                            DesignatorSimple(
+                             d
+                            ) [DesignatorSimple]
+                          ) [NormalFactor]
+                        ) [FactorWrapper]
+                      ) [SingleTerm]
+                    ) [ThereIsMoreExpr]
                   ) [Expr]
-                  LessOrEqual(
-                  ) [LessOrEqual]
-                  Expr(
-                    SingleTerm(
-                      FactorWrapper(
-                        NoUnary(
-                        ) [NoUnary]
-                        Num(
-                         5
-                        ) [Num]
-                      ) [FactorWrapper]
-                    ) [SingleTerm]
-                    NoMoreExpr(
-                    ) [NoMoreExpr]
-                  ) [Expr]
-                ) [CondFactRelop]
-              ) [SingleCondTerm]
-            ) [SingleCondition]
-          ) [DoWhileSingleStatement]
+                ) [ReturnExprSingleStatement]
+              ) [StatementWithSingleStatement]
+            ) [StatementListExists]
+          ) [MethDeclParams]
+        ) [MethodDeclarations]
+        MethDeclParams(
+          MethodRetType(
+            Type(
+             int
+            ) [Type]
+          ) [MethodRetType]
+          MethodName(
+           inkrement
+          ) [MethodName]
+          FormParameters(
+            SingleFormPars(
+              FormalParameter(
+                Type(
+                 int
+                ) [Type]
+               a
+              ) [FormalParameter]
+            ) [SingleFormPars]
+            FormalParameter(
+              Type(
+               int
+              ) [Type]
+             inc
+            ) [FormalParameter]
+          ) [FormParameters]
+          IsListVarDeclWrapper(
+            NoListVarDeclWrapper(
+            ) [NoListVarDeclWrapper]
+            VarDeclWrapperOk(
+              Type(
+               int
+              ) [Type]
+              SingleVarDecl(
+                NormalVarDecl(
+                 pom
+                ) [NormalVarDecl]
+              ) [SingleVarDecl]
+            ) [VarDeclWrapperOk]
+          ) [IsListVarDeclWrapper]
+          StatementListExists(
+            StatementListExists(
+              NoStatementList(
+              ) [NoStatementList]
+              StatementWithSingleStatement(
+                IfElseSingleStatement(
+                  SingleCondition(
+                    SingleCondTerm(
+                      CondFactRelop(
+                        Expr(
+                          SingleTerm(
+                            FactorWrapper(
+                              NoUnary(
+                              ) [NoUnary]
+                              NormalFactor(
+                                DesignatorSimple(
+                                 inc
+                                ) [DesignatorSimple]
+                              ) [NormalFactor]
+                            ) [FactorWrapper]
+                          ) [SingleTerm]
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                        ) [Expr]
+                        Equals(
+                        ) [Equals]
+                        Expr(
+                          SingleTerm(
+                            FactorWrapper(
+                              NoUnary(
+                              ) [NoUnary]
+                              NormalFactor(
+                                DesignatorSimple(
+                                 jedan
+                                ) [DesignatorSimple]
+                              ) [NormalFactor]
+                            ) [FactorWrapper]
+                          ) [SingleTerm]
+                          NoMoreExpr(
+                          ) [NoMoreExpr]
+                        ) [Expr]
+                      ) [CondFactRelop]
+                    ) [SingleCondTerm]
+                  ) [SingleCondition]
+                  StatementWithSingleStatement(
+                    DesignatorSingleStatement(
+                      DesStmAssign(
+                        DesignatorSimple(
+                         pom
+                        ) [DesignatorSimple]
+                        AssignWrap(
+                          Assignop(
+                          ) [Assignop]
+                          Expr(
+                            SingleTerm(
+                              FactorWrapper(
+                                NoUnary(
+                                ) [NoUnary]
+                                Num(
+                                 1
+                                ) [Num]
+                              ) [FactorWrapper]
+                            ) [SingleTerm]
+                            NoMoreExpr(
+                            ) [NoMoreExpr]
+                          ) [Expr]
+                        ) [AssignWrap]
+                      ) [DesStmAssign]
+                    ) [DesignatorSingleStatement]
+                  ) [StatementWithSingleStatement]
+                  ElseHelp(
+                  ) [ElseHelp]
+                  StatementWithSingleStatement(
+                    IfSingleStatement(
+                      SingleCondition(
+                        SingleCondTerm(
+                          CondFactRelop(
+                            Expr(
+                              SingleTerm(
+                                FactorWrapper(
+                                  NoUnary(
+                                  ) [NoUnary]
+                                  NormalFactor(
+                                    DesignatorSimple(
+                                     inc
+                                    ) [DesignatorSimple]
+                                  ) [NormalFactor]
+                                ) [FactorWrapper]
+                              ) [SingleTerm]
+                              NoMoreExpr(
+                              ) [NoMoreExpr]
+                            ) [Expr]
+                            Equals(
+                            ) [Equals]
+                            Expr(
+                              SingleTerm(
+                                FactorWrapper(
+                                  NoUnary(
+                                  ) [NoUnary]
+                                  Num(
+                                   2
+                                  ) [Num]
+                                ) [FactorWrapper]
+                              ) [SingleTerm]
+                              NoMoreExpr(
+                              ) [NoMoreExpr]
+                            ) [Expr]
+                          ) [CondFactRelop]
+                        ) [SingleCondTerm]
+                      ) [SingleCondition]
+                      StatementWithSingleStatement(
+                        DesignatorSingleStatement(
+                          DesStmAssign(
+                            DesignatorSimple(
+                             pom
+                            ) [DesignatorSimple]
+                            AssignWrap(
+                              Assignop(
+                              ) [Assignop]
+                              Expr(
+                                SingleTerm(
+                                  FactorWrapper(
+                                    NoUnary(
+                                    ) [NoUnary]
+                                    NormalFactor(
+                                      DesignatorSimple(
+                                       a
+                                      ) [DesignatorSimple]
+                                    ) [NormalFactor]
+                                  ) [FactorWrapper]
+                                ) [SingleTerm]
+                                NoMoreExpr(
+                                ) [NoMoreExpr]
+                              ) [Expr]
+                            ) [AssignWrap]
+                          ) [DesStmAssign]
+                        ) [DesignatorSingleStatement]
+                      ) [StatementWithSingleStatement]
+                    ) [IfSingleStatement]
+                  ) [StatementWithSingleStatement]
+                ) [IfElseSingleStatement]
+              ) [StatementWithSingleStatement]
+            ) [StatementListExists]
+            StatementWithSingleStatement(
+              ReturnExprSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      FactorWithActPars(
+                        DesignatorSimple(
+                         sum
+                        ) [DesignatorSimple]
+                        ActParsHelp(
+                        ) [ActParsHelp]
+                        MulActPars(
+                          SingleActPar(
+                            Expr(
+                              SingleTerm(
+                                FactorWrapper(
+                                  NoUnary(
+                                  ) [NoUnary]
+                                  NormalFactor(
+                                    DesignatorSimple(
+                                     a
+                                    ) [DesignatorSimple]
+                                  ) [NormalFactor]
+                                ) [FactorWrapper]
+                              ) [SingleTerm]
+                              NoMoreExpr(
+                              ) [NoMoreExpr]
+                            ) [Expr]
+                          ) [SingleActPar]
+                          Expr(
+                            SingleTerm(
+                              FactorWrapper(
+                                NoUnary(
+                                ) [NoUnary]
+                                NormalFactor(
+                                  DesignatorSimple(
+                                   pom
+                                  ) [DesignatorSimple]
+                                ) [NormalFactor]
+                              ) [FactorWrapper]
+                            ) [SingleTerm]
+                            NoMoreExpr(
+                            ) [NoMoreExpr]
+                          ) [Expr]
+                        ) [MulActPars]
+                      ) [FactorWithActPars]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [ReturnExprSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+        ) [MethDeclParams]
+      ) [MethodDeclarations]
+      MethDeclNoParams(
+        MethodRetType(
+          Type(
+           bool
+          ) [Type]
+        ) [MethodRetType]
+        MethodName(
+         verify
+        ) [MethodName]
+        NoListVarDeclWrapper(
+        ) [NoListVarDeclWrapper]
+        StatementListExists(
+          StatementListExists(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementWithSingleStatement(
+              PrintSingleStatement(
+                Expr(
+                  SingleTerm(
+                    FactorWrapper(
+                      NoUnary(
+                      ) [NoUnary]
+                      Char(
+                       v
+                      ) [Char]
+                    ) [FactorWrapper]
+                  ) [SingleTerm]
+                  NoMoreExpr(
+                  ) [NoMoreExpr]
+                ) [Expr]
+              ) [PrintSingleStatement]
+            ) [StatementWithSingleStatement]
+          ) [StatementListExists]
+          StatementWithSingleStatement(
+            ReturnExprSingleStatement(
+              Expr(
+                SingleTerm(
+                  FactorWrapper(
+                    NoUnary(
+                    ) [NoUnary]
+                    Bool(
+                     0
+                    ) [Bool]
+                  ) [FactorWrapper]
+                ) [SingleTerm]
+                NoMoreExpr(
+                ) [NoMoreExpr]
+              ) [Expr]
+            ) [ReturnExprSingleStatement]
+          ) [StatementWithSingleStatement]
+        ) [StatementListExists]
+      ) [MethDeclNoParams]
+    ) [MethodDeclarations]
+    MethDeclNoParams(
+      MethodRetVoid(
+      ) [MethodRetVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      NoListVarDeclWrapper(
+      ) [NoListVarDeclWrapper]
+      StatementListExists(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementWithSingleStatement(
+          PrintSingleStatement(
+            Expr(
+              SingleTerm(
+                FactorWrapper(
+                  NoUnary(
+                  ) [NoUnary]
+                  FactorWithActPars(
+                    DesignatorSimple(
+                     ord
+                    ) [DesignatorSimple]
+                    ActParsHelp(
+                    ) [ActParsHelp]
+                    SingleActPar(
+                      Expr(
+                        SingleTerm(
+                          FactorWrapper(
+                            NoUnary(
+                            ) [NoUnary]
+                            Char(
+                             a
+                            ) [Char]
+                          ) [FactorWrapper]
+                        ) [SingleTerm]
+                        NoMoreExpr(
+                        ) [NoMoreExpr]
+                      ) [Expr]
+                    ) [SingleActPar]
+                  ) [FactorWithActPars]
+                ) [FactorWrapper]
+              ) [SingleTerm]
+              NoMoreExpr(
+              ) [NoMoreExpr]
+            ) [Expr]
+          ) [PrintSingleStatement]
         ) [StatementWithSingleStatement]
       ) [StatementListExists]
     ) [MethDeclNoParams]
   ) [MethodDeclarations]
 ) [Program]
-INFO  01:20:07,695 - ===================================
-INFO  01:20:07,713 - Access to local variable 'i' detected. Var: Int, 0, 1 in line 5.
-INFO  01:20:07,714 - Access to local variable 'y' detected. Var: Int, 1, 1 in line 6.
-INFO  01:20:07,714 - Access to local variable 'i' detected. Var: Int, 0, 1 in line 8.
-INFO  01:20:07,714 - Access to local variable 'y' detected. Var: Int, 1, 1 in line 11.
-INFO  01:20:07,714 - Access to local variable 'y' detected. Var: Int, 1, 1 in line 12.
-INFO  01:20:07,714 - Access to local variable 'y' detected. Var: Int, 1, 1 in line 13.
-INFO  01:20:07,714 - Access to local variable 'y' detected. Var: Int, 1, 1 in line 14.
-INFO  01:20:07,714 - Access to local variable 'i' detected. Var: Int, 0, 1 in line 16.
-INFO  01:20:07,715 - Access to local variable 'i' detected. Var: Int, 0, 1 in line 17.
-INFO  01:20:07,715 - Access to local variable 'i' detected. Var: Int, 0, 1 in line 18.
-INFO  01:20:07,715 - Access to local variable 'i' detected. Var: Int, 0, 1 in line 19.
-INFO  01:20:07,715 - ===================================
-INFO  01:20:07,716 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
-INFO  01:20:07,724 - Parsiranje uspesno zavrseno!
+INFO  10:18:38,249 - ===================================
+INFO  10:18:38,261 - Access to formal parameter 'z' detected. Var: Int, 0, 1 in line 23.
+INFO  10:18:38,262 - Access to formal parameter 'd' detected. Var: Int, 1, 1 in line 23.
+INFO  10:18:38,262 - Access to formal parameter 'inc' detected. Var: Int, 1, 1 in line 29.
+INFO  10:18:38,262 - Access to local variable 'pom' detected. Var: Int, 2, 1 in line 29.
+INFO  10:18:38,263 - Access to formal parameter 'inc' detected. Var: Int, 1, 1 in line 30.
+INFO  10:18:38,263 - Access to local variable 'pom' detected. Var: Int, 2, 1 in line 30.
+INFO  10:18:38,263 - Access to formal parameter 'a' detected. Var: Int, 0, 1 in line 30.
+INFO  10:18:38,263 - Access to formal parameter 'a' detected. Var: Int, 0, 1 in line 32.
+INFO  10:18:38,263 - Access to local variable 'pom' detected. Var: Int, 2, 1 in line 32.
+INFO  10:18:38,263 - Global function 'sum' call detected. Meth sum: Int [Var: Int, 0, 1 Var: Int, 1, 1 ], 0, 2 in line 32.
+INFO  10:18:38,263 - Global function 'ord' call detected. Meth ord: Int [Var: Char, 0, 1 ], 0, 1 in line 42.
+INFO  10:18:38,263 - ===================================
+INFO  10:18:38,264 - Generating bytecode file: C:\Users\Test\Desktop\PP1\workspace\MJCompiler\test\program.obj
+INFO  10:18:38,269 - Parsiranje uspesno zavrseno!

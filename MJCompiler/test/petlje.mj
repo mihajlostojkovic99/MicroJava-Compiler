@@ -1,0 +1,76 @@
+program petlje
+
+int x, y, z, q;
+
+{
+	void petlja(bool b) int i; {
+		i = 0;
+		do {
+			if (b) break;
+			i++;
+			print('i');
+		} while (i < 3);
+		print(eol);
+	}
+	
+	void main() bool b; {
+		x = 0;
+		y = 0;
+		z = 0;
+		q = 0;
+		b = false;
+		
+		do {
+			x++;
+			if (x == 5) continue;
+			print('x');print(eol);
+			y = 0;
+			do {
+				y++;
+				if (x != 1) b = true;
+				else b = false;
+				if (y == 3) {
+					petlja(b);
+					break;
+					continue;
+				}
+				
+				if (y < 2 && x < 3) {
+					z = 0;
+					do {
+						print('z');
+						z++;
+					} while(z < 5);
+					print(eol);
+				}
+				else {
+					continue;
+					break;
+				}
+				print('y');print(eol);
+				
+			} while(y < 5);
+			if (x == 7) break;
+			if (x >= 6) {
+				continue;
+				break;
+			}
+			q = 0;
+			do {
+				q++;
+				print('q');
+				if (q == 2) break;
+				else continue;
+			} while(q < 4);
+			q = 0;
+			do {
+				q++;
+				print('l');print('e');
+				if (q == 2) break;
+				else continue;
+			} while(q < 4);
+			print(eol);
+		} while(x < 10);
+	}
+
+}

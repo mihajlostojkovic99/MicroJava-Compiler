@@ -62,11 +62,12 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Stack<Integer> skipElse = new Stack<>();
 	private Stack<Integer> doWhileStart = new Stack<>();
 
-	private Stack<Boolean> breakflagStack = new Stack<>();
+	private Stack<Integer> breakLevelStack = new Stack<>();
 	private Stack<Integer> breakAdrStack = new Stack<>();
 	
 	private Stack<Integer> continueLevelStack = new Stack<>();
 	private Stack<Integer> continueAdrStack = new Stack<>();
+	
 	private int doWhileLevel = 0;
 	
 	int getMainPc() {
@@ -297,7 +298,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ElseHelp elseHelp) {
-		// 
+		//push
 		Code.putJump(0);
 		skipElse.push(Code.pc - 2);
 		
@@ -306,17 +307,17 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(DoWhileHelp doWhileHelp) {
-		// 
+		//push 
 		doWhileStart.push(Code.pc);
 		doWhileLevel++;
 	}
 	
 	@Override
 	public void visit(DoWhileSingleStatement doWhileSingleStatement) {
-		// 
-		
+		//dowhile
 		Code.putJump(doWhileStart.pop());
-		if (!breakflagStack.empty() && breakflagStack.pop() == true) {
+		while (!breakLevelStack.empty() /*&& !continueAdrStack.empty()*/ && breakLevelStack.peek() == doWhileLevel) {
+			breakLevelStack.pop();
 			Code.fixup(breakAdrStack.pop());
 		}
 		Code.fixup(skipThen.pop());
@@ -325,6 +326,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ContinueSingleStatement continueSingleStatement) {
+		//continue
 		Code.putJump(0);
 		continueAdrStack.push(Code.pc - 2);
 		continueLevelStack.push(doWhileLevel);
@@ -332,6 +334,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(CondHelp condHelp) {
+		//pop
 		while (!continueLevelStack.empty() /*&& !continueAdrStack.empty()*/ && continueLevelStack.peek() == doWhileLevel) {
 			continueLevelStack.pop();
 			Code.fixup(continueAdrStack.pop());
@@ -340,10 +343,10 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(BreakSingleStatement breakSingleStatement) {
-		// 
+		// break
 		Code.putJump(0);
 		breakAdrStack.push(Code.pc - 2);
-		breakflagStack.push(true);
+		breakLevelStack.push(doWhileLevel);
 	}
 	
 	@Override
